@@ -71,3 +71,11 @@ Each reported lens requires method, summary, at least one evidence reference, an
 From the repository root: `python -m unittest discover -s tests -v`.
 
 Next vertical slice: add a read-only IXO decision card backed by this packet; create a real human approval adapter and OX Relay baton bridge only after source ownership, permission tests and a verified on-device run.
+
+## v0.1 additive adaptive optimisation (reference only)
+
+`governance_router.adaptive.recommend_route(packet)` gives a **non-authorizing** risk-based routing recommendation. Missing/unknown flags and cross-owner or higher-impact effects default to a full four-lens review. Known low-risk, reversible same-owner actions may use the owner's pre-existing policy; that policy still governs permission. This does **not** alter the v0 `review()` and `prepare_handoff()` contract.
+
+`governance_router.adaptive.suggest_improvements(observations, verify_receipt=trusted_callback)` summarises verified review durations, missing-evidence signals, clarification demand and reopened decisions per workflow. Without a supplied independent receipt verifier, nothing counts as verified. With at least five verified observations, the module may propose small experiments: evidence preflight, an independent second review, read-only context prefill or clearer question template. It never modifies policy, voting power or execution permissions; the observations are descriptive and cannot establish causal improvement.
+
+**Promotion boundary:** predeclare a baseline, freeze a held-out evaluator, run comparably with versioned receipts, assess accessible participation and dissent/rights risks, obtain exact-scope human approval, and keep rollback. This reference kit has no live persistence, receipt service, held-out runner, identity/delegation registry or owner runtime integration.
