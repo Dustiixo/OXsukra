@@ -1,0 +1,14 @@
+{
+  "accepted_physics_cases": 32,
+  "cases_passed": 128,
+  "cases_requested": 128,
+  "engine": "Godot external_godot_target, launched in a fresh process per case",
+  "failures": [],
+  "not_a_third_party_game": true,
+  "passed": true,
+  "rejected_hostile_cases": 96,
+  "schema": "ixo.deepbrew.studio.bounded_external_stress.g0.3.1",
+  "source_sha256_before_and_after": "b58f8d50b094a9285ee36e0243aefaaf5dc6977d58a8c795a3d90660d019110d",
+  "wall_budget_seconds": 90.0,
+  "wall_seconds": 49.028
+}

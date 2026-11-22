@@ -1,0 +1,3883 @@
+{
+  "schema": "ixo.rcll.colocrypt.print.v0.4",
+  "source_prompt_sha256": "bc42f9fdc22bca7d2b75e2853ce47dfbab834e3ded702382b083345af3408d9c",
+  "source_fixture_is_synthetic": true,
+  "acoustic_packets_are_real_mp3": true,
+  "independent_mp3_decode_passed_during_this_build": true,
+  "historical_hmac_claims_reauthenticated": false,
+  "color_wheel_address_space": 360,
+  "selected_root_hues": [
+    0,
+    36,
+    72,
+    108,
+    144,
+    180,
+    216,
+    252,
+    288,
+    324
+  ],
+  "prototype_ops": [
+    "BEARING_COUNT",
+    "TIME_RANGE",
+    "MEAN_FREQUENCY_HZ",
+    "MEAN_STRENGTH_PCM",
+    "LANE_HISTOGRAM",
+    "FREQUENCY_RANGE_HZ",
+    "PEAK_BEARING_INDEX",
+    "RECEIVER_CLOCK_SCALE",
+    "WINDOW_SHA256",
+    "PARENT_EVENT_HASH"
+  ],
+  "time_grid_bars": 16,
+  "bar_positions_are_projection_not_detected_beats": true,
+  "original_ten_audio_gates_implemented": false,
+  "real_ai_language_semantics_proven": false,
+  "splices": 100,
+  "measured_points_covered": 1240,
+  "gate_merkle_root": "fa73b0f2e664c0d3c732a485d369732f4c5ef37ccb2d417896ad9d52bfcfc8bb",
+  "gates": [
+    {
+      "gate": 0,
+      "address": "G00",
+      "hue": 0,
+      "source_event_hash": "d77dc8a766009ba81a2515b759ac17ece623188df05da5559387e314700ad730",
+      "source_mp3_sha256": "034515aff783147a037121f0e80fd9f681520481c9694dc98b8b0b38388762a8",
+      "language_phase": "CALL",
+      "status_kind": "stable",
+      "sampled_audio_bearings": 124,
+      "splices": [
+        {
+          "address": "G00/H000/S00",
+          "gate": 0,
+          "slot": 0,
+          "language": "COLOCRYPT/H000/S00",
+          "color_hue_id": 0,
+          "display_rgb": [
+            240,
+            34,
+            34
+          ],
+          "status_kind": "stable",
+          "status_colour": "#F2F4F8",
+          "phase": "CALL",
+          "bar_range_projection": [
+            "0",
+            "8/5"
+          ],
+          "bearing_slice": [
+            0,
+            12
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            0.728,
+            2.048
+          ],
+          "mean_frequency_hz": 2053.3683,
+          "mean_strength_pcm": 8427.4833,
+          "language_opcode": "BEARING_COUNT",
+          "opcode_result": 12,
+          "bearing_digest": "126a62d02677c472dff79ef9d90266ceac91de0dcc8b85e82b80fb4ad4c656ff",
+          "source_event_hash": "d77dc8a766009ba81a2515b759ac17ece623188df05da5559387e314700ad730",
+          "source_mp3_sha256": "034515aff783147a037121f0e80fd9f681520481c9694dc98b8b0b38388762a8",
+          "splice_sha256": "41638ef07628f5c71de8acf4576d5eaae6f7e558ecec65a646c2d3e9f1bdf833"
+        },
+        {
+          "address": "G00/H000/S01",
+          "gate": 0,
+          "slot": 1,
+          "language": "COLOCRYPT/H000/S01",
+          "color_hue_id": 0,
+          "display_rgb": [
+            236,
+            44,
+            38
+          ],
+          "status_kind": "stable",
+          "status_colour": "#F2F4F8",
+          "phase": "CALL",
+          "bar_range_projection": [
+            "8/5",
+            "16/5"
+          ],
+          "bearing_slice": [
+            12,
+            24
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            2.168,
+            3.4879
+          ],
+          "mean_frequency_hz": 1476.6908,
+          "mean_strength_pcm": 8478.4917,
+          "language_opcode": "TIME_RANGE",
+          "opcode_result": [
+            2.168,
+            3.4879
+          ],
+          "bearing_digest": "8997f2aba483540050346890376d4642921c42a519bc20c4c52288507c04a824",
+          "source_event_hash": "d77dc8a766009ba81a2515b759ac17ece623188df05da5559387e314700ad730",
+          "source_mp3_sha256": "034515aff783147a037121f0e80fd9f681520481c9694dc98b8b0b38388762a8",
+          "splice_sha256": "9a939a15734e1e412cf5a182ee25b4c5ebf86ec6a7ec349d6383c11d73ca01c8"
+        },
+        {
+          "address": "G00/H000/S02",
+          "gate": 0,
+          "slot": 2,
+          "language": "COLOCRYPT/H000/S02",
+          "color_hue_id": 0,
+          "display_rgb": [
+            233,
+            53,
+            43
+          ],
+          "status_kind": "stable",
+          "status_colour": "#F2F4F8",
+          "phase": "CALL",
+          "bar_range_projection": [
+            "16/5",
+            "24/5"
+          ],
+          "bearing_slice": [
+            24,
+            37
+          ],
+          "bearing_count": 13,
+          "observed_time_range_seconds": [
+            3.6079,
+            5.0479
+          ],
+          "mean_frequency_hz": 1627.7192,
+          "mean_strength_pcm": 8437.7846,
+          "language_opcode": "MEAN_FREQUENCY_HZ",
+          "opcode_result": 1627.7192,
+          "bearing_digest": "3475b8bf0f610237691766f75f7fee45f221918530a316aebad53e0816b8e13c",
+          "source_event_hash": "d77dc8a766009ba81a2515b759ac17ece623188df05da5559387e314700ad730",
+          "source_mp3_sha256": "034515aff783147a037121f0e80fd9f681520481c9694dc98b8b0b38388762a8",
+          "splice_sha256": "6769852b2afa69f508c1576e6bf3a144ff61e27c117d0e3337cdaa78df26c884"
+        },
+        {
+          "address": "G00/H000/S03",
+          "gate": 0,
+          "slot": 3,
+          "language": "COLOCRYPT/H000/S03",
+          "color_hue_id": 0,
+          "display_rgb": [
+            229,
+            62,
+            48
+          ],
+          "status_kind": "stable",
+          "status_colour": "#F2F4F8",
+          "phase": "CALL",
+          "bar_range_projection": [
+            "24/5",
+            "32/5"
+          ],
+          "bearing_slice": [
+            37,
+            49
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            5.1679,
+            6.4879
+          ],
+          "mean_frequency_hz": 1996.7,
+          "mean_strength_pcm": 8414.675,
+          "language_opcode": "MEAN_STRENGTH_PCM",
+          "opcode_result": 8414.675,
+          "bearing_digest": "81a3aa52b7dc68640e180810fecda2e55c5d061465fee747150a9bce7f590b02",
+          "source_event_hash": "d77dc8a766009ba81a2515b759ac17ece623188df05da5559387e314700ad730",
+          "source_mp3_sha256": "034515aff783147a037121f0e80fd9f681520481c9694dc98b8b0b38388762a8",
+          "splice_sha256": "f00a513aeca53d0dd326c7b3719fc10c65f8134c80c1e1c79504ec0757f297eb"
+        },
+        {
+          "address": "G00/H000/S04",
+          "gate": 0,
+          "slot": 4,
+          "language": "COLOCRYPT/H000/S04",
+          "color_hue_id": 0,
+          "display_rgb": [
+            225,
+            71,
+            52
+          ],
+          "status_kind": "stable",
+          "status_colour": "#F2F4F8",
+          "phase": "CALL",
+          "bar_range_projection": [
+            "32/5",
+            "8"
+          ],
+          "bearing_slice": [
+            49,
+            62
+          ],
+          "bearing_count": 13,
+          "observed_time_range_seconds": [
+            6.6079,
+            8.0479
+          ],
+          "mean_frequency_hz": 2410.8108,
+          "mean_strength_pcm": 8432.2308,
+          "language_opcode": "LANE_HISTOGRAM",
+          "opcode_result": [
+            4,
+            2,
+            3,
+            4
+          ],
+          "bearing_digest": "80c8dd773d4927ee614ddb0cecaf45524a266ca7b2b49c15bbed481c815ca052",
+          "source_event_hash": "d77dc8a766009ba81a2515b759ac17ece623188df05da5559387e314700ad730",
+          "source_mp3_sha256": "034515aff783147a037121f0e80fd9f681520481c9694dc98b8b0b38388762a8",
+          "splice_sha256": "b019ffc28c21ef8161a737cd67a7439fff6c5ba89872c3959508461b9afe95be"
+        },
+        {
+          "address": "G00/H000/S05",
+          "gate": 0,
+          "slot": 5,
+          "language": "COLOCRYPT/H000/S05",
+          "color_hue_id": 0,
+          "display_rgb": [
+            222,
+            79,
+            57
+          ],
+          "status_kind": "stable",
+          "status_colour": "#F2F4F8",
+          "phase": "CALL",
+          "bar_range_projection": [
+            "8",
+            "48/5"
+          ],
+          "bearing_slice": [
+            62,
+            74
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            8.1679,
+            9.4878
+          ],
+          "mean_frequency_hz": 2558.3775,
+          "mean_strength_pcm": 8414.2667,
+          "language_opcode": "FREQUENCY_RANGE_HZ",
+          "opcode_result": [
+            1200.02,
+            3820.07
+          ],
+          "bearing_digest": "9a23c7f26c9c48183e5f4b9a113abd8dd31c0cd0f133ccf9db95c627325dccf6",
+          "source_event_hash": "d77dc8a766009ba81a2515b759ac17ece623188df05da5559387e314700ad730",
+          "source_mp3_sha256": "034515aff783147a037121f0e80fd9f681520481c9694dc98b8b0b38388762a8",
+          "splice_sha256": "d74d39d6b74963853b5f5aac5d7513c8602bd4dd7fb7ed0a0b5e44f6b68998f0"
+        },
+        {
+          "address": "G00/H000/S06",
+          "gate": 0,
+          "slot": 6,
+          "language": "COLOCRYPT/H000/S06",
+          "color_hue_id": 0,
+          "display_rgb": [
+            218,
+            86,
+            61
+          ],
+          "status_kind": "stable",
+          "status_colour": "#F2F4F8",
+          "phase": "CALL",
+          "bar_range_projection": [
+            "48/5",
+            "56/5"
+          ],
+          "bearing_slice": [
+            74,
+            86
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            9.6078,
+            10.9278
+          ],
+          "mean_frequency_hz": 1960.0333,
+          "mean_strength_pcm": 8451.2083,
+          "language_opcode": "PEAK_BEARING_INDEX",
+          "opcode_result": 77,
+          "bearing_digest": "f68f71ce6ccd54e3cc4c484589b7e0469c4ba24a222fb5e9b5c9bfaa1e0f7851",
+          "source_event_hash": "d77dc8a766009ba81a2515b759ac17ece623188df05da5559387e314700ad730",
+          "source_mp3_sha256": "034515aff783147a037121f0e80fd9f681520481c9694dc98b8b0b38388762a8",
+          "splice_sha256": "68f93cbde47d3bd8177a91d3933991d43a97dadcc9c82d8fd1410ebcfa42aa2f"
+        },
+        {
+          "address": "G00/H000/S07",
+          "gate": 0,
+          "slot": 7,
+          "language": "COLOCRYPT/H000/S07",
+          "color_hue_id": 0,
+          "display_rgb": [
+            215,
+            93,
+            65
+          ],
+          "status_kind": "stable",
+          "status_colour": "#F2F4F8",
+          "phase": "CALL",
+          "bar_range_projection": [
+            "56/5",
+            "64/5"
+          ],
+          "bearing_slice": [
+            86,
+            99
+          ],
+          "bearing_count": 13,
+          "observed_time_range_seconds": [
+            11.0478,
+            12.4878
+          ],
+          "mean_frequency_hz": 2718.5085,
+          "mean_strength_pcm": 8416.2923,
+          "language_opcode": "RECEIVER_CLOCK_SCALE",
+          "opcode_result": 0.999983,
+          "bearing_digest": "5ee03b4ba08eb4c7e5eafa90c2087c255e420f5e45a1fe384ca18363bdc4f4ea",
+          "source_event_hash": "d77dc8a766009ba81a2515b759ac17ece623188df05da5559387e314700ad730",
+          "source_mp3_sha256": "034515aff783147a037121f0e80fd9f681520481c9694dc98b8b0b38388762a8",
+          "splice_sha256": "163286592990fb585a945849872face2cb8b878759d94236cfa752c989c0fff3"
+        },
+        {
+          "address": "G00/H000/S08",
+          "gate": 0,
+          "slot": 8,
+          "language": "COLOCRYPT/H000/S08",
+          "color_hue_id": 0,
+          "display_rgb": [
+            211,
+            99,
+            68
+          ],
+          "status_kind": "stable",
+          "status_colour": "#F2F4F8",
+          "phase": "CALL",
+          "bar_range_projection": [
+            "64/5",
+            "72/5"
+          ],
+          "bearing_slice": [
+            99,
+            111
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            12.6078,
+            13.9278
+          ],
+          "mean_frequency_hz": 2845.0492,
+          "mean_strength_pcm": 8408.6,
+          "language_opcode": "WINDOW_SHA256",
+          "opcode_result": "918ea3df32b423287aa1fa77cb1f50fe2b337199822c669d663485321de4bd4e",
+          "bearing_digest": "491901a040db26bcca268d54dd1beaab06a023ecf71bf3de82c1ed7d79cd32cc",
+          "source_event_hash": "d77dc8a766009ba81a2515b759ac17ece623188df05da5559387e314700ad730",
+          "source_mp3_sha256": "034515aff783147a037121f0e80fd9f681520481c9694dc98b8b0b38388762a8",
+          "splice_sha256": "79653f959a72b2a382dc8b28b86254eb5653ba5cd28f9a2e9821170601fbc87f"
+        },
+        {
+          "address": "G00/H000/S09",
+          "gate": 0,
+          "slot": 9,
+          "language": "COLOCRYPT/H000/S09",
+          "color_hue_id": 0,
+          "display_rgb": [
+            208,
+            105,
+            72
+          ],
+          "status_kind": "stable",
+          "status_colour": "#F2F4F8",
+          "phase": "CALL",
+          "bar_range_projection": [
+            "72/5",
+            "16"
+          ],
+          "bearing_slice": [
+            111,
+            124
+          ],
+          "bearing_count": 13,
+          "observed_time_range_seconds": [
+            14.0478,
+            15.4877
+          ],
+          "mean_frequency_hz": 2018.4946,
+          "mean_strength_pcm": 8437.1,
+          "language_opcode": "PARENT_EVENT_HASH",
+          "opcode_result": "d77dc8a766009ba81a2515b759ac17ece623188df05da5559387e314700ad730",
+          "bearing_digest": "a2fee4dd1885d3150be148be804de9aa6be4174c0ee0fbead35cbee3c394a53a",
+          "source_event_hash": "d77dc8a766009ba81a2515b759ac17ece623188df05da5559387e314700ad730",
+          "source_mp3_sha256": "034515aff783147a037121f0e80fd9f681520481c9694dc98b8b0b38388762a8",
+          "splice_sha256": "ed26284fd72269876dc10f035688926c81753b0c08d4e61a429237f6cacdfc66"
+        }
+      ],
+      "gate_sha256": "7426488c6770d4d783112cec78d4196bc5b8cb9a9a522152f0cc2a59b88d242b"
+    },
+    {
+      "gate": 1,
+      "address": "G01",
+      "hue": 36,
+      "source_event_hash": "437f4e3d02bcdf662fba230ecc6f1bac9a62ed98464ab49ca70073885d970f63",
+      "source_mp3_sha256": "b7d73b457c0bc453941cd5b3ea15a1fdb7d870e8406c7a7676dad34cd353394c",
+      "language_phase": "CALL",
+      "status_kind": "input",
+      "sampled_audio_bearings": 124,
+      "splices": [
+        {
+          "address": "G01/H036/S00",
+          "gate": 1,
+          "slot": 0,
+          "language": "COLOCRYPT/H036/S00",
+          "color_hue_id": 36,
+          "display_rgb": [
+            240,
+            157,
+            34
+          ],
+          "status_kind": "input",
+          "status_colour": "#00E5FF",
+          "phase": "CALL",
+          "bar_range_projection": [
+            "0",
+            "8/5"
+          ],
+          "bearing_slice": [
+            0,
+            12
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            0.728,
+            2.048
+          ],
+          "mean_frequency_hz": 2053.3683,
+          "mean_strength_pcm": 8427.4833,
+          "language_opcode": "TIME_RANGE",
+          "opcode_result": [
+            0.728,
+            2.048
+          ],
+          "bearing_digest": "126a62d02677c472dff79ef9d90266ceac91de0dcc8b85e82b80fb4ad4c656ff",
+          "source_event_hash": "437f4e3d02bcdf662fba230ecc6f1bac9a62ed98464ab49ca70073885d970f63",
+          "source_mp3_sha256": "b7d73b457c0bc453941cd5b3ea15a1fdb7d870e8406c7a7676dad34cd353394c",
+          "splice_sha256": "d3183968f116284df108b42ad6426eb06ebadebed3d2623481d221aa44a37985"
+        },
+        {
+          "address": "G01/H036/S01",
+          "gate": 1,
+          "slot": 1,
+          "language": "COLOCRYPT/H036/S01",
+          "color_hue_id": 36,
+          "display_rgb": [
+            236,
+            162,
+            38
+          ],
+          "status_kind": "input",
+          "status_colour": "#00E5FF",
+          "phase": "CALL",
+          "bar_range_projection": [
+            "8/5",
+            "16/5"
+          ],
+          "bearing_slice": [
+            12,
+            24
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            2.168,
+            3.4879
+          ],
+          "mean_frequency_hz": 1476.6908,
+          "mean_strength_pcm": 8478.4917,
+          "language_opcode": "MEAN_FREQUENCY_HZ",
+          "opcode_result": 1476.6908,
+          "bearing_digest": "8997f2aba483540050346890376d4642921c42a519bc20c4c52288507c04a824",
+          "source_event_hash": "437f4e3d02bcdf662fba230ecc6f1bac9a62ed98464ab49ca70073885d970f63",
+          "source_mp3_sha256": "b7d73b457c0bc453941cd5b3ea15a1fdb7d870e8406c7a7676dad34cd353394c",
+          "splice_sha256": "2218da62575c2c5d19dc20c517c7d84922d99543addc5d0d743718d071ff7943"
+        },
+        {
+          "address": "G01/H036/S02",
+          "gate": 1,
+          "slot": 2,
+          "language": "COLOCRYPT/H036/S02",
+          "color_hue_id": 36,
+          "display_rgb": [
+            233,
+            167,
+            43
+          ],
+          "status_kind": "input",
+          "status_colour": "#00E5FF",
+          "phase": "CALL",
+          "bar_range_projection": [
+            "16/5",
+            "24/5"
+          ],
+          "bearing_slice": [
+            24,
+            37
+          ],
+          "bearing_count": 13,
+          "observed_time_range_seconds": [
+            3.6079,
+            5.0479
+          ],
+          "mean_frequency_hz": 1690.7969,
+          "mean_strength_pcm": 8439.9231,
+          "language_opcode": "MEAN_STRENGTH_PCM",
+          "opcode_result": 8439.9231,
+          "bearing_digest": "720ef35e29886bf149dc9602506d3666ad8d96ab2ca9f2c08a36eeb5727692b0",
+          "source_event_hash": "437f4e3d02bcdf662fba230ecc6f1bac9a62ed98464ab49ca70073885d970f63",
+          "source_mp3_sha256": "b7d73b457c0bc453941cd5b3ea15a1fdb7d870e8406c7a7676dad34cd353394c",
+          "splice_sha256": "eb447fa5352a7f87e39713af5f8a760892904792af60b734ba7ee5065e48eb79"
+        },
+        {
+          "address": "G01/H036/S03",
+          "gate": 1,
+          "slot": 3,
+          "language": "COLOCRYPT/H036/S03",
+          "color_hue_id": 36,
+          "display_rgb": [
+            229,
+            171,
+            48
+          ],
+          "status_kind": "input",
+          "status_colour": "#00E5FF",
+          "phase": "CALL",
+          "bar_range_projection": [
+            "24/5",
+            "32/5"
+          ],
+          "bearing_slice": [
+            37,
+            49
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            5.1679,
+            6.4879
+          ],
+          "mean_frequency_hz": 2053.3683,
+          "mean_strength_pcm": 8427.75,
+          "language_opcode": "LANE_HISTOGRAM",
+          "opcode_result": [
+            4,
+            4,
+            2,
+            2
+          ],
+          "bearing_digest": "16a33636848d3af297780b648e22326c32ab6366ca8fc2a219c1ab94e5d79dc2",
+          "source_event_hash": "437f4e3d02bcdf662fba230ecc6f1bac9a62ed98464ab49ca70073885d970f63",
+          "source_mp3_sha256": "b7d73b457c0bc453941cd5b3ea15a1fdb7d870e8406c7a7676dad34cd353394c",
+          "splice_sha256": "b8c89f257f3f8f5d72beb3e12057155e8bccaafa6828d4961f33a6d090e2f191"
+        },
+        {
+          "address": "G01/H036/S04",
+          "gate": 1,
+          "slot": 4,
+          "language": "COLOCRYPT/H036/S04",
+          "color_hue_id": 36,
+          "display_rgb": [
+            225,
+            175,
+            52
+          ],
+          "status_kind": "input",
+          "status_colour": "#00E5FF",
+          "phase": "CALL",
+          "bar_range_projection": [
+            "32/5",
+            "8"
+          ],
+          "bearing_slice": [
+            49,
+            62
+          ],
+          "bearing_count": 13,
+          "observed_time_range_seconds": [
+            6.6079,
+            8.0479
+          ],
+          "mean_frequency_hz": 2190.8054,
+          "mean_strength_pcm": 8393.9615,
+          "language_opcode": "FREQUENCY_RANGE_HZ",
+          "opcode_result": [
+            1200.02,
+            3820.07
+          ],
+          "bearing_digest": "1b00d80f9980b2465908fcf2dfaeea16d8c88302fa76051dd96854a70766319e",
+          "source_event_hash": "437f4e3d02bcdf662fba230ecc6f1bac9a62ed98464ab49ca70073885d970f63",
+          "source_mp3_sha256": "b7d73b457c0bc453941cd5b3ea15a1fdb7d870e8406c7a7676dad34cd353394c",
+          "splice_sha256": "353f7893ef7d8edb8f186afc40ba8d9ece31100ca984744f6681498a5d894545"
+        },
+        {
+          "address": "G01/H036/S05",
+          "gate": 1,
+          "slot": 5,
+          "language": "COLOCRYPT/H036/S05",
+          "color_hue_id": 36,
+          "display_rgb": [
+            222,
+            178,
+            57
+          ],
+          "status_kind": "input",
+          "status_colour": "#00E5FF",
+          "phase": "CALL",
+          "bar_range_projection": [
+            "8",
+            "48/5"
+          ],
+          "bearing_slice": [
+            62,
+            74
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            8.1679,
+            9.4878
+          ],
+          "mean_frequency_hz": 2330.0392,
+          "mean_strength_pcm": 8397.5167,
+          "language_opcode": "PEAK_BEARING_INDEX",
+          "opcode_result": 69,
+          "bearing_digest": "5f13b10a8d731ad99dff5bcdcb110fc9ca55601ec9dda1e0e136c76f8fa7d7b2",
+          "source_event_hash": "437f4e3d02bcdf662fba230ecc6f1bac9a62ed98464ab49ca70073885d970f63",
+          "source_mp3_sha256": "b7d73b457c0bc453941cd5b3ea15a1fdb7d870e8406c7a7676dad34cd353394c",
+          "splice_sha256": "69dd241df87ea66df0ea6ee922a751f7e468560d6cccac86328e58821b401c31"
+        },
+        {
+          "address": "G01/H036/S06",
+          "gate": 1,
+          "slot": 6,
+          "language": "COLOCRYPT/H036/S06",
+          "color_hue_id": 36,
+          "display_rgb": [
+            218,
+            180,
+            61
+          ],
+          "status_kind": "input",
+          "status_colour": "#00E5FF",
+          "phase": "CALL",
+          "bar_range_projection": [
+            "48/5",
+            "56/5"
+          ],
+          "bearing_slice": [
+            74,
+            86
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            9.6078,
+            10.9278
+          ],
+          "mean_frequency_hz": 2490.0433,
+          "mean_strength_pcm": 8412.0833,
+          "language_opcode": "RECEIVER_CLOCK_SCALE",
+          "opcode_result": 0.999983,
+          "bearing_digest": "2e975d49cefab5ef5c1f8bb9500b58cac3c4e03888d9b061c8467c6f40dbef33",
+          "source_event_hash": "437f4e3d02bcdf662fba230ecc6f1bac9a62ed98464ab49ca70073885d970f63",
+          "source_mp3_sha256": "b7d73b457c0bc453941cd5b3ea15a1fdb7d870e8406c7a7676dad34cd353394c",
+          "splice_sha256": "ad23d520a647fb0761e705b53801c93c9e15deb88856d30153fdb085663fa7dd"
+        },
+        {
+          "address": "G01/H036/S07",
+          "gate": 1,
+          "slot": 7,
+          "language": "COLOCRYPT/H036/S07",
+          "color_hue_id": 36,
+          "display_rgb": [
+            215,
+            183,
+            65
+          ],
+          "status_kind": "input",
+          "status_colour": "#00E5FF",
+          "phase": "CALL",
+          "bar_range_projection": [
+            "56/5",
+            "64/5"
+          ],
+          "bearing_slice": [
+            86,
+            99
+          ],
+          "bearing_count": 13,
+          "observed_time_range_seconds": [
+            11.0478,
+            12.4878
+          ],
+          "mean_frequency_hz": 2156.9592,
+          "mean_strength_pcm": 8427.6385,
+          "language_opcode": "WINDOW_SHA256",
+          "opcode_result": "26c8bc2e37a2ca0212a93844f7a187c26d79e202421b6144387b48b7cc7fe61a",
+          "bearing_digest": "bc416d292f9170c63ebcda8da75fea56178cbc7658ea69ecc4a525bbbe5fd7db",
+          "source_event_hash": "437f4e3d02bcdf662fba230ecc6f1bac9a62ed98464ab49ca70073885d970f63",
+          "source_mp3_sha256": "b7d73b457c0bc453941cd5b3ea15a1fdb7d870e8406c7a7676dad34cd353394c",
+          "splice_sha256": "815498c78f82573e3af3e693b6218a2639d31973a241debf73dc565933a8304e"
+        },
+        {
+          "address": "G01/H036/S08",
+          "gate": 1,
+          "slot": 8,
+          "language": "COLOCRYPT/H036/S08",
+          "color_hue_id": 36,
+          "display_rgb": [
+            211,
+            184,
+            68
+          ],
+          "status_kind": "input",
+          "status_colour": "#00E5FF",
+          "phase": "CALL",
+          "bar_range_projection": [
+            "64/5",
+            "72/5"
+          ],
+          "bearing_slice": [
+            99,
+            111
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            12.6078,
+            13.9278
+          ],
+          "mean_frequency_hz": 2351.7058,
+          "mean_strength_pcm": 8411.5167,
+          "language_opcode": "PARENT_EVENT_HASH",
+          "opcode_result": "437f4e3d02bcdf662fba230ecc6f1bac9a62ed98464ab49ca70073885d970f63",
+          "bearing_digest": "20746397d3402524f5f7997140afbc70e119387ed7f88fd31ded426209967b28",
+          "source_event_hash": "437f4e3d02bcdf662fba230ecc6f1bac9a62ed98464ab49ca70073885d970f63",
+          "source_mp3_sha256": "b7d73b457c0bc453941cd5b3ea15a1fdb7d870e8406c7a7676dad34cd353394c",
+          "splice_sha256": "1b1bc384d0651f2210a256e31b2a9c58add6bbd2aecfe1b7d35c82d355d5b8c1"
+        },
+        {
+          "address": "G01/H036/S09",
+          "gate": 1,
+          "slot": 9,
+          "language": "COLOCRYPT/H036/S09",
+          "color_hue_id": 36,
+          "display_rgb": [
+            208,
+            186,
+            72
+          ],
+          "status_kind": "input",
+          "status_colour": "#00E5FF",
+          "phase": "CALL",
+          "bar_range_projection": [
+            "72/5",
+            "16"
+          ],
+          "bearing_slice": [
+            111,
+            124
+          ],
+          "bearing_count": 13,
+          "observed_time_range_seconds": [
+            14.0478,
+            15.4877
+          ],
+          "mean_frequency_hz": 2156.9592,
+          "mean_strength_pcm": 8427.7615,
+          "language_opcode": "BEARING_COUNT",
+          "opcode_result": 13,
+          "bearing_digest": "35390145d284fb396fbf97dd9e783a55d4ed4455601455cca0ce3a3e59183ee4",
+          "source_event_hash": "437f4e3d02bcdf662fba230ecc6f1bac9a62ed98464ab49ca70073885d970f63",
+          "source_mp3_sha256": "b7d73b457c0bc453941cd5b3ea15a1fdb7d870e8406c7a7676dad34cd353394c",
+          "splice_sha256": "d64e9d07bce6338663efca165fa1355b2aacc0716c495a6d4f375fc0a19d3420"
+        }
+      ],
+      "gate_sha256": "1e6a595d5bb22e5d384287ad72edf3b72fa2499b059c61d034be9ff29ce99e70"
+    },
+    {
+      "gate": 2,
+      "address": "G02",
+      "hue": 72,
+      "source_event_hash": "dfb5b1dbdd061cb22b38684a4a55ffeb0b450bc2d83b158c373d144eb3c6f0a9",
+      "source_mp3_sha256": "bf1273790ab6e38c9ef82c7f1cf27ce6618f5dae673b065a8ce494552cb31196",
+      "language_phase": "CARRY",
+      "status_kind": "run",
+      "sampled_audio_bearings": 124,
+      "splices": [
+        {
+          "address": "G02/H072/S00",
+          "gate": 2,
+          "slot": 0,
+          "language": "COLOCRYPT/H072/S00",
+          "color_hue_id": 72,
+          "display_rgb": [
+            198,
+            240,
+            34
+          ],
+          "status_kind": "run",
+          "status_colour": "#246BFF",
+          "phase": "CARRY",
+          "bar_range_projection": [
+            "0",
+            "8/5"
+          ],
+          "bearing_slice": [
+            0,
+            12
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            0.728,
+            2.048
+          ],
+          "mean_frequency_hz": 2053.3683,
+          "mean_strength_pcm": 8427.4833,
+          "language_opcode": "MEAN_FREQUENCY_HZ",
+          "opcode_result": 2053.3683,
+          "bearing_digest": "126a62d02677c472dff79ef9d90266ceac91de0dcc8b85e82b80fb4ad4c656ff",
+          "source_event_hash": "dfb5b1dbdd061cb22b38684a4a55ffeb0b450bc2d83b158c373d144eb3c6f0a9",
+          "source_mp3_sha256": "bf1273790ab6e38c9ef82c7f1cf27ce6618f5dae673b065a8ce494552cb31196",
+          "splice_sha256": "1e2a240177fcb9cfe9ab798c6f1c71c340cfb2f99292abeea06cf17bbc866c9a"
+        },
+        {
+          "address": "G02/H072/S01",
+          "gate": 2,
+          "slot": 1,
+          "language": "COLOCRYPT/H072/S01",
+          "color_hue_id": 72,
+          "display_rgb": [
+            191,
+            236,
+            38
+          ],
+          "status_kind": "run",
+          "status_colour": "#246BFF",
+          "phase": "CARRY",
+          "bar_range_projection": [
+            "8/5",
+            "16/5"
+          ],
+          "bearing_slice": [
+            12,
+            24
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            2.168,
+            3.4879
+          ],
+          "mean_frequency_hz": 1476.6908,
+          "mean_strength_pcm": 8478.4917,
+          "language_opcode": "MEAN_STRENGTH_PCM",
+          "opcode_result": 8478.4917,
+          "bearing_digest": "8997f2aba483540050346890376d4642921c42a519bc20c4c52288507c04a824",
+          "source_event_hash": "dfb5b1dbdd061cb22b38684a4a55ffeb0b450bc2d83b158c373d144eb3c6f0a9",
+          "source_mp3_sha256": "bf1273790ab6e38c9ef82c7f1cf27ce6618f5dae673b065a8ce494552cb31196",
+          "splice_sha256": "57f36cfd9eba76cc9d6c643603c57a9f67fd11f95e7b6dcc715a42220b0e5ae5"
+        },
+        {
+          "address": "G02/H072/S02",
+          "gate": 2,
+          "slot": 2,
+          "language": "COLOCRYPT/H072/S02",
+          "color_hue_id": 72,
+          "display_rgb": [
+            185,
+            233,
+            43
+          ],
+          "status_kind": "run",
+          "status_colour": "#246BFF",
+          "phase": "CARRY",
+          "bar_range_projection": [
+            "16/5",
+            "24/5"
+          ],
+          "bearing_slice": [
+            24,
+            37
+          ],
+          "bearing_count": 13,
+          "observed_time_range_seconds": [
+            3.6079,
+            5.0479
+          ],
+          "mean_frequency_hz": 1743.1062,
+          "mean_strength_pcm": 8452.0077,
+          "language_opcode": "LANE_HISTOGRAM",
+          "opcode_result": [
+            7,
+            3,
+            2,
+            1
+          ],
+          "bearing_digest": "2ef82b5a3e475d0d6b7494767b23ce3a8ee56fe3994640981b0c8f61371df91f",
+          "source_event_hash": "dfb5b1dbdd061cb22b38684a4a55ffeb0b450bc2d83b158c373d144eb3c6f0a9",
+          "source_mp3_sha256": "bf1273790ab6e38c9ef82c7f1cf27ce6618f5dae673b065a8ce494552cb31196",
+          "splice_sha256": "13665ac7e5ea557c67c8c1d9cef72ead032e62fa58df20bc711eadcf5f90330f"
+        },
+        {
+          "address": "G02/H072/S03",
+          "gate": 2,
+          "slot": 3,
+          "language": "COLOCRYPT/H072/S03",
+          "color_hue_id": 72,
+          "display_rgb": [
+            178,
+            229,
+            48
+          ],
+          "status_kind": "run",
+          "status_colour": "#246BFF",
+          "phase": "CARRY",
+          "bar_range_projection": [
+            "24/5",
+            "32/5"
+          ],
+          "bearing_slice": [
+            37,
+            49
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            5.1679,
+            6.4879
+          ],
+          "mean_frequency_hz": 2111.7017,
+          "mean_strength_pcm": 8405.3083,
+          "language_opcode": "FREQUENCY_RANGE_HZ",
+          "opcode_result": [
+            1200.02,
+            3820.07
+          ],
+          "bearing_digest": "759e38b1f46ee2c50afa35517c62976cb0c3a72deffaffe3d719044ee102e725",
+          "source_event_hash": "dfb5b1dbdd061cb22b38684a4a55ffeb0b450bc2d83b158c373d144eb3c6f0a9",
+          "source_mp3_sha256": "bf1273790ab6e38c9ef82c7f1cf27ce6618f5dae673b065a8ce494552cb31196",
+          "splice_sha256": "983a54653ec94281a0292d49d617546c295b9a1d9dbf73d31f7cf01d8319b055"
+        },
+        {
+          "address": "G02/H072/S04",
+          "gate": 2,
+          "slot": 4,
+          "language": "COLOCRYPT/H072/S04",
+          "color_hue_id": 72,
+          "display_rgb": [
+            172,
+            225,
+            52
+          ],
+          "status_kind": "run",
+          "status_colour": "#246BFF",
+          "phase": "CARRY",
+          "bar_range_projection": [
+            "32/5",
+            "8"
+          ],
+          "bearing_slice": [
+            49,
+            62
+          ],
+          "bearing_count": 13,
+          "observed_time_range_seconds": [
+            6.6079,
+            8.0479
+          ],
+          "mean_frequency_hz": 2410.8108,
+          "mean_strength_pcm": 8432.2538,
+          "language_opcode": "PEAK_BEARING_INDEX",
+          "opcode_result": 50,
+          "bearing_digest": "0ca72e995062607614c196f2c2a5c52772717fc383f7c5a9f0c7f0167d360320",
+          "source_event_hash": "dfb5b1dbdd061cb22b38684a4a55ffeb0b450bc2d83b158c373d144eb3c6f0a9",
+          "source_mp3_sha256": "bf1273790ab6e38c9ef82c7f1cf27ce6618f5dae673b065a8ce494552cb31196",
+          "splice_sha256": "f62d27953f461fa36ca8523e0b9ecc456389e8c163361453fc74cf588f98be06"
+        },
+        {
+          "address": "G02/H072/S05",
+          "gate": 2,
+          "slot": 5,
+          "language": "COLOCRYPT/H072/S05",
+          "color_hue_id": 72,
+          "display_rgb": [
+            167,
+            222,
+            57
+          ],
+          "status_kind": "run",
+          "status_colour": "#246BFF",
+          "phase": "CARRY",
+          "bar_range_projection": [
+            "8",
+            "48/5"
+          ],
+          "bearing_slice": [
+            62,
+            74
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            8.1679,
+            9.4878
+          ],
+          "mean_frequency_hz": 1753.3617,
+          "mean_strength_pcm": 8448.3167,
+          "language_opcode": "RECEIVER_CLOCK_SCALE",
+          "opcode_result": 0.999983,
+          "bearing_digest": "add77dabe7cee1b387eecde9c22f41749790cded86c03dbe35ed177065aa0b46",
+          "source_event_hash": "dfb5b1dbdd061cb22b38684a4a55ffeb0b450bc2d83b158c373d144eb3c6f0a9",
+          "source_mp3_sha256": "bf1273790ab6e38c9ef82c7f1cf27ce6618f5dae673b065a8ce494552cb31196",
+          "splice_sha256": "32040449f08420fd9a34b36dbe3ca08188a67dc03d595c9702a5127a241c44e8"
+        },
+        {
+          "address": "G02/H072/S06",
+          "gate": 2,
+          "slot": 6,
+          "language": "COLOCRYPT/H072/S06",
+          "color_hue_id": 72,
+          "display_rgb": [
+            162,
+            218,
+            61
+          ],
+          "status_kind": "run",
+          "status_colour": "#246BFF",
+          "phase": "CARRY",
+          "bar_range_projection": [
+            "48/5",
+            "56/5"
+          ],
+          "bearing_slice": [
+            74,
+            86
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            9.6078,
+            10.9278
+          ],
+          "mean_frequency_hz": 2260.04,
+          "mean_strength_pcm": 8430.8333,
+          "language_opcode": "WINDOW_SHA256",
+          "opcode_result": "075f546a3e9bec15d5478d2e8c1d2fc4c06c86da1a69c2644b46f61d58f37fee",
+          "bearing_digest": "8dfae1c23573edabdbf4684f823d32609fbe5852341f2c4aefb67c071397a0e6",
+          "source_event_hash": "dfb5b1dbdd061cb22b38684a4a55ffeb0b450bc2d83b158c373d144eb3c6f0a9",
+          "source_mp3_sha256": "bf1273790ab6e38c9ef82c7f1cf27ce6618f5dae673b065a8ce494552cb31196",
+          "splice_sha256": "976932a4fd5ebc50a4506d4127bd6c27a6c7af41f14976affa1e2918d39e21a9"
+        },
+        {
+          "address": "G02/H072/S07",
+          "gate": 2,
+          "slot": 7,
+          "language": "COLOCRYPT/H072/S07",
+          "color_hue_id": 72,
+          "display_rgb": [
+            157,
+            215,
+            65
+          ],
+          "status_kind": "run",
+          "status_colour": "#246BFF",
+          "phase": "CARRY",
+          "bar_range_projection": [
+            "56/5",
+            "64/5"
+          ],
+          "bearing_slice": [
+            86,
+            99
+          ],
+          "bearing_count": 13,
+          "observed_time_range_seconds": [
+            11.0478,
+            12.4878
+          ],
+          "mean_frequency_hz": 1584.6415,
+          "mean_strength_pcm": 8448.9769,
+          "language_opcode": "PARENT_EVENT_HASH",
+          "opcode_result": "dfb5b1dbdd061cb22b38684a4a55ffeb0b450bc2d83b158c373d144eb3c6f0a9",
+          "bearing_digest": "309886ff6f69d58163478a16d650a8f51637b03d0846474b09618e9d50227ee8",
+          "source_event_hash": "dfb5b1dbdd061cb22b38684a4a55ffeb0b450bc2d83b158c373d144eb3c6f0a9",
+          "source_mp3_sha256": "bf1273790ab6e38c9ef82c7f1cf27ce6618f5dae673b065a8ce494552cb31196",
+          "splice_sha256": "e4b59a666549c983ebad68f9a2c1849db443fa8b7e26a8d5550f4caab5dc773c"
+        },
+        {
+          "address": "G02/H072/S08",
+          "gate": 2,
+          "slot": 8,
+          "language": "COLOCRYPT/H072/S08",
+          "color_hue_id": 72,
+          "display_rgb": [
+            152,
+            211,
+            68
+          ],
+          "status_kind": "run",
+          "status_colour": "#246BFF",
+          "phase": "CARRY",
+          "bar_range_projection": [
+            "64/5",
+            "72/5"
+          ],
+          "bearing_slice": [
+            99,
+            111
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            12.6078,
+            13.9278
+          ],
+          "mean_frequency_hz": 2398.3733,
+          "mean_strength_pcm": 8399.9667,
+          "language_opcode": "BEARING_COUNT",
+          "opcode_result": 12,
+          "bearing_digest": "eedfe143fd987aefc51f64ac81957361ab85ddc01ff7b06ae368c232a24e76bf",
+          "source_event_hash": "dfb5b1dbdd061cb22b38684a4a55ffeb0b450bc2d83b158c373d144eb3c6f0a9",
+          "source_mp3_sha256": "bf1273790ab6e38c9ef82c7f1cf27ce6618f5dae673b065a8ce494552cb31196",
+          "splice_sha256": "db0bc503e9fa224b5052bf2f189b6c9e56410ade472cc3d1164f4ddbe6a74093"
+        },
+        {
+          "address": "G02/H072/S09",
+          "gate": 2,
+          "slot": 9,
+          "language": "COLOCRYPT/H072/S09",
+          "color_hue_id": 72,
+          "display_rgb": [
+            148,
+            208,
+            72
+          ],
+          "status_kind": "run",
+          "status_colour": "#246BFF",
+          "phase": "CARRY",
+          "bar_range_projection": [
+            "72/5",
+            "16"
+          ],
+          "bearing_slice": [
+            111,
+            124
+          ],
+          "bearing_count": 13,
+          "observed_time_range_seconds": [
+            14.0478,
+            15.4877
+          ],
+          "mean_frequency_hz": 2073.8815,
+          "mean_strength_pcm": 8413.1231,
+          "language_opcode": "TIME_RANGE",
+          "opcode_result": [
+            14.0478,
+            15.4877
+          ],
+          "bearing_digest": "c08488adc893b67d2bac8d4d62776464bc2c00accff155eb53d1b365a65618e2",
+          "source_event_hash": "dfb5b1dbdd061cb22b38684a4a55ffeb0b450bc2d83b158c373d144eb3c6f0a9",
+          "source_mp3_sha256": "bf1273790ab6e38c9ef82c7f1cf27ce6618f5dae673b065a8ce494552cb31196",
+          "splice_sha256": "cfa4b011b2fc20b58c030e9db8d3d9f0a0d63cc6137f748d7ba6d0fb636421c9"
+        }
+      ],
+      "gate_sha256": "3b5e686f7c7028a1c16a3de3f8d3ca604eb51b887313843ba72945934cedaffc"
+    },
+    {
+      "gate": 3,
+      "address": "G03",
+      "hue": 108,
+      "source_event_hash": "29590423adca1cff3de00657b184b33d305aa656fc973f75efeed58922264597",
+      "source_mp3_sha256": "602202be150357dcedac85d9100d90f28acab67a5596dca994982b2ef7645300",
+      "language_phase": "CARRY",
+      "status_kind": "pending",
+      "sampled_audio_bearings": 124,
+      "splices": [
+        {
+          "address": "G03/H108/S00",
+          "gate": 3,
+          "slot": 0,
+          "language": "COLOCRYPT/H108/S00",
+          "color_hue_id": 108,
+          "display_rgb": [
+            75,
+            240,
+            34
+          ],
+          "status_kind": "pending",
+          "status_colour": "#FFE600",
+          "phase": "CARRY",
+          "bar_range_projection": [
+            "0",
+            "8/5"
+          ],
+          "bearing_slice": [
+            0,
+            12
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            0.728,
+            2.048
+          ],
+          "mean_frequency_hz": 2053.3683,
+          "mean_strength_pcm": 8427.4833,
+          "language_opcode": "MEAN_STRENGTH_PCM",
+          "opcode_result": 8427.4833,
+          "bearing_digest": "126a62d02677c472dff79ef9d90266ceac91de0dcc8b85e82b80fb4ad4c656ff",
+          "source_event_hash": "29590423adca1cff3de00657b184b33d305aa656fc973f75efeed58922264597",
+          "source_mp3_sha256": "602202be150357dcedac85d9100d90f28acab67a5596dca994982b2ef7645300",
+          "splice_sha256": "5a80d4c83d2ca90dfbf53cd0ea7c6906fff8b0f43ed1868a787dd070dbc4510f"
+        },
+        {
+          "address": "G03/H108/S01",
+          "gate": 3,
+          "slot": 1,
+          "language": "COLOCRYPT/H108/S01",
+          "color_hue_id": 108,
+          "display_rgb": [
+            73,
+            236,
+            38
+          ],
+          "status_kind": "pending",
+          "status_colour": "#FFE600",
+          "phase": "CARRY",
+          "bar_range_projection": [
+            "8/5",
+            "16/5"
+          ],
+          "bearing_slice": [
+            12,
+            24
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            2.168,
+            3.4879
+          ],
+          "mean_frequency_hz": 1476.6908,
+          "mean_strength_pcm": 8478.4917,
+          "language_opcode": "LANE_HISTOGRAM",
+          "opcode_result": [
+            9,
+            1,
+            2,
+            0
+          ],
+          "bearing_digest": "8997f2aba483540050346890376d4642921c42a519bc20c4c52288507c04a824",
+          "source_event_hash": "29590423adca1cff3de00657b184b33d305aa656fc973f75efeed58922264597",
+          "source_mp3_sha256": "602202be150357dcedac85d9100d90f28acab67a5596dca994982b2ef7645300",
+          "splice_sha256": "b8b1801cf1968239bb1b16cda94c66295f9baa2671a9ee7281f4f93d4ec80dc5"
+        },
+        {
+          "address": "G03/H108/S02",
+          "gate": 3,
+          "slot": 2,
+          "language": "COLOCRYPT/H108/S02",
+          "color_hue_id": 108,
+          "display_rgb": [
+            71,
+            233,
+            43
+          ],
+          "status_kind": "pending",
+          "status_colour": "#FFE600",
+          "phase": "CARRY",
+          "bar_range_projection": [
+            "16/5",
+            "24/5"
+          ],
+          "bearing_slice": [
+            24,
+            37
+          ],
+          "bearing_count": 13,
+          "observed_time_range_seconds": [
+            3.6079,
+            5.0479
+          ],
+          "mean_frequency_hz": 1604.6415,
+          "mean_strength_pcm": 8461.4692,
+          "language_opcode": "FREQUENCY_RANGE_HZ",
+          "opcode_result": [
+            1200.02,
+            2580.04
+          ],
+          "bearing_digest": "f81d47f219c46559dfd5fcf2da869100efb1a53be47a2d1fecebd032356e0e80",
+          "source_event_hash": "29590423adca1cff3de00657b184b33d305aa656fc973f75efeed58922264597",
+          "source_mp3_sha256": "602202be150357dcedac85d9100d90f28acab67a5596dca994982b2ef7645300",
+          "splice_sha256": "623eaa873fbb66eb0decc209f45edf57f82bce2d2613c06844700160a29c170d"
+        },
+        {
+          "address": "G03/H108/S03",
+          "gate": 3,
+          "slot": 3,
+          "language": "COLOCRYPT/H108/S03",
+          "color_hue_id": 108,
+          "display_rgb": [
+            70,
+            229,
+            48
+          ],
+          "status_kind": "pending",
+          "status_colour": "#FFE600",
+          "phase": "CARRY",
+          "bar_range_projection": [
+            "24/5",
+            "32/5"
+          ],
+          "bearing_slice": [
+            37,
+            49
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            5.1679,
+            6.4879
+          ],
+          "mean_frequency_hz": 2121.7025,
+          "mean_strength_pcm": 8430.05,
+          "language_opcode": "PEAK_BEARING_INDEX",
+          "opcode_result": 38,
+          "bearing_digest": "ebcbbf8e650c1057c10d7cf7ce94fb2c80c97d100ec3edfa63dde94065583ce1",
+          "source_event_hash": "29590423adca1cff3de00657b184b33d305aa656fc973f75efeed58922264597",
+          "source_mp3_sha256": "602202be150357dcedac85d9100d90f28acab67a5596dca994982b2ef7645300",
+          "splice_sha256": "3c7e49ac12471ffd56c33cfd8ab6cdff6b1860415154e53ed4e27f71dd6aa41f"
+        },
+        {
+          "address": "G03/H108/S04",
+          "gate": 3,
+          "slot": 4,
+          "language": "COLOCRYPT/H108/S04",
+          "color_hue_id": 108,
+          "display_rgb": [
+            68,
+            225,
+            52
+          ],
+          "status_kind": "pending",
+          "status_colour": "#FFE600",
+          "phase": "CARRY",
+          "bar_range_projection": [
+            "32/5",
+            "8"
+          ],
+          "bearing_slice": [
+            49,
+            62
+          ],
+          "bearing_count": 13,
+          "observed_time_range_seconds": [
+            6.6079,
+            8.0479
+          ],
+          "mean_frequency_hz": 2306.1923,
+          "mean_strength_pcm": 8408.1077,
+          "language_opcode": "RECEIVER_CLOCK_SCALE",
+          "opcode_result": 0.999983,
+          "bearing_digest": "1bf523ecb666143222f16758d555589c39adb83ded7c066d39f2a9ff51fa2f23",
+          "source_event_hash": "29590423adca1cff3de00657b184b33d305aa656fc973f75efeed58922264597",
+          "source_mp3_sha256": "602202be150357dcedac85d9100d90f28acab67a5596dca994982b2ef7645300",
+          "splice_sha256": "179fb45bb0697285ea73fa923a81794f2d67580a6c5f6ad22b08d2c61b85b2ad"
+        },
+        {
+          "address": "G03/H108/S05",
+          "gate": 3,
+          "slot": 5,
+          "language": "COLOCRYPT/H108/S05",
+          "color_hue_id": 108,
+          "display_rgb": [
+            68,
+            222,
+            57
+          ],
+          "status_kind": "pending",
+          "status_colour": "#FFE600",
+          "phase": "CARRY",
+          "bar_range_projection": [
+            "8",
+            "48/5"
+          ],
+          "bearing_slice": [
+            62,
+            74
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            8.1679,
+            9.4878
+          ],
+          "mean_frequency_hz": 2421.7092,
+          "mean_strength_pcm": 8409.7667,
+          "language_opcode": "WINDOW_SHA256",
+          "opcode_result": "094e1f9d901f6a3bfe4c61b21c6cada0d382009cc7739d42db38a33c5b7c20b6",
+          "bearing_digest": "c9812fecf58d2778c362347f4e8befb4761251ebf5e074c7b8739a77a6681bf2",
+          "source_event_hash": "29590423adca1cff3de00657b184b33d305aa656fc973f75efeed58922264597",
+          "source_mp3_sha256": "602202be150357dcedac85d9100d90f28acab67a5596dca994982b2ef7645300",
+          "splice_sha256": "964b667a531f0335e203cad8c407e651dbfe77eda83aebb6be7b54846580827c"
+        },
+        {
+          "address": "G03/H108/S06",
+          "gate": 3,
+          "slot": 6,
+          "language": "COLOCRYPT/H108/S06",
+          "color_hue_id": 108,
+          "display_rgb": [
+            67,
+            218,
+            61
+          ],
+          "status_kind": "pending",
+          "status_colour": "#FFE600",
+          "phase": "CARRY",
+          "bar_range_projection": [
+            "48/5",
+            "56/5"
+          ],
+          "bearing_slice": [
+            74,
+            86
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            9.6078,
+            10.9278
+          ],
+          "mean_frequency_hz": 2315.0392,
+          "mean_strength_pcm": 8447.7,
+          "language_opcode": "PARENT_EVENT_HASH",
+          "opcode_result": "29590423adca1cff3de00657b184b33d305aa656fc973f75efeed58922264597",
+          "bearing_digest": "ad1b4bbac8c9ceb588e5c5517bfc5ef2189ca1726f2c86767380e5bfc57436b6",
+          "source_event_hash": "29590423adca1cff3de00657b184b33d305aa656fc973f75efeed58922264597",
+          "source_mp3_sha256": "602202be150357dcedac85d9100d90f28acab67a5596dca994982b2ef7645300",
+          "splice_sha256": "a86796ebf354d623976ff33e8bae59fded9bd6fdf4e1b402ff76393a42c13dfd"
+        },
+        {
+          "address": "G03/H108/S07",
+          "gate": 3,
+          "slot": 7,
+          "language": "COLOCRYPT/H108/S07",
+          "color_hue_id": 108,
+          "display_rgb": [
+            67,
+            215,
+            65
+          ],
+          "status_kind": "pending",
+          "status_colour": "#FFE600",
+          "phase": "CARRY",
+          "bar_range_projection": [
+            "56/5",
+            "64/5"
+          ],
+          "bearing_slice": [
+            86,
+            99
+          ],
+          "bearing_count": 13,
+          "observed_time_range_seconds": [
+            11.0478,
+            12.4878
+          ],
+          "mean_frequency_hz": 2635.4308,
+          "mean_strength_pcm": 8401.5385,
+          "language_opcode": "BEARING_COUNT",
+          "opcode_result": 13,
+          "bearing_digest": "03fbf26cb3c0c1f11b540bcc03c5b3fe15cf38ebec8f2cba8bf91a0d693fbb29",
+          "source_event_hash": "29590423adca1cff3de00657b184b33d305aa656fc973f75efeed58922264597",
+          "source_mp3_sha256": "602202be150357dcedac85d9100d90f28acab67a5596dca994982b2ef7645300",
+          "splice_sha256": "00af9abba88d455100029eca9d731feb78f4425e71bd3759921acb87330ef628"
+        },
+        {
+          "address": "G03/H108/S08",
+          "gate": 3,
+          "slot": 8,
+          "language": "COLOCRYPT/H108/S08",
+          "color_hue_id": 108,
+          "display_rgb": [
+            68,
+            211,
+            70
+          ],
+          "status_kind": "pending",
+          "status_colour": "#FFE600",
+          "phase": "CARRY",
+          "bar_range_projection": [
+            "64/5",
+            "72/5"
+          ],
+          "bearing_slice": [
+            99,
+            111
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            12.6078,
+            13.9278
+          ],
+          "mean_frequency_hz": 2558.3775,
+          "mean_strength_pcm": 8414.4,
+          "language_opcode": "TIME_RANGE",
+          "opcode_result": [
+            12.6078,
+            13.9278
+          ],
+          "bearing_digest": "1fd19f78aa30f81c4fd7e3f07126437ec74fd0ccc91c78b5aeb38d2fd59fd2a5",
+          "source_event_hash": "29590423adca1cff3de00657b184b33d305aa656fc973f75efeed58922264597",
+          "source_mp3_sha256": "602202be150357dcedac85d9100d90f28acab67a5596dca994982b2ef7645300",
+          "splice_sha256": "0710b7c34cf0d460b837ca38137401bf2132df2e2351bb135528279f178766b6"
+        },
+        {
+          "address": "G03/H108/S09",
+          "gate": 3,
+          "slot": 9,
+          "language": "COLOCRYPT/H108/S09",
+          "color_hue_id": 108,
+          "display_rgb": [
+            72,
+            208,
+            77
+          ],
+          "status_kind": "pending",
+          "status_colour": "#FFE600",
+          "phase": "CARRY",
+          "bar_range_projection": [
+            "72/5",
+            "16"
+          ],
+          "bearing_slice": [
+            111,
+            124
+          ],
+          "bearing_count": 13,
+          "observed_time_range_seconds": [
+            14.0478,
+            15.4877
+          ],
+          "mean_frequency_hz": 2358.5015,
+          "mean_strength_pcm": 8420.3923,
+          "language_opcode": "MEAN_FREQUENCY_HZ",
+          "opcode_result": 2358.5015,
+          "bearing_digest": "85a29e7411c8f9827ed84dbd0dfd23e972ad0e565d8076cdfa0f9621b9614d6f",
+          "source_event_hash": "29590423adca1cff3de00657b184b33d305aa656fc973f75efeed58922264597",
+          "source_mp3_sha256": "602202be150357dcedac85d9100d90f28acab67a5596dca994982b2ef7645300",
+          "splice_sha256": "5fa5c880a1853b10185a155fc3c24a7674b6726822224c2b674e0a16aecfd2f1"
+        }
+      ],
+      "gate_sha256": "62025eafd415f47bc1c99a025080a4496771792e48207e90da76d4a21073089d"
+    },
+    {
+      "gate": 4,
+      "address": "G04",
+      "hue": 144,
+      "source_event_hash": "4857b4adb18f3a844649c52150185e1fc75d6cb45a27d214cc8c110e4ba2714e",
+      "source_mp3_sha256": "5b4f890dd766c524af0a231b2586e3228b7fa99226ceb677decb116d60e3f12f",
+      "language_phase": "CATCH",
+      "status_kind": "anomaly",
+      "sampled_audio_bearings": 124,
+      "splices": [
+        {
+          "address": "G04/H144/S00",
+          "gate": 4,
+          "slot": 0,
+          "language": "COLOCRYPT/H144/S00",
+          "color_hue_id": 144,
+          "display_rgb": [
+            34,
+            240,
+            116
+          ],
+          "status_kind": "anomaly",
+          "status_colour": "#FF8700",
+          "phase": "CATCH",
+          "bar_range_projection": [
+            "0",
+            "8/5"
+          ],
+          "bearing_slice": [
+            0,
+            12
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            0.728,
+            2.048
+          ],
+          "mean_frequency_hz": 2053.3683,
+          "mean_strength_pcm": 8427.4833,
+          "language_opcode": "LANE_HISTOGRAM",
+          "opcode_result": [
+            4,
+            4,
+            2,
+            2
+          ],
+          "bearing_digest": "126a62d02677c472dff79ef9d90266ceac91de0dcc8b85e82b80fb4ad4c656ff",
+          "source_event_hash": "4857b4adb18f3a844649c52150185e1fc75d6cb45a27d214cc8c110e4ba2714e",
+          "source_mp3_sha256": "5b4f890dd766c524af0a231b2586e3228b7fa99226ceb677decb116d60e3f12f",
+          "splice_sha256": "dbc1e378854324b6be5f93ceebe8c8392826ff262a1439332479a468ba3b01d5"
+        },
+        {
+          "address": "G04/H144/S01",
+          "gate": 4,
+          "slot": 1,
+          "language": "COLOCRYPT/H144/S01",
+          "color_hue_id": 144,
+          "display_rgb": [
+            38,
+            236,
+            123
+          ],
+          "status_kind": "anomaly",
+          "status_colour": "#FF8700",
+          "phase": "CATCH",
+          "bar_range_projection": [
+            "8/5",
+            "16/5"
+          ],
+          "bearing_slice": [
+            12,
+            24
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            2.168,
+            3.4879
+          ],
+          "mean_frequency_hz": 1476.6908,
+          "mean_strength_pcm": 8478.4917,
+          "language_opcode": "FREQUENCY_RANGE_HZ",
+          "opcode_result": [
+            1200.02,
+            2580.04
+          ],
+          "bearing_digest": "8997f2aba483540050346890376d4642921c42a519bc20c4c52288507c04a824",
+          "source_event_hash": "4857b4adb18f3a844649c52150185e1fc75d6cb45a27d214cc8c110e4ba2714e",
+          "source_mp3_sha256": "5b4f890dd766c524af0a231b2586e3228b7fa99226ceb677decb116d60e3f12f",
+          "splice_sha256": "abbc3687d4bde96d4c5aeeb3689b78ffdb83ed23a65cef895448bae474209f0e"
+        },
+        {
+          "address": "G04/H144/S02",
+          "gate": 4,
+          "slot": 2,
+          "language": "COLOCRYPT/H144/S02",
+          "color_hue_id": 144,
+          "display_rgb": [
+            43,
+            233,
+            129
+          ],
+          "status_kind": "anomaly",
+          "status_colour": "#FF8700",
+          "phase": "CATCH",
+          "bar_range_projection": [
+            "16/5",
+            "24/5"
+          ],
+          "bearing_slice": [
+            24,
+            37
+          ],
+          "bearing_count": 13,
+          "observed_time_range_seconds": [
+            3.6079,
+            5.0479
+          ],
+          "mean_frequency_hz": 1647.7192,
+          "mean_strength_pcm": 8450.6923,
+          "language_opcode": "PEAK_BEARING_INDEX",
+          "opcode_result": 32,
+          "bearing_digest": "9f3479bb89943309db6f00da63ee271d7440dfb7b3dc590870e3c051eb0f4d71",
+          "source_event_hash": "4857b4adb18f3a844649c52150185e1fc75d6cb45a27d214cc8c110e4ba2714e",
+          "source_mp3_sha256": "5b4f890dd766c524af0a231b2586e3228b7fa99226ceb677decb116d60e3f12f",
+          "splice_sha256": "85707b1295f45478918c72895fb2b70d4cc84a9cfffedf7f98075749e05f0cf7"
+        },
+        {
+          "address": "G04/H144/S03",
+          "gate": 4,
+          "slot": 3,
+          "language": "COLOCRYPT/H144/S03",
+          "color_hue_id": 144,
+          "display_rgb": [
+            48,
+            229,
+            135
+          ],
+          "status_kind": "anomaly",
+          "status_colour": "#FF8700",
+          "phase": "CATCH",
+          "bar_range_projection": [
+            "24/5",
+            "32/5"
+          ],
+          "bearing_slice": [
+            37,
+            49
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            5.1679,
+            6.4879
+          ],
+          "mean_frequency_hz": 2260.04,
+          "mean_strength_pcm": 8430.6,
+          "language_opcode": "RECEIVER_CLOCK_SCALE",
+          "opcode_result": 0.999983,
+          "bearing_digest": "5ad930361acb5c05f8aa3f3c31ac4d31cd604ba659004f12bd3d2d41c72b6ea8",
+          "source_event_hash": "4857b4adb18f3a844649c52150185e1fc75d6cb45a27d214cc8c110e4ba2714e",
+          "source_mp3_sha256": "5b4f890dd766c524af0a231b2586e3228b7fa99226ceb677decb116d60e3f12f",
+          "splice_sha256": "1da45f8d2c963186a3ffcd02ef00090bed602ff99be5fb80a028def4a1526808"
+        },
+        {
+          "address": "G04/H144/S04",
+          "gate": 4,
+          "slot": 4,
+          "language": "COLOCRYPT/H144/S04",
+          "color_hue_id": 144,
+          "display_rgb": [
+            52,
+            225,
+            140
+          ],
+          "status_kind": "anomaly",
+          "status_colour": "#FF8700",
+          "phase": "CATCH",
+          "bar_range_projection": [
+            "32/5",
+            "8"
+          ],
+          "bearing_slice": [
+            49,
+            62
+          ],
+          "bearing_count": 13,
+          "observed_time_range_seconds": [
+            6.6079,
+            8.0479
+          ],
+          "mean_frequency_hz": 2264.6554,
+          "mean_strength_pcm": 8415.2154,
+          "language_opcode": "WINDOW_SHA256",
+          "opcode_result": "b26638f220a7ffce8c39c066b21a70738b617be2b16db3c28afa0947d51b3bc9",
+          "bearing_digest": "53b3f68472d409a5aeecfe02b04294401cad85bc3a3dceba138d65f7e14901ae",
+          "source_event_hash": "4857b4adb18f3a844649c52150185e1fc75d6cb45a27d214cc8c110e4ba2714e",
+          "source_mp3_sha256": "5b4f890dd766c524af0a231b2586e3228b7fa99226ceb677decb116d60e3f12f",
+          "splice_sha256": "7cf81004a719fe7df3dfb72f41d92eda64f421438722ba61f04ce84d47bdc581"
+        },
+        {
+          "address": "G04/H144/S05",
+          "gate": 4,
+          "slot": 5,
+          "language": "COLOCRYPT/H144/S05",
+          "color_hue_id": 144,
+          "display_rgb": [
+            57,
+            222,
+            145
+          ],
+          "status_kind": "anomaly",
+          "status_colour": "#FF8700",
+          "phase": "CATCH",
+          "bar_range_projection": [
+            "8",
+            "48/5"
+          ],
+          "bearing_slice": [
+            62,
+            74
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            8.1679,
+            9.4878
+          ],
+          "mean_frequency_hz": 2776.715,
+          "mean_strength_pcm": 8406.3167,
+          "language_opcode": "PARENT_EVENT_HASH",
+          "opcode_result": "4857b4adb18f3a844649c52150185e1fc75d6cb45a27d214cc8c110e4ba2714e",
+          "bearing_digest": "a3fae9743d42adcc41e16ded0fc801cc57ec36f673d62d993ccc18ce128942b2",
+          "source_event_hash": "4857b4adb18f3a844649c52150185e1fc75d6cb45a27d214cc8c110e4ba2714e",
+          "source_mp3_sha256": "5b4f890dd766c524af0a231b2586e3228b7fa99226ceb677decb116d60e3f12f",
+          "splice_sha256": "f7a5a9e7ac96837ce160038a4175c1478e72f33fc071f9549557701350aa4d58"
+        },
+        {
+          "address": "G04/H144/S06",
+          "gate": 4,
+          "slot": 6,
+          "language": "COLOCRYPT/H144/S06",
+          "color_hue_id": 144,
+          "display_rgb": [
+            61,
+            218,
+            149
+          ],
+          "status_kind": "anomaly",
+          "status_colour": "#FF8700",
+          "phase": "CATCH",
+          "bar_range_projection": [
+            "48/5",
+            "56/5"
+          ],
+          "bearing_slice": [
+            74,
+            86
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            9.6078,
+            10.9278
+          ],
+          "mean_frequency_hz": 2328.3742,
+          "mean_strength_pcm": 8433.05,
+          "language_opcode": "BEARING_COUNT",
+          "opcode_result": 12,
+          "bearing_digest": "496b5cf93e85badfedf5f12f88fad42f1c3612b41902818a9c28caa2bab0f84f",
+          "source_event_hash": "4857b4adb18f3a844649c52150185e1fc75d6cb45a27d214cc8c110e4ba2714e",
+          "source_mp3_sha256": "5b4f890dd766c524af0a231b2586e3228b7fa99226ceb677decb116d60e3f12f",
+          "splice_sha256": "0b06b4db646cfa5ff5064a064358bef971b7adab9ad635074795b5f3f0b380b2"
+        },
+        {
+          "address": "G04/H144/S07",
+          "gate": 4,
+          "slot": 7,
+          "language": "COLOCRYPT/H144/S07",
+          "color_hue_id": 144,
+          "display_rgb": [
+            65,
+            215,
+            153
+          ],
+          "status_kind": "anomaly",
+          "status_colour": "#FF8700",
+          "phase": "CATCH",
+          "bar_range_projection": [
+            "56/5",
+            "64/5"
+          ],
+          "bearing_slice": [
+            86,
+            99
+          ],
+          "bearing_count": 13,
+          "observed_time_range_seconds": [
+            11.0478,
+            12.4878
+          ],
+          "mean_frequency_hz": 2073.8815,
+          "mean_strength_pcm": 8412.8538,
+          "language_opcode": "TIME_RANGE",
+          "opcode_result": [
+            11.0478,
+            12.4878
+          ],
+          "bearing_digest": "7997af05f79e637a1b879309dcb1710cb3709bbe2c6c3c3becb6564289034e26",
+          "source_event_hash": "4857b4adb18f3a844649c52150185e1fc75d6cb45a27d214cc8c110e4ba2714e",
+          "source_mp3_sha256": "5b4f890dd766c524af0a231b2586e3228b7fa99226ceb677decb116d60e3f12f",
+          "splice_sha256": "651e592adbc5e4ed3a2494c689539576200bcf605dae0f0d92024ae0fe193870"
+        },
+        {
+          "address": "G04/H144/S08",
+          "gate": 4,
+          "slot": 8,
+          "language": "COLOCRYPT/H144/S08",
+          "color_hue_id": 144,
+          "display_rgb": [
+            68,
+            211,
+            156
+          ],
+          "status_kind": "anomaly",
+          "status_colour": "#FF8700",
+          "phase": "CATCH",
+          "bar_range_projection": [
+            "64/5",
+            "72/5"
+          ],
+          "bearing_slice": [
+            99,
+            111
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            12.6078,
+            13.9278
+          ],
+          "mean_frequency_hz": 2075.035,
+          "mean_strength_pcm": 8441.8917,
+          "language_opcode": "MEAN_FREQUENCY_HZ",
+          "opcode_result": 2075.035,
+          "bearing_digest": "84ae48967ecc744eb270fb0d2b0a47b10b87f56c1ee24a4ee5c89c14a05eff16",
+          "source_event_hash": "4857b4adb18f3a844649c52150185e1fc75d6cb45a27d214cc8c110e4ba2714e",
+          "source_mp3_sha256": "5b4f890dd766c524af0a231b2586e3228b7fa99226ceb677decb116d60e3f12f",
+          "splice_sha256": "25291bdb8f9d1f3452c3618977609cf22aefa6181bb39d8a484c36d66e338d60"
+        },
+        {
+          "address": "G04/H144/S09",
+          "gate": 4,
+          "slot": 9,
+          "language": "COLOCRYPT/H144/S09",
+          "color_hue_id": 144,
+          "display_rgb": [
+            72,
+            208,
+            159
+          ],
+          "status_kind": "anomaly",
+          "status_colour": "#FF8700",
+          "phase": "CATCH",
+          "bar_range_projection": [
+            "72/5",
+            "16"
+          ],
+          "bearing_slice": [
+            111,
+            124
+          ],
+          "bearing_count": 13,
+          "observed_time_range_seconds": [
+            14.0478,
+            15.4877
+          ],
+          "mean_frequency_hz": 2146.1908,
+          "mean_strength_pcm": 8437.7692,
+          "language_opcode": "MEAN_STRENGTH_PCM",
+          "opcode_result": 8437.7692,
+          "bearing_digest": "856f3fd8fc232c1591832188634a38e251229ef9599ca5e89726792a9f30279b",
+          "source_event_hash": "4857b4adb18f3a844649c52150185e1fc75d6cb45a27d214cc8c110e4ba2714e",
+          "source_mp3_sha256": "5b4f890dd766c524af0a231b2586e3228b7fa99226ceb677decb116d60e3f12f",
+          "splice_sha256": "b646e305f0509f58be390be206a12c84dd21c61a47fbf70a3b85ef6ca86a412b"
+        }
+      ],
+      "gate_sha256": "b5af56359fd53e38d200d111e9f770b8a98ee528a9b88f121b8402e1f8127be9"
+    },
+    {
+      "gate": 5,
+      "address": "G05",
+      "hue": 180,
+      "source_event_hash": "0e767d725286d82b37bdd9cd57db84ceedbdb9ce0f0cc32a701e334736f108d5",
+      "source_mp3_sha256": "0b342dcee942c6406412c5a17461883e0b5a69aac297447ada6e08c46d50fa4c",
+      "language_phase": "CATCH",
+      "status_kind": "failure",
+      "sampled_audio_bearings": 124,
+      "splices": [
+        {
+          "address": "G05/H180/S00",
+          "gate": 5,
+          "slot": 0,
+          "language": "COLOCRYPT/H180/S00",
+          "color_hue_id": 180,
+          "display_rgb": [
+            34,
+            240,
+            240
+          ],
+          "status_kind": "failure",
+          "status_colour": "#FF1744",
+          "phase": "CATCH",
+          "bar_range_projection": [
+            "0",
+            "8/5"
+          ],
+          "bearing_slice": [
+            0,
+            12
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            0.728,
+            2.048
+          ],
+          "mean_frequency_hz": 2053.3683,
+          "mean_strength_pcm": 8427.4833,
+          "language_opcode": "FREQUENCY_RANGE_HZ",
+          "opcode_result": [
+            1200.02,
+            3820.07
+          ],
+          "bearing_digest": "126a62d02677c472dff79ef9d90266ceac91de0dcc8b85e82b80fb4ad4c656ff",
+          "source_event_hash": "0e767d725286d82b37bdd9cd57db84ceedbdb9ce0f0cc32a701e334736f108d5",
+          "source_mp3_sha256": "0b342dcee942c6406412c5a17461883e0b5a69aac297447ada6e08c46d50fa4c",
+          "splice_sha256": "3d57f80cebf2f034fed2c34b15f65aba5504da28827bf5164d1d64af5c987174"
+        },
+        {
+          "address": "G05/H180/S01",
+          "gate": 5,
+          "slot": 1,
+          "language": "COLOCRYPT/H180/S01",
+          "color_hue_id": 180,
+          "display_rgb": [
+            38,
+            231,
+            236
+          ],
+          "status_kind": "failure",
+          "status_colour": "#FF1744",
+          "phase": "CATCH",
+          "bar_range_projection": [
+            "8/5",
+            "16/5"
+          ],
+          "bearing_slice": [
+            12,
+            24
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            2.168,
+            3.4879
+          ],
+          "mean_frequency_hz": 1476.6908,
+          "mean_strength_pcm": 8478.4917,
+          "language_opcode": "PEAK_BEARING_INDEX",
+          "opcode_result": 14,
+          "bearing_digest": "8997f2aba483540050346890376d4642921c42a519bc20c4c52288507c04a824",
+          "source_event_hash": "0e767d725286d82b37bdd9cd57db84ceedbdb9ce0f0cc32a701e334736f108d5",
+          "source_mp3_sha256": "0b342dcee942c6406412c5a17461883e0b5a69aac297447ada6e08c46d50fa4c",
+          "splice_sha256": "a280fd2399bf161735a6d37e1afc6a123f37376dc1bac091306b414bb0efe3b8"
+        },
+        {
+          "address": "G05/H180/S02",
+          "gate": 5,
+          "slot": 2,
+          "language": "COLOCRYPT/H180/S02",
+          "color_hue_id": 180,
+          "display_rgb": [
+            43,
+            222,
+            233
+          ],
+          "status_kind": "failure",
+          "status_colour": "#FF1744",
+          "phase": "CATCH",
+          "bar_range_projection": [
+            "16/5",
+            "24/5"
+          ],
+          "bearing_slice": [
+            24,
+            37
+          ],
+          "bearing_count": 13,
+          "observed_time_range_seconds": [
+            3.6079,
+            5.0479
+          ],
+          "mean_frequency_hz": 1753.8746,
+          "mean_strength_pcm": 8442.0615,
+          "language_opcode": "RECEIVER_CLOCK_SCALE",
+          "opcode_result": 0.999983,
+          "bearing_digest": "6b4eeaa5a09bda1c63ea626e5acf4a089cf1872ac7ec7c3e340e130be6d53335",
+          "source_event_hash": "0e767d725286d82b37bdd9cd57db84ceedbdb9ce0f0cc32a701e334736f108d5",
+          "source_mp3_sha256": "0b342dcee942c6406412c5a17461883e0b5a69aac297447ada6e08c46d50fa4c",
+          "splice_sha256": "7f80717ce71963c1768645d3b5948dfcd29fa4e7a7b435e02949beffb897b580"
+        },
+        {
+          "address": "G05/H180/S03",
+          "gate": 5,
+          "slot": 3,
+          "language": "COLOCRYPT/H180/S03",
+          "color_hue_id": 180,
+          "display_rgb": [
+            48,
+            214,
+            229
+          ],
+          "status_kind": "failure",
+          "status_colour": "#FF1744",
+          "phase": "CATCH",
+          "bar_range_projection": [
+            "24/5",
+            "32/5"
+          ],
+          "bearing_slice": [
+            37,
+            49
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            5.1679,
+            6.4879
+          ],
+          "mean_frequency_hz": 2075.035,
+          "mean_strength_pcm": 8441.7,
+          "language_opcode": "WINDOW_SHA256",
+          "opcode_result": "55d922bd4c3f014e2fcf57036f88009b96e6d2f5d85edcad8e8d3a7529501c20",
+          "bearing_digest": "94912cf498666a190bc90e901d616c355aa56805c7f8aa20ca3c0956b3f319b3",
+          "source_event_hash": "0e767d725286d82b37bdd9cd57db84ceedbdb9ce0f0cc32a701e334736f108d5",
+          "source_mp3_sha256": "0b342dcee942c6406412c5a17461883e0b5a69aac297447ada6e08c46d50fa4c",
+          "splice_sha256": "bdbeba1cc0d4a5328a521935b4387ada5bac70560b00de226b4e549da8421fa5"
+        },
+        {
+          "address": "G05/H180/S04",
+          "gate": 5,
+          "slot": 4,
+          "language": "COLOCRYPT/H180/S04",
+          "color_hue_id": 180,
+          "display_rgb": [
+            52,
+            207,
+            225
+          ],
+          "status_kind": "failure",
+          "status_colour": "#FF1744",
+          "phase": "CATCH",
+          "bar_range_projection": [
+            "32/5",
+            "8"
+          ],
+          "bearing_slice": [
+            49,
+            62
+          ],
+          "bearing_count": 13,
+          "observed_time_range_seconds": [
+            6.6079,
+            8.0479
+          ],
+          "mean_frequency_hz": 2367.7331,
+          "mean_strength_pcm": 8442.9846,
+          "language_opcode": "PARENT_EVENT_HASH",
+          "opcode_result": "0e767d725286d82b37bdd9cd57db84ceedbdb9ce0f0cc32a701e334736f108d5",
+          "bearing_digest": "9892133e127cbf904448d9d1e6cfcb24fc26257b81fa4aa8455640c91c13e634",
+          "source_event_hash": "0e767d725286d82b37bdd9cd57db84ceedbdb9ce0f0cc32a701e334736f108d5",
+          "source_mp3_sha256": "0b342dcee942c6406412c5a17461883e0b5a69aac297447ada6e08c46d50fa4c",
+          "splice_sha256": "2782c8f49b0aafa1e291ed88c3994f368d46b7b222ff1575115e0c8f02615ed1"
+        },
+        {
+          "address": "G05/H180/S05",
+          "gate": 5,
+          "slot": 5,
+          "language": "COLOCRYPT/H180/S05",
+          "color_hue_id": 180,
+          "display_rgb": [
+            57,
+            200,
+            222
+          ],
+          "status_kind": "failure",
+          "status_colour": "#FF1744",
+          "phase": "CATCH",
+          "bar_range_projection": [
+            "8",
+            "48/5"
+          ],
+          "bearing_slice": [
+            62,
+            74
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            8.1679,
+            9.4878
+          ],
+          "mean_frequency_hz": 2006.7008,
+          "mean_strength_pcm": 8439.5333,
+          "language_opcode": "BEARING_COUNT",
+          "opcode_result": 12,
+          "bearing_digest": "3c5fefafb73f552d9b97bc0e3e2633bba0db501926f94538b9f7d9c1817b81b1",
+          "source_event_hash": "0e767d725286d82b37bdd9cd57db84ceedbdb9ce0f0cc32a701e334736f108d5",
+          "source_mp3_sha256": "0b342dcee942c6406412c5a17461883e0b5a69aac297447ada6e08c46d50fa4c",
+          "splice_sha256": "ed8c1707dabda0f79a13f2eaa7e400ce60ce418de49e445d2f4f4130c8df22b3"
+        },
+        {
+          "address": "G05/H180/S06",
+          "gate": 5,
+          "slot": 6,
+          "language": "COLOCRYPT/H180/S06",
+          "color_hue_id": 180,
+          "display_rgb": [
+            61,
+            193,
+            218
+          ],
+          "status_kind": "failure",
+          "status_colour": "#FF1744",
+          "phase": "CATCH",
+          "bar_range_projection": [
+            "48/5",
+            "56/5"
+          ],
+          "bearing_slice": [
+            74,
+            86
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            9.6078,
+            10.9278
+          ],
+          "mean_frequency_hz": 2143.3692,
+          "mean_strength_pcm": 8444.0333,
+          "language_opcode": "TIME_RANGE",
+          "opcode_result": [
+            9.6078,
+            10.9278
+          ],
+          "bearing_digest": "a724cde05911c11c3640ee655a512e768a17735652f695a12ce89bf68ec090e4",
+          "source_event_hash": "0e767d725286d82b37bdd9cd57db84ceedbdb9ce0f0cc32a701e334736f108d5",
+          "source_mp3_sha256": "0b342dcee942c6406412c5a17461883e0b5a69aac297447ada6e08c46d50fa4c",
+          "splice_sha256": "d1c3232201b42e22d2f103a7d1da62e26e8d9346247f83c801032cdc93dcff81"
+        },
+        {
+          "address": "G05/H180/S07",
+          "gate": 5,
+          "slot": 7,
+          "language": "COLOCRYPT/H180/S07",
+          "color_hue_id": 180,
+          "display_rgb": [
+            65,
+            187,
+            215
+          ],
+          "status_kind": "failure",
+          "status_colour": "#FF1744",
+          "phase": "CATCH",
+          "bar_range_projection": [
+            "56/5",
+            "64/5"
+          ],
+          "bearing_slice": [
+            86,
+            99
+          ],
+          "bearing_count": 13,
+          "observed_time_range_seconds": [
+            11.0478,
+            12.4878
+          ],
+          "mean_frequency_hz": 2421.5792,
+          "mean_strength_pcm": 8422.3,
+          "language_opcode": "MEAN_FREQUENCY_HZ",
+          "opcode_result": 2421.5792,
+          "bearing_digest": "11924a0c952b09682cc2220bf7ff136bf1db8c9f4fdde046a446897a9fc557de",
+          "source_event_hash": "0e767d725286d82b37bdd9cd57db84ceedbdb9ce0f0cc32a701e334736f108d5",
+          "source_mp3_sha256": "0b342dcee942c6406412c5a17461883e0b5a69aac297447ada6e08c46d50fa4c",
+          "splice_sha256": "f1b383b782f21bc773b1d953f2815553cf744d49a12fca8df9bd3b2fa03106a5"
+        },
+        {
+          "address": "G05/H180/S08",
+          "gate": 5,
+          "slot": 8,
+          "language": "COLOCRYPT/H180/S08",
+          "color_hue_id": 180,
+          "display_rgb": [
+            68,
+            181,
+            211
+          ],
+          "status_kind": "failure",
+          "status_colour": "#FF1744",
+          "phase": "CATCH",
+          "bar_range_projection": [
+            "64/5",
+            "72/5"
+          ],
+          "bearing_slice": [
+            99,
+            111
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            12.6078,
+            13.9278
+          ],
+          "mean_frequency_hz": 2143.3692,
+          "mean_strength_pcm": 8444.0667,
+          "language_opcode": "MEAN_STRENGTH_PCM",
+          "opcode_result": 8444.0667,
+          "bearing_digest": "72992755d79740e1a2d4920db010f21a633a17ec76665cd441c9377cf56908e9",
+          "source_event_hash": "0e767d725286d82b37bdd9cd57db84ceedbdb9ce0f0cc32a701e334736f108d5",
+          "source_mp3_sha256": "0b342dcee942c6406412c5a17461883e0b5a69aac297447ada6e08c46d50fa4c",
+          "splice_sha256": "11bc2f1cd46c685c853d1b6abb66538b318484a802460f021dfb7b92d4d7cbf9"
+        },
+        {
+          "address": "G05/H180/S09",
+          "gate": 5,
+          "slot": 9,
+          "language": "COLOCRYPT/H180/S09",
+          "color_hue_id": 180,
+          "display_rgb": [
+            72,
+            175,
+            208
+          ],
+          "status_kind": "failure",
+          "status_colour": "#FF1744",
+          "phase": "CATCH",
+          "bar_range_projection": [
+            "72/5",
+            "16"
+          ],
+          "bearing_slice": [
+            111,
+            124
+          ],
+          "bearing_count": 13,
+          "observed_time_range_seconds": [
+            14.0478,
+            15.4877
+          ],
+          "mean_frequency_hz": 2761.5862,
+          "mean_strength_pcm": 8405.7,
+          "language_opcode": "LANE_HISTOGRAM",
+          "opcode_result": [
+            1,
+            3,
+            4,
+            5
+          ],
+          "bearing_digest": "c20dd8833435989d5cbfd04d3dedd9f9caa418c884ffa14dd7b2edfecfa72588",
+          "source_event_hash": "0e767d725286d82b37bdd9cd57db84ceedbdb9ce0f0cc32a701e334736f108d5",
+          "source_mp3_sha256": "0b342dcee942c6406412c5a17461883e0b5a69aac297447ada6e08c46d50fa4c",
+          "splice_sha256": "ac20b34840c6c6bc8e283baf48007730df10ce504d84ee1397564b41e182450c"
+        }
+      ],
+      "gate_sha256": "c0650a2f2ab19e41532c2ae81a8fd95a9baad4bec62336203cdb04aa01ddf4e7"
+    },
+    {
+      "gate": 6,
+      "address": "G06",
+      "hue": 216,
+      "source_event_hash": "0527faead0ea5499e11c1379ccf5755cb46745503e5694d171b43901c5a82551",
+      "source_mp3_sha256": "bee881066527f99347914f34d716b1b85d99839b7ed70e7708589b838fb1bdc8",
+      "language_phase": "CATCH",
+      "status_kind": "recurrence",
+      "sampled_audio_bearings": 124,
+      "splices": [
+        {
+          "address": "G06/H216/S00",
+          "gate": 6,
+          "slot": 0,
+          "language": "COLOCRYPT/H216/S00",
+          "color_hue_id": 216,
+          "display_rgb": [
+            34,
+            116,
+            240
+          ],
+          "status_kind": "recurrence",
+          "status_colour": "#FF35AD",
+          "phase": "CATCH",
+          "bar_range_projection": [
+            "0",
+            "8/5"
+          ],
+          "bearing_slice": [
+            0,
+            12
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            0.728,
+            2.048
+          ],
+          "mean_frequency_hz": 2053.3683,
+          "mean_strength_pcm": 8427.4833,
+          "language_opcode": "PEAK_BEARING_INDEX",
+          "opcode_result": 1,
+          "bearing_digest": "126a62d02677c472dff79ef9d90266ceac91de0dcc8b85e82b80fb4ad4c656ff",
+          "source_event_hash": "0527faead0ea5499e11c1379ccf5755cb46745503e5694d171b43901c5a82551",
+          "source_mp3_sha256": "bee881066527f99347914f34d716b1b85d99839b7ed70e7708589b838fb1bdc8",
+          "splice_sha256": "c70256610f14c87b25bee8e98b533948ad60ebce5db455bcd4181080d20aac77"
+        },
+        {
+          "address": "G06/H216/S01",
+          "gate": 6,
+          "slot": 1,
+          "language": "COLOCRYPT/H216/S01",
+          "color_hue_id": 216,
+          "display_rgb": [
+            38,
+            112,
+            236
+          ],
+          "status_kind": "recurrence",
+          "status_colour": "#FF35AD",
+          "phase": "CATCH",
+          "bar_range_projection": [
+            "8/5",
+            "16/5"
+          ],
+          "bearing_slice": [
+            12,
+            24
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            2.168,
+            3.4879
+          ],
+          "mean_frequency_hz": 1476.6908,
+          "mean_strength_pcm": 8478.4917,
+          "language_opcode": "RECEIVER_CLOCK_SCALE",
+          "opcode_result": 0.999983,
+          "bearing_digest": "8997f2aba483540050346890376d4642921c42a519bc20c4c52288507c04a824",
+          "source_event_hash": "0527faead0ea5499e11c1379ccf5755cb46745503e5694d171b43901c5a82551",
+          "source_mp3_sha256": "bee881066527f99347914f34d716b1b85d99839b7ed70e7708589b838fb1bdc8",
+          "splice_sha256": "8fa98de688582c8ac46c0e4a11e761e0a28a96bc3c5258f6acf335a140dee533"
+        },
+        {
+          "address": "G06/H216/S02",
+          "gate": 6,
+          "slot": 2,
+          "language": "COLOCRYPT/H216/S02",
+          "color_hue_id": 216,
+          "display_rgb": [
+            43,
+            109,
+            233
+          ],
+          "status_kind": "recurrence",
+          "status_colour": "#FF35AD",
+          "phase": "CATCH",
+          "bar_range_projection": [
+            "16/5",
+            "24/5"
+          ],
+          "bearing_slice": [
+            24,
+            37
+          ],
+          "bearing_count": 13,
+          "observed_time_range_seconds": [
+            3.6079,
+            5.0479
+          ],
+          "mean_frequency_hz": 1849.2615,
+          "mean_strength_pcm": 8443.3769,
+          "language_opcode": "WINDOW_SHA256",
+          "opcode_result": "bcc9826f15ade961ddb64aa31546d9097c6cfb47856bcad7c2411f8c9204b718",
+          "bearing_digest": "947f29b21cc58a11f06528aa56618b0226d1438b85026cccf79df00c31c0c7b6",
+          "source_event_hash": "0527faead0ea5499e11c1379ccf5755cb46745503e5694d171b43901c5a82551",
+          "source_mp3_sha256": "bee881066527f99347914f34d716b1b85d99839b7ed70e7708589b838fb1bdc8",
+          "splice_sha256": "43c394b4ffe5e30ee7e1a1b3ebe23ee6655edecb04aed0894592d2f82e13bdc2"
+        },
+        {
+          "address": "G06/H216/S03",
+          "gate": 6,
+          "slot": 3,
+          "language": "COLOCRYPT/H216/S03",
+          "color_hue_id": 216,
+          "display_rgb": [
+            48,
+            106,
+            229
+          ],
+          "status_kind": "recurrence",
+          "status_colour": "#FF35AD",
+          "phase": "CATCH",
+          "bar_range_projection": [
+            "24/5",
+            "32/5"
+          ],
+          "bearing_slice": [
+            37,
+            49
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            5.1679,
+            6.4879
+          ],
+          "mean_frequency_hz": 2246.705,
+          "mean_strength_pcm": 8445.425,
+          "language_opcode": "PARENT_EVENT_HASH",
+          "opcode_result": "0527faead0ea5499e11c1379ccf5755cb46745503e5694d171b43901c5a82551",
+          "bearing_digest": "598823b2572ae02e83a259617e0fdd75164dbc2434fa399b043ff02c9f4f6117",
+          "source_event_hash": "0527faead0ea5499e11c1379ccf5755cb46745503e5694d171b43901c5a82551",
+          "source_mp3_sha256": "bee881066527f99347914f34d716b1b85d99839b7ed70e7708589b838fb1bdc8",
+          "splice_sha256": "e04e6e6a3c86364a0256f1193dbe6fe5eae2bea296306cfd468e35b0b504c9f2"
+        },
+        {
+          "address": "G06/H216/S04",
+          "gate": 6,
+          "slot": 4,
+          "language": "COLOCRYPT/H216/S04",
+          "color_hue_id": 216,
+          "display_rgb": [
+            52,
+            103,
+            225
+          ],
+          "status_kind": "recurrence",
+          "status_colour": "#FF35AD",
+          "phase": "CATCH",
+          "bar_range_projection": [
+            "32/5",
+            "8"
+          ],
+          "bearing_slice": [
+            49,
+            62
+          ],
+          "bearing_count": 13,
+          "observed_time_range_seconds": [
+            6.6079,
+            8.0479
+          ],
+          "mean_frequency_hz": 2560.0438,
+          "mean_strength_pcm": 8412.8308,
+          "language_opcode": "BEARING_COUNT",
+          "opcode_result": 13,
+          "bearing_digest": "f7002231f49f1229a5bf6efedbd4e46909f73115597fa08c859a94b8a7a965cc",
+          "source_event_hash": "0527faead0ea5499e11c1379ccf5755cb46745503e5694d171b43901c5a82551",
+          "source_mp3_sha256": "bee881066527f99347914f34d716b1b85d99839b7ed70e7708589b838fb1bdc8",
+          "splice_sha256": "6606715f85993348083f5f440c101852f417ade688d1fb600a32ba22cc8c4881"
+        },
+        {
+          "address": "G06/H216/S05",
+          "gate": 6,
+          "slot": 5,
+          "language": "COLOCRYPT/H216/S05",
+          "color_hue_id": 216,
+          "display_rgb": [
+            57,
+            101,
+            222
+          ],
+          "status_kind": "recurrence",
+          "status_colour": "#FF35AD",
+          "phase": "CATCH",
+          "bar_range_projection": [
+            "8",
+            "48/5"
+          ],
+          "bearing_slice": [
+            62,
+            74
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            8.1679,
+            9.4878
+          ],
+          "mean_frequency_hz": 2293.3725,
+          "mean_strength_pcm": 8433.8333,
+          "language_opcode": "TIME_RANGE",
+          "opcode_result": [
+            8.1679,
+            9.4878
+          ],
+          "bearing_digest": "09edbb8dc4da39cda9c2713c153c3a8e86557a215e25464dcf869496dd0f38c0",
+          "source_event_hash": "0527faead0ea5499e11c1379ccf5755cb46745503e5694d171b43901c5a82551",
+          "source_mp3_sha256": "bee881066527f99347914f34d716b1b85d99839b7ed70e7708589b838fb1bdc8",
+          "splice_sha256": "82d358f4d619b8381c0b06414783c4cb167f06154838df8f0d8da73eb318c11b"
+        },
+        {
+          "address": "G06/H216/S06",
+          "gate": 6,
+          "slot": 6,
+          "language": "COLOCRYPT/H216/S06",
+          "color_hue_id": 216,
+          "display_rgb": [
+            61,
+            99,
+            218
+          ],
+          "status_kind": "recurrence",
+          "status_colour": "#FF35AD",
+          "phase": "CATCH",
+          "bar_range_projection": [
+            "48/5",
+            "56/5"
+          ],
+          "bearing_slice": [
+            74,
+            86
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            9.6078,
+            10.9278
+          ],
+          "mean_frequency_hz": 3120.055,
+          "mean_strength_pcm": 8413.675,
+          "language_opcode": "MEAN_FREQUENCY_HZ",
+          "opcode_result": 3120.055,
+          "bearing_digest": "58bab6527380a01cb7e4f3f5e090298af30ae6971b24365272ee63a47ba5213c",
+          "source_event_hash": "0527faead0ea5499e11c1379ccf5755cb46745503e5694d171b43901c5a82551",
+          "source_mp3_sha256": "bee881066527f99347914f34d716b1b85d99839b7ed70e7708589b838fb1bdc8",
+          "splice_sha256": "ba02c316a5f82070622dadbfc6f239dc0e4c83d3b1c0ab176b20589f6959bf9c"
+        },
+        {
+          "address": "G06/H216/S07",
+          "gate": 6,
+          "slot": 7,
+          "language": "COLOCRYPT/H216/S07",
+          "color_hue_id": 216,
+          "display_rgb": [
+            65,
+            97,
+            215
+          ],
+          "status_kind": "recurrence",
+          "status_colour": "#FF35AD",
+          "phase": "CATCH",
+          "bar_range_projection": [
+            "56/5",
+            "64/5"
+          ],
+          "bearing_slice": [
+            86,
+            99
+          ],
+          "bearing_count": 13,
+          "observed_time_range_seconds": [
+            11.0478,
+            12.4878
+          ],
+          "mean_frequency_hz": 2496.9662,
+          "mean_strength_pcm": 8410.9231,
+          "language_opcode": "MEAN_STRENGTH_PCM",
+          "opcode_result": 8410.9231,
+          "bearing_digest": "a9421a75e6f13cff916bb4c9920a0254e26a4d173057c1601765917ed2942889",
+          "source_event_hash": "0527faead0ea5499e11c1379ccf5755cb46745503e5694d171b43901c5a82551",
+          "source_mp3_sha256": "bee881066527f99347914f34d716b1b85d99839b7ed70e7708589b838fb1bdc8",
+          "splice_sha256": "1f5d18f981a35d9ec0d00c1657057a7fba28dcb6111da49cc7110d93e8fe7a83"
+        },
+        {
+          "address": "G06/H216/S08",
+          "gate": 6,
+          "slot": 8,
+          "language": "COLOCRYPT/H216/S08",
+          "color_hue_id": 216,
+          "display_rgb": [
+            68,
+            95,
+            211
+          ],
+          "status_kind": "recurrence",
+          "status_colour": "#FF35AD",
+          "phase": "CATCH",
+          "bar_range_projection": [
+            "64/5",
+            "72/5"
+          ],
+          "bearing_slice": [
+            99,
+            111
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            12.6078,
+            13.9278
+          ],
+          "mean_frequency_hz": 2500.0442,
+          "mean_strength_pcm": 8436.8,
+          "language_opcode": "LANE_HISTOGRAM",
+          "opcode_result": [
+            4,
+            2,
+            1,
+            5
+          ],
+          "bearing_digest": "b018b9509b756202c1e0fe9f9e3817e8e2cc253b4f83434e8486a1d38de660ce",
+          "source_event_hash": "0527faead0ea5499e11c1379ccf5755cb46745503e5694d171b43901c5a82551",
+          "source_mp3_sha256": "bee881066527f99347914f34d716b1b85d99839b7ed70e7708589b838fb1bdc8",
+          "splice_sha256": "9d403f3d2025109648699c5f9530a65cfb73e57ceacedb18a5105611d6da3de7"
+        },
+        {
+          "address": "G06/H216/S09",
+          "gate": 6,
+          "slot": 9,
+          "language": "COLOCRYPT/H216/S09",
+          "color_hue_id": 216,
+          "display_rgb": [
+            72,
+            94,
+            208
+          ],
+          "status_kind": "recurrence",
+          "status_colour": "#FF35AD",
+          "phase": "CATCH",
+          "bar_range_projection": [
+            "72/5",
+            "16"
+          ],
+          "bearing_slice": [
+            111,
+            124
+          ],
+          "bearing_count": 13,
+          "observed_time_range_seconds": [
+            14.0478,
+            15.4877
+          ],
+          "mean_frequency_hz": 2433.8885,
+          "mean_strength_pcm": 8409.0692,
+          "language_opcode": "FREQUENCY_RANGE_HZ",
+          "opcode_result": [
+            1200.02,
+            3820.07
+          ],
+          "bearing_digest": "1c8e594623456bf6303c26490b7dbf50b3a194baa7bd91a31fe73e0f63cc831c",
+          "source_event_hash": "0527faead0ea5499e11c1379ccf5755cb46745503e5694d171b43901c5a82551",
+          "source_mp3_sha256": "bee881066527f99347914f34d716b1b85d99839b7ed70e7708589b838fb1bdc8",
+          "splice_sha256": "54e1c1de7aae7720bd1b7a13f6b4ef506bbaebd396908447c5dcc23c3ec9ac5a"
+        }
+      ],
+      "gate_sha256": "cb8d12fb327df8e771c42ef19ba8e0c33d8f072798b0ed4eb3d03011f931beca"
+    },
+    {
+      "gate": 7,
+      "address": "G07",
+      "hue": 252,
+      "source_event_hash": "6a9347067fc66f6cf96e9c328298389d0a910a7f9779c79307f64e2d529ed65c",
+      "source_mp3_sha256": "fe03505e2a142f788701ade0ac0fc06f67191aad2bb24d02f618c60554d44c94",
+      "language_phase": "CALL",
+      "status_kind": "repair",
+      "sampled_audio_bearings": 124,
+      "splices": [
+        {
+          "address": "G07/H252/S00",
+          "gate": 7,
+          "slot": 0,
+          "language": "COLOCRYPT/H252/S00",
+          "color_hue_id": 252,
+          "display_rgb": [
+            75,
+            34,
+            240
+          ],
+          "status_kind": "repair",
+          "status_colour": "#A8B4C2",
+          "phase": "CALL",
+          "bar_range_projection": [
+            "0",
+            "8/5"
+          ],
+          "bearing_slice": [
+            0,
+            12
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            0.728,
+            2.048
+          ],
+          "mean_frequency_hz": 2053.3683,
+          "mean_strength_pcm": 8427.4833,
+          "language_opcode": "RECEIVER_CLOCK_SCALE",
+          "opcode_result": 0.999983,
+          "bearing_digest": "126a62d02677c472dff79ef9d90266ceac91de0dcc8b85e82b80fb4ad4c656ff",
+          "source_event_hash": "6a9347067fc66f6cf96e9c328298389d0a910a7f9779c79307f64e2d529ed65c",
+          "source_mp3_sha256": "fe03505e2a142f788701ade0ac0fc06f67191aad2bb24d02f618c60554d44c94",
+          "splice_sha256": "31ca4e83dda01de157181471c04b067c52863f94eac3ff406443efc595fad319"
+        },
+        {
+          "address": "G07/H252/S01",
+          "gate": 7,
+          "slot": 1,
+          "language": "COLOCRYPT/H252/S01",
+          "color_hue_id": 252,
+          "display_rgb": [
+            83,
+            38,
+            236
+          ],
+          "status_kind": "repair",
+          "status_colour": "#A8B4C2",
+          "phase": "CALL",
+          "bar_range_projection": [
+            "8/5",
+            "16/5"
+          ],
+          "bearing_slice": [
+            12,
+            24
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            2.168,
+            3.4879
+          ],
+          "mean_frequency_hz": 1476.6908,
+          "mean_strength_pcm": 8478.4917,
+          "language_opcode": "WINDOW_SHA256",
+          "opcode_result": "dd637d543aecdf6839e91f05c62ba99b2ad20218b93af7713fe290a4142074e9",
+          "bearing_digest": "8997f2aba483540050346890376d4642921c42a519bc20c4c52288507c04a824",
+          "source_event_hash": "6a9347067fc66f6cf96e9c328298389d0a910a7f9779c79307f64e2d529ed65c",
+          "source_mp3_sha256": "fe03505e2a142f788701ade0ac0fc06f67191aad2bb24d02f618c60554d44c94",
+          "splice_sha256": "ca2c667e6d639960c14dc1c5bb9f709d310bb42baf1320658e0bc4190d547296"
+        },
+        {
+          "address": "G07/H252/S02",
+          "gate": 7,
+          "slot": 2,
+          "language": "COLOCRYPT/H252/S02",
+          "color_hue_id": 252,
+          "display_rgb": [
+            91,
+            43,
+            233
+          ],
+          "status_kind": "repair",
+          "status_colour": "#A8B4C2",
+          "phase": "CALL",
+          "bar_range_projection": [
+            "16/5",
+            "24/5"
+          ],
+          "bearing_slice": [
+            24,
+            37
+          ],
+          "bearing_count": 13,
+          "observed_time_range_seconds": [
+            3.6079,
+            5.0479
+          ],
+          "mean_frequency_hz": 1743.1062,
+          "mean_strength_pcm": 8452.0154,
+          "language_opcode": "PARENT_EVENT_HASH",
+          "opcode_result": "6a9347067fc66f6cf96e9c328298389d0a910a7f9779c79307f64e2d529ed65c",
+          "bearing_digest": "6b85a8120c88aaa42e2a8fb59cabf181ccaa7850c831840bca9c3b5fc0d6d78d",
+          "source_event_hash": "6a9347067fc66f6cf96e9c328298389d0a910a7f9779c79307f64e2d529ed65c",
+          "source_mp3_sha256": "fe03505e2a142f788701ade0ac0fc06f67191aad2bb24d02f618c60554d44c94",
+          "splice_sha256": "45deb804d2f5c60b29e125e5e69af4974a84d319670b14ae885bb8ce17bb0a2b"
+        },
+        {
+          "address": "G07/H252/S03",
+          "gate": 7,
+          "slot": 3,
+          "language": "COLOCRYPT/H252/S03",
+          "color_hue_id": 252,
+          "display_rgb": [
+            99,
+            48,
+            229
+          ],
+          "status_kind": "repair",
+          "status_colour": "#A8B4C2",
+          "phase": "CALL",
+          "bar_range_projection": [
+            "24/5",
+            "32/5"
+          ],
+          "bearing_slice": [
+            37,
+            49
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            5.1679,
+            6.4879
+          ],
+          "mean_frequency_hz": 1893.3642,
+          "mean_strength_pcm": 8413.2667,
+          "language_opcode": "BEARING_COUNT",
+          "opcode_result": 12,
+          "bearing_digest": "feb582578b15babf227b8e126d74905ed28fddfa8a2912917b85953f4f3f7a21",
+          "source_event_hash": "6a9347067fc66f6cf96e9c328298389d0a910a7f9779c79307f64e2d529ed65c",
+          "source_mp3_sha256": "fe03505e2a142f788701ade0ac0fc06f67191aad2bb24d02f618c60554d44c94",
+          "splice_sha256": "18073391116d28c75928f1ec246f370e0271c9ae08ae1ab34df6babcc3500d4d"
+        },
+        {
+          "address": "G07/H252/S04",
+          "gate": 7,
+          "slot": 4,
+          "language": "COLOCRYPT/H252/S04",
+          "color_hue_id": 252,
+          "display_rgb": [
+            105,
+            52,
+            225
+          ],
+          "status_kind": "repair",
+          "status_colour": "#A8B4C2",
+          "phase": "CALL",
+          "bar_range_projection": [
+            "32/5",
+            "8"
+          ],
+          "bearing_slice": [
+            49,
+            62
+          ],
+          "bearing_count": 13,
+          "observed_time_range_seconds": [
+            6.6079,
+            8.0479
+          ],
+          "mean_frequency_hz": 2252.3462,
+          "mean_strength_pcm": 8428.8154,
+          "language_opcode": "TIME_RANGE",
+          "opcode_result": [
+            6.6079,
+            8.0479
+          ],
+          "bearing_digest": "075b3340782b2e87ad5967f4d2257eedc674147581fdf3bc8be17b6e8b10defc",
+          "source_event_hash": "6a9347067fc66f6cf96e9c328298389d0a910a7f9779c79307f64e2d529ed65c",
+          "source_mp3_sha256": "fe03505e2a142f788701ade0ac0fc06f67191aad2bb24d02f618c60554d44c94",
+          "splice_sha256": "ed3b966b4d092c49a6d6e412aa4767c497138e843a29c0b66901df64d8b5b4b4"
+        },
+        {
+          "address": "G07/H252/S05",
+          "gate": 7,
+          "slot": 5,
+          "language": "COLOCRYPT/H252/S05",
+          "color_hue_id": 252,
+          "display_rgb": [
+            112,
+            57,
+            222
+          ],
+          "status_kind": "repair",
+          "status_colour": "#A8B4C2",
+          "phase": "CALL",
+          "bar_range_projection": [
+            "8",
+            "48/5"
+          ],
+          "bearing_slice": [
+            62,
+            74
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            8.1679,
+            9.4878
+          ],
+          "mean_frequency_hz": 2340.04,
+          "mean_strength_pcm": 8422.2,
+          "language_opcode": "MEAN_FREQUENCY_HZ",
+          "opcode_result": 2340.04,
+          "bearing_digest": "24eb9e9afa29a59daa0e85a47bda397d6318c258d30a3b10fda77f5729399dbc",
+          "source_event_hash": "6a9347067fc66f6cf96e9c328298389d0a910a7f9779c79307f64e2d529ed65c",
+          "source_mp3_sha256": "fe03505e2a142f788701ade0ac0fc06f67191aad2bb24d02f618c60554d44c94",
+          "splice_sha256": "93678e85867a910638122a675431c400399f9d3031e5b1bd287535de43ac2a1e"
+        },
+        {
+          "address": "G07/H252/S06",
+          "gate": 7,
+          "slot": 6,
+          "language": "COLOCRYPT/H252/S06",
+          "color_hue_id": 252,
+          "display_rgb": [
+            117,
+            61,
+            218
+          ],
+          "status_kind": "repair",
+          "status_colour": "#A8B4C2",
+          "phase": "CALL",
+          "bar_range_projection": [
+            "48/5",
+            "56/5"
+          ],
+          "bearing_slice": [
+            74,
+            86
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            9.6078,
+            10.9278
+          ],
+          "mean_frequency_hz": 2798.3817,
+          "mean_strength_pcm": 8420.2,
+          "language_opcode": "MEAN_STRENGTH_PCM",
+          "opcode_result": 8420.2,
+          "bearing_digest": "8891ffbe770335462306a7ba7baa00adaefca43bc912461b0ea33839c48839f6",
+          "source_event_hash": "6a9347067fc66f6cf96e9c328298389d0a910a7f9779c79307f64e2d529ed65c",
+          "source_mp3_sha256": "fe03505e2a142f788701ade0ac0fc06f67191aad2bb24d02f618c60554d44c94",
+          "splice_sha256": "e958c7e91ebcb29544754a961837ffa7eb7d85fb4380812a13c6e91b17895ad6"
+        },
+        {
+          "address": "G07/H252/S07",
+          "gate": 7,
+          "slot": 7,
+          "language": "COLOCRYPT/H252/S07",
+          "color_hue_id": 252,
+          "display_rgb": [
+            123,
+            65,
+            215
+          ],
+          "status_kind": "repair",
+          "status_colour": "#A8B4C2",
+          "phase": "CALL",
+          "bar_range_projection": [
+            "56/5",
+            "64/5"
+          ],
+          "bearing_slice": [
+            86,
+            99
+          ],
+          "bearing_count": 13,
+          "observed_time_range_seconds": [
+            11.0478,
+            12.4878
+          ],
+          "mean_frequency_hz": 2390.8108,
+          "mean_strength_pcm": 8419.5462,
+          "language_opcode": "LANE_HISTOGRAM",
+          "opcode_result": [
+            3,
+            4,
+            2,
+            4
+          ],
+          "bearing_digest": "c354b6845a2dac8b6c15b9a0989c58e23b2290c588b7277ace30c99023b5f49b",
+          "source_event_hash": "6a9347067fc66f6cf96e9c328298389d0a910a7f9779c79307f64e2d529ed65c",
+          "source_mp3_sha256": "fe03505e2a142f788701ade0ac0fc06f67191aad2bb24d02f618c60554d44c94",
+          "splice_sha256": "e62577cc8ff4044c2090da5bb0363915fa041281922bbd1ad75c7af8ffa69ff6"
+        },
+        {
+          "address": "G07/H252/S08",
+          "gate": 7,
+          "slot": 8,
+          "language": "COLOCRYPT/H252/S08",
+          "color_hue_id": 252,
+          "display_rgb": [
+            127,
+            68,
+            211
+          ],
+          "status_kind": "repair",
+          "status_colour": "#A8B4C2",
+          "phase": "CALL",
+          "bar_range_projection": [
+            "64/5",
+            "72/5"
+          ],
+          "bearing_slice": [
+            99,
+            111
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            12.6078,
+            13.9278
+          ],
+          "mean_frequency_hz": 2156.7042,
+          "mean_strength_pcm": 8429.575,
+          "language_opcode": "FREQUENCY_RANGE_HZ",
+          "opcode_result": [
+            1200.02,
+            3820.07
+          ],
+          "bearing_digest": "d9637d1fc5af3265ea6362f6ec35d38bb6283ee4be52b9f80caad933df41e000",
+          "source_event_hash": "6a9347067fc66f6cf96e9c328298389d0a910a7f9779c79307f64e2d529ed65c",
+          "source_mp3_sha256": "fe03505e2a142f788701ade0ac0fc06f67191aad2bb24d02f618c60554d44c94",
+          "splice_sha256": "ef7dcd83f6f1d69d1b94a79ab7b9188754668f637bc6e4c83de707a1aa377d42"
+        },
+        {
+          "address": "G07/H252/S09",
+          "gate": 7,
+          "slot": 9,
+          "language": "COLOCRYPT/H252/S09",
+          "color_hue_id": 252,
+          "display_rgb": [
+            132,
+            72,
+            208
+          ],
+          "status_kind": "repair",
+          "status_colour": "#A8B4C2",
+          "phase": "CALL",
+          "bar_range_projection": [
+            "72/5",
+            "16"
+          ],
+          "bearing_slice": [
+            111,
+            124
+          ],
+          "bearing_count": 13,
+          "observed_time_range_seconds": [
+            14.0478,
+            15.4877
+          ],
+          "mean_frequency_hz": 2410.8108,
+          "mean_strength_pcm": 8432.4077,
+          "language_opcode": "PEAK_BEARING_INDEX",
+          "opcode_result": 115,
+          "bearing_digest": "bf81fc15e6469d06e59e67d8c1299afd662a27642e59b2fe99d24e4a47334d0c",
+          "source_event_hash": "6a9347067fc66f6cf96e9c328298389d0a910a7f9779c79307f64e2d529ed65c",
+          "source_mp3_sha256": "fe03505e2a142f788701ade0ac0fc06f67191aad2bb24d02f618c60554d44c94",
+          "splice_sha256": "5c580ce99ff5f669e88211587d995c276217fe8c2773ff04dc82abfbe068b79e"
+        }
+      ],
+      "gate_sha256": "83183303ee47562ed29951052d92b862e9adf9581a526b08c3cfa3f777d92487"
+    },
+    {
+      "gate": 8,
+      "address": "G08",
+      "hue": 288,
+      "source_event_hash": "41abde225724e0ed746b2c72d1909492a41dee66502b1421c94edaf316fd0ca6",
+      "source_mp3_sha256": "eb16d6cb5d7ce0c504c53028c38bc9bade2b9659e76500ec473c79e6dc98e66e",
+      "language_phase": "CATCH",
+      "status_kind": "heal",
+      "sampled_audio_bearings": 124,
+      "splices": [
+        {
+          "address": "G08/H288/S00",
+          "gate": 8,
+          "slot": 0,
+          "language": "COLOCRYPT/H288/S00",
+          "color_hue_id": 288,
+          "display_rgb": [
+            198,
+            34,
+            240
+          ],
+          "status_kind": "heal",
+          "status_colour": "#A3FF12",
+          "phase": "CATCH",
+          "bar_range_projection": [
+            "0",
+            "8/5"
+          ],
+          "bearing_slice": [
+            0,
+            12
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            0.728,
+            2.048
+          ],
+          "mean_frequency_hz": 2053.3683,
+          "mean_strength_pcm": 8427.4833,
+          "language_opcode": "WINDOW_SHA256",
+          "opcode_result": "4660e362a59312490b230ce4c3587027815da523acb756cdad6d5a1e523a6c16",
+          "bearing_digest": "126a62d02677c472dff79ef9d90266ceac91de0dcc8b85e82b80fb4ad4c656ff",
+          "source_event_hash": "41abde225724e0ed746b2c72d1909492a41dee66502b1421c94edaf316fd0ca6",
+          "source_mp3_sha256": "eb16d6cb5d7ce0c504c53028c38bc9bade2b9659e76500ec473c79e6dc98e66e",
+          "splice_sha256": "6038813e081a8978f50c12cb7ae28394db9026c1062c4dd162c4706bf2197a66"
+        },
+        {
+          "address": "G08/H288/S01",
+          "gate": 8,
+          "slot": 1,
+          "language": "COLOCRYPT/H288/S01",
+          "color_hue_id": 288,
+          "display_rgb": [
+            202,
+            38,
+            236
+          ],
+          "status_kind": "heal",
+          "status_colour": "#A3FF12",
+          "phase": "CATCH",
+          "bar_range_projection": [
+            "8/5",
+            "16/5"
+          ],
+          "bearing_slice": [
+            12,
+            24
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            2.168,
+            3.4879
+          ],
+          "mean_frequency_hz": 1476.6908,
+          "mean_strength_pcm": 8478.4917,
+          "language_opcode": "PARENT_EVENT_HASH",
+          "opcode_result": "41abde225724e0ed746b2c72d1909492a41dee66502b1421c94edaf316fd0ca6",
+          "bearing_digest": "8997f2aba483540050346890376d4642921c42a519bc20c4c52288507c04a824",
+          "source_event_hash": "41abde225724e0ed746b2c72d1909492a41dee66502b1421c94edaf316fd0ca6",
+          "source_mp3_sha256": "eb16d6cb5d7ce0c504c53028c38bc9bade2b9659e76500ec473c79e6dc98e66e",
+          "splice_sha256": "cb3b946ac5e0e1935d629fec2ca4c18d0f68f563c5726a9181091cabde373f87"
+        },
+        {
+          "address": "G08/H288/S02",
+          "gate": 8,
+          "slot": 2,
+          "language": "COLOCRYPT/H288/S02",
+          "color_hue_id": 288,
+          "display_rgb": [
+            205,
+            43,
+            233
+          ],
+          "status_kind": "heal",
+          "status_colour": "#A3FF12",
+          "phase": "CATCH",
+          "bar_range_projection": [
+            "16/5",
+            "24/5"
+          ],
+          "bearing_slice": [
+            24,
+            37
+          ],
+          "bearing_count": 13,
+          "observed_time_range_seconds": [
+            3.6079,
+            5.0479
+          ],
+          "mean_frequency_hz": 1743.1062,
+          "mean_strength_pcm": 8452.0077,
+          "language_opcode": "BEARING_COUNT",
+          "opcode_result": 13,
+          "bearing_digest": "16baa0b9d27c0db31a234ca1f96401e84de4a7428946e36d859da2dd3dc86d98",
+          "source_event_hash": "41abde225724e0ed746b2c72d1909492a41dee66502b1421c94edaf316fd0ca6",
+          "source_mp3_sha256": "eb16d6cb5d7ce0c504c53028c38bc9bade2b9659e76500ec473c79e6dc98e66e",
+          "splice_sha256": "d0501092f6c44ed0383e901efe1d12746af7c41d49b2aee140bc9d249619f737"
+        },
+        {
+          "address": "G08/H288/S03",
+          "gate": 8,
+          "slot": 3,
+          "language": "COLOCRYPT/H288/S03",
+          "color_hue_id": 288,
+          "display_rgb": [
+            207,
+            48,
+            229
+          ],
+          "status_kind": "heal",
+          "status_colour": "#A3FF12",
+          "phase": "CATCH",
+          "bar_range_projection": [
+            "24/5",
+            "32/5"
+          ],
+          "bearing_slice": [
+            37,
+            49
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            5.1679,
+            6.4879
+          ],
+          "mean_frequency_hz": 2203.3717,
+          "mean_strength_pcm": 8417.525,
+          "language_opcode": "TIME_RANGE",
+          "opcode_result": [
+            5.1679,
+            6.4879
+          ],
+          "bearing_digest": "056690653f5e20c0b9aaba038f7a4fce81b7f2bec58b00f32334bea20c580929",
+          "source_event_hash": "41abde225724e0ed746b2c72d1909492a41dee66502b1421c94edaf316fd0ca6",
+          "source_mp3_sha256": "eb16d6cb5d7ce0c504c53028c38bc9bade2b9659e76500ec473c79e6dc98e66e",
+          "splice_sha256": "fd94035e86f565d21af13bf1e24820a04639b06b5d5ae5e41fadd4d833c98a59"
+        },
+        {
+          "address": "G08/H288/S04",
+          "gate": 8,
+          "slot": 4,
+          "language": "COLOCRYPT/H288/S04",
+          "color_hue_id": 288,
+          "display_rgb": [
+            209,
+            52,
+            225
+          ],
+          "status_kind": "heal",
+          "status_colour": "#A3FF12",
+          "phase": "CATCH",
+          "bar_range_projection": [
+            "32/5",
+            "8"
+          ],
+          "bearing_slice": [
+            49,
+            62
+          ],
+          "bearing_count": 13,
+          "observed_time_range_seconds": [
+            6.6079,
+            8.0479
+          ],
+          "mean_frequency_hz": 2156.9592,
+          "mean_strength_pcm": 8427.5077,
+          "language_opcode": "MEAN_FREQUENCY_HZ",
+          "opcode_result": 2156.9592,
+          "bearing_digest": "c4b894c004657830fb5e9054fbafd7cedaad28c35911389cce4b67b3e911bf36",
+          "source_event_hash": "41abde225724e0ed746b2c72d1909492a41dee66502b1421c94edaf316fd0ca6",
+          "source_mp3_sha256": "eb16d6cb5d7ce0c504c53028c38bc9bade2b9659e76500ec473c79e6dc98e66e",
+          "splice_sha256": "cd4ccd7ef81c979b00c8926ea76b3639dcdf95482dbbcbf84ab5c2f2d72958fd"
+        },
+        {
+          "address": "G08/H288/S05",
+          "gate": 8,
+          "slot": 5,
+          "language": "COLOCRYPT/H288/S05",
+          "color_hue_id": 288,
+          "display_rgb": [
+            211,
+            57,
+            222
+          ],
+          "status_kind": "heal",
+          "status_colour": "#A3FF12",
+          "phase": "CATCH",
+          "bar_range_projection": [
+            "8",
+            "48/5"
+          ],
+          "bearing_slice": [
+            62,
+            74
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            8.1679,
+            9.4878
+          ],
+          "mean_frequency_hz": 2065.0342,
+          "mean_strength_pcm": 8417.1167,
+          "language_opcode": "MEAN_STRENGTH_PCM",
+          "opcode_result": 8417.1167,
+          "bearing_digest": "36bd79a79b5748d2d0d66d8be3fd9349b146760ffeb9449e2b810a659e5378d4",
+          "source_event_hash": "41abde225724e0ed746b2c72d1909492a41dee66502b1421c94edaf316fd0ca6",
+          "source_mp3_sha256": "eb16d6cb5d7ce0c504c53028c38bc9bade2b9659e76500ec473c79e6dc98e66e",
+          "splice_sha256": "b7413ba6b7efa1cc84ddf0afe8f545ed979598235b8e49c8549b1e4f802f049b"
+        },
+        {
+          "address": "G08/H288/S06",
+          "gate": 8,
+          "slot": 6,
+          "language": "COLOCRYPT/H288/S06",
+          "color_hue_id": 288,
+          "display_rgb": [
+            212,
+            61,
+            218
+          ],
+          "status_kind": "heal",
+          "status_colour": "#A3FF12",
+          "phase": "CATCH",
+          "bar_range_projection": [
+            "48/5",
+            "56/5"
+          ],
+          "bearing_slice": [
+            74,
+            86
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            9.6078,
+            10.9278
+          ],
+          "mean_frequency_hz": 2593.3792,
+          "mean_strength_pcm": 8413.5167,
+          "language_opcode": "LANE_HISTOGRAM",
+          "opcode_result": [
+            2,
+            4,
+            1,
+            5
+          ],
+          "bearing_digest": "68a771825df7964754863dc857327e552de3a1a244809eaf612ea14e87dfaf97",
+          "source_event_hash": "41abde225724e0ed746b2c72d1909492a41dee66502b1421c94edaf316fd0ca6",
+          "source_mp3_sha256": "eb16d6cb5d7ce0c504c53028c38bc9bade2b9659e76500ec473c79e6dc98e66e",
+          "splice_sha256": "3826cc05f60ebb6d36b5b42fb73b9e15e7a1cae2e50166349bd69de6f75e5998"
+        },
+        {
+          "address": "G08/H288/S07",
+          "gate": 8,
+          "slot": 7,
+          "language": "COLOCRYPT/H288/S07",
+          "color_hue_id": 288,
+          "display_rgb": [
+            213,
+            65,
+            215
+          ],
+          "status_kind": "heal",
+          "status_colour": "#A3FF12",
+          "phase": "CATCH",
+          "bar_range_projection": [
+            "56/5",
+            "64/5"
+          ],
+          "bearing_slice": [
+            86,
+            99
+          ],
+          "bearing_count": 13,
+          "observed_time_range_seconds": [
+            11.0478,
+            12.4878
+          ],
+          "mean_frequency_hz": 2475.4254,
+          "mean_strength_pcm": 8401.6,
+          "language_opcode": "FREQUENCY_RANGE_HZ",
+          "opcode_result": [
+            1200.02,
+            3820.07
+          ],
+          "bearing_digest": "3c95449771e2e4270c4d6693b2df2f7e8382446894e73003a05771cc0bdb2852",
+          "source_event_hash": "41abde225724e0ed746b2c72d1909492a41dee66502b1421c94edaf316fd0ca6",
+          "source_mp3_sha256": "eb16d6cb5d7ce0c504c53028c38bc9bade2b9659e76500ec473c79e6dc98e66e",
+          "splice_sha256": "4135249a4417a0c9093ff3912ff25a1311ba2d58114857bcc7af478677a44262"
+        },
+        {
+          "address": "G08/H288/S08",
+          "gate": 8,
+          "slot": 8,
+          "language": "COLOCRYPT/H288/S08",
+          "color_hue_id": 288,
+          "display_rgb": [
+            211,
+            68,
+            209
+          ],
+          "status_kind": "heal",
+          "status_colour": "#A3FF12",
+          "phase": "CATCH",
+          "bar_range_projection": [
+            "64/5",
+            "72/5"
+          ],
+          "bearing_slice": [
+            99,
+            111
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            12.6078,
+            13.9278
+          ],
+          "mean_frequency_hz": 1961.6983,
+          "mean_strength_pcm": 8415.8833,
+          "language_opcode": "PEAK_BEARING_INDEX",
+          "opcode_result": 102,
+          "bearing_digest": "fa2c6617dbfda959da294c4ac96abf9f7dfc53bb74cb3f54c3ccebaa7d2eae62",
+          "source_event_hash": "41abde225724e0ed746b2c72d1909492a41dee66502b1421c94edaf316fd0ca6",
+          "source_mp3_sha256": "eb16d6cb5d7ce0c504c53028c38bc9bade2b9659e76500ec473c79e6dc98e66e",
+          "splice_sha256": "f3927c09287c97c4b9b087de9c22a776c98327504c2c7d2579f782fb45e36893"
+        },
+        {
+          "address": "G08/H288/S09",
+          "gate": 8,
+          "slot": 9,
+          "language": "COLOCRYPT/H288/S09",
+          "color_hue_id": 288,
+          "display_rgb": [
+            208,
+            72,
+            202
+          ],
+          "status_kind": "heal",
+          "status_colour": "#A3FF12",
+          "phase": "CATCH",
+          "bar_range_projection": [
+            "72/5",
+            "16"
+          ],
+          "bearing_slice": [
+            111,
+            124
+          ],
+          "bearing_count": 13,
+          "observed_time_range_seconds": [
+            14.0478,
+            15.4877
+          ],
+          "mean_frequency_hz": 2549.2754,
+          "mean_strength_pcm": 8423.0538,
+          "language_opcode": "RECEIVER_CLOCK_SCALE",
+          "opcode_result": 0.999983,
+          "bearing_digest": "5e0f6501e7998a5ecf6e849e29a653f51befb80e383bbb7c3a9cda541c8f1631",
+          "source_event_hash": "41abde225724e0ed746b2c72d1909492a41dee66502b1421c94edaf316fd0ca6",
+          "source_mp3_sha256": "eb16d6cb5d7ce0c504c53028c38bc9bade2b9659e76500ec473c79e6dc98e66e",
+          "splice_sha256": "421abe3f4aa4c2b71ad5bbb747b9b0f527af2787ce019a2e5c986a4e0c189666"
+        }
+      ],
+      "gate_sha256": "052566188a3e875b85034101fd1375c14fa369d1caac7f90c0b4ef5baa4522d2"
+    },
+    {
+      "gate": 9,
+      "address": "G09",
+      "hue": 324,
+      "source_event_hash": "a6f2fdf34ce51323eaa5ecc0ad3b10db14798fc7dde267bdbef7c21f2491c5c5",
+      "source_mp3_sha256": "06303d213b51bbaa3cf26fb83848ebe0c21d83360b5b303e339d08e4a7955d5e",
+      "language_phase": "PRISM",
+      "status_kind": "scar",
+      "sampled_audio_bearings": 124,
+      "splices": [
+        {
+          "address": "G09/H324/S00",
+          "gate": 9,
+          "slot": 0,
+          "language": "COLOCRYPT/H324/S00",
+          "color_hue_id": 324,
+          "display_rgb": [
+            240,
+            34,
+            157
+          ],
+          "status_kind": "scar",
+          "status_colour": "#A020F0",
+          "phase": "PRISM",
+          "bar_range_projection": [
+            "0",
+            "8/5"
+          ],
+          "bearing_slice": [
+            0,
+            12
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            0.728,
+            2.048
+          ],
+          "mean_frequency_hz": 2053.3683,
+          "mean_strength_pcm": 8427.4833,
+          "language_opcode": "PARENT_EVENT_HASH",
+          "opcode_result": "a6f2fdf34ce51323eaa5ecc0ad3b10db14798fc7dde267bdbef7c21f2491c5c5",
+          "bearing_digest": "126a62d02677c472dff79ef9d90266ceac91de0dcc8b85e82b80fb4ad4c656ff",
+          "source_event_hash": "a6f2fdf34ce51323eaa5ecc0ad3b10db14798fc7dde267bdbef7c21f2491c5c5",
+          "source_mp3_sha256": "06303d213b51bbaa3cf26fb83848ebe0c21d83360b5b303e339d08e4a7955d5e",
+          "splice_sha256": "27da4c425f9cd91927c9f71969d5c78cae6009a35e6d8e6aa709ee703a4fe162"
+        },
+        {
+          "address": "G09/H324/S01",
+          "gate": 9,
+          "slot": 1,
+          "language": "COLOCRYPT/H324/S01",
+          "color_hue_id": 324,
+          "display_rgb": [
+            236,
+            38,
+            152
+          ],
+          "status_kind": "scar",
+          "status_colour": "#A020F0",
+          "phase": "PRISM",
+          "bar_range_projection": [
+            "8/5",
+            "16/5"
+          ],
+          "bearing_slice": [
+            12,
+            24
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            2.168,
+            3.4879
+          ],
+          "mean_frequency_hz": 1476.6908,
+          "mean_strength_pcm": 8478.4917,
+          "language_opcode": "BEARING_COUNT",
+          "opcode_result": 12,
+          "bearing_digest": "8997f2aba483540050346890376d4642921c42a519bc20c4c52288507c04a824",
+          "source_event_hash": "a6f2fdf34ce51323eaa5ecc0ad3b10db14798fc7dde267bdbef7c21f2491c5c5",
+          "source_mp3_sha256": "06303d213b51bbaa3cf26fb83848ebe0c21d83360b5b303e339d08e4a7955d5e",
+          "splice_sha256": "53c932db9b90cf10da054167d724b80c67425c321598d1ae23acc83f9b45d5b8"
+        },
+        {
+          "address": "G09/H324/S02",
+          "gate": 9,
+          "slot": 2,
+          "language": "COLOCRYPT/H324/S02",
+          "color_hue_id": 324,
+          "display_rgb": [
+            233,
+            43,
+            147
+          ],
+          "status_kind": "scar",
+          "status_colour": "#A020F0",
+          "phase": "PRISM",
+          "bar_range_projection": [
+            "16/5",
+            "24/5"
+          ],
+          "bearing_slice": [
+            24,
+            37
+          ],
+          "bearing_count": 13,
+          "observed_time_range_seconds": [
+            3.6079,
+            5.0479
+          ],
+          "mean_frequency_hz": 1806.1838,
+          "mean_strength_pcm": 8454.1462,
+          "language_opcode": "TIME_RANGE",
+          "opcode_result": [
+            3.6079,
+            5.0479
+          ],
+          "bearing_digest": "6a8c2a6371d7c3f622b2fdd703abb14a3ae417fe7fa2c431204cfb6c667022fd",
+          "source_event_hash": "a6f2fdf34ce51323eaa5ecc0ad3b10db14798fc7dde267bdbef7c21f2491c5c5",
+          "source_mp3_sha256": "06303d213b51bbaa3cf26fb83848ebe0c21d83360b5b303e339d08e4a7955d5e",
+          "splice_sha256": "aa5c625a6df9c633b331d03dfb5b2162dc0e4a71899d16783c1fad7f750ebf94"
+        },
+        {
+          "address": "G09/H324/S03",
+          "gate": 9,
+          "slot": 3,
+          "language": "COLOCRYPT/H324/S03",
+          "color_hue_id": 324,
+          "display_rgb": [
+            229,
+            48,
+            142
+          ],
+          "status_kind": "scar",
+          "status_colour": "#A020F0",
+          "phase": "PRISM",
+          "bar_range_projection": [
+            "24/5",
+            "32/5"
+          ],
+          "bearing_slice": [
+            37,
+            49
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            5.1679,
+            6.4879
+          ],
+          "mean_frequency_hz": 2178.3708,
+          "mean_strength_pcm": 8443.1417,
+          "language_opcode": "MEAN_FREQUENCY_HZ",
+          "opcode_result": 2178.3708,
+          "bearing_digest": "a93a02e015592488513b3e651811a32f10b605bdaac6db837275bf8f123d9bf3",
+          "source_event_hash": "a6f2fdf34ce51323eaa5ecc0ad3b10db14798fc7dde267bdbef7c21f2491c5c5",
+          "source_mp3_sha256": "06303d213b51bbaa3cf26fb83848ebe0c21d83360b5b303e339d08e4a7955d5e",
+          "splice_sha256": "0be2ab01b99c50405f043f886f63e1be080f862cb8024d8571d99019969fa0d5"
+        },
+        {
+          "address": "G09/H324/S04",
+          "gate": 9,
+          "slot": 4,
+          "language": "COLOCRYPT/H324/S04",
+          "color_hue_id": 324,
+          "display_rgb": [
+            225,
+            52,
+            138
+          ],
+          "status_kind": "scar",
+          "status_colour": "#A020F0",
+          "phase": "PRISM",
+          "bar_range_projection": [
+            "32/5",
+            "8"
+          ],
+          "bearing_slice": [
+            49,
+            62
+          ],
+          "bearing_count": 13,
+          "observed_time_range_seconds": [
+            6.6079,
+            8.0479
+          ],
+          "mean_frequency_hz": 2198.5,
+          "mean_strength_pcm": 8449.5462,
+          "language_opcode": "MEAN_STRENGTH_PCM",
+          "opcode_result": 8449.5462,
+          "bearing_digest": "988a33afe5387f804b4b83e0dba365352b020edb848c07a47a4892ffba7c397b",
+          "source_event_hash": "a6f2fdf34ce51323eaa5ecc0ad3b10db14798fc7dde267bdbef7c21f2491c5c5",
+          "source_mp3_sha256": "06303d213b51bbaa3cf26fb83848ebe0c21d83360b5b303e339d08e4a7955d5e",
+          "splice_sha256": "4c5d64deab02e3e14307a737c7cdd58eca4d456ddd21aff83e8ce416c0dd2a5c"
+        },
+        {
+          "address": "G09/H324/S05",
+          "gate": 9,
+          "slot": 5,
+          "language": "COLOCRYPT/H324/S05",
+          "color_hue_id": 324,
+          "display_rgb": [
+            222,
+            57,
+            134
+          ],
+          "status_kind": "scar",
+          "status_colour": "#A020F0",
+          "phase": "PRISM",
+          "bar_range_projection": [
+            "8",
+            "48/5"
+          ],
+          "bearing_slice": [
+            62,
+            74
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            8.1679,
+            9.4878
+          ],
+          "mean_frequency_hz": 2408.3742,
+          "mean_strength_pcm": 8424.45,
+          "language_opcode": "LANE_HISTOGRAM",
+          "opcode_result": [
+            3,
+            2,
+            4,
+            3
+          ],
+          "bearing_digest": "7b2a09dd64e85c6dd2923c8c9a468d6ebc9f7a79fa48fb39dfeee39a1cd124bc",
+          "source_event_hash": "a6f2fdf34ce51323eaa5ecc0ad3b10db14798fc7dde267bdbef7c21f2491c5c5",
+          "source_mp3_sha256": "06303d213b51bbaa3cf26fb83848ebe0c21d83360b5b303e339d08e4a7955d5e",
+          "splice_sha256": "6769f155aabb3a1041c2c2851f9a5b5a77cff2210f1fd4ca19b0cfe6a9428545"
+        },
+        {
+          "address": "G09/H324/S06",
+          "gate": 9,
+          "slot": 6,
+          "language": "COLOCRYPT/H324/S06",
+          "color_hue_id": 324,
+          "display_rgb": [
+            218,
+            61,
+            130
+          ],
+          "status_kind": "scar",
+          "status_colour": "#A020F0",
+          "phase": "PRISM",
+          "bar_range_projection": [
+            "48/5",
+            "56/5"
+          ],
+          "bearing_slice": [
+            74,
+            86
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            9.6078,
+            10.9278
+          ],
+          "mean_frequency_hz": 2248.37,
+          "mean_strength_pcm": 8409.9917,
+          "language_opcode": "FREQUENCY_RANGE_HZ",
+          "opcode_result": [
+            1200.02,
+            3820.07
+          ],
+          "bearing_digest": "28484e9c1be819f0ffac90c464ea6e8f93931f1b42c085a58a748d8bbea139fc",
+          "source_event_hash": "a6f2fdf34ce51323eaa5ecc0ad3b10db14798fc7dde267bdbef7c21f2491c5c5",
+          "source_mp3_sha256": "06303d213b51bbaa3cf26fb83848ebe0c21d83360b5b303e339d08e4a7955d5e",
+          "splice_sha256": "4f53a7ec763443621c702e3433b4721f818461e8554a990466f00170b67a46a3"
+        },
+        {
+          "address": "G09/H324/S07",
+          "gate": 9,
+          "slot": 7,
+          "language": "COLOCRYPT/H324/S07",
+          "color_hue_id": 324,
+          "display_rgb": [
+            215,
+            65,
+            127
+          ],
+          "status_kind": "scar",
+          "status_colour": "#A020F0",
+          "phase": "PRISM",
+          "bar_range_projection": [
+            "56/5",
+            "64/5"
+          ],
+          "bearing_slice": [
+            86,
+            99
+          ],
+          "bearing_count": 13,
+          "observed_time_range_seconds": [
+            11.0478,
+            12.4878
+          ],
+          "mean_frequency_hz": 2709.2769,
+          "mean_strength_pcm": 8393.5692,
+          "language_opcode": "PEAK_BEARING_INDEX",
+          "opcode_result": 90,
+          "bearing_digest": "88999a271414e10b8c8496607bb12912617546d456f4486a5aeb23bca7c037a0",
+          "source_event_hash": "a6f2fdf34ce51323eaa5ecc0ad3b10db14798fc7dde267bdbef7c21f2491c5c5",
+          "source_mp3_sha256": "06303d213b51bbaa3cf26fb83848ebe0c21d83360b5b303e339d08e4a7955d5e",
+          "splice_sha256": "b6cf60bd349c8556525ba5cc65c0f89c29c50be3dc0192eef45d44d598c71593"
+        },
+        {
+          "address": "G09/H324/S08",
+          "gate": 9,
+          "slot": 8,
+          "language": "COLOCRYPT/H324/S08",
+          "color_hue_id": 324,
+          "display_rgb": [
+            211,
+            68,
+            124
+          ],
+          "status_kind": "scar",
+          "status_colour": "#A020F0",
+          "phase": "PRISM",
+          "bar_range_projection": [
+            "64/5",
+            "72/5"
+          ],
+          "bearing_slice": [
+            99,
+            111
+          ],
+          "bearing_count": 12,
+          "observed_time_range_seconds": [
+            12.6078,
+            13.9278
+          ],
+          "mean_frequency_hz": 2741.7133,
+          "mean_strength_pcm": 8407.1583,
+          "language_opcode": "RECEIVER_CLOCK_SCALE",
+          "opcode_result": 0.999983,
+          "bearing_digest": "4ccb88c346caa5dc9f376a949d864284e62378c1633a990e4efb90efa0a397cb",
+          "source_event_hash": "a6f2fdf34ce51323eaa5ecc0ad3b10db14798fc7dde267bdbef7c21f2491c5c5",
+          "source_mp3_sha256": "06303d213b51bbaa3cf26fb83848ebe0c21d83360b5b303e339d08e4a7955d5e",
+          "splice_sha256": "83617bda0da7cc3817433509c55cc689418ae0c895cc6d314a9db2d8c7445d5e"
+        },
+        {
+          "address": "G09/H324/S09",
+          "gate": 9,
+          "slot": 9,
+          "language": "COLOCRYPT/H324/S09",
+          "color_hue_id": 324,
+          "display_rgb": [
+            208,
+            72,
+            121
+          ],
+          "status_kind": "scar",
+          "status_colour": "#A020F0",
+          "phase": "PRISM",
+          "bar_range_projection": [
+            "72/5",
+            "16"
+          ],
+          "bearing_slice": [
+            111,
+            124
+          ],
+          "bearing_count": 13,
+          "observed_time_range_seconds": [
+            14.0478,
+            15.4877
+          ],
+          "mean_frequency_hz": 2295.4238,
+          "mean_strength_pcm": 8418.4385,
+          "language_opcode": "WINDOW_SHA256",
+          "opcode_result": "f81d6613f6351c3db007a445d8bf7335a74e17bce0d3582a01dd1a88cc942ce1",
+          "bearing_digest": "111152147408b173d5fe048831f1b686fcda1e2d66d244fb8e4ca6e3658e49cc",
+          "source_event_hash": "a6f2fdf34ce51323eaa5ecc0ad3b10db14798fc7dde267bdbef7c21f2491c5c5",
+          "source_mp3_sha256": "06303d213b51bbaa3cf26fb83848ebe0c21d83360b5b303e339d08e4a7955d5e",
+          "splice_sha256": "c7f4d4b570c1c4743f29aadcd4aec068f157fdee050450a36915d10b45bd5593"
+        }
+      ],
+      "gate_sha256": "6a0bc935706f70876e9af0b0205e5dd47d7de18faffbbc233019ca6ad131638f"
+    }
+  ],
+  "fingerprint_sha256": "c20cb09f1fdecafab8bad803aa7b7582b5ba28ee19789013b6a20296bf48421b"
+}

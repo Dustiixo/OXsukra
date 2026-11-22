@@ -1,0 +1,11 @@
+{
+  "schema": "ixo.rcll.colocrypt.vessel.v0.4",
+  "print_sha256": "c20cb09f1fdecafab8bad803aa7b7582b5ba28ee19789013b6a20296bf48421b",
+  "ply_sha256": "30cb3fe9d1334adab598734b163d4efba7e5337e363772acb5d9624aeb11c214",
+  "vertices": 102,
+  "triangles": 200,
+  "edges": 300,
+  "closed_manifold_by_edge_incidence": true,
+  "euler_characteristic": 2,
+  "visual_geometry_proves_semantic_truth": false
+}

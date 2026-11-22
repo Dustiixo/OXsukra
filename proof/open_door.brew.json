@@ -1,0 +1,11 @@
+{
+  "behavior": {
+    "duration_ms": 1500,
+    "effect": "open",
+    "trigger": "on_enter"
+  },
+  "name": "Door Trigger / Homebrew Test",
+  "notes": "Original example: entering the zone keeps the door closed. Change the effect to open or highlight to explore a homebrew modification.",
+  "schema": "deepbrew.behavior.v1",
+  "target": "sandbox.door"
+}
