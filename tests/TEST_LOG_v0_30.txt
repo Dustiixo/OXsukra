@@ -1,0 +1,28 @@
+initial {'mode': 'field', 'cursor': 72, 'total': 72, 'selected': 'root', 'branches': 4, 'links': 27, 'quality': 'medium', 'renderer': 'webgl2', 'frames': 3}
+lens 13 recorded evidence receipts
+Traceback (most recent call last):
+  File "/tmp/flow/IXO_FlowMesh_Atlas_M0_6_Candidate/gpu_field/browser_test_m07.py", line 23, in <module>
+    p.locator('#lens-proof').click();assert p.locator('#receipt').inner_text()=='#'+first.zfill(3);p.locator('[data-panel="events"]').wait_for(state='visible',timeout=8000)
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+initial {'mode': 'field', 'cursor': 72, 'total': 72, 'selected': 'root', 'branches': 4, 'links': 27, 'quality': 'medium', 'renderer': 'webgl2', 'frames': 3}
+lens 13 recorded evidence receipts
+chosen 10  10 []
+Traceback (most recent call last):
+  File "/tmp/flow/IXO_FlowMesh_Atlas_M0_6_Candidate/gpu_field/browser_test_m07.py", line 23, in <module>
+    p.locator('#lens-proof').click();print('chosen',first,p.locator('#receipt').inner_text(),p.locator('#lens-receipt').input_value(),errors,flush=True);assert p.locator('#receipt').inner_text()=='#'+first.zfill(3);p.locator('[data-panel="events"]').wait_for(state='visible',timeout=8000)
+                                                                                                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+initial {'mode': 'field', 'cursor': 72, 'total': 72, 'selected': 'root', 'branches': 4, 'links': 27, 'quality': 'medium', 'renderer': 'webgl2', 'frames': 3}
+lens 13 recorded evidence receipts
+chosen 10  10 []
+receipt #010
+PASS: WebGL2 rendered; real branch click; contextual evidence; full overlay; same cursor; rewind removes evidence; restore; no JS errors
+----------------------------------------------------------------------
+Ran 47 tests in 2.967s
+
+OK
+----------------------------------------------------------------------
+Ran 48 tests in 4.469s
+
+OK

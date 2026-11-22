@@ -1,0 +1,22 @@
+test_append_only (test_ripple.TestRipple.test_append_only) ... ok
+test_cannot_falsely_pass_test (test_ripple.TestRipple.test_cannot_falsely_pass_test) ... ok
+test_historical_journal_audit_detects_duplicate_and_invalid_json (test_ripple.TestRipple.test_historical_journal_audit_detects_duplicate_and_invalid_json) ... ok
+test_historical_journal_audit_flags_invalid_pass_and_status_without_mutation (test_ripple.TestRipple.test_historical_journal_audit_flags_invalid_pass_and_status_without_mutation) ... ok
+test_next_task_does_not_overlap_vela (test_ripple.TestRipple.test_next_task_does_not_overlap_vela) ... ok
+test_next_task_fails_closed_if_ixo_source_mapping_missing (test_ripple.TestRipple.test_next_task_fails_closed_if_ixo_source_mapping_missing) ... ok
+test_no_release_self_approval (test_ripple.TestRipple.test_no_release_self_approval) ... ok
+test_nonstrict_audit_retains_readonly_compatibility (test_ripple.TestRipple.test_nonstrict_audit_retains_readonly_compatibility) ... ok
+test_public_contains_only_alias_fields (test_ripple.TestRipple.test_public_contains_only_alias_fields) ... ok
+test_public_export_is_deterministic (test_ripple.TestRipple.test_public_export_is_deterministic) ... ok
+test_public_no_private_names (test_ripple.TestRipple.test_public_no_private_names) ... ok
+test_published_local_export_excludes_private_sources (test_ripple.TestRipple.test_published_local_export_excludes_private_sources) ... ok
+test_registry_aliases_unique (test_ripple.TestRipple.test_registry_aliases_unique) ... ok
+test_reject_corrupted_prior_journal (test_ripple.TestRipple.test_reject_corrupted_prior_journal) ... ok
+test_reject_duplicate_event_id_without_mutating_journal (test_ripple.TestRipple.test_reject_duplicate_event_id_without_mutating_journal) ... ok
+test_strict_audit_exits_nonzero_for_historical_defects (test_ripple.TestRipple.test_strict_audit_exits_nonzero_for_historical_defects) ... ok
+test_task_is_blocked_until_device (test_ripple.TestRipple.test_task_is_blocked_until_device) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 1.264s
+
+OK

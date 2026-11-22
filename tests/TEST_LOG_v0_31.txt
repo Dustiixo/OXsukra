@@ -1,0 +1,8 @@
+FlowMesh M0.6 source SHA256 5ecec1be39a5999afe2563109f08cedade940649710aeb6a13cf7c1e7bc82dee
+Applied cumulative M0.7 receipt picker then M0.8 export patch.
+CORE: python -m unittest discover -s tests -q: 47 tests OK
+COORDINATOR: python -m unittest discover -s tests -q: 48 tests OK
+JS: node --check gpu_field/field.js: exit 0
+BROWSER: xvfb-run -a python browser.py: PASS download flowmesh-receipt-010.json seq 10 renderer webgl2
+Initial headless browser: FAIL timeout waiting WebGL2; headed without X server: FAIL; xvfb-run corrected execution.
+Windows patched candidate NOT_RUN; independent adapter BLOCKED; GitHub NOT_RUN.

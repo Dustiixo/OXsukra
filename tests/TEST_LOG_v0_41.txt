@@ -1,0 +1,260 @@
+RIPPLE v0.41 - Linux / Chromium / Xvfb / SwiftShader
+
+== FlowMesh core ==
+----------------------------------------------------------------------
+Ran 47 tests in 2.087s
+
+OK
+
+== Coordinator unit suite ==
+----------------------------------------------------------------------
+Ran 48 tests in 3.130s
+
+OK
+
+== Graphical browser acceptance ==
+PASS 13 checks: WebGL2 renderer live, 18 pageable, dynamically sourced beacons, Atlas count matches verified source events, First-page bounds, Pagination to page two, Marker is exact corresponding source receipt, Jump to exact timeline cursor, Open exact receipt in branch lens, Return to spatial field and display evidence lens, Visited receipt visually highlighted on page, Local trace replacement clears stale evidence buttons, Empty evidence state and disabled pagination, Zero browser page errors
+GRAPHICAL_CHROMIUM_SCREENSHOT evidence/FlowMesh_Evidence_Atlas_Chromium.png
+
+== Historical strict journal audit (expected failure; do not promote) ==
+{
+  "records": 40,
+  "issues": [
+    {
+      "line": 1,
+      "reason": "invalid source_sha256"
+    },
+    {
+      "line": 2,
+      "reason": "invalid source_sha256"
+    },
+    {
+      "line": 4,
+      "reason": "invalid status: tested-patch-candidate"
+    },
+    {
+      "line": 4,
+      "reason": "PASS missing test_log_sha256"
+    },
+    {
+      "line": 34,
+      "reason": "missing required fields: capsule_id"
+    },
+    {
+      "line": 34,
+      "reason": "unknown capsule_id"
+    },
+    {
+      "line": 34,
+      "reason": "PASS missing test_log_sha256"
+    },
+    {
+      "line": 35,
+      "reason": "missing required fields: capsule_id,changed_paths,test_status"
+    },
+    {
+      "line": 35,
+      "reason": "unknown capsule_id"
+    },
+    {
+      "line": 35,
+      "reason": "changed_paths must be list"
+    },
+    {
+      "line": 35,
+      "reason": "invalid test_status: None"
+    },
+    {
+      "line": 36,
+      "reason": "missing required fields: capsule_id,changed_paths,created_utc,event_id,rollback,schema,source_ref,source_sha256,status,test_status"
+    },
+    {
+      "line": 36,
+      "reason": "invalid receipt schema"
+    },
+    {
+      "line": 36,
+      "reason": "invalid source_ref"
+    },
+    {
+      "line": 36,
+      "reason": "invalid rollback"
+    },
+    {
+      "line": 36,
+      "reason": "invalid source_sha256"
+    },
+    {
+      "line": 36,
+      "reason": "invalid event_id"
+    },
+    {
+      "line": 36,
+      "reason": "unknown capsule_id"
+    },
+    {
+      "line": 36,
+      "reason": "changed_paths must be list"
+    },
+    {
+      "line": 36,
+      "reason": "invalid status: None"
+    },
+    {
+      "line": 36,
+      "reason": "invalid test_status: None"
+    },
+    {
+      "line": 37,
+      "reason": "missing required fields: capsule_id,changed_paths,source_ref,source_sha256,status,test_status"
+    },
+    {
+      "line": 37,
+      "reason": "invalid receipt schema"
+    },
+    {
+      "line": 37,
+      "reason": "invalid source_ref"
+    },
+    {
+      "line": 37,
+      "reason": "invalid source_sha256"
+    },
+    {
+      "line": 37,
+      "reason": "unknown capsule_id"
+    },
+    {
+      "line": 37,
+      "reason": "changed_paths must be list"
+    },
+    {
+      "line": 37,
+      "reason": "invalid status: None"
+    },
+    {
+      "line": 37,
+      "reason": "invalid test_status: None"
+    },
+    {
+      "line": 38,
+      "reason": "missing required fields: capsule_id,changed_paths,created_utc,event_id,rollback,schema,source_ref,source_sha256,status,test_status"
+    },
+    {
+      "line": 38,
+      "reason": "invalid receipt schema"
+    },
+    {
+      "line": 38,
+      "reason": "invalid source_ref"
+    },
+    {
+      "line": 38,
+      "reason": "invalid rollback"
+    },
+    {
+      "line": 38,
+      "reason": "invalid source_sha256"
+    },
+    {
+      "line": 38,
+      "reason": "invalid event_id"
+    },
+    {
+      "line": 38,
+      "reason": "unknown capsule_id"
+    },
+    {
+      "line": 38,
+      "reason": "changed_paths must be list"
+    },
+    {
+      "line": 38,
+      "reason": "invalid status: None"
+    },
+    {
+      "line": 38,
+      "reason": "invalid test_status: None"
+    },
+    {
+      "line": 39,
+      "reason": "missing required fields: capsule_id,changed_paths,created_utc,event_id,schema,source_ref,source_sha256,status,test_status"
+    },
+    {
+      "line": 39,
+      "reason": "invalid receipt schema"
+    },
+    {
+      "line": 39,
+      "reason": "invalid source_ref"
+    },
+    {
+      "line": 39,
+      "reason": "invalid source_sha256"
+    },
+    {
+      "line": 39,
+      "reason": "invalid event_id"
+    },
+    {
+      "line": 39,
+      "reason": "unknown capsule_id"
+    },
+    {
+      "line": 39,
+      "reason": "changed_paths must be list"
+    },
+    {
+      "line": 39,
+      "reason": "invalid status: None"
+    },
+    {
+      "line": 39,
+      "reason": "invalid test_status: None"
+    },
+    {
+      "line": 40,
+      "reason": "missing required fields: capsule_id,changed_paths,created_utc,event_id,schema,source_ref,source_sha256,status,test_status"
+    },
+    {
+      "line": 40,
+      "reason": "invalid receipt schema"
+    },
+    {
+      "line": 40,
+      "reason": "invalid source_ref"
+    },
+    {
+      "line": 40,
+      "reason": "invalid source_sha256"
+    },
+    {
+      "line": 40,
+      "reason": "invalid event_id"
+    },
+    {
+      "line": 40,
+      "reason": "unknown capsule_id"
+    },
+    {
+      "line": 40,
+      "reason": "changed_paths must be list"
+    },
+    {
+      "line": 40,
+      "reason": "invalid status: None"
+    },
+    {
+      "line": 40,
+      "reason": "invalid test_status: None"
+    }
+  ]
+}
+
+== Reversible patch ==
+PASS: reverse unified patch restored exact 3 parent SHA256 source files in temporary workspace
+
+node --check IXO_FlowMesh_Atlas_M0_6_Candidate/gpu_field/field.js : PASS
+python 3.13.5; node v22.16.0; Chromium /usr/bin/chromium; WebGL2 under Xvfb
+Adapter contract transaction: BLOCKED, no jointly authorized independent peer contract
+Physical ASUS acceptance: NOT_RUN

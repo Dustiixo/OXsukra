@@ -1,0 +1,13 @@
+test_00_repeat_scan_cycles_targets_without_mutation (__main__.PulseBrowserTest.test_00_repeat_scan_cycles_targets_without_mutation) ... ok
+test_01_baseline_negative_control (__main__.PulseBrowserTest.test_01_baseline_negative_control) ... ok
+test_02_scan_shows_nearby_objectives_no_progress_mutation (__main__.PulseBrowserTest.test_02_scan_shows_nearby_objectives_no_progress_mutation) ... ok
+test_03_shard_mined_disappears_scan_updates (__main__.PulseBrowserTest.test_03_shard_mined_disappears_scan_updates) ... ok
+test_04_relay_then_device_signal_progression (__main__.PulseBrowserTest.test_04_relay_then_device_signal_progression) ... ok
+test_05_scan_pauses_safely_with_game (__main__.PulseBrowserTest.test_05_scan_pauses_safely_with_game) ... ok
+test_06_touch_scan_actual_mobile_canvas (__main__.PulseBrowserTest.test_06_touch_scan_actual_mobile_canvas) ... ok
+test_07_close_range_shard_enemy_radar (__main__.PulseBrowserTest.test_07_close_range_shard_enemy_radar) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 8.045s
+
+OK

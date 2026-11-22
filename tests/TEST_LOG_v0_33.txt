@@ -1,0 +1,1 @@
+Chromium Playwright: 8/8 PASS; coordinator unittest: 48/48 PASS; node --check: PASS. Android, Godot, adapter and GitHub: NOT_RUN/BLOCKED.

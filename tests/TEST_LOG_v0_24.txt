@@ -1,0 +1,159 @@
+test_cli_second_process_works (test_flowmesh.IntegrityTests.test_cli_second_process_works) ... ok
+test_deleted_source_breaks_receipt_validation (test_flowmesh.IntegrityTests.test_deleted_source_breaks_receipt_validation) ... ok
+test_ledger_corruption_detected (test_flowmesh.IntegrityTests.test_ledger_corruption_detected) ... ok
+test_receipt_chain (test_flowmesh.IntegrityTests.test_receipt_chain) ... ok
+test_snapshot_corruption_detected (test_flowmesh.IntegrityTests.test_snapshot_corruption_detected) ... ok
+test_stale_writer_conflict (test_flowmesh.IntegrityTests.test_stale_writer_conflict) ... ok
+test_bad_model_failure_parks_without_fabrication (test_flowmesh.ModelTests.test_bad_model_failure_parks_without_fabrication) ... ok
+test_fake_model_is_proposal_not_verified_evidence (test_flowmesh.ModelTests.test_fake_model_is_proposal_not_verified_evidence) ... ok
+test_localhost_only (test_flowmesh.ModelTests.test_localhost_only) ... ok
+test_malformed_ollama_result_is_rejected (test_flowmesh.ModelTests.test_malformed_ollama_result_is_rejected) ... ok
+test_model_work_is_capped_per_tick (test_flowmesh.ModelTests.test_model_work_is_capped_per_tick) ... ok
+test_no_arbitrary_execution_capability (test_flowmesh.ModelTests.test_no_arbitrary_execution_capability) ... ok
+test_offline_never_calls_model_network (test_flowmesh.ModelTests.test_offline_never_calls_model_network) ... ok
+test_ollama_json_response_is_bounded_and_structured (test_flowmesh.ModelTests.test_ollama_json_response_is_bounded_and_structured) ... ok
+test_two_model_agents_really_run_concurrently (test_flowmesh.ModelTests.test_two_model_agents_really_run_concurrently) ... ok
+test_user_park_during_model_call_discards_that_branch_result (test_flowmesh.ModelTests.test_user_park_during_model_call_discards_that_branch_result) ... ok
+test_user_revision_during_model_work_invalidates_stale_result (test_flowmesh.ModelTests.test_user_revision_during_model_work_invalidates_stale_result) ... ok
+test_auto_cap_bounds (test_flowmesh.SchedulerTests.test_auto_cap_bounds) ... ok
+test_budget_is_conserved_per_tick (test_flowmesh.SchedulerTests.test_budget_is_conserved_per_tick) ... ok
+test_child_probe_has_parent (test_flowmesh.SchedulerTests.test_child_probe_has_parent) ... ok
+test_evidence_gain_affects_budget (test_flowmesh.SchedulerTests.test_evidence_gain_affects_budget) ... ok
+test_evidence_import_reawakens_exhausted_probe (test_flowmesh.SchedulerTests.test_evidence_import_reawakens_exhausted_probe) ... ok
+test_focus_changes_weight (test_flowmesh.SchedulerTests.test_focus_changes_weight) ... ok
+test_heuristic_research_probes (test_flowmesh.SchedulerTests.test_heuristic_research_probes) ... ok
+test_ledger_tracks_actual_allocation (test_flowmesh.SchedulerTests.test_ledger_tracks_actual_allocation) ... ok
+test_new_source_stays_readonly_after_import (test_flowmesh.SchedulerTests.test_new_source_stays_readonly_after_import) ... ok
+test_no_worker_without_evidence (test_flowmesh.SchedulerTests.test_no_worker_without_evidence) ... ok
+test_park_and_resume (test_flowmesh.SchedulerTests.test_park_and_resume) ... ok
+test_peer_discovery_reactivation_contract (test_flowmesh.SchedulerTests.test_peer_discovery_reactivation_contract) ... ok
+test_probe_duplicate_blocked (test_flowmesh.SchedulerTests.test_probe_duplicate_blocked) ... ok
+test_prompt_revision_is_append_only (test_flowmesh.SchedulerTests.test_prompt_revision_is_append_only) ... ok
+test_resource_reallocation_when_parked (test_flowmesh.SchedulerTests.test_resource_reallocation_when_parked) ... ok
+test_same_session_persists_after_steps (test_flowmesh.SchedulerTests.test_same_session_persists_after_steps) ... ok
+test_user_park_not_auto_woken_on_new_source (test_flowmesh.SchedulerTests.test_user_park_not_auto_woken_on_new_source) ... ok
+test_cannot_overwrite_existing_session (test_flowmesh.StartTests.test_cannot_overwrite_existing_session) ... ok
+test_goal_and_mode_validation (test_flowmesh.StartTests.test_goal_and_mode_validation) ... ok
+test_initial_root_and_budget (test_flowmesh.StartTests.test_initial_root_and_budget) ... ok
+test_repeat_source_is_idempotent (test_flowmesh.StartTests.test_repeat_source_is_idempotent) ... ok
+test_source_import_and_provenance (test_flowmesh.StartTests.test_source_import_and_provenance) ... ok
+test_source_symlink_rejected (test_flowmesh.StartTests.test_source_symlink_rejected) ... ok
+test_sources_reject_oversized (test_flowmesh.StartTests.test_sources_reject_oversized) ... ok
+test_sources_reject_unknown_extension (test_flowmesh.StartTests.test_sources_reject_unknown_extension) ... ok
+test_unicode_goal_and_revision (test_flowmesh.StartTests.test_unicode_goal_and_revision) ... ok
+test_unknown_directory_protected (test_flowmesh.StartTests.test_unknown_directory_protected) ... ok
+
+----------------------------------------------------------------------
+Ran 44 tests in 1.307s
+
+OK
+test_cli_second_process_works (test_flowmesh.IntegrityTests.test_cli_second_process_works) ... ok
+test_deleted_source_breaks_receipt_validation (test_flowmesh.IntegrityTests.test_deleted_source_breaks_receipt_validation) ... ok
+test_ledger_corruption_detected (test_flowmesh.IntegrityTests.test_ledger_corruption_detected) ... ok
+test_receipt_chain (test_flowmesh.IntegrityTests.test_receipt_chain) ... ok
+test_snapshot_corruption_detected (test_flowmesh.IntegrityTests.test_snapshot_corruption_detected) ... ok
+test_stale_writer_conflict (test_flowmesh.IntegrityTests.test_stale_writer_conflict) ... ok
+test_bad_model_failure_parks_without_fabrication (test_flowmesh.ModelTests.test_bad_model_failure_parks_without_fabrication) ... ok
+test_fake_model_is_proposal_not_verified_evidence (test_flowmesh.ModelTests.test_fake_model_is_proposal_not_verified_evidence) ... ok
+test_localhost_only (test_flowmesh.ModelTests.test_localhost_only) ... ok
+test_malformed_ollama_result_is_rejected (test_flowmesh.ModelTests.test_malformed_ollama_result_is_rejected) ... ok
+test_model_work_is_capped_per_tick (test_flowmesh.ModelTests.test_model_work_is_capped_per_tick) ... ok
+test_no_arbitrary_execution_capability (test_flowmesh.ModelTests.test_no_arbitrary_execution_capability) ... ok
+test_offline_never_calls_model_network (test_flowmesh.ModelTests.test_offline_never_calls_model_network) ... ok
+test_ollama_json_response_is_bounded_and_structured (test_flowmesh.ModelTests.test_ollama_json_response_is_bounded_and_structured) ... ok
+test_two_model_agents_really_run_concurrently (test_flowmesh.ModelTests.test_two_model_agents_really_run_concurrently) ... ok
+test_user_park_during_model_call_discards_that_branch_result (test_flowmesh.ModelTests.test_user_park_during_model_call_discards_that_branch_result) ... ok
+test_user_revision_during_model_work_invalidates_stale_result (test_flowmesh.ModelTests.test_user_revision_during_model_work_invalidates_stale_result) ... ok
+test_auto_cap_bounds (test_flowmesh.SchedulerTests.test_auto_cap_bounds) ... ok
+test_budget_is_conserved_per_tick (test_flowmesh.SchedulerTests.test_budget_is_conserved_per_tick) ... ok
+test_child_probe_has_parent (test_flowmesh.SchedulerTests.test_child_probe_has_parent) ... ok
+test_evidence_gain_affects_budget (test_flowmesh.SchedulerTests.test_evidence_gain_affects_budget) ... ok
+test_evidence_import_reawakens_exhausted_probe (test_flowmesh.SchedulerTests.test_evidence_import_reawakens_exhausted_probe) ... ok
+test_focus_changes_weight (test_flowmesh.SchedulerTests.test_focus_changes_weight) ... ok
+test_heuristic_research_probes (test_flowmesh.SchedulerTests.test_heuristic_research_probes) ... ok
+test_ledger_tracks_actual_allocation (test_flowmesh.SchedulerTests.test_ledger_tracks_actual_allocation) ... ok
+test_new_source_stays_readonly_after_import (test_flowmesh.SchedulerTests.test_new_source_stays_readonly_after_import) ... ok
+test_no_worker_without_evidence (test_flowmesh.SchedulerTests.test_no_worker_without_evidence) ... ok
+test_park_and_resume (test_flowmesh.SchedulerTests.test_park_and_resume) ... ok
+test_peer_discovery_reactivation_contract (test_flowmesh.SchedulerTests.test_peer_discovery_reactivation_contract) ... ok
+test_probe_duplicate_blocked (test_flowmesh.SchedulerTests.test_probe_duplicate_blocked) ... ok
+test_prompt_revision_is_append_only (test_flowmesh.SchedulerTests.test_prompt_revision_is_append_only) ... ok
+test_resource_reallocation_when_parked (test_flowmesh.SchedulerTests.test_resource_reallocation_when_parked) ... ok
+test_same_session_persists_after_steps (test_flowmesh.SchedulerTests.test_same_session_persists_after_steps) ... ok
+test_user_park_not_auto_woken_on_new_source (test_flowmesh.SchedulerTests.test_user_park_not_auto_woken_on_new_source) ... ok
+test_cannot_overwrite_existing_session (test_flowmesh.StartTests.test_cannot_overwrite_existing_session) ... ok
+test_corrupt_workspace_source_is_explicit_failure (test_flowmesh.StartTests.test_corrupt_workspace_source_is_explicit_failure) ... ok
+test_goal_and_mode_validation (test_flowmesh.StartTests.test_goal_and_mode_validation) ... ok
+test_initial_root_and_budget (test_flowmesh.StartTests.test_initial_root_and_budget) ... ok
+test_repeat_source_is_idempotent (test_flowmesh.StartTests.test_repeat_source_is_idempotent) ... ok
+test_source_import_and_provenance (test_flowmesh.StartTests.test_source_import_and_provenance) ... ok
+test_source_symlink_rejected (test_flowmesh.StartTests.test_source_symlink_rejected) ... ok
+test_sources_reject_oversized (test_flowmesh.StartTests.test_sources_reject_oversized) ... ok
+test_sources_reject_unknown_extension (test_flowmesh.StartTests.test_sources_reject_unknown_extension) ... ok
+test_unicode_goal_and_revision (test_flowmesh.StartTests.test_unicode_goal_and_revision) ... ok
+test_unknown_directory_protected (test_flowmesh.StartTests.test_unknown_directory_protected) ... ok
+
+----------------------------------------------------------------------
+Ran 45 tests in 1.404s
+
+OK
+Checked 36 original source/package files
+FAIL flowmesh/sources.py changed
+FAIL tests/test_flowmesh.py changed
+verifier_exit=2
+test_append_only (test_ripple.TestRipple.test_append_only) ... ok
+test_audit_does_not_flag_candidate_as_promotion (test_ripple.TestRipple.test_audit_does_not_flag_candidate_as_promotion) ... ok
+test_audit_flags_bad_changed_paths_without_mutation (test_ripple.TestRipple.test_audit_flags_bad_changed_paths_without_mutation) ... ok
+test_audit_flags_bidi_path_readonly (test_ripple.TestRipple.test_audit_flags_bidi_path_readonly) ... ok
+test_audit_flags_fake_pass_digest_without_mutation (test_ripple.TestRipple.test_audit_flags_fake_pass_digest_without_mutation) ... ok
+test_audit_flags_invisible_rollback_readonly (test_ripple.TestRipple.test_audit_flags_invisible_rollback_readonly) ... ok
+test_audit_flags_unknown_capsule_without_mutation (test_ripple.TestRipple.test_audit_flags_unknown_capsule_without_mutation) ... ok
+test_audit_invalid_source_hash_without_mutation (test_ripple.TestRipple.test_audit_invalid_source_hash_without_mutation) ... ok
+test_audit_invisible_event_id_readonly (test_ripple.TestRipple.test_audit_invisible_event_id_readonly) ... ok
+test_audit_rejects_unverified_promotion_readonly (test_ripple.TestRipple.test_audit_rejects_unverified_promotion_readonly) ... ok
+test_audit_wrong_schema_read_only (test_ripple.TestRipple.test_audit_wrong_schema_read_only) ... ok
+test_cannot_falsely_pass_test (test_ripple.TestRipple.test_cannot_falsely_pass_test) ... ok
+test_cli_audit_journal_file_clean_fixture_does_not_inherit_historical_errors (test_ripple.TestRipple.test_cli_audit_journal_file_clean_fixture_does_not_inherit_historical_errors) ... ok
+test_cli_audit_journal_file_selects_independent_fixture (test_ripple.TestRipple.test_cli_audit_journal_file_selects_independent_fixture) ... ok
+test_duplicate_changed_paths_audit_readonly (test_ripple.TestRipple.test_duplicate_changed_paths_audit_readonly) ... ok
+test_duplicate_changed_paths_rejected_without_append (test_ripple.TestRipple.test_duplicate_changed_paths_rejected_without_append) ... ok
+test_historical_journal_audit_detects_duplicate_and_invalid_json (test_ripple.TestRipple.test_historical_journal_audit_detects_duplicate_and_invalid_json) ... ok
+test_historical_journal_audit_flags_invalid_pass_and_status_without_mutation (test_ripple.TestRipple.test_historical_journal_audit_flags_invalid_pass_and_status_without_mutation) ... ok
+test_journal_audit_detects_unsafe_paths_readonly (test_ripple.TestRipple.test_journal_audit_detects_unsafe_paths_readonly) ... ok
+test_next_reflects_confirmed_asus_reproduction (test_ripple.TestRipple.test_next_reflects_confirmed_asus_reproduction) ... ok
+test_next_task_does_not_overlap_vela (test_ripple.TestRipple.test_next_task_does_not_overlap_vela) ... ok
+test_next_task_fails_closed_if_ixo_source_mapping_missing (test_ripple.TestRipple.test_next_task_fails_closed_if_ixo_source_mapping_missing) ... ok
+test_no_release_self_approval (test_ripple.TestRipple.test_no_release_self_approval) ... ok
+test_nonstrict_audit_retains_readonly_compatibility (test_ripple.TestRipple.test_nonstrict_audit_retains_readonly_compatibility) ... ok
+test_public_contains_only_alias_fields (test_ripple.TestRipple.test_public_contains_only_alias_fields) ... ok
+test_public_export_is_deterministic (test_ripple.TestRipple.test_public_export_is_deterministic) ... ok
+test_public_no_private_names (test_ripple.TestRipple.test_public_no_private_names) ... ok
+test_published_local_export_excludes_private_sources (test_ripple.TestRipple.test_published_local_export_excludes_private_sources) ... ok
+test_receipt_rejects_traversal_paths_without_writing (test_ripple.TestRipple.test_receipt_rejects_traversal_paths_without_writing) ... ok
+test_registry_aliases_unique (test_ripple.TestRipple.test_registry_aliases_unique) ... ok
+test_reject_bidi_path_without_append (test_ripple.TestRipple.test_reject_bidi_path_without_append) ... ok
+test_reject_blank_historical_event_id_without_mutation (test_ripple.TestRipple.test_reject_blank_historical_event_id_without_mutation) ... ok
+test_reject_corrupted_prior_journal (test_ripple.TestRipple.test_reject_corrupted_prior_journal) ... ok
+test_reject_duplicate_event_id_without_mutating_journal (test_ripple.TestRipple.test_reject_duplicate_event_id_without_mutating_journal) ... ok
+test_reject_empty_source_ref_without_append (test_ripple.TestRipple.test_reject_empty_source_ref_without_append) ... ok
+test_reject_fake_pass_digest_without_writing (test_ripple.TestRipple.test_reject_fake_pass_digest_without_writing) ... ok
+test_reject_invalid_source_hash_without_write (test_ripple.TestRipple.test_reject_invalid_source_hash_without_write) ... ok
+test_reject_invisible_event_id_without_append (test_ripple.TestRipple.test_reject_invisible_event_id_without_append) ... ok
+test_reject_preexisting_duplicate_ids_without_mutation (test_ripple.TestRipple.test_reject_preexisting_duplicate_ids_without_mutation) ... ok
+test_reject_unknown_test_status_without_writing (test_ripple.TestRipple.test_reject_unknown_test_status_without_writing) ... ok
+test_reject_wrong_receipt_schema_without_writing (test_ripple.TestRipple.test_reject_wrong_receipt_schema_without_writing) ... ok
+test_strict_audit_exits_nonzero_for_historical_defects (test_ripple.TestRipple.test_strict_audit_exits_nonzero_for_historical_defects) ... ok
+test_strict_audit_flags_unknown_test_status_in_separate_journal (test_ripple.TestRipple.test_strict_audit_flags_unknown_test_status_in_separate_journal) ... ok
+test_task_is_blocked_until_device (test_ripple.TestRipple.test_task_is_blocked_until_device) ... ok
+test_unhashable_historical_enums_audit_readonly (test_ripple.TestRipple.test_unhashable_historical_enums_audit_readonly) ... ok
+test_unhashable_receipt_enums_fail_closed (test_ripple.TestRipple.test_unhashable_receipt_enums_fail_closed) ... ok
+test_unsafe_event_id_audit_readonly (test_ripple.TestRipple.test_unsafe_event_id_audit_readonly) ... ok
+test_unsafe_event_id_rejected_without_append (test_ripple.TestRipple.test_unsafe_event_id_rejected_without_append) ... ok
+
+----------------------------------------------------------------------
+Ran 48 tests in 3.447s
+
+OK
+{"ok": true, "capsules": 27}
+35803e0cf6bd89bab696001f06dc663e885b126b2c87899991d90e21beb0da7c  flowmesh/sources.py
+040557ec89b1539a70e3c85f767f92820cc450d7213af2b9b89f98b0be07fdfd  tests/test_flowmesh.py

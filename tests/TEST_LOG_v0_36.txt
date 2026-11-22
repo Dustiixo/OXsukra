@@ -1,0 +1,4 @@
+Chromium headless /usr/bin/chromium via Playwright Python: 6/6 PASS (baseline, touch open, screenshot, keyboard close, A close, read-only), page errors 0.
+python -m unittest discover -s tests -p test_ripple.py -q: 48/48 PASS.
+node --check tests/underbyte_v0_36.js: PASS.
+Independent adapter: BLOCKED, no authorized peer contract.

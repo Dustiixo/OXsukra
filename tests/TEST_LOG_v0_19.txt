@@ -1,0 +1,46 @@
+test_append_only (test_ripple.TestRipple.test_append_only) ... ok
+test_audit_does_not_flag_candidate_as_promotion (test_ripple.TestRipple.test_audit_does_not_flag_candidate_as_promotion) ... ok
+test_audit_flags_bad_changed_paths_without_mutation (test_ripple.TestRipple.test_audit_flags_bad_changed_paths_without_mutation) ... ok
+test_audit_flags_bidi_path_readonly (test_ripple.TestRipple.test_audit_flags_bidi_path_readonly) ... ok
+test_audit_flags_fake_pass_digest_without_mutation (test_ripple.TestRipple.test_audit_flags_fake_pass_digest_without_mutation) ... ok
+test_audit_flags_unknown_capsule_without_mutation (test_ripple.TestRipple.test_audit_flags_unknown_capsule_without_mutation) ... ok
+test_audit_invalid_source_hash_without_mutation (test_ripple.TestRipple.test_audit_invalid_source_hash_without_mutation) ... ok
+test_audit_invisible_event_id_readonly (test_ripple.TestRipple.test_audit_invisible_event_id_readonly) ... ok
+test_audit_rejects_unverified_promotion_readonly (test_ripple.TestRipple.test_audit_rejects_unverified_promotion_readonly) ... ok
+test_audit_wrong_schema_read_only (test_ripple.TestRipple.test_audit_wrong_schema_read_only) ... ok
+test_cannot_falsely_pass_test (test_ripple.TestRipple.test_cannot_falsely_pass_test) ... ok
+test_cli_audit_journal_file_clean_fixture_does_not_inherit_historical_errors (test_ripple.TestRipple.test_cli_audit_journal_file_clean_fixture_does_not_inherit_historical_errors) ... ok
+test_cli_audit_journal_file_selects_independent_fixture (test_ripple.TestRipple.test_cli_audit_journal_file_selects_independent_fixture) ... ok
+test_duplicate_changed_paths_audit_readonly (test_ripple.TestRipple.test_duplicate_changed_paths_audit_readonly) ... ok
+test_duplicate_changed_paths_rejected_without_append (test_ripple.TestRipple.test_duplicate_changed_paths_rejected_without_append) ... ok
+test_historical_journal_audit_detects_duplicate_and_invalid_json (test_ripple.TestRipple.test_historical_journal_audit_detects_duplicate_and_invalid_json) ... ok
+test_historical_journal_audit_flags_invalid_pass_and_status_without_mutation (test_ripple.TestRipple.test_historical_journal_audit_flags_invalid_pass_and_status_without_mutation) ... ok
+test_journal_audit_detects_unsafe_paths_readonly (test_ripple.TestRipple.test_journal_audit_detects_unsafe_paths_readonly) ... ok
+test_next_task_does_not_overlap_vela (test_ripple.TestRipple.test_next_task_does_not_overlap_vela) ... ok
+test_next_task_fails_closed_if_ixo_source_mapping_missing (test_ripple.TestRipple.test_next_task_fails_closed_if_ixo_source_mapping_missing) ... ok
+test_no_release_self_approval (test_ripple.TestRipple.test_no_release_self_approval) ... ok
+test_nonstrict_audit_retains_readonly_compatibility (test_ripple.TestRipple.test_nonstrict_audit_retains_readonly_compatibility) ... ok
+test_public_contains_only_alias_fields (test_ripple.TestRipple.test_public_contains_only_alias_fields) ... ok
+test_public_export_is_deterministic (test_ripple.TestRipple.test_public_export_is_deterministic) ... ok
+test_public_no_private_names (test_ripple.TestRipple.test_public_no_private_names) ... ok
+test_published_local_export_excludes_private_sources (test_ripple.TestRipple.test_published_local_export_excludes_private_sources) ... ok
+test_receipt_rejects_traversal_paths_without_writing (test_ripple.TestRipple.test_receipt_rejects_traversal_paths_without_writing) ... ok
+test_registry_aliases_unique (test_ripple.TestRipple.test_registry_aliases_unique) ... ok
+test_reject_bidi_path_without_append (test_ripple.TestRipple.test_reject_bidi_path_without_append) ... ok
+test_reject_blank_historical_event_id_without_mutation (test_ripple.TestRipple.test_reject_blank_historical_event_id_without_mutation) ... ok
+test_reject_corrupted_prior_journal (test_ripple.TestRipple.test_reject_corrupted_prior_journal) ... ok
+test_reject_duplicate_event_id_without_mutating_journal (test_ripple.TestRipple.test_reject_duplicate_event_id_without_mutating_journal) ... ok
+test_reject_fake_pass_digest_without_writing (test_ripple.TestRipple.test_reject_fake_pass_digest_without_writing) ... ok
+test_reject_invalid_source_hash_without_write (test_ripple.TestRipple.test_reject_invalid_source_hash_without_write) ... ok
+test_reject_invisible_event_id_without_append (test_ripple.TestRipple.test_reject_invisible_event_id_without_append) ... ok
+test_reject_preexisting_duplicate_ids_without_mutation (test_ripple.TestRipple.test_reject_preexisting_duplicate_ids_without_mutation) ... ok
+test_reject_unknown_test_status_without_writing (test_ripple.TestRipple.test_reject_unknown_test_status_without_writing) ... ok
+test_reject_wrong_receipt_schema_without_writing (test_ripple.TestRipple.test_reject_wrong_receipt_schema_without_writing) ... ok
+test_strict_audit_exits_nonzero_for_historical_defects (test_ripple.TestRipple.test_strict_audit_exits_nonzero_for_historical_defects) ... ok
+test_strict_audit_flags_unknown_test_status_in_separate_journal (test_ripple.TestRipple.test_strict_audit_flags_unknown_test_status_in_separate_journal) ... ok
+test_task_is_blocked_until_device (test_ripple.TestRipple.test_task_is_blocked_until_device) ... ok
+
+----------------------------------------------------------------------
+Ran 41 tests in 3.728s
+
+OK

@@ -1,0 +1,2 @@
+node --check tests/underbyte_v0_34.js
+exit=0

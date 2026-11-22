@@ -1,0 +1,19 @@
+$ python -m unittest discover -s tests -p test_ripple.py -q
+----------------------------------------------------------------------
+Ran 48 tests in 3.373s
+
+OK
+
+EXIT 0
+
+$ python verification/browser_underbyte_journal_v0_37.py
+PASS initial closed
+PASS touch journal and objectives
+PASS screenshot captured
+PASS keyboard close
+PASS keyboard reopen
+PASS read-only gameplay state
+PASS map switching
+PASS no page errors
+
+EXIT 0

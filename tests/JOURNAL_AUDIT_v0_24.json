@@ -1,0 +1,21 @@
+{
+  "records": 24,
+  "issues": [
+    {
+      "line": 1,
+      "reason": "invalid source_sha256"
+    },
+    {
+      "line": 2,
+      "reason": "invalid source_sha256"
+    },
+    {
+      "line": 4,
+      "reason": "invalid status: tested-patch-candidate"
+    },
+    {
+      "line": 4,
+      "reason": "PASS missing test_log_sha256"
+    }
+  ]
+}

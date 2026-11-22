@@ -1,0 +1,307 @@
+Linux Python offline; exact source v1.3; patches applied sequentially.
+
+python -m unittest discover -v (original)
+test_asbestos_request_gets_safety_flag (test_client_hunt.BuyerFilterTests.test_asbestos_request_gets_safety_flag) ... ok
+test_buyer_query_budget_spends_none_on_employment (test_client_hunt.BuyerFilterTests.test_buyer_query_budget_spends_none_on_employment) ... ok
+test_employee_ad_excluded (test_client_hunt.BuyerFilterTests.test_employee_ad_excluded) ... ok
+test_existing_worker_hiring_mode_still_accepts_job_posts (test_client_hunt.BuyerFilterTests.test_existing_worker_hiring_mode_still_accepts_job_posts) ... ok
+test_explicit_homeowner_request (test_client_hunt.BuyerFilterTests.test_explicit_homeowner_request) ... ok
+test_generic_article_not_buyer (test_client_hunt.BuyerFilterTests.test_generic_article_not_buyer) ... ok
+test_hazard_profile_only_buyer_requests (test_client_hunt.BuyerFilterTests.test_hazard_profile_only_buyer_requests) ... ok
+test_job_board_disallowed_even_if_snippet_has_buyer_words (test_client_hunt.BuyerFilterTests.test_job_board_disallowed_even_if_snippet_has_buyer_words) ... ok
+test_mold_request_gets_safety_flag (test_client_hunt.BuyerFilterTests.test_mold_request_gets_safety_flag) ... ok
+test_service_provider_ad_excluded (test_client_hunt.BuyerFilterTests.test_service_provider_ad_excluded) ... ok
+test_tender_not_labelled_homeowner_buyer (test_client_hunt.BuyerFilterTests.test_tender_not_labelled_homeowner_buyer) ... ok
+test_worker_seeking_jobs_excluded (test_client_hunt.BuyerFilterTests.test_worker_seeking_jobs_excluded) ... ok
+test_existing_lead_migrates_without_losing_notes (test_client_hunt.EvidenceAndMigrationTests.test_existing_lead_migrates_without_losing_notes) ... ok
+test_hunt_preserves_status_and_captures_snippet_evidence (test_client_hunt.EvidenceAndMigrationTests.test_hunt_preserves_status_and_captures_snippet_evidence) ... ok
+test_official_tender_adapter_does_not_confuse_jobs_with_contracts (test_client_hunt.EvidenceAndMigrationTests.test_official_tender_adapter_does_not_confuse_jobs_with_contracts) ... ok
+test_old_customized_config_preserved_with_new_profiles (test_client_hunt.EvidenceAndMigrationTests.test_old_customized_config_preserved_with_new_profiles) ... ok
+test_another_lead_on_same_host_is_rate_limited (test_original_probe.PersistenceTests.test_another_lead_on_same_host_is_rate_limited) ... ok
+test_probe_adds_evidence_but_preserves_human_review (test_original_probe.PersistenceTests.test_probe_adds_evidence_but_preserves_human_review) ... ok
+test_same_lead_is_rate_limited_without_network (test_original_probe.PersistenceTests.test_same_lead_is_rate_limited_without_network) ... ok
+test_dns_resolving_to_private_ip_blocked (test_original_probe.SecurityAndOriginalEvidenceTests.test_dns_resolving_to_private_ip_blocked) ... ok
+test_html_robots_response_fails_closed (test_original_probe.SecurityAndOriginalEvidenceTests.test_html_robots_response_fails_closed) ... ok
+test_matching_public_buyer_page_is_only_text_corroboration (test_original_probe.SecurityAndOriginalEvidenceTests.test_matching_public_buyer_page_is_only_text_corroboration) ... ok
+test_missing_robots_allows_only_documented_404 (test_original_probe.SecurityAndOriginalEvidenceTests.test_missing_robots_allows_only_documented_404) ... ok
+test_original_post_404_is_not_found (test_original_probe.SecurityAndOriginalEvidenceTests.test_original_post_404_is_not_found) ... ok
+test_original_redirect_to_other_host_never_fetched (test_original_probe.SecurityAndOriginalEvidenceTests.test_original_redirect_to_other_host_never_fetched) ... ok
+test_private_ips_block_before_any_request (test_original_probe.SecurityAndOriginalEvidenceTests.test_private_ips_block_before_any_request) ... ok
+test_robots_disallow_blocks_original_request (test_original_probe.SecurityAndOriginalEvidenceTests.test_robots_disallow_blocks_original_request) ... ok
+test_robots_forbidden_fails_closed (test_original_probe.SecurityAndOriginalEvidenceTests.test_robots_forbidden_fails_closed) ... ok
+test_robots_redirect_to_other_host_never_fetched (test_original_probe.SecurityAndOriginalEvidenceTests.test_robots_redirect_to_other_host_never_fetched) ... ok
+test_robots_server_error_fails_closed (test_original_probe.SecurityAndOriginalEvidenceTests.test_robots_server_error_fails_closed) ... ok
+test_same_origin_redirect_rechecks_robots_for_new_path (test_original_probe.SecurityAndOriginalEvidenceTests.test_same_origin_redirect_rechecks_robots_for_new_path) ... ok
+test_services_ad_conflicts_with_indexed_buyer_snippet (test_original_probe.SecurityAndOriginalEvidenceTests.test_services_ad_conflicts_with_indexed_buyer_snippet) ... ok
+test_sign_in_wall_never_counted_as_buyer_corroboration (test_original_probe.SecurityAndOriginalEvidenceTests.test_sign_in_wall_never_counted_as_buyer_corroboration) ... ok
+test_unrelated_page_is_ambiguous_or_conflicting (test_original_probe.SecurityAndOriginalEvidenceTests.test_unrelated_page_is_ambiguous_or_conflicting) ... ok
+test_both_export_modes_neutralize_spreadsheet_formulas (test_security_gate.CSVInjectionTests.test_both_export_modes_neutralize_spreadsheet_formulas) ... ok
+test_preserves_status_and_raw_database_notes (test_security_gate.CSVInjectionTests.test_preserves_status_and_raw_database_notes) ... ok
+test_acknowledged_rss_can_be_fetched (test_security_gate.LegalSourceGateTests.test_acknowledged_rss_can_be_fetched) ... ok
+test_legacy_feed_without_permission_does_not_fetch (test_security_gate.LegalSourceGateTests.test_legacy_feed_without_permission_does_not_fetch) ... ok
+test_old_http_feed_survives_config_upgrade_without_fetch (test_security_gate.LegalSourceGateTests.test_old_http_feed_survives_config_upgrade_without_fetch) ... ok
+test_rss_requires_operator_permission_acknowledgement (test_security_gate.LegalSourceGateTests.test_rss_requires_operator_permission_acknowledgement) ... ok
+test_private_database_and_config_permissions (test_security_gate.LocalStorageTests.test_private_database_and_config_permissions) ... ok
+test_307_redirect_is_refused (test_security_gate.OutboundSecretPolicyTests.test_307_redirect_is_refused) ... ok
+test_untrusted_source_links_cannot_trigger_local_url_handlers (test_security_gate.OutboundSecretPolicyTests.test_untrusted_source_links_cannot_trigger_local_url_handlers) ... ok
+test_cross_host_redirect_blocked (test_security_gate.SourceTransportSecurityTests.test_cross_host_redirect_blocked) ... ok
+test_dns_rebinding_to_internal_ip_fails_before_any_request (test_security_gate.SourceTransportSecurityTests.test_dns_rebinding_to_internal_ip_fails_before_any_request) ... ok
+test_https_downgrade_blocked (test_security_gate.SourceTransportSecurityTests.test_https_downgrade_blocked) ... ok
+test_only_allow_known_government_json_endpoints (test_security_gate.SourceTransportSecurityTests.test_only_allow_known_government_json_endpoints) ... ok
+test_public_canadabuys_url_exact (test_security_gate.SourceTransportSecurityTests.test_public_canadabuys_url_exact) ... ok
+test_reject_private_destination_with_no_get (test_security_gate.SourceTransportSecurityTests.test_reject_private_destination_with_no_get) ... ok
+test_same_origin_redirect_allowed (test_security_gate.SourceTransportSecurityTests.test_same_origin_redirect_allowed) ... ok
+test_same_origin_redirect_limited (test_security_gate.SourceTransportSecurityTests.test_same_origin_redirect_limited) ... ok
+test_size_limit_even_with_injected_response (test_security_gate.SourceTransportSecurityTests.test_size_limit_even_with_injected_response) ... ok
+
+----------------------------------------------------------------------
+Ran 52 tests in 0.324s
+
+OK
+
+same (prior patch)
+test_asbestos_request_gets_safety_flag (test_client_hunt.BuyerFilterTests.test_asbestos_request_gets_safety_flag) ... ok
+test_buyer_query_budget_spends_none_on_employment (test_client_hunt.BuyerFilterTests.test_buyer_query_budget_spends_none_on_employment) ... ok
+test_employee_ad_excluded (test_client_hunt.BuyerFilterTests.test_employee_ad_excluded) ... ok
+test_existing_worker_hiring_mode_still_accepts_job_posts (test_client_hunt.BuyerFilterTests.test_existing_worker_hiring_mode_still_accepts_job_posts) ... ok
+test_explicit_homeowner_request (test_client_hunt.BuyerFilterTests.test_explicit_homeowner_request) ... ok
+test_generic_article_not_buyer (test_client_hunt.BuyerFilterTests.test_generic_article_not_buyer) ... ok
+test_hazard_profile_only_buyer_requests (test_client_hunt.BuyerFilterTests.test_hazard_profile_only_buyer_requests) ... ok
+test_job_board_disallowed_even_if_snippet_has_buyer_words (test_client_hunt.BuyerFilterTests.test_job_board_disallowed_even_if_snippet_has_buyer_words) ... ok
+test_mold_request_gets_safety_flag (test_client_hunt.BuyerFilterTests.test_mold_request_gets_safety_flag) ... ok
+test_service_provider_ad_excluded (test_client_hunt.BuyerFilterTests.test_service_provider_ad_excluded) ... ok
+test_tender_not_labelled_homeowner_buyer (test_client_hunt.BuyerFilterTests.test_tender_not_labelled_homeowner_buyer) ... ok
+test_worker_seeking_jobs_excluded (test_client_hunt.BuyerFilterTests.test_worker_seeking_jobs_excluded) ... ok
+test_existing_lead_migrates_without_losing_notes (test_client_hunt.EvidenceAndMigrationTests.test_existing_lead_migrates_without_losing_notes) ... ok
+test_hunt_preserves_status_and_captures_snippet_evidence (test_client_hunt.EvidenceAndMigrationTests.test_hunt_preserves_status_and_captures_snippet_evidence) ... ok
+test_official_tender_adapter_does_not_confuse_jobs_with_contracts (test_client_hunt.EvidenceAndMigrationTests.test_official_tender_adapter_does_not_confuse_jobs_with_contracts) ... ok
+test_old_customized_config_preserved_with_new_profiles (test_client_hunt.EvidenceAndMigrationTests.test_old_customized_config_preserved_with_new_profiles) ... ok
+test_another_lead_on_same_host_is_rate_limited (test_original_probe.PersistenceTests.test_another_lead_on_same_host_is_rate_limited) ... ok
+test_probe_adds_evidence_but_preserves_human_review (test_original_probe.PersistenceTests.test_probe_adds_evidence_but_preserves_human_review) ... ok
+test_same_lead_is_rate_limited_without_network (test_original_probe.PersistenceTests.test_same_lead_is_rate_limited_without_network) ... ok
+test_dns_resolving_to_private_ip_blocked (test_original_probe.SecurityAndOriginalEvidenceTests.test_dns_resolving_to_private_ip_blocked) ... ok
+test_html_robots_response_fails_closed (test_original_probe.SecurityAndOriginalEvidenceTests.test_html_robots_response_fails_closed) ... ok
+test_matching_public_buyer_page_is_only_text_corroboration (test_original_probe.SecurityAndOriginalEvidenceTests.test_matching_public_buyer_page_is_only_text_corroboration) ... ok
+test_missing_robots_allows_only_documented_404 (test_original_probe.SecurityAndOriginalEvidenceTests.test_missing_robots_allows_only_documented_404) ... ok
+test_original_post_404_is_not_found (test_original_probe.SecurityAndOriginalEvidenceTests.test_original_post_404_is_not_found) ... ok
+test_original_redirect_to_other_host_never_fetched (test_original_probe.SecurityAndOriginalEvidenceTests.test_original_redirect_to_other_host_never_fetched) ... ok
+test_private_ips_block_before_any_request (test_original_probe.SecurityAndOriginalEvidenceTests.test_private_ips_block_before_any_request) ... ok
+test_robots_disallow_blocks_original_request (test_original_probe.SecurityAndOriginalEvidenceTests.test_robots_disallow_blocks_original_request) ... ok
+test_robots_forbidden_fails_closed (test_original_probe.SecurityAndOriginalEvidenceTests.test_robots_forbidden_fails_closed) ... ok
+test_robots_redirect_to_other_host_never_fetched (test_original_probe.SecurityAndOriginalEvidenceTests.test_robots_redirect_to_other_host_never_fetched) ... ok
+test_robots_server_error_fails_closed (test_original_probe.SecurityAndOriginalEvidenceTests.test_robots_server_error_fails_closed) ... ok
+test_same_origin_redirect_rechecks_robots_for_new_path (test_original_probe.SecurityAndOriginalEvidenceTests.test_same_origin_redirect_rechecks_robots_for_new_path) ... ok
+test_services_ad_conflicts_with_indexed_buyer_snippet (test_original_probe.SecurityAndOriginalEvidenceTests.test_services_ad_conflicts_with_indexed_buyer_snippet) ... ok
+test_sign_in_wall_never_counted_as_buyer_corroboration (test_original_probe.SecurityAndOriginalEvidenceTests.test_sign_in_wall_never_counted_as_buyer_corroboration) ... ok
+test_unrelated_page_is_ambiguous_or_conflicting (test_original_probe.SecurityAndOriginalEvidenceTests.test_unrelated_page_is_ambiguous_or_conflicting) ... ok
+test_both_export_modes_neutralize_spreadsheet_formulas (test_security_gate.CSVInjectionTests.test_both_export_modes_neutralize_spreadsheet_formulas) ... ok
+test_preserves_status_and_raw_database_notes (test_security_gate.CSVInjectionTests.test_preserves_status_and_raw_database_notes) ... ok
+test_acknowledged_rss_can_be_fetched (test_security_gate.LegalSourceGateTests.test_acknowledged_rss_can_be_fetched) ... ok
+test_legacy_feed_without_permission_does_not_fetch (test_security_gate.LegalSourceGateTests.test_legacy_feed_without_permission_does_not_fetch) ... ok
+test_old_http_feed_survives_config_upgrade_without_fetch (test_security_gate.LegalSourceGateTests.test_old_http_feed_survives_config_upgrade_without_fetch) ... ok
+test_rss_requires_operator_permission_acknowledgement (test_security_gate.LegalSourceGateTests.test_rss_requires_operator_permission_acknowledgement) ... ok
+test_private_database_and_config_permissions (test_security_gate.LocalStorageTests.test_private_database_and_config_permissions) ... ok
+test_307_redirect_is_refused (test_security_gate.OutboundSecretPolicyTests.test_307_redirect_is_refused) ... ok
+test_untrusted_source_links_cannot_trigger_local_url_handlers (test_security_gate.OutboundSecretPolicyTests.test_untrusted_source_links_cannot_trigger_local_url_handlers) ... ok
+test_cross_host_redirect_blocked (test_security_gate.SourceTransportSecurityTests.test_cross_host_redirect_blocked) ... ok
+test_dns_rebinding_to_internal_ip_fails_before_any_request (test_security_gate.SourceTransportSecurityTests.test_dns_rebinding_to_internal_ip_fails_before_any_request) ... ok
+test_https_downgrade_blocked (test_security_gate.SourceTransportSecurityTests.test_https_downgrade_blocked) ... ok
+test_multicast_dns_and_literals_blocked_before_request (test_security_gate.SourceTransportSecurityTests.test_multicast_dns_and_literals_blocked_before_request) ... ok
+test_only_allow_known_government_json_endpoints (test_security_gate.SourceTransportSecurityTests.test_only_allow_known_government_json_endpoints) ... ok
+test_public_canadabuys_url_exact (test_security_gate.SourceTransportSecurityTests.test_public_canadabuys_url_exact) ... ok
+test_reject_private_destination_with_no_get (test_security_gate.SourceTransportSecurityTests.test_reject_private_destination_with_no_get) ... ok
+test_same_origin_redirect_allowed (test_security_gate.SourceTransportSecurityTests.test_same_origin_redirect_allowed) ... ok
+test_same_origin_redirect_limited (test_security_gate.SourceTransportSecurityTests.test_same_origin_redirect_limited) ... ok
+test_size_limit_even_with_injected_response (test_security_gate.SourceTransportSecurityTests.test_size_limit_even_with_injected_response) ... ok
+
+----------------------------------------------------------------------
+Ran 53 tests in 0.247s
+
+OK
+
+python -m unittest test_security_gate.SourceTransportSecurityTests.test_mixed_dns_answers_fail_closed_before_request -v (original code, new test; expected failure)
+test_mixed_dns_answers_fail_closed_before_request (test_security_gate.SourceTransportSecurityTests.test_mixed_dns_answers_fail_closed_before_request) ... 
+  test_mixed_dns_answers_fail_closed_before_request (test_security_gate.SourceTransportSecurityTests.test_mixed_dns_answers_fail_closed_before_request) (addresses=('93.184.215.14', '224.0.0.1')) ... FAIL
+  test_mixed_dns_answers_fail_closed_before_request (test_security_gate.SourceTransportSecurityTests.test_mixed_dns_answers_fail_closed_before_request) (addresses=('224.0.0.1', '93.184.215.14')) ... FAIL
+  test_mixed_dns_answers_fail_closed_before_request (test_security_gate.SourceTransportSecurityTests.test_mixed_dns_answers_fail_closed_before_request) (addresses=('93.184.215.14', 'ff0e::1')) ... FAIL
+  test_mixed_dns_answers_fail_closed_before_request (test_security_gate.SourceTransportSecurityTests.test_mixed_dns_answers_fail_closed_before_request) (addresses=('ff0e::1', '93.184.215.14')) ... FAIL
+
+======================================================================
+FAIL: test_mixed_dns_answers_fail_closed_before_request (test_security_gate.SourceTransportSecurityTests.test_mixed_dns_answers_fail_closed_before_request) (addresses=('93.184.215.14', '224.0.0.1'))
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/st28/stayscraping-v1.3/test_security_gate.py", line 77, in test_mixed_dns_answers_fail_closed_before_request
+    with self.assertRaises(ProbeSecurityError):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+AssertionError: ProbeSecurityError not raised
+
+======================================================================
+FAIL: test_mixed_dns_answers_fail_closed_before_request (test_security_gate.SourceTransportSecurityTests.test_mixed_dns_answers_fail_closed_before_request) (addresses=('224.0.0.1', '93.184.215.14'))
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/st28/stayscraping-v1.3/test_security_gate.py", line 77, in test_mixed_dns_answers_fail_closed_before_request
+    with self.assertRaises(ProbeSecurityError):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+AssertionError: ProbeSecurityError not raised
+
+======================================================================
+FAIL: test_mixed_dns_answers_fail_closed_before_request (test_security_gate.SourceTransportSecurityTests.test_mixed_dns_answers_fail_closed_before_request) (addresses=('93.184.215.14', 'ff0e::1'))
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/st28/stayscraping-v1.3/test_security_gate.py", line 77, in test_mixed_dns_answers_fail_closed_before_request
+    with self.assertRaises(ProbeSecurityError):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+AssertionError: ProbeSecurityError not raised
+
+======================================================================
+FAIL: test_mixed_dns_answers_fail_closed_before_request (test_security_gate.SourceTransportSecurityTests.test_mixed_dns_answers_fail_closed_before_request) (addresses=('ff0e::1', '93.184.215.14'))
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/st28/stayscraping-v1.3/test_security_gate.py", line 77, in test_mixed_dns_answers_fail_closed_before_request
+    with self.assertRaises(ProbeSecurityError):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+AssertionError: ProbeSecurityError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.017s
+
+FAILED (failures=4)
+
+python -m unittest discover -v (both patches)
+test_asbestos_request_gets_safety_flag (test_client_hunt.BuyerFilterTests.test_asbestos_request_gets_safety_flag) ... ok
+test_buyer_query_budget_spends_none_on_employment (test_client_hunt.BuyerFilterTests.test_buyer_query_budget_spends_none_on_employment) ... ok
+test_employee_ad_excluded (test_client_hunt.BuyerFilterTests.test_employee_ad_excluded) ... ok
+test_existing_worker_hiring_mode_still_accepts_job_posts (test_client_hunt.BuyerFilterTests.test_existing_worker_hiring_mode_still_accepts_job_posts) ... ok
+test_explicit_homeowner_request (test_client_hunt.BuyerFilterTests.test_explicit_homeowner_request) ... ok
+test_generic_article_not_buyer (test_client_hunt.BuyerFilterTests.test_generic_article_not_buyer) ... ok
+test_hazard_profile_only_buyer_requests (test_client_hunt.BuyerFilterTests.test_hazard_profile_only_buyer_requests) ... ok
+test_job_board_disallowed_even_if_snippet_has_buyer_words (test_client_hunt.BuyerFilterTests.test_job_board_disallowed_even_if_snippet_has_buyer_words) ... ok
+test_mold_request_gets_safety_flag (test_client_hunt.BuyerFilterTests.test_mold_request_gets_safety_flag) ... ok
+test_service_provider_ad_excluded (test_client_hunt.BuyerFilterTests.test_service_provider_ad_excluded) ... ok
+test_tender_not_labelled_homeowner_buyer (test_client_hunt.BuyerFilterTests.test_tender_not_labelled_homeowner_buyer) ... ok
+test_worker_seeking_jobs_excluded (test_client_hunt.BuyerFilterTests.test_worker_seeking_jobs_excluded) ... ok
+test_existing_lead_migrates_without_losing_notes (test_client_hunt.EvidenceAndMigrationTests.test_existing_lead_migrates_without_losing_notes) ... ok
+test_hunt_preserves_status_and_captures_snippet_evidence (test_client_hunt.EvidenceAndMigrationTests.test_hunt_preserves_status_and_captures_snippet_evidence) ... ok
+test_official_tender_adapter_does_not_confuse_jobs_with_contracts (test_client_hunt.EvidenceAndMigrationTests.test_official_tender_adapter_does_not_confuse_jobs_with_contracts) ... ok
+test_old_customized_config_preserved_with_new_profiles (test_client_hunt.EvidenceAndMigrationTests.test_old_customized_config_preserved_with_new_profiles) ... ok
+test_another_lead_on_same_host_is_rate_limited (test_original_probe.PersistenceTests.test_another_lead_on_same_host_is_rate_limited) ... ok
+test_probe_adds_evidence_but_preserves_human_review (test_original_probe.PersistenceTests.test_probe_adds_evidence_but_preserves_human_review) ... ok
+test_same_lead_is_rate_limited_without_network (test_original_probe.PersistenceTests.test_same_lead_is_rate_limited_without_network) ... ok
+test_dns_resolving_to_private_ip_blocked (test_original_probe.SecurityAndOriginalEvidenceTests.test_dns_resolving_to_private_ip_blocked) ... ok
+test_html_robots_response_fails_closed (test_original_probe.SecurityAndOriginalEvidenceTests.test_html_robots_response_fails_closed) ... ok
+test_matching_public_buyer_page_is_only_text_corroboration (test_original_probe.SecurityAndOriginalEvidenceTests.test_matching_public_buyer_page_is_only_text_corroboration) ... ok
+test_missing_robots_allows_only_documented_404 (test_original_probe.SecurityAndOriginalEvidenceTests.test_missing_robots_allows_only_documented_404) ... ok
+test_original_post_404_is_not_found (test_original_probe.SecurityAndOriginalEvidenceTests.test_original_post_404_is_not_found) ... ok
+test_original_redirect_to_other_host_never_fetched (test_original_probe.SecurityAndOriginalEvidenceTests.test_original_redirect_to_other_host_never_fetched) ... ok
+test_private_ips_block_before_any_request (test_original_probe.SecurityAndOriginalEvidenceTests.test_private_ips_block_before_any_request) ... ok
+test_robots_disallow_blocks_original_request (test_original_probe.SecurityAndOriginalEvidenceTests.test_robots_disallow_blocks_original_request) ... ok
+test_robots_forbidden_fails_closed (test_original_probe.SecurityAndOriginalEvidenceTests.test_robots_forbidden_fails_closed) ... ok
+test_robots_redirect_to_other_host_never_fetched (test_original_probe.SecurityAndOriginalEvidenceTests.test_robots_redirect_to_other_host_never_fetched) ... ok
+test_robots_server_error_fails_closed (test_original_probe.SecurityAndOriginalEvidenceTests.test_robots_server_error_fails_closed) ... ok
+test_same_origin_redirect_rechecks_robots_for_new_path (test_original_probe.SecurityAndOriginalEvidenceTests.test_same_origin_redirect_rechecks_robots_for_new_path) ... ok
+test_services_ad_conflicts_with_indexed_buyer_snippet (test_original_probe.SecurityAndOriginalEvidenceTests.test_services_ad_conflicts_with_indexed_buyer_snippet) ... ok
+test_sign_in_wall_never_counted_as_buyer_corroboration (test_original_probe.SecurityAndOriginalEvidenceTests.test_sign_in_wall_never_counted_as_buyer_corroboration) ... ok
+test_unrelated_page_is_ambiguous_or_conflicting (test_original_probe.SecurityAndOriginalEvidenceTests.test_unrelated_page_is_ambiguous_or_conflicting) ... ok
+test_both_export_modes_neutralize_spreadsheet_formulas (test_security_gate.CSVInjectionTests.test_both_export_modes_neutralize_spreadsheet_formulas) ... ok
+test_preserves_status_and_raw_database_notes (test_security_gate.CSVInjectionTests.test_preserves_status_and_raw_database_notes) ... ok
+test_acknowledged_rss_can_be_fetched (test_security_gate.LegalSourceGateTests.test_acknowledged_rss_can_be_fetched) ... ok
+test_legacy_feed_without_permission_does_not_fetch (test_security_gate.LegalSourceGateTests.test_legacy_feed_without_permission_does_not_fetch) ... ok
+test_old_http_feed_survives_config_upgrade_without_fetch (test_security_gate.LegalSourceGateTests.test_old_http_feed_survives_config_upgrade_without_fetch) ... ok
+test_rss_requires_operator_permission_acknowledgement (test_security_gate.LegalSourceGateTests.test_rss_requires_operator_permission_acknowledgement) ... ok
+test_private_database_and_config_permissions (test_security_gate.LocalStorageTests.test_private_database_and_config_permissions) ... ok
+test_307_redirect_is_refused (test_security_gate.OutboundSecretPolicyTests.test_307_redirect_is_refused) ... ok
+test_untrusted_source_links_cannot_trigger_local_url_handlers (test_security_gate.OutboundSecretPolicyTests.test_untrusted_source_links_cannot_trigger_local_url_handlers) ... ok
+test_cross_host_redirect_blocked (test_security_gate.SourceTransportSecurityTests.test_cross_host_redirect_blocked) ... ok
+test_dns_rebinding_to_internal_ip_fails_before_any_request (test_security_gate.SourceTransportSecurityTests.test_dns_rebinding_to_internal_ip_fails_before_any_request) ... ok
+test_https_downgrade_blocked (test_security_gate.SourceTransportSecurityTests.test_https_downgrade_blocked) ... ok
+test_mixed_dns_answers_fail_closed_before_request (test_security_gate.SourceTransportSecurityTests.test_mixed_dns_answers_fail_closed_before_request) ... ok
+test_multicast_dns_and_literals_blocked_before_request (test_security_gate.SourceTransportSecurityTests.test_multicast_dns_and_literals_blocked_before_request) ... ok
+test_only_allow_known_government_json_endpoints (test_security_gate.SourceTransportSecurityTests.test_only_allow_known_government_json_endpoints) ... ok
+test_public_canadabuys_url_exact (test_security_gate.SourceTransportSecurityTests.test_public_canadabuys_url_exact) ... ok
+test_reject_private_destination_with_no_get (test_security_gate.SourceTransportSecurityTests.test_reject_private_destination_with_no_get) ... ok
+test_same_origin_redirect_allowed (test_security_gate.SourceTransportSecurityTests.test_same_origin_redirect_allowed) ... ok
+test_same_origin_redirect_limited (test_security_gate.SourceTransportSecurityTests.test_same_origin_redirect_limited) ... ok
+test_size_limit_even_with_injected_response (test_security_gate.SourceTransportSecurityTests.test_size_limit_even_with_injected_response) ... ok
+
+----------------------------------------------------------------------
+Ran 54 tests in 0.263s
+
+OK
+
+python -m unittest discover -s tests -v
+test_append_only (test_ripple.TestRipple.test_append_only) ... ok
+test_audit_does_not_flag_candidate_as_promotion (test_ripple.TestRipple.test_audit_does_not_flag_candidate_as_promotion) ... ok
+test_audit_flags_bad_changed_paths_without_mutation (test_ripple.TestRipple.test_audit_flags_bad_changed_paths_without_mutation) ... ok
+test_audit_flags_bidi_path_readonly (test_ripple.TestRipple.test_audit_flags_bidi_path_readonly) ... ok
+test_audit_flags_fake_pass_digest_without_mutation (test_ripple.TestRipple.test_audit_flags_fake_pass_digest_without_mutation) ... ok
+test_audit_flags_invisible_rollback_readonly (test_ripple.TestRipple.test_audit_flags_invisible_rollback_readonly) ... ok
+test_audit_flags_unknown_capsule_without_mutation (test_ripple.TestRipple.test_audit_flags_unknown_capsule_without_mutation) ... ok
+test_audit_invalid_source_hash_without_mutation (test_ripple.TestRipple.test_audit_invalid_source_hash_without_mutation) ... ok
+test_audit_invisible_event_id_readonly (test_ripple.TestRipple.test_audit_invisible_event_id_readonly) ... ok
+test_audit_rejects_unverified_promotion_readonly (test_ripple.TestRipple.test_audit_rejects_unverified_promotion_readonly) ... ok
+test_audit_wrong_schema_read_only (test_ripple.TestRipple.test_audit_wrong_schema_read_only) ... ok
+test_cannot_falsely_pass_test (test_ripple.TestRipple.test_cannot_falsely_pass_test) ... ok
+test_cli_audit_journal_file_clean_fixture_does_not_inherit_historical_errors (test_ripple.TestRipple.test_cli_audit_journal_file_clean_fixture_does_not_inherit_historical_errors) ... ok
+test_cli_audit_journal_file_selects_independent_fixture (test_ripple.TestRipple.test_cli_audit_journal_file_selects_independent_fixture) ... ok
+test_duplicate_changed_paths_audit_readonly (test_ripple.TestRipple.test_duplicate_changed_paths_audit_readonly) ... ok
+test_duplicate_changed_paths_rejected_without_append (test_ripple.TestRipple.test_duplicate_changed_paths_rejected_without_append) ... ok
+test_historical_journal_audit_detects_duplicate_and_invalid_json (test_ripple.TestRipple.test_historical_journal_audit_detects_duplicate_and_invalid_json) ... ok
+test_historical_journal_audit_flags_invalid_pass_and_status_without_mutation (test_ripple.TestRipple.test_historical_journal_audit_flags_invalid_pass_and_status_without_mutation) ... ok
+test_journal_audit_detects_unsafe_paths_readonly (test_ripple.TestRipple.test_journal_audit_detects_unsafe_paths_readonly) ... ok
+test_next_reflects_confirmed_asus_reproduction (test_ripple.TestRipple.test_next_reflects_confirmed_asus_reproduction) ... ok
+test_next_task_does_not_overlap_vela (test_ripple.TestRipple.test_next_task_does_not_overlap_vela) ... ok
+test_next_task_fails_closed_if_ixo_source_mapping_missing (test_ripple.TestRipple.test_next_task_fails_closed_if_ixo_source_mapping_missing) ... ok
+test_no_release_self_approval (test_ripple.TestRipple.test_no_release_self_approval) ... ok
+test_nonstrict_audit_retains_readonly_compatibility (test_ripple.TestRipple.test_nonstrict_audit_retains_readonly_compatibility) ... ok
+test_public_contains_only_alias_fields (test_ripple.TestRipple.test_public_contains_only_alias_fields) ... ok
+test_public_export_is_deterministic (test_ripple.TestRipple.test_public_export_is_deterministic) ... ok
+test_public_no_private_names (test_ripple.TestRipple.test_public_no_private_names) ... ok
+test_published_local_export_excludes_private_sources (test_ripple.TestRipple.test_published_local_export_excludes_private_sources) ... ok
+test_receipt_rejects_traversal_paths_without_writing (test_ripple.TestRipple.test_receipt_rejects_traversal_paths_without_writing) ... ok
+test_registry_aliases_unique (test_ripple.TestRipple.test_registry_aliases_unique) ... ok
+test_reject_bidi_path_without_append (test_ripple.TestRipple.test_reject_bidi_path_without_append) ... ok
+test_reject_blank_historical_event_id_without_mutation (test_ripple.TestRipple.test_reject_blank_historical_event_id_without_mutation) ... ok
+test_reject_corrupted_prior_journal (test_ripple.TestRipple.test_reject_corrupted_prior_journal) ... ok
+test_reject_duplicate_event_id_without_mutating_journal (test_ripple.TestRipple.test_reject_duplicate_event_id_without_mutating_journal) ... ok
+test_reject_empty_source_ref_without_append (test_ripple.TestRipple.test_reject_empty_source_ref_without_append) ... ok
+test_reject_fake_pass_digest_without_writing (test_ripple.TestRipple.test_reject_fake_pass_digest_without_writing) ... ok
+test_reject_invalid_source_hash_without_write (test_ripple.TestRipple.test_reject_invalid_source_hash_without_write) ... ok
+test_reject_invisible_event_id_without_append (test_ripple.TestRipple.test_reject_invisible_event_id_without_append) ... ok
+test_reject_preexisting_duplicate_ids_without_mutation (test_ripple.TestRipple.test_reject_preexisting_duplicate_ids_without_mutation) ... ok
+test_reject_unknown_test_status_without_writing (test_ripple.TestRipple.test_reject_unknown_test_status_without_writing) ... ok
+test_reject_wrong_receipt_schema_without_writing (test_ripple.TestRipple.test_reject_wrong_receipt_schema_without_writing) ... ok
+test_strict_audit_exits_nonzero_for_historical_defects (test_ripple.TestRipple.test_strict_audit_exits_nonzero_for_historical_defects) ... ok
+test_strict_audit_flags_unknown_test_status_in_separate_journal (test_ripple.TestRipple.test_strict_audit_flags_unknown_test_status_in_separate_journal) ... ok
+test_task_is_blocked_until_device (test_ripple.TestRipple.test_task_is_blocked_until_device) ... ok
+test_unhashable_historical_enums_audit_readonly (test_ripple.TestRipple.test_unhashable_historical_enums_audit_readonly) ... ok
+test_unhashable_receipt_enums_fail_closed (test_ripple.TestRipple.test_unhashable_receipt_enums_fail_closed) ... ok
+test_unsafe_event_id_audit_readonly (test_ripple.TestRipple.test_unsafe_event_id_audit_readonly) ... ok
+test_unsafe_event_id_rejected_without_append (test_ripple.TestRipple.test_unsafe_event_id_rejected_without_append) ... ok
+
+----------------------------------------------------------------------
+Ran 48 tests in 3.567s
+
+OK
+
+python tools/ripple.py audit-journal --strict (exit 2)
+{
+  "records": 27,
+  "issues": [
+    {
+      "line": 1,
+      "reason": "invalid source_sha256"
+    },
+    {
+      "line": 2,
+      "reason": "invalid source_sha256"
+    },
+    {
+      "line": 4,
+      "reason": "invalid status: tested-patch-candidate"
+    },
+    {
+      "line": 4,
+      "reason": "PASS missing test_log_sha256"
+    }
+  ]
+}

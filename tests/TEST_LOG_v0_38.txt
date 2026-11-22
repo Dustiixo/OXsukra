@@ -1,0 +1,18 @@
+CORE
+----------------------------------------------------------------------
+Ran 47 tests in 2.746s
+
+OK
+
+COORDINATOR
+----------------------------------------------------------------------
+Ran 48 tests in 4.966s
+
+OK
+
+CHROMIUM
+opened '#047' expected 47
+PASS: Chromium WebGL2; receipt count 13 previous 40 next 47 evidence opens correct receipt; no runtime errors
+
+NODE
+node --check gpu_field/field.js : PASS

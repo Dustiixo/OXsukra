@@ -1,0 +1,15 @@
+Immutable checkpoint: /OXsukra/ThreadArchives/IXO-VELA-FOCUS-20261112-001/IXO_FlowMesh_M0_1.zip
+Source archive SHA256: cb336bc46cf5c2d9e797a7b84e60f9ef8e2ab2df7debe98bee0576f71a6762ae
+Baseline: 44/44 PASS (PYTHONPATH=.)
+Patched: .............................................
+----------------------------------------------------------------------
+Ran 45 tests in 0.575s
+
+OK
+
+Original package verifier on patched workspace: EXPECTED FAIL (source changed, old manifest)
+Checked 36 original source/package files
+FAIL flowmesh/sources.py changed
+FAIL tests/test_flowmesh.py changed
+
+No host, external adapter, or GitHub test.
