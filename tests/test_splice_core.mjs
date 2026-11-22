@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import {makeDemo,analyzeSignal,COUNT,addressOf,encodeWord,decodeWord,parseSlotScript,geometry,DEFAULTS,colourOf,fftMagnitudes,makePrintPayload,wavBytes} from '../static/splice-core.mjs';
+const test=(name,fn)=>{fn();console.log('PASS '+name);};
+test('1000 gate addresses unique, 10×10×10',()=>{const seen=new Set();for(let i=0;i<COUNT;i++){const {gateRow,gateColumn,subsplice}=addressOf(i);assert.ok(gateRow<10&&gateColumn<10&&subsplice<10);seen.add(`${gateRow}:${gateColumn}:${subsplice}`);}assert.equal(seen.size,1000);assert.throws(()=>addressOf(1000));});
+test('16bit bitnote encode/decode',()=>{for(let e of [0,.2,1])for(let p=0;p<12;p++){const w=encodeWord(e,p,2,3),d=decodeWord(w);assert.equal(d.pitchClass,p);assert.equal(d.timbre2,3);assert.equal(d.onset2,2);assert.equal(d.energy8,Math.round(e*255));}});
+test('slot hack input bounded, no arbitrary evaluation',()=>{const p=parseSlotScript('depth: 1.4.\nhue: -45.\nthreshold: .45.\ntwist: 2.0.');assert.equal(p.depth,1.4);assert.equal(p.hue,-45);assert.throws(()=>parseSlotScript('depth: process.exit(1).'));assert.throws(()=>parseSlotScript('window.location: 9.'));assert.throws(()=>parseSlotScript('depth: NaN.'));});
+test('FFT peak of A 440',()=>{const rate=11025,n=2048,arr=Float32Array.from({length:n},(_,i)=>Math.sin(2*Math.PI*440*i/rate));const m=fftMagnitudes(arr);let peak=1;for(let i=2;i<m.length;i++)if(m[i]>m[peak])peak=i;assert.ok(Math.abs(peak*rate/n-440)<rate/n);});
+const demo=makeDemo(11025,4),slices=analyzeSignal(demo.samples,demo.sampleRate);
+test('synthetic waveform yields exact 1000 measured ledgers',()=>{assert.equal(slices.length,1000);assert.ok(slices.some(x=>x.energy>.1));assert.ok(slices.every(x=>Number.isFinite(x.rms)&&x.pitch>=0&&x.pitch<12&&x.chroma.length===12&&x.bitnote.length===16));});
+test('views derived from same data; mapping does not change PRINT payload',()=>{const before=JSON.stringify(makePrintPayload(slices)),s=slices[40],old=geometry(s,DEFAULTS),next=geometry(s,{...DEFAULTS,depth:2.4});assert.notDeepEqual(old,next);assert.equal(JSON.stringify(makePrintPayload(slices)),before);assert.notDeepEqual(colourOf(s,DEFAULTS),colourOf(s,{...DEFAULTS,hue:90}));});
+test('synthetic WAV header and length',()=>{const data=wavBytes(demo.samples,demo.sampleRate),dv=new DataView(data);assert.equal(data.byteLength,44+demo.samples.length*2);assert.equal(dv.getUint32(24,true),11025);});
+
+test('silence is a REST and produces zero-valued bitnote',()=>{const records=analyzeSignal(new Float32Array(11025),11025);assert.equal(records.length,1000);assert.ok(records.every(r=>r.silent&&r.word===0&&r.energy===0));});

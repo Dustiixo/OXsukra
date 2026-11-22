@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import {entropy,patchesOf,splicesOf,positionOf,MAX_BYTES} from '../static/byte-core.mjs';
+let passed=0;
+const test=(name,fn)=>{fn();passed++;console.log(`PASS byte-js ${name}`);};
+test('entropy zeros',()=>{assert.equal(entropy(new Uint8Array(64)),0);});
+test('entropy two values',()=>{assert.equal(Math.round(entropy(new Uint8Array([0,1,0,1]))*1000),1000);});
+test('patch coverage',()=>{const a=Uint8Array.from({length:4100},(_,i)=>i%256),p=patchesOf(a);assert.equal(p[0].start,0);assert.equal(p.at(-1).end,a.length);for(let i=1;i<p.length;i++)assert.equal(p[i-1].end,p[i].start);});
+test('low entropy gets longer patches',()=>{const a=new Uint8Array(8192),b=Uint8Array.from({length:8192},(_,i)=>i%256);assert.ok(patchesOf(b).length>patchesOf(a).length);});
+test('stable thousand addresses',()=>{const a=Uint8Array.from({length:4096},(_,i)=>i%256),s=splicesOf(a);assert.equal(s.length,1000);assert.equal(s[999].end,4096);assert.equal(s[734].gateRow,7);assert.equal(s[734].gateColumn,3);assert.equal(s[734].subsplice,4);});
+test('small file sparse',()=>{const s=splicesOf(new Uint8Array([0,255]));assert.equal(s.filter(x=>x.length).length,2);});
+test('render finite',()=>{const s=splicesOf(Uint8Array.from({length:1001},(_,i)=>i%256));for(const v of s){const p=positionOf(v);assert.ok(Number.isFinite(p.x)&&Number.isFinite(p.y)&&Number.isFinite(p.z));}});
+test('bounds',()=>assert.throws(()=>splicesOf(new Uint8Array(MAX_BYTES+1))));
+test('algorithm parity fixture',()=>{const a=Uint8Array.from({length:5112},(_,i)=>(i*29+(i>>4)*17)%256),sp=splicesOf(a);assert.deepEqual(sp.slice(0,4).map(s=>[s.start,s.end,s.entropyMilli,s.meanByteMilli]),[[0,5,2322,58000],[5,10,2322,151800],[10,15,2322,92000],[15,20,2322,148200]]);});
+console.log(`${passed}/9 byte-js groups`);

@@ -1,0 +1,36 @@
+{
+  "after": {
+    "objChanged": true,
+    "objSha256": "74bf363eb05bdc2da483d0e514335fca02f48fb6df0233442a91261e00e70ce5",
+    "originalHashIdentical": true,
+    "representationPrintIdentical": true,
+    "revision": 1,
+    "splices": 1000,
+    "status": "COMMITTED_MAPPING_ONLY",
+    "wavSha256": "4349b72c93cef71efb38eea8aaf52a4abb05bdb8b852847f1ea901c644ab1f55",
+    "wavUnchanged": true
+  },
+  "before": {
+    "objSha256": "b702b48c13dc2a655123a9660adbe13fb2fc2e730736eca52053d9dfef73bf7a",
+    "representationPrint": "888c574abc9e1e8d525597e13437478c41f2c182464376d6c596a99c110be2a8",
+    "revision": 0,
+    "splices": 1000,
+    "wavSha256": "4349b72c93cef71efb38eea8aaf52a4abb05bdb8b852847f1ea901c644ab1f55"
+  },
+  "fixtureKind": "OFFLINE_TEXT_EDIT_NOT_NATIVE_SELF",
+  "inputSourceSha256": "e76c2071d3db7a49edb33550d47ceb8397843c635f7769e1b7a5f85a64d9721d",
+  "review": {
+    "revisionBeforeApproval": 0,
+    "status": "REVIEW_REQUIRED"
+  },
+  "schema": "OX_SELF_LITERAL_DEMO_EVIDENCE/1",
+  "secretMaterialIncluded": false,
+  "selfVM": "NOT_RUN",
+  "stage": {
+    "before": 1.2,
+    "candidateSha256": "569c2da1d483f717a9ae6fbc6eb51d64d3df54d6f70187ea69927aec26567375",
+    "slot": "depth",
+    "status": "STAGED_UNVERIFIED_SELF_LITERAL",
+    "value": 2.25
+  }
+}
