@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,viewport-fit=cover,user-scalable=no" />
+<meta name="theme-color" content="#111724" />
+<title>UNDERBYTE — Pocket Adventure · Pulse Radar v0.3</title>
+<style>
+:root{color-scheme:dark;--ink:#d6e6e9;--dim:#94b6bf;--edge:#485971;--panel:#171c2f;--accent:#6de7d7}
+*{box-sizing:border-box;touch-action:manipulation}
+html,body{height:100%;height:100dvh;margin:0;overflow:hidden;overscroll-behavior:none}
+body{background:radial-gradient(ellipse at 50% 30%,#222841,#0c1020 75%);color:var(--ink);font-family:ui-monospace,Consolas,Menlo,monospace;user-select:none;-webkit-user-select:none}
+.shell{margin:auto;max-width:1100px;height:100%;height:100dvh;display:flex;flex-direction:column;padding:calc(5px + env(safe-area-inset-top)) calc(6px + env(safe-area-inset-right)) calc(5px + env(safe-area-inset-bottom)) calc(6px + env(safe-area-inset-left));gap:5px}
+.top{display:flex;justify-content:space-between;align-items:center;min-height:36px;gap:6px;padding:0 5px}
+.logo{font-size:clamp(15px,4vw,22px);font-weight:1000;letter-spacing:.09em;color:#a9f0e5;text-shadow:2px 2px #355575;white-space:nowrap}
+.eyebrow{font-size:9px;letter-spacing:.12em;color:#95acc8;white-space:nowrap}
+.top-actions{display:flex;gap:6px;align-items:center}
+.top-actions button,.tiny{font-family:inherit;background:#192539;color:#dde9e6;border:1px solid #546a81;border-radius:6px;padding:6px 9px;font-size:10px;min-height:30px}
+.stage{flex:1;min-height:0;display:grid;grid-template-areas:'screen screen' 'left right';grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:auto 220px;gap:8px;align-items:center;align-content:start}
+.screen{grid-area:screen;position:relative;width:100%;max-width:720px;aspect-ratio:3/2;margin:0 auto;align-self:start;border:4px solid #465573;border-radius:9px;box-shadow:0 0 0 2px #111a2a,0 10px 28px #02040bd6,inset 0 0 12px #000;overflow:hidden;background:#121e31;touch-action:none}
+.screen:after{content:'';position:absolute;inset:0;pointer-events:none;border:1px solid #91a1b6aa;border-radius:3px;box-shadow:inset 0 0 10px #06112670}
+canvas{width:100%;height:100%;display:block;image-rendering:pixelated;image-rendering:crisp-edges;touch-action:none}
+.controls-left,.controls-right{height:220px;min-height:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;position:relative;gap:7px}
+.controls-left{grid-area:left}.controls-right{grid-area:right}
+.shoulder{min-width:83px;min-height:35px;border:1px solid #70809c;border-bottom:4px solid #3d516a;border-radius:10px 10px 5px 5px;background:linear-gradient(#36425d,#1c2742);color:#d7e1e9;font:900 13px ui-monospace,monospace;touch-action:none}
+.dpad{width:min(100%,150px);aspect-ratio:1;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);gap:0;touch-action:none;margin:0}
+.d{border:1px solid #52637e;background:linear-gradient(#354057,#1a2439);color:#d4e6e9;display:flex;justify-content:center;align-items:center;font:900 clamp(17px,5vw,25px) system-ui;touch-action:none;-webkit-tap-highlight-color:transparent;padding:0}
+.d.up{grid-area:1/2/2/3;border-radius:9px 9px 2px 2px}.d.left{grid-area:2/1/3/2;border-radius:9px 2px 2px 9px}.d.middle{grid-area:2/2/3/3;background:#202b41;border-radius:2px;pointer-events:none}.d.right{grid-area:2/3/3/4;border-radius:2px 9px 9px 2px}.d.down{grid-area:3/2/4/3;border-radius:2px 2px 9px 9px}
+.d:active,.d.pressed,.ab:active,.ab.pressed,.shoulder:active,.shoulder.pressed,.start:active{background:#4e6e75;transform:translateY(1px);filter:brightness(1.2)}
+.abpad{margin:22px 0 0;display:flex;align-items:center;justify-content:center;gap:13px;width:100%;min-height:100px;touch-action:none}
+.ab{font:900 22px ui-monospace,monospace;color:#f6edf9;border:2px solid #b08faa;border-bottom:5px solid #543958;background:linear-gradient(130deg,#91546e,#5a375b);border-radius:50%;width:clamp(59px,17vw,78px);height:clamp(59px,17vw,78px);box-shadow:0 4px 8px #0005;touch-action:none}
+.ab.b{transform:translateY(15px)}.ab.b:active,.ab.b.pressed{transform:translateY(16px)}
+.caption{color:#9eb4bf;font-size:10px;line-height:1.25;text-align:center;min-height:15px;margin-top:auto}
+.foot{min-height:20px;display:flex;align-items:center;justify-content:space-between;gap:4px;color:#98b9bd;padding:0 5px;font-size:9px}
+.foot b{color:#c4e5dc}
+@media (orientation:landscape) and (max-height:620px){
+ .shell{padding-top:2px;padding-bottom:2px;gap:3px}.top{min-height:24px}.logo{font-size:15px}.eyebrow{display:none}.top-actions button{padding:3px 7px;min-height:23px}
+ .stage{grid-template-areas:'left screen right';grid-template-columns:minmax(130px,1fr) minmax(0,calc((100dvh - 54px)*1.5)) minmax(130px,1fr);grid-template-rows:minmax(0,1fr);gap:7px;align-content:stretch}
+ .screen{width:100%;max-height:calc(100dvh - 53px);align-self:center;justify-self:center;border-width:3px}
+ .controls-left,.controls-right{height:100%;min-height:0;align-self:stretch;justify-content:space-around}
+ .dpad{width:min(145px,90%);max-height:min(145px,65%)}.shoulder{min-height:28px;min-width:75px}.abpad{margin:0;gap:4px;min-height:0}.ab{width:clamp(50px,7.5vw,70px);height:clamp(50px,7.5vw,70px)}
+ .caption{font-size:9px;min-height:10px}.foot{font-size:8px;min-height:12px}
+}
+@media(max-width:365px){.top-actions button{padding:4px 5px;font-size:9px}.logo{font-size:15px}.stage{gap:5px}.dpad{max-width:142px}.abpad{gap:4px}}
+</style>
+</head>
+<body>
+<div class="shell">
+ <header class="top">
+  <div><div class="logo">UNDERBYTE <span style="color:#b99ee4">▣</span></div><div class="eyebrow">THE QUIET EDGE · FIRST PLAYABLE</div></div>
+  <div class="top-actions"><button type="button" id="mapBtn" aria-label="Open world map">MAP</button><button type="button" id="journalBtn" aria-label="Open quest journal">LOG</button><button type="button" id="selectBtn" aria-label="Character and journal">SELECT</button><button type="button" id="startBtn" aria-label="Pause or resume">START</button><button type="button" id="fsBtn" aria-label="Fullscreen">⛶</button></div>
+ </header>
+ <main class="stage">
+  <section class="screen" aria-label="UNDERBYTE interactive pixel game screen"><canvas id="game" width="240" height="160" aria-label="Playable Underbyte side-scrolling world"></canvas></section>
+  <div class="controls-left">
+   <button class="shoulder" id="lBtn" aria-label="Dash">L · DASH</button>
+   <div class="dpad" aria-label="Directional buttons">
+    <button class="d up" id="upBtn" aria-label="Talk or use">▲</button><button class="d left" id="leftBtn" aria-label="Move left">◀</button><div class="d middle"></div><button class="d right" id="rightBtn" aria-label="Move right">▶</button><button class="d down" id="downBtn" aria-label="Crouch">▼</button>
+   </div>
+   <span class="caption">MOVE · ▲ TALK / USE</span>
+  </div>
+  <div class="controls-right">
+   <button class="shoulder" id="rBtn" aria-label="Scan for secrets">R · SCAN</button>
+   <div class="abpad"><button class="ab b" id="bBtn" aria-label="Swing or mine">B</button><button class="ab a" id="aBtn" aria-label="Jump">A</button></div>
+   <span class="caption">B SWING / MINE · A JUMP</span>
+  </div>
+ </main>
+ <div class="foot"><span><b>16-BIT-STYLE ORIGINAL GAME</b> · offline</span><span id="saveStatus">AUTOSAVE READY</span></div>
+</div>
+<script>
+(()=>{'use strict';
+const C=document.getElementById('game'),g=C.getContext('2d',{alpha:false});g.imageSmoothingEnabled=false;
+const W=240,H=160,LEVEL=1400,GROUND=128,STORE='underbyte-pixel-v02',SCAN_RANGE=320,SCAN_SECONDS=4;
+const $=id=>document.getElementById(id); const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+const input={left:false,right:false,down:false};
+let frame=0,cam=0,last=performance.now(),time=0,flash=0,worldStarted=true,menu='',notice='',noticeUntil=0,savePossible=true;
+let particles=[],attacking=0,scanning=0,scanSelection=0,scanOrigin=null,scanSignature=null,shake=0;
+let waypoint=null; // Navigation-only marker; never changes player, quest, or combat state.
+const colors=[{hair:'#33354c',scarf:'#f16779',coat:'#568db6'},{hair:'#b8a78f',scarf:'#57e5bf',coat:'#765c9c'},{hair:'#b34b67',scarf:'#ffd177',coat:'#3c769e'},{hair:'#d9e7f0',scarf:'#bd8af5',coat:'#4b617f'}];
+const ores=[{x:330,id:1},{x:486,id:2},{x:734,id:3}];
+const enemies=[{x:424,origin:424,hp:2,alive:true,phase:0},{x:673,origin:673,hp:2,alive:true,phase:2},{x:1085,origin:1085,hp:3,alive:true,phase:4}];
+const platform=[{x:278,y:101,w:54},{x:448,y:100,w:56},{x:677,y:96,w:56},{x:787,y:101,w:80},{x:1054,y:96,w:65},{x:1200,y:102,w:68}];
+const p={x:52,y:GROUND,vx:0,vy:0,dir:1,hp:3,inv:0,grounded:true,ore:0,mined:[],relay:false,device:false,npc:false,palette:0,death:0};
+function msg(s,secs=3.3){notice=s;noticeUntil=time+secs}
+function save(){try{localStorage.setItem(STORE,JSON.stringify({x:p.x,y:p.y,hp:p.hp,ore:p.ore,mined:p.mined,relay:p.relay,device:p.device,npc:p.npc,palette:p.palette,death:p.death,enemies:enemies.map(e=>e.alive)}));$('saveStatus').textContent='SAVED • LOCAL';savePossible=true;return true}catch(_){savePossible=false;$('saveStatus').textContent='SAVE UNAVAILABLE';return false}}
+function load(){try{let raw=localStorage.getItem(STORE);if(!raw)return;let s=JSON.parse(raw);for(let key of ['x','y','hp','ore','palette','death'])if(typeof s[key]==='number')p[key]=s[key];for(let key of ['relay','device','npc'])if(typeof s[key]==='boolean')p[key]=s[key];if(Array.isArray(s.mined))p.mined=s.mined.filter(x=>Number.isInteger(x));if(Array.isArray(s.enemies))s.enemies.forEach((x,i)=>{if(enemies[i])enemies[i].alive=Boolean(x)});p.x=clamp(p.x,20,LEVEL-25);p.y=clamp(p.y,0,GROUND);p.hp=clamp(p.hp,1,3);p.palette=((p.palette%colors.length)+colors.length)%colors.length;$('saveStatus').textContent='SAVE LOADED'}catch(_){}}
+load();
+const rand=n=>{let v=Math.sin(n*128.71+8.7)*43758.5453;return v-Math.floor(v)};
+function rect(x,y,w,h,c){g.fillStyle=c;g.fillRect(Math.round(x),Math.round(y),Math.round(w),Math.round(h))}
+function line(x1,y1,x2,y2,c){g.strokeStyle=c;g.lineWidth=1;g.beginPath();g.moveTo(x1+.5,y1+.5);g.lineTo(x2+.5,y2+.5);g.stroke()}
+function text(s,x,y,size=7,col='#e8e9e6',align='left'){g.font='bold '+size+'px monospace';g.textBaseline='top';g.textAlign=align;g.fillStyle='#0b1524';g.fillText(s,x+1,y+1);g.fillStyle=col;g.fillText(s,x,y);g.textAlign='left'}
+function sparks(x,y,c='#9ce9d6',count=9){for(let i=0;i<count;i++){let a=i*6.28/count+rand(frame+i),sp=30+rand(i*7+frame)*40;particles.push({x,y,vx:Math.cos(a)*sp,vy:Math.sin(a)*sp-25,life:.3+rand(i)*.5,color:c})}}
+function solidAt(x){return !(x>566&&x<608)}
+function objective(){if(p.ore<3)return 'FIND 3 SPARK SHARDS';if(!p.relay)return 'ACTIVATE THE OLD RELAY';if(!p.device)return 'FOLLOW THE SIGNAL';return 'A DOOR FROM INSIDE...'}
+function moveUpdate(dt){if(menu)return;time+=dt;frame++;
+ const dir=(input.right?1:0)-(input.left?1:0);p.vx=dir*(input.down?23:68);if(dir)p.dir=dir;
+ const oldY=p.y;p.x=clamp(p.x+p.vx*dt,10,LEVEL-8);
+ p.vy=clamp(p.vy+390*dt,-300,230);p.y+=p.vy*dt;
+ let atGround=solidAt(p.x)&&p.y>=GROUND;
+ let platformHit=false;
+ if(p.vy>=0)for(const b of platform){if(p.x+6>=b.x&&p.x-6<=b.x+b.w&&oldY<=b.y+2&&p.y>=b.y){p.y=b.y;p.vy=0;p.grounded=true;platformHit=true;break}}
+ if(!platformHit&&atGround){p.y=GROUND;p.vy=0;p.grounded=true}else if(!platformHit)p.grounded=false;
+ if(p.y>170){p.death++;p.hp=Math.max(1,p.hp-1);p.x=clamp(p.x-105,35,LEVEL-100);p.y=60;p.vy=0;p.inv=1.5;shake=6;msg('WATCH YOUR STEP!  -1 HEART',2.2);save()}
+ if(p.inv>0)p.inv-=dt;
+ attacking=Math.max(0,attacking-dt);scanning=Math.max(0,scanning-dt);shake=Math.max(0,shake-dt*10);
+ for(let i=0;i<enemies.length;i++){let e=enemies[i];if(!e.alive)continue;e.x=e.origin+Math.sin(time*1.3+e.phase)*19;if(Math.abs(e.x-p.x)<11&&Math.abs(p.y-GROUND)<18&&p.inv<=0){p.hp--;p.inv=1.4;p.vy=-75;p.x-=p.dir*9;shake=3;msg('Ouch. The little thing bites!',2);if(p.hp<=0){p.hp=3;p.x=52;p.y=90;msg('RESPAWNED AT THE QUIET EDGE',2.5)}save()}}
+ for(let i=particles.length-1;i>=0;i--){const q=particles[i];q.life-=dt;q.x+=q.vx*dt;q.y+=q.vy*dt;q.vy+=110*dt;if(q.life<=0)particles.splice(i,1)}
+ cam=clamp(p.x-84,0,LEVEL-W);
+}
+function jump(){if(menu==='palette'){menu='';save();return}if(menu)return;if(p.grounded){p.vy=-175;p.grounded=false;sparks(p.x,p.y,'#cfe6de',4)}}
+function swing(){if(menu)return;attacking=.22;let hit=false;for(const o of ores){if(p.mined.includes(o.id))continue;if(Math.abs(o.x-p.x)<22&&Math.abs(p.y-GROUND)<38){p.mined.push(o.id);p.ore++;sparks(o.x,GROUND-13,'#82f4dc',14);hit=true;msg('SPARK SHARD '+p.ore+'/3');save();break}}
+ for(const e of enemies){if(!e.alive||Math.abs(e.x-p.x)>21||Math.abs(p.y-GROUND)>24)continue;e.hp--;sparks(e.x,GROUND-10,'#ff9d9e',10);hit=true;if(e.hp<=0){e.alive=false;msg('SCRAPLING DEFEATED');save()}else msg('HIT! THE SCRAPLING RECOILS',1.5)}
+ if(!hit)sparks(p.x+p.dir*13,p.y-13,'#a8cdf4',2)
+}
+function interact(){if(menu==='pause'){menu='';return}if(menu==='palette'){menu='';save();return}if(menu)return;
+ if(Math.abs(p.x-193)<28){p.npc=true;msg('MOSS: "He came from INSIDE the screen.\nNobody knows what he is looking for."',5);save();return}
+ if(Math.abs(p.x-904)<29){if(p.ore>=3){p.relay=true;sparks(904,107,'#f8d894',20);msg('RELAY ONLINE! A DISTANT PATH OPENS.',4);save()}else msg('RELAY NEEDS 3 SPARK SHARDS',3);return}
+ if(Math.abs(p.x-1269)<34){if(p.relay){p.device=true;sparks(1269,109,'#81e7ff',20);msg('YOU FOUND: THE ECHO KEY.\nWhy does it recognize you?',5);save()}else msg('THE DEVICE HAS NO POWER YET.',3);return}
+ if(Math.abs(p.x-1360)<35){msg(p.device?'THE GATE REMEMBERS YOU.  END OF DEMO.':'THE GATE IS LOCKED. FIND THE DEVICE.',5);return}
+ msg('NOTHING HERE. TRY A RUIN, CREATURE OR DEVICE.',2)
+}
+function dash(){if(menu)return;p.x=clamp(p.x+p.dir*35,15,LEVEL-10);sparks(p.x,p.y,'#b3c5ff',8)}
+// Pulse radar is read-only: discovering a target never changes quests, enemies or saves.
+function scanTargets(){
+ const results=[];
+ function add(kind,x,label,color){
+  const dx=x-p.x;
+  if(Math.abs(dx)<=SCAN_RANGE)results.push({kind,x,dx:Math.round(dx),distance:Math.round(Math.abs(dx)),label,color});
+ }
+ if(!p.npc)add('npc',193,'MOSS','#ecd0fa');
+ for(const o of ores)if(!p.mined.includes(o.id))add('shard',o.x,'SHARD','#8cfdea');
+ for(const e of enemies)if(e.alive)add('enemy',e.x,'SCRAPLING','#ff9aa3');
+ if(!p.relay)add('relay',904,'RELAY','#fbe4a1');
+ if(p.relay&&!p.device)add('device',1269,'ECHO KEY','#90d9ff');
+ if(p.device)add('gate',1360,'GATE','#e5aaff');
+ return results.sort((a,b)=>a.distance-b.distance||a.kind.localeCompare(b.kind)).slice(0,4);
+}
+// Long-range fallback reveals the next reachable story objective without altering progress.
+function questBearing(){
+ const objectives=[];
+ if(!p.npc)objectives.push({x:193,label:'MOSS'});
+ if(p.ore<3)for(const o of ores)if(!p.mined.includes(o.id))objectives.push({x:o.x,label:'SPARK SHARD'});
+ else {} // relay remains available once all shards are collected
+ if(p.ore>=3&&!p.relay)objectives.push({x:904,label:'RELAY'});
+ if(p.relay&&!p.device)objectives.push({x:1269,label:'ECHO KEY'});
+ if(p.device)objectives.push({x:1360,label:'GATE'});
+ objectives.sort((a,b)=>Math.abs(a.x-p.x)-Math.abs(b.x-p.x));
+ const target=objectives[0];
+ if(!target)return null;
+ const dx=Math.round(target.x-p.x);
+ return {label:target.label,distance:Math.abs(dx),direction:dx<0?'WEST':dx>0?'EAST':'HERE'};
+}
+function scan(){
+ if(menu)return;
+ const targets=scanTargets();
+ const signature=targets.map(t=>t.kind+":"+t.x).join("|");
+ if(scanning>0&&scanOrigin!==null&&Math.abs(p.x-scanOrigin)<30&&scanSignature===signature)scanSelection++;else scanSelection=0;
+ scanOrigin=p.x;scanSignature=signature;
+ scanning=SCAN_SECONDS;
+ if(!targets.length){const bearing=questBearing();msg(bearing?'PULSE: NO NEAR SIGNAL · NEXT '+bearing.label+' '+bearing.distance+' '+bearing.direction:'PULSE: NO SIGNAL · ALL OBJECTIVES CLEAR',3);return}
+ const selected=targets[scanSelection%targets.length];
+ msg('PULSE: '+selected.label+' '+selected.distance+' '+(selected.dx<0?'WEST':'EAST')+' · '+(scanSelection%targets.length+1)+'/'+targets.length,2.5);
+}
+function drawScan(){
+ if(scanning<=0||menu)return;
+ rect(23,26,194,76,'#101c31ee');rect(25,28,190,72,'#263c53');rect(26,29,188,70,'#112439');
+ text('PULSE RADAR  /  320 STEPS',32,33,7,'#b1ffee');
+ rect(35,55,170,1,'#608e98');rect(119,49,2,13,'#e6e3b4');
+ const targets=scanTargets();
+ const guidance=questBearing();if(guidance)text('QUEST '+guidance.label+' '+guidance.distance+(guidance.direction==='WEST'?'W':guidance.direction==='EAST'?'E':' HERE'),31,88,7,'#ffe4a4');
+ if(!targets.length){const bearing=questBearing();text(bearing?'NEXT '+bearing.label+' '+bearing.distance+(bearing.direction==='WEST'?'W':bearing.direction==='EAST'?'E':' HERE'):'ALL OBJECTIVES CLEAR',32,69,7,'#a7b3c2');}
+ for(let i=0;i<targets.length;i++){
+  const target=targets[i];const x=clamp(Math.round(120+target.dx/SCAN_RANGE*82),34,206);
+  rect(x-2,51,5,7,target.color);
+  if(i===scanSelection%targets.length){rect(x-4,47,9,2,'#ffffff');rect(x-4,60,9,2,'#ffffff');}
+  text(target.label+' '+target.distance+(target.dx<0?'W':'E'),31+(i%2)*95,64+Math.floor(i/2)*11,6,target.color);
+ }
+}
+
+function togglePause(){menu=menu==='pause'?'':'pause';for(let k of Object.keys(input))input[k]=false;save()}
+function toggleSelect(){menu=menu==='palette'?'':'palette';for(let k of Object.keys(input))input[k]=false;save()}
+function paletteStep(d){p.palette=(p.palette+d+colors.length)%colors.length;save()}
+function action(which){if(menu==='map'){if(which==='a'||which==='up'||which==='r')toggleMap();return}if(menu==='palette'){if(which==='left')paletteStep(-1);else if(which==='right')paletteStep(1);else if(which==='a'||which==='up')toggleSelect();return}
+ if(menu==='pause'){if(which==='a'||which==='up')togglePause();return}
+ if(which==='a')jump();else if(which==='b')swing();else if(which==='up')interact();else if(which==='l')dash();else if(which==='r')scan();}
+function bg(){
+ const upper=g.createLinearGradient(0,0,0,131);upper.addColorStop(0,'#19234b');upper.addColorStop(.55,'#60496b');upper.addColorStop(.86,'#c48682');upper.addColorStop(1,'#f0bf92');g.fillStyle=upper;g.fillRect(0,0,W,132);
+ const moonX=188-cam*.045;rect(moonX,21,30,26,'#e6b1bf');rect(moonX+4,18,22,32,'#ecc5c0');rect(moonX+9,28,8,7,'#ce91aa');rect(moonX+3,38,7,3,'#d7a0b0');
+ for(let i=0;i<34;i++){let x=(i*71-cam*.08)%270;if(x< -20)x+=270;let y=11+(i*41)%74;rect(x,y,1,1,i%4?'#e8b6c3':'#9fbbca')}
+ for(let i=0;i<22;i++){const xx=((i*29-cam*.12)%330+330)%330-40;const yy=83+(i*9)%28;rect(xx,yy-34,16+(i%3)*12,38,'#453858');rect(xx+4,yy-42,5,8,'#453858');if(i%4===0)rect(xx+7,yy-36,2,2,'#e1a2a7')}
+ for(let i=0;i<19;i++){const xx=((i*42-cam*.28)%310+310)%310-25;const h=22+(i*7)%28;rect(xx,118-h,21,h,'#294258');rect(xx+7,118-h-8,5,8,'#294258');rect(xx+3,118-h+7,3,4,'#698b97')}
+ for(let i=0;i<15;i++){const xx=((i*66-cam*.46)%360+360)%360-30;const h=30+(i*17)%15;rect(xx,GROUND-h,4,h,'#1d3a43');rect(xx-13,GROUND-h-7,28,14,'#28515c');rect(xx-8,GROUND-h-15,21,12,'#32676c');rect(xx-2,GROUND-h-19,12,9,'#447877');rect(xx+6,GROUND-h-3,4,3,'#85a88c')}
+}
+function world(){
+ // terrain, biome stripes, ground cut and deep pit
+ for(let wx=Math.floor(cam/8)*8;wx<=cam+W+8;wx+=8){if(!solidAt(wx+4))continue;let x=wx-cam;rect(x,GROUND,8,32,'#263e49');rect(x,GROUND,8,3,'#86ae7b');rect(x,GROUND+3,8,3,'#496b60');rect(x,GROUND+7,8,10,Math.floor(wx/8)%2?'#364c55':'#2c4752');if(Math.floor(wx/8)%5===0){rect(x+1,GROUND+12,2,3,'#6f7977');rect(x+5,GROUND+24,2,2,'#192f3d')}}
+ for(const b of platform){let x=b.x-cam;if(x>W||x+b.w<0)continue;rect(x,b.y,b.w,5,'#527477');rect(x,b.y,b.w,2,'#abbd93');rect(x+3,b.y+5,b.w-6,4,'#243d49');for(let i=0;i<b.w;i+=12)rect(x+i,b.y+3,2,2,'#334957')}
+ for(let j=0;j<39;j++){let wx=j*38+21;if(wx>566&&wx<608)continue;let x=wx-cam;if(x<-15||x>W+15)continue;rect(x,GROUND-4,2,5,'#6d986c');rect(x-2,GROUND-5,6,2,'#9bc586');if(j%3===0){rect(x+7,GROUND-9,2,8,'#61877d');rect(x+4,GROUND-13,8,4,'#477f78');rect(x+5,GROUND-14,6,2,'#86b596')}if(j%7===0){rect(x-5,GROUND-3,4,3,'#e8bd81')}}
+ // recognizable ruins and portal-like structures
+ for(let i=0;i<8;i++){let wx=253+i*137,x=wx-cam;if(x<-40||x>W+40)continue;rect(x-6,GROUND-38,5,39,'#445b69');rect(x+20,GROUND-40,5,41,'#415a64');rect(x-9,GROUND-43,36,5,'#77868a');rect(x-10,GROUND-44,37,2,'#aab19d');rect(x-6,GROUND-38,31,3,'#293f52')}
+ for(let i=0;i<6;i++){const wx=175+i*220;let x=wx-cam;if(x<-15||x>W+15)continue;rect(x,GROUND-28,4,28,'#473c4c');rect(x-9,GROUND-37,22,11,'#3a5461');rect(x-5,GROUND-42,16,8,'#426b72');rect(x-1,GROUND-45,8,6,'#55908a');rect(x+1,GROUND-41,2,2,'#d3cc8a')}
+}
+function drawOre(){for(const o of ores){if(p.mined.includes(o.id))continue;let x=Math.round(o.x-cam);if(x< -20||x>W+20)continue;let oy=GROUND-14;rect(x-9,oy+10,18,5,'#30444c');rect(x-5,oy+2,10,12,'#3b8a9c');rect(x-3,oy-4,6,16,'#94fff0');rect(x-1,oy-7,3,10,'#e2ffda');rect(x+4,oy+7,3,5,'#6beac4');rect(x-8,oy+4,3,6,'#55b5c8');if(frame%90<45)rect(x+8,oy+2,2,2,'#c2fff0')}}
+function drawProp(){
+ // tutorial mast
+ let x=113-cam;if(x>-30&&x<W+30){rect(x-3,GROUND-31,6,31,'#334d58');rect(x-16,GROUND-41,32,15,'#3d5964');rect(x-15,GROUND-40,30,2,'#a1ac95');rect(x-12,GROUND-37,24,8,'#23364a');text('?',x,GROUND-37,9,'#f6ca87','center')}
+ // relay
+ x=904-cam;if(x>-45&&x<W+45){rect(x-18,GROUND-29,36,29,'#293946');rect(x-22,GROUND-35,44,7,'#56717a');rect(x-17,GROUND-34,34,3,'#a7bca1');rect(x-11,GROUND-24,23,15,p.relay?'#419b99':'#345468');rect(x-7,GROUND-21,15,10,p.relay?'#a8f1da':'#647994');rect(x-4,GROUND-18,9,4,'#203047');rect(x-18,GROUND-4,36,4,'#151f32');if(p.relay){rect(x-1,GROUND-44,3,8,'#9ae1d4');if(frame%35<19)rect(x+2,GROUND-49,2,2,'#e7f9e9')}}
+ // device
+ x=1269-cam;if(x>-30&&x<W+30){rect(x-12,GROUND-13,24,13,'#354a5c');rect(x-13,GROUND-15,25,4,'#7d8d8f');if(!p.device){rect(x-4,GROUND-27,9,14,'#8da7cc');rect(x-6,GROUND-29,13,4,'#b8ebf2');rect(x-2,GROUND-24,5,5,'#4ed5e5')}else rect(x-3,GROUND-18,6,3,'#b6e7de')}
+ // end gate
+ x=1360-cam;if(x>-45&&x<W+45){rect(x-26,GROUND-53,7,53,'#455266');rect(x+19,GROUND-53,7,53,'#455266');rect(x-28,GROUND-58,56,7,'#70848b');rect(x-20,GROUND-49,40,47,p.device?'#4e6f73':'#26344e');rect(x-15,GROUND-45,30,41,p.device?'#386e78':'#19253f');if(p.device){rect(x-2,GROUND-49,4,47,'#a2fff0');rect(x-10,GROUND-28,20,3,'#72e0dc')}else rect(x-3,GROUND-33,6,12,'#99adbb')}
+}
+function fox(x,y){g.save();g.translate(Math.round(x),Math.round(y));rect(-7,-16,4,8,'#bb91b0');rect(4,-16,4,8,'#d6b5d2');rect(-8,-10,17,11,'#c8a9d3');rect(-5,-8,11,6,'#ecddde');rect(2,-7,2,2,'#242b45');rect(-5,-7,2,2,'#242b45');rect(-2,-3,4,2,'#7acbd3');rect(-4,0,3,3,'#aaa1c6');rect(3,0,3,3,'#aaa1c6');rect(7,-8,5,5,'#bf85bc');g.restore()}
+function drawEnemy(e){if(!e.alive)return;let x=Math.round(e.x-cam),y=GROUND;rect(x-8,y-11,16,10,'#7a557b');rect(x-6,y-15,12,6,'#b36e8b');rect(x-5,y-12,3,3,'#ffd9a7');rect(x+3,y-12,3,3,'#ffcc8e');rect(x-6,y-2,5,3,'#4c3855');rect(x+2,y-2,5,3,'#4c3855');rect(x-11,y-6,4,3,'#9175a2');rect(x+8,y-6,4,3,'#9175a2')}
+function hero(x,y){const q=colors[p.palette],f=p.dir,walking=Math.abs(p.vx)>1&&!menu;const bob=walking?Math.floor((Math.sin(time*16)+1)/2*2):0;const legs=walking?Math.sin(time*16):0;
+ g.save();g.translate(Math.round(x),Math.round(y-bob));g.scale(f,1);
+ if(p.inv>0&&Math.floor(time*16)%2){g.restore();return}
+ // scarf tail + outline
+ rect(-12,-16,7,3,'#502d47');rect(-14,-15,7,2,q.scarf);rect(-7,-17,14,3,'#2a2e43');
+ // boots/legs with animated swing
+ rect(-6+(legs>0?1:0),-7,6,7,'#222b3a');rect(2+(legs<0?-1:0),-7,6,7,'#222b3a');rect(-8+(legs>0?1:0),-2,8,3,'#596071');rect(2+(legs<0?-1:0),-2,8,3,'#596071');
+ // jacket
+ rect(-8,-17,16,13,'#23344e');rect(-6,-16,12,10,q.coat);rect(-4,-15,6,9,'#48617d');rect(-6,-7,13,2,'#273249');rect(0,-7,3,2,'#f3cc83');
+ // arms
+ rect(-11,-15,4,8,'#2b344f');rect(-10,-10,3,4,'#e4b18e');rect(8,-15,4,8,'#324255');rect(9,-9,3,3,'#ddb28a');
+ // scarf wrap
+ rect(-7,-18,14,4,q.scarf);rect(4,-17,4,2,'#ffd2b1');
+ // face
+ rect(-8,-28,17,13,'#272e40');rect(-7,-26,15,11,'#f2bd96');rect(4,-21,2,2,'#172c4a');rect(2,-20,1,1,'#fcfff6');rect(5,-16,3,2,'#d48c7d');
+ // pixel hair
+ rect(-9,-30,17,6,'#23253b');rect(-11,-28,6,5,q.hair);rect(-5,-33,7,6,q.hair);rect(1,-32,10,5,q.hair);rect(8,-29,4,4,q.hair);
+ rect(-9,-28,9,2,'#8b6a7b');
+ // visor
+ rect(-5,-27,15,4,'#35455b');rect(-4,-26,6,2,'#5ed5dd');rect(3,-26,6,2,'#76eff0');rect(0,-27,2,2,'#141e33');
+ // weapon swing
+ if(attacking>0){rect(10,-22,2,14,'#d2e5e1');rect(11,-25,3,5,'#8ce7f4');rect(12,-11,7,3,'#f1d3aa')}
+ if(scanning>0&&frame%6<3)rect(-12,-35,25,2,'#7de2d2');
+ g.restore();
+}
+function drawWorld(){
+ g.save();if(shake>0)g.translate(frame%2?Math.ceil(shake):0,0);
+ bg();world();drawProp();drawOre();
+ for(const e of enemies)drawEnemy(e);
+ const fx=193-cam;if(fx> -20&&fx<W+20){fox(fx,GROUND-2);if(Math.abs(p.x-193)<35){text('▲ TALK',fx,GROUND-30,7,'#fff3c4','center')}}
+ for(const q of particles)rect(q.x-cam,q.y,2,2,q.color);
+ let hx=Math.floor(p.x-cam);rect(hx-9,Math.min(GROUND+1,p.y+1),18,2,'#0d24335f');hero(hx,p.y);
+ if(time<15){rect(hx-14,p.y-43,29,11,'#183d50');text('YOU',hx,p.y-41,8,'#d6f9ef','center');rect(hx,p.y-30,1,3,'#9ef2db')}
+ if(scanning>0){g.strokeStyle='#adffed';g.lineWidth=1;g.beginPath();g.arc(hx,p.y-17,(SCAN_SECONDS-scanning)*22,0,Math.PI*2);g.stroke()}
+ g.restore();
+}
+function hud(){
+ rect(0,0,W,20,'#11162dd9');rect(0,19,W,1,'#6a8796');text('UNDERBYTE',5,4,9,'#baf5e5');
+ for(let i=0;i<3;i++){rect(85+i*10,6,7,6,i<p.hp?'#f88693':'#485467');rect(86+i*10,4,2,2,i<p.hp?'#ff9da0':'#485467');rect(89+i*10,4,2,2,i<p.hp?'#ff9da0':'#485467')}
+ text('◆ '+p.ore+'/3',138,5,8,'#a5f6e2');text('EDGE 01',195,5,7,'#d4d9f0');
+ if(waypoint!==null){const delta=Math.round(waypoint-p.x);rect(139,23,99,12,'#13283c');text('PIN '+Math.abs(delta)+' '+(Math.abs(delta)<=5?'HERE':delta<0?'WEST':'EAST'),143,25,7,'#ffe2a0')}
+ rect(0,141,W,19,'#111c30e8');rect(0,140,W,1,'#9fb9a8');
+ let target=objective();if(notice&&time<noticeUntil){let parts=notice.split('\n');text(parts[0].slice(0,39),5,144,7,'#f2e6ca');if(parts.length>1)text(parts[1].slice(0,38),5,152,6,'#c3e4e4')}else text(target.slice(0,36),5,146,8,'#c6efe9');
+}
+function drawMap(){
+ rect(14,24,212,112,'#10182b');rect(16,26,208,108,'#344c64');rect(18,28,204,104,'#152238');
+ text('EDGE 01 · WORLD MAP',25,33,10,'#baf5e5');
+ const left=27,right=213,y=79,scale=x=>left+Math.round(clamp(x,0,LEVEL)/LEVEL*(right-left));
+ rect(left,y-3,right-left,6,'#536477');
+ for(const o of ores){const x=scale(o.x);rect(x-2,y-6,4,12,p.mined.includes(o.id)?'#52677a':'#82f4dc')}
+ for(const e of enemies){if(e.alive){const x=scale(e.x);rect(x-2,y-3,4,6,'#e993a3')}}
+ const quest=questBearing();if(quest){const x=scale(p.x+(quest.direction==='WEST'?-quest.distance:quest.direction==='EAST'?quest.distance:0));rect(x-2,y-12,4,5,'#ffe4a4')}
+ if(waypoint!==null){const wx=scale(waypoint);rect(wx-3,y-15,7,7,'#ffcc70');rect(wx,y-8,1,18,'#ffcc70')}
+ const px=scale(p.x);rect(px-2,y-9,5,18,'#f5f4f0');
+ text('YOU '+Math.round(p.x)+' / '+LEVEL,25,96,8,'#d5e7e6');
+ text('◆ SHARD   ■ ENEMY   ▴ QUEST',25,108,7,'#a9c9d0');
+ text('TAP TRACK TO PIN · C CLEAR',25,120,7,'#f4e2bb');
+ text('X',208,34,10,'#ffca8d');
+}
+function drawJournal(){
+ rect(14,20,212,120,'#10182b');rect(17,23,206,114,'#243b50');rect(19,25,202,110,'#101e32');
+ text('FIELD JOURNAL',27,31,12,'#baf5e5');
+ const steps=[['RECOVER 3 SPARK SHARDS',p.ore>=3],['ACTIVATE OLD RELAY',p.relay],['FOLLOW THE SIGNAL',p.device]];
+ steps.forEach((step,i)=>{const y=54+i*20;rect(28,y,9,9,step[1]?'#7be7bd':'#52667c');text(step[1]?'X':'-',30,y,8,'#102637');text(step[0],44,y,8,step[1]?'#9fe6c5':'#f1e6c8')});
+ text('SHARDS '+p.ore+'/3  ·  '+steps.filter(x=>x[1]).length+'/3 STAGES',27,116,7,'#bad6d5');
+ text('I / LOG: CLOSE',212,126,7,'#f5dfad','right');
+}
+function toggleJournal(){menu=menu==='journal'?'':'journal';for(const k of Object.keys(input))input[k]=false}
+function toggleMap(){menu=menu==='map'?'':'map';for(const k of Object.keys(input))input[k]=false}
+function drawMenu(){if(!menu)return;if(menu==='map'){drawMap();return}if(menu==='journal'){drawJournal();return}rect(23,23,194,112,'#101626');rect(26,26,188,106,'#26344b');rect(28,28,184,102,'#121d34');rect(28,28,184,2,'#83aeb0');
+ if(menu==='pause'){text('PAUSED',120,40,17,'#b2f2de','center');text('A / START  CONTINUE',120,70,9,'#e3e6ec','center');text('SELECT  CHARACTER',120,88,8,'#b8bfd4','center');text('PROGRESS SAVES LOCALLY',120,111,7,'#a5c4b5','center')}
+ else {text('YOUR LITTLE GUY',120,35,12,'#aaf1e4','center');hero(79,104);text('←  PALETTE  →',145,69,9,'#f4ead3','center');text('STYLE '+(p.palette+1)+'/4',145,85,8,'#b6d7cf','center');text('A / SELECT: CLOSE',120,115,8,'#d5d8e3','center')}}
+function draw(){g.clearRect(0,0,W,H);drawWorld();hud();drawScan();drawMenu()}
+function tick(now){let dt=Math.min(.034,(now-last)/1000);last=now;moveUpdate(dt);draw();requestAnimationFrame(tick)}
+msg('A JUMP · B SWING · ▲ TALK · L DASH',4.8);requestAnimationFrame(tick);
+function bindHold(id,key){let el=$(id),touches=new Set();el.addEventListener('pointerdown',e=>{e.preventDefault();if(menu==='palette'){paletteStep(key==='left'?-1:1);return}if(menu)return;touches.add(e.pointerId);input[key]=true;el.classList.add('pressed');try{el.setPointerCapture(e.pointerId)}catch(_){}});function end(e){touches.delete(e.pointerId);if(!touches.size){input[key]=false;el.classList.remove('pressed')}}for(let name of ['pointerup','pointercancel','lostpointercapture'])el.addEventListener(name,end);el.addEventListener('contextmenu',e=>e.preventDefault())}
+function bindTap(id,actionKey){const el=$(id);let active=new Set();el.addEventListener('pointerdown',e=>{e.preventDefault();active.add(e.pointerId);el.classList.add('pressed');try{el.setPointerCapture(e.pointerId)}catch(_){}action(actionKey)});for(const name of ['pointerup','pointercancel','lostpointercapture'])el.addEventListener(name,e=>{active.delete(e.pointerId);if(!active.size)el.classList.remove('pressed')});el.addEventListener('click',e=>{if(e.detail===0)action(actionKey)});el.addEventListener('contextmenu',e=>e.preventDefault())}
+// Map touch selects a navigation-only waypoint, never teleports or mutates quest state.
+// The same pointer handler preserves the original radar interaction outside map mode.
+$('game').addEventListener('pointerdown',e=>{
+ const bounds=e.currentTarget.getBoundingClientRect();
+ const x=(e.clientX-bounds.left)*W/bounds.width;
+ const y=(e.clientY-bounds.top)*H/bounds.height;
+ if(menu==='map'){
+  if(x>=196&&x<=219&&y>=29&&y<=52){waypoint=null;msg('MAP PIN CLEARED',2);e.preventDefault();return}
+  if(x>=27&&x<=213&&y>=64&&y<=94){waypoint=Math.round(clamp((x-27)/186,0,1)*LEVEL);msg('MAP PIN SET: '+waypoint,2);e.preventDefault()}
+  return;
+ }
+ if(menu||scanning<=0)return;
+ if(x>=23&&x<=217&&y>=26&&y<=102){e.preventDefault();const targets=scanTargets();if(targets.length){scanSelection=(scanSelection+1)%targets.length;scanOrigin=p.x;scanSignature=targets.map(t=>t.kind+':'+t.x).join('|');scanning=SCAN_SECONDS;const t=targets[scanSelection];msg('PULSE: '+t.label+' '+t.distance+' '+(t.dx<0?'WEST':'EAST')+' · '+(scanSelection+1)+'/'+targets.length,2.5);}}
+});
+bindHold('leftBtn','left');bindHold('rightBtn','right');bindHold('downBtn','down');for(let [id,key] of [['upBtn','up'],['aBtn','a'],['bBtn','b'],['lBtn','l'],['rBtn','r']])bindTap(id,key);
+$('mapBtn').addEventListener('click',toggleMap);$('journalBtn').addEventListener('click',toggleJournal);$('startBtn').addEventListener('click',togglePause);$('selectBtn').addEventListener('click',toggleSelect);
+$('fsBtn').addEventListener('click',async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await document.documentElement.requestFullscreen()}catch(_){msg('FULLSCREEN IS UNAVAILABLE ON THIS BROWSER',3)}});
+const keyMap={ArrowLeft:'left',KeyA:'left',ArrowRight:'right',KeyD:'right',ArrowDown:'down',KeyS:'down'};const once={Space:'a',KeyZ:'a',KeyJ:'a',KeyX:'b',KeyK:'b',ArrowUp:'up',KeyW:'up',KeyE:'up',KeyQ:'l',ShiftLeft:'l',KeyR:'r'};
+window.addEventListener('keydown',e=>{if(e.code in keyMap){e.preventDefault();if(menu==='palette'){if(!e.repeat)paletteStep(keyMap[e.code]==='left'?-1:1)}else if(!menu)input[keyMap[e.code]]=true}else if(e.code in once){e.preventDefault();if(!e.repeat)action(once[e.code])}else if(e.code==='KeyM'&&!e.repeat){e.preventDefault();toggleMap()}else if(e.code==='KeyC'&&menu==='map'&&!e.repeat){e.preventDefault();waypoint=null;msg('MAP PIN CLEARED',2)}else if(e.code==='KeyI'&&!e.repeat){e.preventDefault();toggleJournal()}else if(e.code==='Enter'&&!e.repeat){e.preventDefault();togglePause()}else if(e.code==='Tab'&&!e.repeat){e.preventDefault();toggleSelect()}});
+window.addEventListener('keyup',e=>{if(e.code in keyMap)input[keyMap[e.code]]=false});
+function suspend(){for(let key of Object.keys(input))input[key]=false;if(!menu)save()}
+window.addEventListener('blur',suspend);document.addEventListener('visibilitychange',()=>{if(document.hidden)suspend()});
+setInterval(()=>{if(!menu)save()},30000);
+Object.defineProperty(window,'__UNDERBYTE_TEST__',{value:Object.freeze({snapshot:()=>({x:p.x,y:p.y,ore:p.ore,mined:p.mined.slice(),relay:p.relay,device:p.device,hp:p.hp,palette:p.palette,menu,paused:!!menu,mapOpen:menu==='map',journalOpen:menu==='journal',journalSteps:[p.ore>=3,p.relay,p.device],waypoint,waypointDistance:waypoint===null?null:Math.round(Math.abs(waypoint-p.x)),alive:enemies.map(e=>e.alive),savePossible,scanActive:scanning>0,scanSelection:scanning>0?scanSelection%Math.max(1,scanTargets().length):null,questBearing:questBearing(),scanTargets:scanning>0?scanTargets().map(t=>({kind:t.kind,dx:t.dx,distance:t.distance,label:t.label})):[],notice}),setX:x=>{p.x=clamp(x,10,LEVEL-10);p.y=GROUND;p.vy=0},save,reset:()=>{try{localStorage.removeItem(STORE)}catch(_){}}})});
+})();
+</script>
+</body>
+</html>

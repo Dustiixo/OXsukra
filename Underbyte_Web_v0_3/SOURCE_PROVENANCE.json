@@ -1,0 +1,20 @@
+{
+  "browser_test_delivery": "Chromium page.set_content() on about:blank because managed URL blocklist prevents file and localhost navigations",
+  "candidate_file": "projects/Underbyte_Web_v0_3/UNDERBYTE_GBA_TOUCH_v0_3_RIPPLE.html",
+  "git_sha": null,
+  "independent_adapter_transaction": "BLOCKED: no authorized shared peer contract",
+  "native_godot_library_path": "/UNDERBYTE_NATIVE_GODOT_SOURCE_2026-11-03.zip",
+  "native_godot_modified": false,
+  "native_godot_sha256": "04bf719f88a676af7f479e51e760f4cb519c2aa06b387b5a476cca2d8adf472c",
+  "parent_pack_sha256": "380d12566282d3d2b5cf62c3d4e2d019a1c70aad16d876cf918412b598d6186a",
+  "parent_ripple_pack": "/OX_Ripple/Continuity/OX_Ripple_Progressive_Build_Pack_v0_31.zip",
+  "patch_file": "patches/Underbyte_v0_3_Pulse_Radar.patch",
+  "project": "Underbyte Pocket Adventure (independent web prototype, not native Godot)",
+  "safety": "Original archive and browser save key retained, no file/global hook or network capability introduced",
+  "source_library_path": "/UNDERBYTE_GBA_V02_PACKAGE.zip",
+  "source_sha256": "8c296e577abb4fb89441e00d9161ec8c8b20f75b2afbb9b3ddbec5766e95711c",
+  "test_command": "python verification/browser_underbyte_pulse_v0_32.py",
+  "tested_android_browser": false,
+  "tested_file_url_navigation": false,
+  "tested_linux_chromium_canvas": true
+}
