@@ -2,7 +2,7 @@
 
 **Audited 2026-11-22.** Source branches are publicly accessible under the authenticated GitHub owner `Dustiixo`; this does **not** mean all projects are independent GitHub repositories or promoted releases.
 
-Nine **review/staging** branches contain **541 source/artifact files**. A direct GitHub tree audit compared each uploaded file's remote Git blob SHA with SHA-1 calculated over the sanitized local source bytes: **541/541 matched**, with no extra or missing branch blobs. The public root `main` holds this index and the read-only audit harness; the source branches stay separate. No force pushes or existing PR merges were made.
+Twelve **review/staging** branches contain **628 source/artifact files**. A direct GitHub tree audit compared each uploaded file's remote Git blob SHA with SHA-1 calculated over the sanitized local source bytes: **628/628 matched**, with no extra or missing branch blobs. The public root `main` holds this index and the read-only audit harness; the source branches stay separate. No force pushes or existing PR merges were made.
 
 | Candidate | Git blobs | Public source branch | Commit | Test evidence |
 |---|---:|---|---|---|
@@ -16,6 +16,10 @@ Nine **review/staging** branches contain **541 source/artifact files**. A direct
 | PARALLAX Linux M0.7 + Session Atlas M0.1 | 42 | [publish/parallax-linux-m0-7-session-atlas-m0-1-20261122](https://github.com/Dustiixo/OXsukra/tree/publish/parallax-linux-m0-7-session-atlas-m0-1-20261122) | `2bc3cf207c11` | 9 Python host, 7 Node atlas and 2 extension/content scripts PASS |
 | IXO engineering v0.4.1 | 99 | [publish/ixo-v0-4-1-engineering-source-20261122](https://github.com/Dustiixo/OXsukra/tree/publish/ixo-v0-4-1-engineering-source-20261122) | `9c9b32b1caf8` | 152 Python unittest on source archive PASS |
 
+| SpatialDoor v0.1 | 22 | [publish/spatial-door-v0-1-source-20261122](https://github.com/Dustiixo/SpatialDoor/tree/publish/spatial-door-v0-1-source-20261122) | `d60152c3ce5e` | 50 unittest under Xvfb passed; remote SHA match 22/22 |
+| DeepBrew Studio G0.3.1 | 49 | [publish/deepbrew-studio-g0-3-1-source-20261122](https://github.com/Dustiixo/OXsukra/tree/publish/deepbrew-studio-g0-3-1-source-20261122) | `956a27d254bc` | Python compileall passed; Godot test report historical, NOT independently rerun |
+| ECHOFOLD Ocean G0.1 | 16 | [publish/echofold-ocean-g0-1-source-20261122](https://github.com/Dustiixo/OXsukra/tree/publish/echofold-ocean-g0-1-source-20261122) | `1d7e963c4737` | 5 Python unittest passed; remote SHA match 16/16 |
+
 ## Important limits
 
 1. **Source publication is not functional completion.** Production native Windows/ASUS acceptance, device integrations, cross-owner contracts, 3D GPU acceptance, and full release approvals remain separate gates.
@@ -26,3 +30,7 @@ Nine **review/staging** branches contain **541 source/artifact files**. A direct
 6. **Unreconciled work:** native/current IXO source history, HermesXO owner source, full AIXO engine, DeepBrew Studio independent source, Opris, ECHOFOLD, GREMLIN, WRAP, and other ecosystem projects require exact source, license, privacy and test reconciliation. Existing README-only repositories are not counted as published implementations.
 
 For each project: create or select its correctly named repository, validate licensing and lineage, import the source without overwriting existing history, run tests on the resulting tree, open a reviewed PR, and only then promote to its default branch. This ledger is designed to make progress measurable, not substitute for those steps.
+
+## Publication follow-through
+
+An hourly evidence-first GitHub publication workflow is active to reconcile the remaining source archives and repo boundaries. It must skip unchanged digests and must not bypass licensing, privacy, testing, author-ownership or release acceptance. This task is still **incomplete**: outstanding dedicated repositories and owner-controlled integrations cannot be declared complete based on source snapshots.

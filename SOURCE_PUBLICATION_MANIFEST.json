@@ -83,11 +83,38 @@
       "git_blob_count": 99,
       "tests": "152 Python unittest on source archive PASS",
       "limit": "Historical engineering source; not current native host release"
+    },
+    {
+      "project": "SpatialDoor v0.1",
+      "repo": "Dustiixo/SpatialDoor",
+      "branch": "publish/spatial-door-v0-1-source-20261122",
+      "commit": "d60152c3ce5eeea0dd1e8c7022537e32faf8e7d9",
+      "git_blob_count": 22,
+      "tests": "50 unittest under Xvfb passed; remote SHA match 22/22",
+      "limit": "Original Git ancestry preserved in history bundle; preview media excluded"
+    },
+    {
+      "project": "DeepBrew Studio G0.3.1",
+      "repo": "Dustiixo/OXsukra",
+      "branch": "publish/deepbrew-studio-g0-3-1-source-20261122",
+      "commit": "956a27d254bc95112e64bea022556429b445ed01",
+      "git_blob_count": 49,
+      "tests": "Python compileall passed; Godot test report historical, NOT independently rerun",
+      "limit": "Audio assets/media excluded, Godot runtime unavailable"
+    },
+    {
+      "project": "ECHOFOLD Ocean G0.1",
+      "repo": "Dustiixo/OXsukra",
+      "branch": "publish/echofold-ocean-g0-1-source-20261122",
+      "commit": "1d7e963c4737d8183c1f438f7210cd774afab2f1",
+      "git_blob_count": 16,
+      "tests": "5 Python unittest passed; remote SHA match 16/16",
+      "limit": "Native Godot hardware and cross-system integration unverified"
     }
   ],
   "remote_git_blob_integrity": {
-    "expected": 541,
-    "matched": 541,
+    "expected": 628,
+    "matched": 628,
     "missing": 0,
     "mismatch": 0,
     "extra": 0
