@@ -1,0 +1,5 @@
+Parent M2.2 manifest verification: 38/38 SHA-256 PASS
+Command: python -m pytest -q
+.....................                                                    [100%]
+21 passed in 0.65s
+Environment: Linux container; no ASUS Windows hardware acceptance

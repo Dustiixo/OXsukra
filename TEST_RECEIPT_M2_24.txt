@@ -1,0 +1,9 @@
+Environment: Linux-6.18.57-x86_64-with-glibc2.41
+Python: 3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]
+Parent: 85/85 manifest entries; ZIP integrity PASS; 72 tests passed in 1.80s
+Command: PYTHONDONTWRITEBYTECODE=1 python -m pytest -q -p no:cacheprovider
+........................................................................ [ 96%]
+...                                                                      [100%]
+75 passed in 1.71s
+Python source compilation PASS
+Windows hardware and filesystem acceptance NOT RUN

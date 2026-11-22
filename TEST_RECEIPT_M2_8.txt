@@ -1,0 +1,7 @@
+VELA M2.8 TEST RECEIPT — 2026-11-21
+Parent M2.7: 48/48 SHA-256 source entries verified; 35/35 pytest PASS.
+Change: FID optional audio-object graph structural validation; five new test cases.
+Linux container: .......................................                                  [100%]
+39 passed in 0.93s
+Windows hardware/audio acceptance: NOT RUN / NOT VERIFIED.
+Rollback: immutable M2.7 archive.

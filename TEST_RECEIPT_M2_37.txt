@@ -1,0 +1,7 @@
+M2.37 native Tk marker lifecycle regression
+Parent M2.36: 140/140 manifest entries verified; baseline 91/91 passed.
+........................................................................ [ 78%]
+....................                                                     [100%]
+92 passed in 1.64s
+Python compileall: PASS
+Xvfb Tk widgets and simulated audio: PASS. Physical Windows audio, driver, GPU and microphone: UNVERIFIED.

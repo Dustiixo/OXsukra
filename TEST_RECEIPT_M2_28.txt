@@ -1,0 +1,6 @@
+Parent manifest: 102 matched; ZIP CRC passed; baseline 82 passed in 1.62s
+........................................................................ [ 85%]
+............                                                             [100%]
+84 passed in 1.76s
+compileall passed
+GUI and physical hardware not tested

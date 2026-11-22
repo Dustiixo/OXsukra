@@ -1,0 +1,6 @@
+VELA M2.13 test receipt, 2026-11-21
+Parent M2.12 SHA-256 manifest: 58/58 entries matched.
+Parent automated baseline: 47 passed.
+Updated source: python -m pytest -q -> 55 passed in 0.93s (Linux container).
+New test cases: 1 phrase timing/default, 7 invalid quantization parameter cases.
+Hardware acceptance: NOT RUN (ASUS Windows, audio drivers, microphone, GPU, real playback).

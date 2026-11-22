@@ -1,0 +1,10 @@
+VELA M2.18 Linux-container verification 2026-11-21
+Parent archive: VELA_Continuity_M2_17_2026-11-21.zip
+Parent archive SHA-256: 99d8d256f9b0fd7d84035c2e3bd23a9a5313299cab0e0de22a28a14a3779fb3c
+Parent manifest: 72/72 matched
+Parent pytest: 62 passed
+New pytest: 64 passed
+New regressions: pending response required; WAV export contains response and preserves transport
+Python compileall: PASS
+Native ASUS Windows audio/GUI/drivers: NOT TESTED
+Release state: NOT COMPLETE

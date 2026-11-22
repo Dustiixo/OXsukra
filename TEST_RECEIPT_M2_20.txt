@@ -1,0 +1,7 @@
+VELA M2.20 Linux container
+Parent manifest: 73/73 SHA-256 matched
+Parent pytest: 66/66 PASS
+New pytest: 68/68 PASS
+Two new tests: dialog-time response change and optional expected-ID API
+Python compileall: PASS
+Native Windows ASUS device acceptance: NOT RUN

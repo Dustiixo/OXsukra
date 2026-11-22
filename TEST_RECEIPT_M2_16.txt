@@ -1,0 +1,5 @@
+VELA M2.16 Linux-container verification, 2026-11-21
+Parent M2.15: 64/64 manifest entries verified; ZIP integrity PASS; baseline pytest 58/58 PASS.
+Change: exact-boundary response activation even when audio render callback ends precisely on the target frame.
+Post-change pytest: 60/60 PASS (2 new regression tests); compileall PASS.
+No native ASUS Windows GUI, sound device, microphone, GPU, or speaker playback acceptance was performed. NOT COMPLETE.

@@ -1,0 +1,23 @@
+VELA M2.29 independent local verification receipt
+Date: 2026-11-22 (UTC date)
+Parent: VELA_Continuity_M2_28_2026-11-22.zip
+Parent ZIP SHA-256: 38d6a36cf3e4300054705f9df2a54de8e2a0cb609af0d0b93ea7f7ea1e05a1b0
+Parent ZIP CRC: PASS
+Parent SHA-256 manifest: 105/105 matched
+Parent baseline pytest: 84/84 PASS
+
+Fresh updated automated suite:
+Command: python -m pytest -q
+........................................................................ [ 84%]
+.............                                                            [100%]
+85 passed in 1.84s
+
+Source compilation: python -m compileall -q vela tests — PASS
+
+Actual GUI interaction smoke:
+Command: PYTHONPATH=. xvfb-run -a -s '-screen 0 1700x1100x24' python demo/verify_reverse_ab_linux.py
+PASS: native Tk reverse → A/B waveform, before/after playback, stop, close and undo; simulated output only
+Screenshot: demo/VELA_M2_29_native_linux.png — actual running native Linux Tk under Xvfb
+AudioDevice simulated: output samples tested, no physical sound card
+
+Native ASUS Windows startup, physical audio playback, driver coexistence, mic/GPU and complete five-scene acceptance: UNVERIFIED. NOT COMPLETE.

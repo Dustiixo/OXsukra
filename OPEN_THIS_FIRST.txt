@@ -1,0 +1,14 @@
+VELA M2 — CONTINUITY CHECKPOINT
+================================
+
+This is a recoverable, source-first VELA prototype, not a complete VELA application.
+1. Extract the folder.
+2. Double-click START VELA.bat on Windows; setup may use internet on first run.
+3. Try LOAD DEMO -> PLAY -> 04 AUDIO OBJECT -> inspect -> propose -> accept/reject.
+4. SAVE .FID, close, reopen, check original audio identity and history.
+5. Read VELA_BUILD_STATUS.md and tests before treating features as verified.
+
+Native Windows/audio-device acceptance remains UNVERIFIED.
+Syntra, a real music LLM, 5 completed scenes, and custom semantic audio encoding are NOT implemented.
+
+Historical DeepBrew labels in schema keys and old docs have been retained for backward compatibility, not to rename VELA or merge it into DeepBrew Studio.

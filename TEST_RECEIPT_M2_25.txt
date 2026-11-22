@@ -1,0 +1,11 @@
+Environment: Linux-6.18.57-x86_64-with-glibc2.41
+Python: 3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]
+Parent SHA-256: f6c352deaabbb24413a7d2f1d339f3dbb5191c4f2b97f7e66237ef6629c7bb84
+Parent manifest 88/88; ZIP integrity PASS; baseline 75 passed in 1.60s
+Command: PYTHONDONTWRITEBYTECODE=1 python -m pytest -q -p no:cacheprovider
+........................................................................ [ 92%]
+......                                                                   [100%]
+78 passed in 1.86s
+Source compilation PASS
+Tk actual edit/undo and screenshot under Xvfb PASS; no audio device opened.
+Windows acceptance NOT RUN.

@@ -1,0 +1,7 @@
+VELA M2.14 | 2026-11-21 | Linux container
+Parent M2.13 manifest: 60/60 SHA-256 checks PASS
+Parent baseline: 55/55 pytest PASS
+Current: python -m pytest -q -> 56 passed in 1.21s
+Current: python -m compileall -q vela -> PASS
+New regression: test_gui_phrase_selection_validates_without_display
+Physical GUI/Windows/audio-device acceptance: NOT RUN / UNVERIFIED

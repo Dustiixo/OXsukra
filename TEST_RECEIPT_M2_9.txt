@@ -1,0 +1,8 @@
+VELA M2.9 / 2026-11-21
+Parent: VELA_Continuity_M2_8_2026-11-21.zip
+Parent SHA-256 manifest: 62/62 PASS
+Parent pytest: 39/39 PASS (Linux container)
+Updated pytest: 42/42 PASS (Linux container)
+Three new parameterized malformed-original-provenance cases.
+Windows hardware/audio driver acceptance: NOT TESTED.
+Overall status: NOT COMPLETE.

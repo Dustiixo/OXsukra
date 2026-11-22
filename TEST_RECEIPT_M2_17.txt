@@ -1,0 +1,4 @@
+Parent: M2.16; SHA-256 66/66 matched. Baseline pytest: 60 passed.
+M2.17 pytest: 62 passed in 1.26s. Python compileall: PASS.
+New tests: deterministic non-destructive scheduled phrase audition; invalid audition length.
+Environment: Linux container, Python. Native ASUS Windows audio/GUI/hardware: NOT TESTED.

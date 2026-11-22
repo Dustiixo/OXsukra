@@ -1,0 +1,4 @@
+Parent: M2.9; 52/52 SHA-256 entries PASS; 42/42 baseline pytest PASS.
+M2.10: 44/44 pytest PASS (Linux container).
+New regression tests: unsupported BZIP2 member rejected; DEFLATE manifest accepted.
+Native ASUS Windows/audio hardware: NOT TESTED.

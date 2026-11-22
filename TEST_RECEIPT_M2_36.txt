@@ -1,0 +1,3 @@
+Parent M2.35: 136/136 SHA-256 verified; baseline 90/90 pytest.
+M2.36: 91 passed in 1.77s (Linux pytest); Python compileall passed.
+Windows physical hardware and native Tk interaction NOT verified.

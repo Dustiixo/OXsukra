@@ -1,0 +1,5 @@
+Linux container automated tests (not Windows hardware acceptance):
+..................................................................       [100%]
+66 passed in 0.92s
+
+compileall PASS

@@ -1,0 +1,16 @@
+VELA M2.31 TEST RECEIPT — 2026-11-22T09:54:29.892420+00:00
+Parent: VELA_Continuity_M2_30_2026-11-22.zip
+Parent SHA-256: 85d36ecdaff9f9d60ba7035ba389cb916237099b88f0e2e5e3e028e7f046e81e
+Parent ZIP CRC: PASS
+Parent source SHA-256: 119/119 matched
+Parent pytest: 86/86 passed
+
+Updated pytest command: python -m pytest -q
+........................................................................ [ 81%]
+................                                                         [100%]
+88 passed in 2.10s
+Python compileall: PASS
+Tk/Xvfb simulated-output native smoke: PASS: Tk click-to-cue, shared A/B sample 44100, cursor updates, close, original and undo; SIMULATED OUTPUT ONLY
+GUI screenshot: demo/VELA_M2_31_native_linux.png (real Linux Tk screen capture, not AI art)
+Windows ASUS physical playback, microphone, audio drivers, GPU: NOT TESTED
+No protected GitHub push, cross-project merge or automatic AI proposal approval.

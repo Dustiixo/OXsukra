@@ -1,0 +1,9 @@
+VELA M2.21 Linux container
+Parent ZIP: integrity PASS
+Parent manifest: 76/76 SHA-256 PASS
+Parent pytest: 68/68 PASS
+New pytest: 70/70 PASS
+Two new tests: same-ID reschedule API guard; dialog-time reschedule abort without WAV/history
+Existing mock adjusted for optional expected_pending_at keyword
+Python compileall: PASS
+Native ASUS Windows device acceptance: NOT RUN

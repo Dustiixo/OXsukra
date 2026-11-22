@@ -1,0 +1,4 @@
+2026-11-21 | Linux container | python -m pytest -q | 46 passed in 1.18s
+Parent M2.10: 44 passed in 1.42s; 54/54 SHA-256 manifest entries matched.
+New tests: oversized manifest before parse; oversized total declared archive before parse.
+No Windows/ASUS device, driver, playback, microphone or GPU test performed.

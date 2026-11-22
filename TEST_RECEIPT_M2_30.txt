@@ -1,0 +1,4 @@
+VELA M2.30 TEST RECEIPT\nParent: M2.29\nCommand: python -m pytest -q\n........................................................................ [ 83%]
+..............                                                           [100%]
+86 passed in 1.72s
+\ncompileall: PASS\nWindows physical device/driver acceptance: NOT TESTED\n

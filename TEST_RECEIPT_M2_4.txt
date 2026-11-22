@@ -1,0 +1,7 @@
+VELA M2.4 test receipt | 2026-11-21
+Source: VELA_Continuity_M2_3_2026-11-21.zip from ChatGPT Library /VELA/Continuity/
+Parent manifest SHA-256: 40/40 MATCH
+Parent pytest: 21 passed in 0.65s
+M2.4 pytest: 27 passed in 0.72s
+Execution: Linux container, Python pytest; no Windows ASUS audio device or driver tests.
+Change: Windows-ambiguous FID ZIP member name rejection.

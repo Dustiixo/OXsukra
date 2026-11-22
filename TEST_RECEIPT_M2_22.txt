@@ -1,0 +1,1 @@
+Linux container: parent archive ZIP integrity PASS; 84/84 manifest entries verified; baseline pytest 70 passed in 1.17s. Modified pytest 71 passed in 1.13s. python -m compileall -q vela tests completed successfully. Windows hardware/driver acceptance NOT RUN.

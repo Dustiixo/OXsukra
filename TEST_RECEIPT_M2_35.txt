@@ -1,0 +1,1 @@
+Parent manifest 136/136 PASS; baseline pytest 90/90 PASS; modified pytest 90/90 PASS; Linux Xvfb Tk simulated device: NATIVE GUI LOOP PASS 17534 52955; physical Windows device UNVERIFIED.

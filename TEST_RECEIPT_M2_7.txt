@@ -1,0 +1,7 @@
+VELA M2.7 verification | 2026-11-21
+Parent manifest: 46/46 SHA-256 checks PASS
+Parent pytest: 31/31 PASS
+Updated pytest: 35/35 PASS (Linux container, Python)
+New tests: 4 parametrized malformed FID metadata cases
+Native ASUS Windows startup, driver, playback, microphone, GPU: NOT TESTED
+No real device acceptance; overall VELA NOT COMPLETE.

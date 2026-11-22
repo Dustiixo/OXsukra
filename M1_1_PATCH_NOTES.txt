@@ -1,0 +1,21 @@
+VELA M1.1 - WINDOWS LAUNCHER HOTFIX
+==================================
+Fixes bootstrap diagnostics and Python interpreter selection.
+The actual audio app engine is unchanged from M1.
+
+HOW TO APPLY A HOTFIX TO EXISTING M1 INSTALLATION
+1. Extract VELA_M1_1_Startup_Hotfix.zip.
+2. Copy RUN_WINDOWS.bat and DIAGNOSE_WINDOWS.bat into your
+   existing VELA_Waters_Edge_M1 folder, replacing RUN_WINDOWS.bat.
+3. Double-click RUN_WINDOWS.bat again.
+4. If Python fails verification, double-click DIAGNOSE_WINDOWS.bat
+   and share its report, removing any private paths if desired.
+
+The launcher chooses a working installed Python 3.10-3.14 with Tcl/Tk;
+clears PYTHONHOME/PYTHONPATH for this run; and backs up damaged .venv
+folders instead of deleting them. If no working Python is available,
+install the standard 64-bit Python 3.12/3.13 from python.org with pip and
+Tcl/Tk included, then rerun the launcher.
+
+M1.1 does not contain a prebuilt Windows EXE. Python is still needed.
+Windows runtime/device testing is pending user-machine validation.

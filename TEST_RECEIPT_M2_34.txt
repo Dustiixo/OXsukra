@@ -1,0 +1,3 @@
+Parent M2.33 ZIP CRC PASS; parent SHA-256 manifest 128/128 PASS; baseline pytest 89/89 PASS.
+M2.34 Linux pytest 90/90 PASS (1.58s); compileall PASS. New regression: loop interval validation, repeated samples, A/B alignment, stop, clear, legacy one-shot, source immutability.
+Physical Windows hardware/driver acceptance NOT RUN. GUI loop control NOT IMPLEMENTED.

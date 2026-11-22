@@ -1,0 +1,6 @@
+Command: xvfb-run -a python -m pytest -q
+94 passed in 2.04s
+Command: python -m compileall -q vela tests
+PASS
+Parent M2.38 SHA-256 manifest: 151/151 matched before changes
+Native Linux Tk/Xvfb simulated audio only; Windows hardware not tested.

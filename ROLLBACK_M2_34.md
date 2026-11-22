@@ -1,0 +1,1 @@
+Restore immutable M2.33 to a separate directory. Do not overwrite original audio or FID project files. No schema migration was introduced. The loop-region API is opt-in and affects only an isolated preview.

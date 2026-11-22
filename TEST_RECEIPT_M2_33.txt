@@ -1,0 +1,5 @@
+Parent manifest verified: 128/128
+pytest -q: 89 passed in 1.62s
+Native Tk Xvfb simulated audio: PASS A/B/Space/Escape and root Space handler not triggered
+compileall: PASS
+Windows device acceptance: NOT RUN

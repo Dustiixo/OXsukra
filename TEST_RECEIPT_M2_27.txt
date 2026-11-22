@@ -1,0 +1,9 @@
+Parent checksums: 97/97; ZIP integrity PASS; baseline pytest: 80 passed in 1.48s.
+python -m pytest -q
+........................................................................ [ 87%]
+..........                                                               [100%]
+82 passed in 1.36s
+python -m compileall -q vela tests: PASS
+Native Tk A/B controls, matching samples, stop/close and isolated live state PASS (simulated device; no speakers)
+Python 3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]
+Physical output: NOT TESTED; sounddevice unavailable.

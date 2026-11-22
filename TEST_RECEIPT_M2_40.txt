@@ -1,0 +1,5 @@
+Command: xvfb-run -a python -m pytest -q
+Baseline: 94 passed in 2.80s
+Final: 95 passed in 2.50s
+Test: test_resize_during_active_loop_preserves_playback_and_sample_bounds
+Native Linux Tk with simulated audio only; Windows hardware NOT tested.

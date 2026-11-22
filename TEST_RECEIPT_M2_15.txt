@@ -1,0 +1,6 @@
+VELA M2.15 TEST RECEIPT — 2026-11-21
+Parent: M2.14 SHA256 manifest 62/62 MATCH; parent pytest 56 passed.
+Release: python -m pytest -q -> 58 passed in 1.23s.
+python -m compileall -q vela tests -> PASS.
+New tests: test_pending_impact_marker_wrap_and_future_phrase; test_pending_impact_marker_absent_after_application.
+Scope: Linux-container Python tests, not physical Windows GUI/audio acceptance.

@@ -1,0 +1,3 @@
+Parent M2.37: 144/144 SHA-256; baseline 92/92 pytest.
+M2.38: 93/93 pytest under Linux Xvfb; Python compileall pass.
+Physical Windows hardware/driver acceptance NOT tested.
