@@ -1,0 +1,107 @@
+{
+  "schema_version": "0.3",
+  "mode": "reference-only-not-a-discord-import",
+  "team_size": 4,
+  "roles": [
+    "Member",
+    "ProjectOwner",
+    "HubOperator",
+    "BotManager",
+    "HERMES"
+  ],
+  "categories": [
+    {
+      "name": "00 // ENTRY",
+      "text": [
+        "start-here",
+        "disclosure-and-rules",
+        "announcements"
+      ],
+      "voice": []
+    },
+    {
+      "name": "01 // BACK ALLEY",
+      "text": [
+        "general",
+        "memes",
+        "clip-dump"
+      ],
+      "voice": [
+        "The Garage",
+        "AFK"
+      ]
+    },
+    {
+      "name": "02 // DUMP HUB",
+      "text": [
+        "file-drop",
+        "intake-status",
+        "research-links"
+      ],
+      "voice": []
+    },
+    {
+      "name": "03 // ENGINE ROOM",
+      "text": [
+        "dev-general",
+        "ixo",
+        "syntra",
+        "apc-odin",
+        "cross-project"
+      ],
+      "voice": [
+        "Dev Lab",
+        "Screen Share"
+      ]
+    },
+    {
+      "name": "04 // ALCHEMY",
+      "text": [
+        "experiments",
+        "comparisons",
+        "verification"
+      ],
+      "voice": []
+    },
+    {
+      "name": "05 // BUSINESS INTENTIONS",
+      "text": [
+        "concepts-only",
+        "opportunities"
+      ],
+      "voice": []
+    },
+    {
+      "name": "06 // MEMORY",
+      "text": [
+        "eureka",
+        "decisions",
+        "knowledge-index"
+      ],
+      "voice": []
+    },
+    {
+      "name": "07 // LIVE",
+      "text": [
+        "stream-schedule",
+        "music-requests",
+        "showcase"
+      ],
+      "voice": [
+        "Listening Room",
+        "Live Studio"
+      ]
+    },
+    {
+      "name": "08 // CONTROL",
+      "text": [
+        "hermes-status",
+        "bot-requests",
+        "incident-notices"
+      ],
+      "voice": []
+    }
+  ],
+  "auto_create": false,
+  "permissions": "Set manually; do not imply project isolation at hub level"
+}

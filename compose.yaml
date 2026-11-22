@@ -1,0 +1,15 @@
+services:
+  funnel-hub:
+    build: .
+    restart: unless-stopped
+    ports:
+      - '127.0.0.1:8787:8787'
+    volumes:
+      - ./vault:/data
+    environment:
+      FUNNEL_DISCORD_WEBHOOK_URL: ${FUNNEL_DISCORD_WEBHOOK_URL:-}
+      FUNNEL_RCLONE_REMOTE: ${FUNNEL_RCLONE_REMOTE:-}
+    # For Google Drive mirroring in Docker: install rclone and mount the rclone
+    # config directory as read-only; default Docker image does NOT include it.
+    security_opt:
+      - no-new-privileges:true

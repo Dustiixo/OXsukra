@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.venv/
+vault/
+demo_vault/
+.ox_funnel/
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+.env
+.env.*
+!.env.example
+*.token
+*.secret
+bot.json
+.DS_Store

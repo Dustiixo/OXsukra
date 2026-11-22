@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/hermes-purpose.v1.json",
+  "title": "HERMES Purpose Funnel v1: request envelope",
+  "description": "Schema for incoming preview and request payloads, independent of Python and Java. This is an interface specification, not an installed extension.",
+  "oneOf": [
+    {"$ref": "#/$defs/preview"},
+    {"$ref": "#/$defs/ticket"}
+  ],
+  "$defs": {
+    "preview": {
+      "type": "object",
+      "required": ["name"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1, "maxLength": 180},
+        "description": {"type": "string", "maxLength": 500},
+        "project": {"type": "string", "pattern": "^[a-zA-Z0-9_-]{1,40}$"}
+      },
+      "additionalProperties": false
+    },
+    "ticket": {
+      "type": "object",
+      "required": ["kind", "title", "reason"],
+      "properties": {
+        "kind": {"enum": ["new_purpose", "missing_file"]},
+        "title": {"type": "string", "minLength": 1, "maxLength": 120},
+        "reason": {"type": "string", "minLength": 1, "maxLength": 600},
+        "proposed_slug": {"type": "string", "pattern": "^[a-zA-Z0-9_-]{1,40}$"},
+        "keywords": {"type": "array", "maxItems": 12, "items": {"type": "string", "pattern": "^[a-zA-Z0-9]{2,30}$"}},
+        "item_id": {"type": "string", "maxLength": 40}
+      },
+      "additionalProperties": false
+    }
+  },
+  "response": {
+    "contract": "hermes.purpose.v1",
+    "decision_values": ["suggested", "needs_review", "restricted"],
+    "guarantee": "The preview has executed:false, storage_action:none and discord_action:none; request submission only writes review metadata."
+  }
+}

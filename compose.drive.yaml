@@ -1,0 +1,6 @@
+# Optional Docker Compose override for an already-configured rclone setup.
+# Set RCLONE_CONFIG_DIR to the host folder that CONTAINS rclone.conf.
+services:
+  funnel-hub:
+    volumes:
+      - ${RCLONE_CONFIG_DIR}:/root/.config/rclone:ro
