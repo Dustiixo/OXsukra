@@ -2,7 +2,7 @@
 
 **Audited 2026-11-22.** Source branches are publicly accessible under the authenticated GitHub owner `Dustiixo`; this does **not** mean all projects are independent GitHub repositories or promoted releases.
 
-Twelve **review/staging** branches contain **628 source/artifact files**. A direct GitHub tree audit compared each uploaded file's remote Git blob SHA with SHA-1 calculated over the sanitized local source bytes: **628/628 matched**, with no extra or missing branch blobs. The public root `main` holds this index and the read-only audit harness; the source branches stay separate. No force pushes or existing PR merges were made.
+Fifteen **review/staging** branches contain **769 source/artifact files**. A direct GitHub tree audit compared each uploaded file's remote Git blob SHA with SHA-1 calculated over the sanitized local source bytes: **769/769 matched**, with no extra or missing branch blobs. The public root `main` holds this index and the read-only audit harness; the source branches stay separate. No force pushes or existing PR merges were made.
 
 | Candidate | Git blobs | Public source branch | Commit | Test evidence |
 |---|---:|---|---|---|
@@ -19,6 +19,10 @@ Twelve **review/staging** branches contain **628 source/artifact files**. A dire
 | SpatialDoor v0.1 | 22 | [publish/spatial-door-v0-1-source-20261122](https://github.com/Dustiixo/SpatialDoor/tree/publish/spatial-door-v0-1-source-20261122) | `d60152c3ce5e` | 50 unittest under Xvfb passed; remote SHA match 22/22 |
 | DeepBrew Studio G0.3.1 | 49 | [publish/deepbrew-studio-g0-3-1-source-20261122](https://github.com/Dustiixo/OXsukra/tree/publish/deepbrew-studio-g0-3-1-source-20261122) | `956a27d254bc` | Python compileall passed; Godot test report historical, NOT independently rerun |
 | ECHOFOLD Ocean G0.1 | 16 | [publish/echofold-ocean-g0-1-source-20261122](https://github.com/Dustiixo/OXsukra/tree/publish/echofold-ocean-g0-1-source-20261122) | `1d7e963c4737` | 5 Python unittest passed; remote SHA match 16/16 |
+
+| Underbyte Native Godot | 22 | [publish/underbyte-godot-native-source-20261122](https://github.com/Dustiixo/OXsukra/tree/publish/underbyte-godot-native-source-20261122) | `3c0738137393` | 8/10 content tests passed; 2 asset-dependent failed due intentionally withheld media |
+| OX Hermes Funnel Pilot v0.8 | 58 | [publish/ox-hermes-funnel-pilot-v0-8-source-20261122](https://github.com/Dustiixo/OXsukra/tree/publish/ox-hermes-funnel-pilot-v0-8-source-20261122) | `39450690d44a` | Python compileall PASS; full unittest timed out after 15s; test acceptance NOT established |
+| OX Spatial Fabric v0.2.2 | 61 | [publish/ox-spatial-fabric-v0-2-2-source-20261122](https://github.com/Dustiixo/OXsukra/tree/publish/ox-spatial-fabric-v0-2-2-source-20261122) | `9f2666807c2a` | Python compileall PASS; full unittest timed out after 15s; test acceptance NOT established |
 
 ## Important limits
 

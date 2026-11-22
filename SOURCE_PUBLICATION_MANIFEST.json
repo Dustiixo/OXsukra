@@ -110,11 +110,38 @@
       "git_blob_count": 16,
       "tests": "5 Python unittest passed; remote SHA match 16/16",
       "limit": "Native Godot hardware and cross-system integration unverified"
+    },
+    {
+      "project": "Underbyte Native Godot",
+      "repo": "Dustiixo/OXsukra",
+      "branch": "publish/underbyte-godot-native-source-20261122",
+      "commit": "3c07381373936b8a087d472191ffe5242c60f599",
+      "git_blob_count": 22,
+      "tests": "8/10 content tests passed; 2 asset-dependent failed due intentionally withheld media",
+      "limit": "Original local Git objects and media withheld; Godot runtime unverified"
+    },
+    {
+      "project": "OX Hermes Funnel Pilot v0.8",
+      "repo": "Dustiixo/OXsukra",
+      "branch": "publish/ox-hermes-funnel-pilot-v0-8-source-20261122",
+      "commit": "39450690d44a52a1d62b89b559cb6b5c78c142cd",
+      "git_blob_count": 58,
+      "tests": "Python compileall PASS; full unittest timed out after 15s; test acceptance NOT established",
+      "limit": "Collaborator/private notes omitted; HermesXO factual-memory owner is a different project"
+    },
+    {
+      "project": "OX Spatial Fabric v0.2.2",
+      "repo": "Dustiixo/OXsukra",
+      "branch": "publish/ox-spatial-fabric-v0-2-2-source-20261122",
+      "commit": "9f2666807c2ab4a2c050f96bc0e73f952194f5cd",
+      "git_blob_count": 61,
+      "tests": "Python compileall PASS; full unittest timed out after 15s; test acceptance NOT established",
+      "limit": "Large demo JSON, audio, meshes, PNG excluded; native SELF/GUI not accepted"
     }
   ],
   "remote_git_blob_integrity": {
-    "expected": 628,
-    "matched": 628,
+    "expected": 769,
+    "matched": 769,
     "missing": 0,
     "mismatch": 0,
     "extra": 0
