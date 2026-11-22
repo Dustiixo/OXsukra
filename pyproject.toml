@@ -1,0 +1,13 @@
+[project]
+name = "ixo-uv-foundation"
+version = "0.4.0"
+description = "IXO local-first Python foundation with executable native feature operations and audited integration"
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.uv]
+package = false
+
+[tool.ixo]
+main = "ixo_foundation"
+source_baseline = "IXO_COMPONENT_REBUILD_v0_4"

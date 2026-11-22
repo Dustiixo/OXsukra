@@ -1,0 +1,42 @@
+'use strict';
+const token=new URLSearchParams(location.search).get('token')||'';
+const $=id=>document.getElementById(id),c=$('space'),ctx=c.getContext('2d');
+const el=(tag,text)=>{let n=document.createElement(tag);n.textContent=String(text);return n};
+let ix=null,ax=null,orbitOffset=0,zoom=1,dragging=false,dragStart=0,moved=false,hit=[],transition=0,phase=0,lastSet='main',targetSet='main';
+const output=x=>{$('output').textContent=x};
+async function action(path,data){try{let r=await fetch(path,{method:'POST',headers:{'Content-Type':'application/json','X-IXO-Token':token},body:JSON.stringify(data)});let j=await r.json();output(j.message||j.error||JSON.stringify(j));await refresh();return j}catch(e){output('ERROR: '+e.message)}}
+async function command(text){const old=ix?.active_set;let r=await action('/api/command',{command:text});if(r?.ok&&old!==ix?.active_set){transition=1;lastSet=old;targetSet=ix.active_set}return r}
+async function aixoAction(data){return action('/api/aixo/action',data)}
+function lines(id,items,fmt){const parent=$(id);parent.replaceChildren();if(!items?.length){parent.appendChild(el('div','(no records)'));return}items.forEach(x=>{let d=el('div',fmt(x));d.className='item';parent.appendChild(d)})}
+function renderIXO(){if(!ix)return;$('active').textContent=ix.active_set.toUpperCase();$('sets').replaceChildren();ix.sets.forEach(s=>{let b=el('button',s);if(s===ix.active_set)b.className='active';b.onclick=()=>command('/set '+s);$('sets').appendChild(b)});
+$('counts').textContent=Object.entries(ix.counts).map(([k,v])=>`${k}: ${v}`).join(' · ');
+lines('facts',ix.facts,f=>'F'+f.id+' '+f.text);lines('reflections',ix.reflections,m=>`${m.stage.toUpperCase()} @${m.workspace}: ${m.text}`);lines('events',ix.events,e=>`#${e.seq} ${e.type} ${JSON.stringify(e.payload)}`);
+$('proposals').replaceChildren();ix.proposals.forEach(p=>{let d=el('div',`P${p.id} ${p.classification} [${p.status}]\n${p.text}`);d.className='item';if(p.status==='PENDING'){let a=el('button','APPROVE'),b=el('button','REJECT');a.onclick=()=>command('/approve P'+p.id);b.onclick=()=>command('/reject P'+p.id);d.append(a,b)}$('proposals').appendChild(d)})}
+function renderAIXO(){if(!ax)return;$('bridgecount').textContent=`${ax.captured_events} committed IXO events captured`;
+lines('experiments',ax.experiments,x=>`#${x.id} ${x.title} — ${x.question}`);lines('evaluations',ax.evaluations,x=>`${x.passed?'PASS':'FAIL'} | EXP ${x.experiment_id} | ${x.claim} | observed ${x.observed}`);lines('evidence',ax.recent_evidence,x=>`IXO #${x.ixo_seq} ${x.kind}`);
+if(document.activeElement && $('lessons').contains(document.activeElement))return;
+$('lessons').replaceChildren();const first=ax.lessons.find(x=>!x.completed_at)?.id;ax.lessons.forEach(l=>{let d=document.createElement('div');d.className='item';d.appendChild(el('div',`${l.id} [${l.mode}] ${l.title} ${l.completed_at?'✓':''}`));if(l.id===first){let i=el('input','');i.placeholder='Artifact or observation (required)';i.maxLength=2000;i.style.cssText='width:100%;background:#020d07;color:#a4ffc7;border:1px solid #275f3b;padding:6px';d.appendChild(i);let b=el('button','COMPLETE WITH EVIDENCE');b.onclick=()=>aixoAction({action:'lesson',lesson:l.id,artifact:i.value});d.appendChild(b)}$('lessons').appendChild(d)})}
+async function refresh(){try{const [i,a]=await Promise.all([fetch('/api/status',{cache:'no-store'}),fetch('/api/aixo',{cache:'no-store'})]);if(!i.ok||!a.ok)throw Error('service disconnected');ix=await i.json();ax=await a.json();$('connection').textContent='● LOCAL PYTHON + SQLITE CONNECTED';renderIXO();renderAIXO()}catch(e){$('connection').textContent='● RUNTIME OFFLINE'}}
+$('tab-ixo').onclick=()=>switchTab(false);$('tab-aixo').onclick=()=>switchTab(true);$('tab-dsoe').onclick=()=>switchDSOE();$('tab-experience').onclick=()=>switchExperience();
+function switchTab(a){$('panel-ixo').hidden=a;$('panel-aixo').hidden=!a;$('panel-dsoe').hidden=true;$('panel-experience').hidden=true;$('tab-experience').className='';$('tab-ixo').className=a?'':'active';$('tab-aixo').className=a?'active':'';$('tab-dsoe').className=''}
+$('home').onclick=()=>command('/go main');$('cmdform').onsubmit=e=>{e.preventDefault();const v=$('command').value.trim();if(v){command(v);$('command').value=''}};
+$('capture').onclick=()=>aixoAction({action:'capture'});
+$('experimentform').onsubmit=e=>{e.preventDefault();aixoAction({action:'experiment',title:$('exptitle').value,question:$('expquestion').value})};
+$('evalform').onsubmit=e=>{e.preventDefault();const assertion=$('evalkind').value;let v=$('evalexpected').value.trim();if(assertion!=='active_set')v=Number(v);aixoAction({action:'evaluate',experiment_id:Number($('evalexp').value),assertion,expected:v})};
+function resize(){const box=c.getBoundingClientRect(),d=Math.min(devicePixelRatio||1,2);c.width=Math.max(1,Math.round(box.width*d));c.height=Math.max(1,Math.round(box.height*d));ctx.setTransform(d,0,0,d,0,0)}
+function draw(ms){phase=ms*.001;const w=c.clientWidth,h=c.clientHeight,cx=w*.5,cy=h*.49,R=Math.min(w*.42,h*.48)*zoom;ctx.fillStyle='#010603';ctx.fillRect(0,0,w,h);
+// Engineering spatial reference field, kept subtle and mathematically tied to view.
+ctx.lineWidth=.6;ctx.strokeStyle='rgba(80,222,122,.075)';for(let x=(cx%40);x<w;x+=40){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,h);ctx.stroke()}for(let y=(cy%40);y<h;y+=40){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(w,y);ctx.stroke()}
+ctx.save();ctx.translate(cx,cy);ctx.scale(1,.67);
+for(let k=0;k<5;k++){const rr=R*(.36+k*.16),a=phase*(k%2?-.08:.055);ctx.beginPath();ctx.ellipse(0,0,rr,rr,0,a,a+Math.PI*1.7);ctx.lineWidth=.6+(k===0?1:0);ctx.strokeStyle=`rgba(68,236,125,${.30-k*.042})`;ctx.stroke()}
+// Photon ring and turbulent accretion spiral: continuous animation, not a video.
+for(let k=0;k<170;k++){const theta=k*2.39996+phase*(.065+(k%5)*.006),rad=R*(.2+((k*37)%100)/100*.40),x=Math.cos(theta)*rad,y=Math.sin(theta)*rad;ctx.fillStyle=`rgba(61,${150+k%95},105,${.08+(k%8)*.034})`;ctx.beginPath();ctx.arc(x,y,.8+(k%3)*.3,0,Math.PI*2);ctx.fill()}
+ctx.beginPath();ctx.ellipse(0,0,R*.235,R*.235,0,0,Math.PI*2);ctx.shadowColor='#3cfc8d';ctx.shadowBlur=30;ctx.strokeStyle='#63ffa3';ctx.lineWidth=2.7;ctx.stroke();ctx.shadowBlur=0;ctx.beginPath();ctx.arc(0,0,R*.195,0,Math.PI*2);ctx.fillStyle='#000';ctx.fill();
+ctx.restore();
+ctx.textAlign='center';ctx.font='bold 13px monospace';ctx.fillStyle='#a0ffc6';ctx.fillText('IXO / CORE',cx,cy-6);ctx.font='10px monospace';ctx.fillStyle='#62cc88';ctx.fillText('BLACK HOLE PORTAL',cx,cy+9);
+const nodes=(ix?.sets||['main','hermes','moon2','aixo','kova','haven','aegisloom','research']).filter(x=>x!=='main');hit=[];
+nodes.forEach((name,i)=>{const a=(i/nodes.length)*Math.PI*2+orbitOffset+phase*.006*(i%2?1:-1),r=R*(.65+(i%3)*.105),x=cx+Math.cos(a)*r,y=cy+Math.sin(a)*r*.67;hit.push({name,x,y});ctx.strokeStyle='rgba(65,217,121,.16)';ctx.beginPath();ctx.moveTo(cx,cy);ctx.lineTo(x,y);ctx.stroke();ctx.fillStyle=name===ix?.active_set?'#b8ffce':'#42e584';ctx.shadowColor='#46f58b';ctx.shadowBlur=name===ix?.active_set?22:8;ctx.beginPath();ctx.arc(x,y,name===ix?.active_set?8:5,0,Math.PI*2);ctx.fill();ctx.shadowBlur=0;ctx.font='11px monospace';ctx.textAlign='center';ctx.fillStyle='#8effb5';ctx.fillText(name.toUpperCase(),x,y-15)});
+if(transition>0){transition=Math.max(0,transition-.015);ctx.fillStyle=`rgba(74,255,140,${transition*.14})`;ctx.fillRect(0,0,w,h);ctx.beginPath();ctx.strokeStyle=`rgba(104,255,163,${transition*.8})`;ctx.lineWidth=2;ctx.arc(cx,cy,(1-transition)*Math.max(w,h),0,Math.PI*2);ctx.stroke()}
+requestAnimationFrame(draw)}
+c.addEventListener('pointerdown',e=>{dragging=true;dragStart=e.clientX;moved=false;c.setPointerCapture(e.pointerId)});c.addEventListener('pointermove',e=>{if(dragging){const d=e.clientX-dragStart;if(Math.abs(d)>2)moved=true;orbitOffset+=d*.008;dragStart=e.clientX}});c.addEventListener('pointerup',e=>{dragging=false;if(moved)return;const r=c.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;const hitNode=hit.find(p=>Math.hypot(p.x-x,p.y-y)<30);if(hitNode)command('/go '+hitNode.name);else if(Math.hypot(x-r.width*.5,y-r.height*.49)<Math.min(r.width*.42,r.height*.48)*zoom*.24)command('/go main')});c.addEventListener('wheel',e=>{e.preventDefault();zoom=Math.max(.64,Math.min(1.45,zoom-e.deltaY*.0008))},{passive:false});
+window.addEventListener('resize',resize);resize();refresh();setInterval(refresh,3000);requestAnimationFrame(draw);

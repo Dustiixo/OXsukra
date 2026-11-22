@@ -1,0 +1,10 @@
+IXO LIVE FEATURE CONTROL v0.4.0
+Source environment: Linux / CPython 3.13.5
+Command: python -m unittest discover -s tests -q
+Result: 149 tests passed, 0 failed, 0 errors.
+Operation test cases include actual calls changing source SQLite state, verifying negative AIXO evaluation, real FrameShift analysis, a sequential cross-component workflow, real-file ingestion, and CLI subprocess invocation from both the live-control CLI and the preexisting core CLI.
+Additional run: python -m ixo_foundation.ops_cli --home /mnt/data/ixo_live_demo run frameshift.analyze --data '{"text":"I scream or ice cream"}'
+Additional run: python -m ixo_foundation.ops_cli --home /mnt/data/ixo_live_demo run quality.tests --data '{"suite":"operations"}'
+UI: Tkinter syntax/import checked. Linux test host has no Windows desktop UI; native window behavior has not been observed.
+Installer: payload hash checked by packaging script and manual verification. Windows execution not observed.
+Integration limitations: no external agent execution, autonomous Moon2, model training, native VR OS, or Hermes Mark 12 parity.

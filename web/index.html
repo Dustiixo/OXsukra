@@ -1,0 +1,39 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>IXO · Black Hole Shell</title><link rel="stylesheet" href="/style.css"></head>
+<body><header><div><strong>IXO</strong><small>RUNTIME + AIXO / VERIFIED LOCAL SHELL / v0.3.2 / PYTHON</small></div><div id="connection">CONNECTING</div></header>
+<main><section id="viewport"><canvas id="space" aria-label="Interactive black hole spatial navigator"></canvas><div class="topHUD">HABITAT <b id="active">MAIN</b><br>SPATIAL AXIS / EVENT-DRIVEN</div><div class="rightHUD">BLACK HOLE / CENTRAL PORTAL<br>ORBIT: LIVE WORKSPACES<br>RENDER: 2D PROTOTYPE<br>COLOR: GREEN</div><div class="bottomHUD">CLICK AN ORBIT TO ENTER · CLICK CORE TO RETURN · DRAG TO ROTATE · SCROLL TO ZOOM</div><button id="home">RETURN TO CORE</button></section>
+<aside><nav class="tabs"><button id="tab-ixo" class="active">IXO / OPERATE</button><button id="tab-aixo">AIXO / VERIFY</button><button id="tab-dsoe">DSOE / OPERATE</button><button id="tab-experience">EXPERIENCE / BALANCE</button></nav>
+<div id="panel-ixo"><section><h2>HABITAT / WORKSPACE</h2><div id="sets"></div></section><section><h2>STATE INSPECTOR</h2><div id="counts"></div><details open><summary>HERMES PROPOSALS</summary><div id="proposals"></div></details><details><summary>FACTS</summary><div id="facts"></div></details><details><summary>MOON2 LEDGER</summary><div id="reflections"></div></details></section><section><h2>IXO AUDIT EVENTS</h2><div id="events"></div></section></div>
+<div id="panel-aixo" hidden><section><h2>AIXO / EXPERIMENTS</h2><p>Captures evidence. Cannot change IXO state.</p><button id="capture">CAPTURE IXO EVENTS</button><div id="bridgecount"></div><form id="experimentform"><label>EXPERIMENT TITLE<input id="exptitle" placeholder="Workspace survives restart" maxlength="120" required></label><label>QUESTION<input id="expquestion" placeholder="Does the state match expectation?" maxlength="500" required></label><button type="submit">CREATE EXPERIMENT</button></form><div id="experiments"></div></section><section><h2>ONE MEASURABLE CLAIM</h2><form id="evalform"><label>EXPERIMENT ID<input id="evalexp" type="number" min="1" placeholder="1" required></label><label>ASSERTION<select id="evalkind"><option value="active_set">active_set</option><option value="facts_count">facts_count</option><option value="proposals_count">proposals_count</option><option value="reflections_count">reflections_count</option><option value="events_count">events_count</option></select></label><label>EXPECTED VALUE<input id="evalexpected" placeholder="main or 0" required></label><button type="submit">RUN EVALUATION</button></form><div id="evaluations"></div></section><section><h2>COURSE / ONE ARTIFACT PER SESSION</h2><div id="lessons"></div></section><section><h2>CAPTURED EVIDENCE</h2><div id="evidence"></div></section></div>
+<div id="panel-dsoe" hidden>
+<section><h2>DSOE / THREE-PANTHEON PROTOCOL</h2>
+<p>Native agent runtimes not connected. A dispatch writes a local JSON handoff for external review. Nothing is sent to GitHub or an AI model.</p>
+<div id="dsoe-providers"></div>
+<form id="dsoe-plan"><label>OBJECTIVE<input id="dsoe-objective" placeholder="Describe an executable task" maxlength="2000" required></label><button type="submit">CREATE TASK / DRAFT</button></form>
+</section><section><h2>TASKS / OPERATOR GATES</h2><div id="dsoe-tasks"></div></section>
+<section><h2>IMPORT EXTERNAL RESULT / UNTRUSTED</h2>
+<p>Paste a valid result JSON for a dispatched job. Report and review are separate. Imported output never becomes a Hermes fact.</p>
+<form id="dsoe-report"><label>JOB ID<input id="dsoe-jobid" placeholder="Job ID" maxlength="80" required></label><label>RESULT JSON<textarea id="dsoe-json" rows="8" spellcheck="false" placeholder="Paste result JSON" required></textarea></label><button type="submit">REPORT / REQUEST REVIEW</button></form>
+</section><section><h2>DSOE TRACE</h2><div id="dsoe-events"></div></section>
+</div>
+<div id="panel-experience" hidden>
+<section><h2>EXPERIENCE / EXPOSURE BOUNDARY</h2>
+<p>IXO can ingest all development work without mistaking that exposure for general competence. This panel measures provenance, not intelligence or truth.</p>
+<button id="exp-sync">CAPTURE IXO DEVELOPMENT EVENTS</button>
+<div id="exp-stats" class="item">Loading experience balance...</div>
+<div id="exp-warnings"></div></section>
+<section><h2>BALANCED GENERAL-USE MATERIAL</h2>
+<p>IXO development is capped at 35% of selected learning examples. Holdout cases and fixtures are excluded. No model is trained by this action.</p>
+<div id="exp-manifest"></div></section>
+<section><h2>ADD INDEPENDENT MATERIAL / EXPLICITLY LABELLED</h2>
+<p>Use an existing Haven, Kova, music or hardware note, rather than building another project. Manual labels are not proof of independent verification. CLI can import existing local files and directories.</p>
+<form id="exp-form">
+<label>PROJECT<input id="exp-project" placeholder="Haven" maxlength="240" required></label>
+<label>DOMAIN<input id="exp-domain" placeholder="home_tools" maxlength="240" required></label>
+<label>SOURCE REFERENCE<input id="exp-source" placeholder="old-notes/haven-design.md" maxlength="1200" required></label>
+<label>ORIGIN<select id="exp-origin"><option value="independent_project">Independent project</option><option value="external_reference">External reference</option><option value="ixo_development">IXO development</option><option value="fixture">Fixture (never treated as evidence)</option></select></label>
+<label>TEXT<textarea id="exp-content" rows="6" maxlength="100000" placeholder="Paste source material and preserve original context" required></textarea></label>
+<button type="submit">RECORD LABELLED MATERIAL</button>
+</form></section>
+<section><h2>TRANSFER PROTECTION</h2><p>Method promotion needs held-out task cases across non-IXO domains. The CLI records attested outcomes and blocks general promotion from IXO-only examples. This does not automatically deploy skills or change Hermes facts.</p></section>
+</div>
+</aside></main><footer><label for="command">COMMAND SURFACE / PYTHON IS SOURCE OF TRUTH</label><form id="cmdform"><span>&gt;</span><input id="command" autocomplete="off" spellcheck="false" placeholder="/set hermes · /remember ... · /reflect ..."><button type="submit">EXECUTE</button></form><pre id="output">IXO runtime booting...</pre></footer><script src="/app.js"></script><script src="/dsoe.js"></script><script src="/experience.js"></script></body></html>
