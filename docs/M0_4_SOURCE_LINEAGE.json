@@ -1,0 +1,13 @@
+{
+  "schema":"ixo.flowmesh.gpu-lineage.v1",
+  "candidate":"M0.4",
+  "parent_archive":"IXO_FlowMesh_Spatial_Chamber_M0_3_Candidate.zip",
+  "parent_archive_sha256":"220f96e125c5a98526fc04a643353779b600f4f92501fe307fb2c331231b62ad",
+  "flowmesh_original_archive_sha256":"cb336bc46cf5c2d9e797a7b84e60f9ef8e2ab2df7debe98bee0576f71a6762ae",
+  "flowmesh_m0_1_1_candidate_sha256":"81d0b0ac1bcc2ec2300ca5ff4930a6d0ba29ade48ae2b09f2fd3edc82e9af10e",
+  "engine_changes":"none",
+  "new_renderer":"gpu_field/",
+  "release":"blocked",
+  "asus_m0_4_acceptance":"NOT_RUN",
+  "git_writes":"none"
+}

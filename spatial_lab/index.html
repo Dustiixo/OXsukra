@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark"><title>IXO / SPATIAL CHAMBER</title><link rel="stylesheet" href="chamber.css"></head>
+<body>
+<div class="chamber" id="chamber">
+  <canvas id="field" aria-label="Spatial map of recorded FlowMesh research branches. Drag to orbit, wheel to zoom, click a branch to focus." role="img"></canvas>
+  <div class="screen-noise" aria-hidden="true"></div>
+  <div class="coordinate-lines" aria-hidden="true"><i></i><i></i></div>
+  <header class="topline">
+    <div class="identity"><div class="sigil">IXO<span>:</span></div><div class="identity-copy"><strong>FLOWMESH</strong><span>SPATIAL CHAMBER <b>/</b> M0.3</span></div></div>
+    <div class="top-center"><span class="top-coordinate">FIELD / 00-IX</span><span class="top-sub">RESEARCH AS TERRAIN, NOT TABS</span></div>
+    <div class="top-right"><div class="live-indicator"><span class="live-led"></span><span id="mode">VERIFIED LOCAL REPLAY</span></div><span class="safe-meta">NO MODEL RUNNING IN THIS VIEW</span></div>
+  </header>
+  <section class="left-column" aria-label="Research navigation">
+    <div class="project-head"><span class="kicker">A / THE EXPEDITION</span><h1>FOLLOW<br><em>THE THREAD.</em></h1><div class="thin-rule"></div><p id="goal">Explore your recorded research as a navigable place.</p></div>
+    <div class="path-header"><span>KNOWN PATHS</span><span id="path-count">00 / 00</span></div><div class="path-list" id="paths"></div>
+    <div class="instruction"><span class="instruction-mark">?</span><div>DRAG TO ORBIT<br>SCROLL TO MOVE CLOSER<br>CLICK A SIGNAL TO INSPECT</div></div>
+  </section>
+  <div class="center-label" aria-hidden="true"><span class="minor">REAL EVENTS / 3D PROJECTION</span><strong>THE THINKING<br>ISN'T AN ANIMATION.</strong><span class="statement">These shapes are spatial representations of real receipts, not model thoughts.</span></div>
+  <aside class="inspector" aria-label="Recorded evidence and current event">
+    <div class="inspector-top"><span class="kicker">B / FORENSIC LENS</span><span class="receipt-number" id="receipt-num">#000</span></div>
+    <div class="kind-chip" id="event-kind">RECORDED EVENT</div>
+    <h2 id="event-title">The field is ready.</h2>
+    <p class="event-desc" id="event-description">Every meaningful signal in the scene has a source. Choose a research path or move through the receipt history.</p>
+    <div class="inspector-section"><div class="section-heading"><span>01</span><span>WHY IT MATTERS</span></div><p id="event-why">You can follow the evidence instead of reading a debug console.</p></div>
+    <div class="inspector-section proof-block"><div class="section-heading"><span>02</span><span>SHOW THE PROOF</span></div><p id="proof">Waiting for a recorded event.</p><div class="proof-digest" id="proof-digest">SOURCE INTEGRITY / PASS</div></div>
+    <div class="inspector-section selected-branch"><div class="section-heading"><span>03</span><span>SELECTED PATH</span></div><strong id="selected-label">ROOT / MAIN GOAL</strong><p id="selected-question">Research branches are retained independently.</p><div class="selected-meta" id="selected-meta">STATUS / ACTIVE</div></div>
+    <div class="interpretation"><span class="marker"></span><span>READ-ONLY VIEW. ALL RESEARCH DATA STAYS LOCAL. NO AUTOMATIC SOURCE WRITES.</span></div>
+  </aside>
+  <div class="floating-command"><button id="focus" title="Focus selected branch" aria-label="Focus selected branch">◎ <span>FOCUS</span></button><button id="reset-view" title="Reset spatial camera" aria-label="Reset camera">⌖ <span>RESET VIEW</span></button><button id="load-trace" aria-label="Load a local FlowMesh JSON trace">↥ <span>LOAD TRACE</span></button><button id="inspect" aria-label="Open evidence lens" aria-expanded="false">◈ <span>EVIDENCE</span></button><input id="trace-file" type="file" accept=".json,application/json" hidden></div>
+  <div class="world-labels" aria-hidden="true"><span>Y↑</span><span>↙ Z</span><span>X→</span></div>
+  <footer class="time-deck" aria-label="Recorded event replay">
+    <div class="time-head"><div><span class="kicker">C / MEMORY STRIP</span><strong>RETRACE THE IMPACT.</strong></div><div class="time-status"><span id="current-index">000</span><span class="sep">/</span><span id="total-index">072</span> <span class="small">RECEIPTS</span></div></div>
+    <div class="time-body"><div class="play-tools"><button id="first" aria-label="Go to first event">↺</button><button id="previous" aria-label="Previous event">⟨</button><button id="play" class="play-button" aria-label="Play recorded events">▶</button><button id="next" aria-label="Next event">⟩</button><button id="last" aria-label="Go to latest event">⇥</button></div><div class="lanes"><div class="lane"><span>ENGINE</span><div class="lane-trace" id="lane-engine"></div></div><div class="lane"><span>PROMPT</span><div class="lane-trace" id="lane-prompt"></div></div><div class="lane"><span>EVIDENCE</span><div class="lane-trace" id="lane-evidence"></div></div><input type="range" id="seek" min="0" max="72" step="1" value="72" aria-label="Scrub recorded FlowMesh events" /></div><div class="time-actions"><button id="help" aria-label="What is real about this interface">WHAT'S REAL? ↗</button><span id="last-event-time">TICK 006</span></div></div>
+    <div class="bottom-caption"><span>IXO / ECHOFOLD EXPERIMENTAL VIEW</span><span><i></i> BLUE: HISTORY <i></i> WHITE: PATHS <i></i> GREEN: VERIFIED SOURCE <i></i> RED: STOP / PARK</span><span>LOCAL / ISOLATED / UNSIGNED</span></div>
+  </footer>
+  <div class="toast" role="status" id="toast" aria-live="polite"></div>
+  <div class="overlay hidden" id="about" role="dialog" aria-modal="true" aria-labelledby="about-title"><div class="about-panel"><button id="close-about" aria-label="Close">✕</button><span class="kicker">HOW THIS IS GROUNDED</span><h2 id="about-title">Pretty is not proof.</h2><p>The central world is an experimental three-dimensional *projection* of real FlowMesh branch relations, verified excerpt events and their shared sources. It is not a recording of hidden AI thoughts.</p><p>Shapes, particles, ambience and motion are visual design. Branch creation, parking, evidence links, text, hashes and timeline markers come from the loaded trace.</p><p>This demo comes from a verified local FlowMesh run. You may load a private trace JSON exported with <code>spatial_lab/export_trace.py</code>. The viewer makes no network requests when opened as a file. An optional local-only live bridge is supplied separately.</p><p>For privacy, do not publish personal traces: they can include research quotations and project names.</p></div></div>
+</div>
+<script src="trace_data.js"></script><script src="chamber.js"></script>
+</body></html>

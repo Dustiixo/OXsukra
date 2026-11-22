@@ -1,0 +1,74 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><meta name="color-scheme" content="dark"><title>IXO | Dual Surface GPU Field</title><link rel="stylesheet" href="field.css"></head><body>
+<main id="app" class="mode-field">
+  <canvas id="world" aria-label="GPU rendered research landscape. Touch a glowing structure to inspect a recorded research branch. Drag to orbit and pinch to zoom." tabindex="0"></canvas>
+  <div class="grain" aria-hidden="true"></div><div class="frame-edges" aria-hidden="true"></div>
+  <header class="head">
+    <div class="brand"><span class="mark">I<span>X</span>O</span><span class="brand-text"><b>FLOWMESH</b><small>ATLAS / FIELD 0.6</small></span></div>
+    <div class="header-center"><i class="alive"></i><span id="source-state">RECORDED · VERIFIED SAMPLE</span><small>NO MODEL RUNNING IN THIS VIEW</small></div>
+    <div class="mode-bar" role="group" aria-label="Display mode"><button id="field-mode" class="active" aria-pressed="true">FIELD</button><button id="deck-mode" aria-pressed="false">DECK</button></div>
+  </header>
+  <div class="field-title" id="field-title"><div class="eyebrow">01 / THE EXPEDITION</div><div class="hero-word">EXPLORE<br><em>THE ATLAS.</em></div><div class="subhero" id="goal">Touch a research structure. Follow the evidence.</div></div>
+  <div class="landmarks" id="landmarks" aria-label="Research structures"></div>
+  <div class="topography" aria-hidden="true"><span>Y ↑</span><span>WORLD / XZ</span><span>SPACE / VERIFIED</span></div>
+  <aside id="deck" aria-label="Full screen research command surface" aria-hidden="true" class="deck" role="dialog" aria-modal="false">
+    <div class="deck-atmosphere" aria-hidden="true"><div class="deck-orbit deck-orbit-a"></div><div class="deck-orbit deck-orbit-b"></div><div class="deck-crosshair">IXO</div></div>
+    <div class="deck-screen-head">
+      <div class="deck-overline"><span class="deck-status-dot"></span> RESEARCH ARCHIVE / READ-ONLY CONTROL</div>
+      <button id="deck-close" type="button" aria-label="Close DECK and return to the research world">CLOSE DECK <span>✕</span></button>
+    </div>
+    <div class="deck-screen-title"><span class="deck-small-index">[ 02 / DUAL SURFACE ]</span><h1>THE <i>PAUSE</i><br>IS THE <em>PORTAL.</em></h1><p>Same research. Different perspective. No state reset.</p></div>
+    <div class="deck-shell">
+      <nav class="deck-navigation" aria-label="DECK sections">
+        <button type="button" class="deck-nav-button active" data-section="paths" aria-current="page"><b>01</b><span>RESEARCH PATHS</span><small>Open a branch</small><i>↗</i></button>
+        <button type="button" class="deck-nav-button" data-section="events"><b>02</b><span>WHAT HAPPENED</span><small>Understand the evidence</small><i>↗</i></button>
+        <button type="button" class="deck-nav-button" data-section="timeline"><b>03</b><span>REPLAY HISTORY</span><small>Follow the original receipts</small><i>↗</i></button>
+        <button type="button" class="deck-nav-button" data-section="system"><b>04</b><span>WORLD SETTINGS</span><small>Display and private trace</small><i>↗</i></button>
+      </nav>
+      <div class="deck-content">
+        <section class="deck-panel is-active" data-panel="paths" aria-label="Research branches">
+          <div class="deck-panel-head"><span>EXPLORE / 01</span><span>SELECT A PATH</span></div>
+          <h2>EVERY BRANCH<br>HAS A <em>REASON.</em></h2>
+          <p class="deck-intro">Pick one. The research world focuses on it when you return to FIELD. Parked paths stay in your history.</p>
+          <div id="branch-list" class="branch-grid"></div>
+        </section>
+        <section class="deck-panel" data-panel="events" aria-label="Current receipt and evidence" hidden>
+          <div class="deck-panel-head"><span>THE PROOF / 02</span><span id="receipt">#000</span></div>
+          <div class="event-kind" id="event-kind">READY</div><h2 id="event-title">The world is ready.</h2>
+          <p class="deck-intro" id="event-desc">Choose a branch or rewind the research history.</p>
+          <div class="evidence-rows"><div><span>WHY IT MATTERS</span><p id="event-why">The structures correspond to recorded events.</p></div><div><span>RECORD / READ-ONLY</span><p id="proof">Source-backed event data will appear here.</p></div></div>
+        </section>
+        <section class="deck-panel" data-panel="timeline" aria-label="Research memory and playback" hidden>
+          <div class="deck-panel-head"><span>TIME MACHINE / 03</span><span>RECORDED HISTORY</span></div>
+          <h2>REWIND THE<br><em>EVIDENCE.</em></h2>
+          <p class="deck-intro">Use the timeline along the bottom of the screen. Watch paths appear, sources connect, and parked branches return. A playback is not a live model run.</p>
+          <div class="evidence-atlas" id="evidence-atlas" aria-label="Verified evidence atlas">
+            <div class="atlas-head"><div><span>PROVENANCE / READ ONLY</span><strong id="atlas-count">0 VERIFIED RECEIPTS</strong></div><div class="atlas-pager"><button id="atlas-prev" type="button" aria-label="Previous evidence page">‹</button><span id="atlas-page">1 / 1</span><button id="atlas-next" type="button" aria-label="Next evidence page">›</button></div></div>
+            <div id="atlas-events" class="atlas-events" aria-label="Open exact verified evidence receipts"></div>
+            <p class="atlas-note">Each beacon corresponds to a recorded source excerpt. Select one to jump to its exact timeline event and inspect the original receipt.</p>
+          </div>
+          <div class="timeline-explain"><div><strong>01</strong><span>ENGINE</span><p>What actually ran</p></div><div><strong>02</strong><span>PROMPT</span><p>What was requested</p></div><div><strong>03</strong><span>EVIDENCE</span><p>What the sources support</p></div></div>
+          <button type="button" id="timeline-inspect" class="large-action" disabled>INSPECT EVIDENCE AT CURSOR ↗</button>
+          <button type="button" id="history-begin" class="large-action">REWIND TO START <span>↶</span></button>
+        </section>
+        <section class="deck-panel" data-panel="system" aria-label="Local source and render quality" hidden>
+          <div class="deck-panel-head"><span>ENGINE ROOM / 04</span><span>LOCAL ONLY</span></div>
+          <h2>CONTROL THE<br><em>SURFACE.</em></h2>
+          <p class="deck-intro">Graphics quality changes only how the world looks. Research evidence stays unchanged.</p>
+          <div class="deck-setting"><div class="deck-setting-label">VISUAL QUALITY</div><div class="quality"><button data-quality="low">ECO</button><button data-quality="medium">BALANCED</button><button data-quality="high">HIGH</button></div></div>
+          <div class="deck-setting"><div class="deck-setting-label">PRIVATE RESEARCH TRACE</div><button id="load-trace" class="load-trace">OPEN LOCAL TRACE ↗</button><input type="file" id="trace-input" hidden accept=".json,application/json"><p>Reads a local JSON file. Does not upload it.</p></div>
+        </section>
+      </div>
+    </div>
+    <div class="deck-screen-foot"><span>SELECT AN OPTION TO EXPLORE.</span><span>ESC / TAB TO RETURN TO FIELD</span><span>RECORDED PROOF ≠ AI DISCOVERY</span></div>
+  </aside>
+  <section id="branch-lens" class="branch-lens hidden" aria-label="Selected research path"><div class="lens-top"><span id="lens-name"></span><button id="lens-close" aria-label="Close path details">×</button></div><h2 id="lens-question"></h2><p id="lens-count"></p><p id="lens-excerpt"></p><label for="lens-receipt">Evidence receipt</label><select id="lens-receipt" style="display:block;width:100%;margin:6px 0 12px;background:#102635;color:#e2eef8;padding:8px"></select><div class="lens-navigation" style="display:flex;gap:8px;margin:8px 0"><button id="lens-prev" type="button" aria-label="Previous evidence receipt">◀ PREVIOUS</button><button id="lens-next" type="button" aria-label="Next evidence receipt">NEXT ▶</button></div><button id="lens-jump" type="button">JUMP TO RECEIPT IN TIMELINE ↗</button><button id="lens-proof">OPEN EVIDENCE ↗</button></section>
+  <div class="touch-wheel hidden" id="touch-wheel" role="group" aria-label="Contextual branch actions"><button data-wheel="focus" aria-label="Focus selected branch">◎<span>FOCUS</span></button><button data-wheel="inspect" aria-label="Read evidence">◈<span>PROOF</span></button><button data-wheel="history" aria-label="See history">◷<span>HISTORY</span></button><button data-wheel="close" aria-label="Close menu">×<span>CLOSE</span></button></div>
+  <div class="field-toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="field-actionbar" aria-label="View actions"><button id="recenter" aria-label="Recenter camera" title="Recenter camera">⌖</button><button id="examine" aria-label="Show evidence" title="Inspect evidence">◈</button><button id="help" aria-label="How to use" title="How to use">?</button></div>
+  <footer id="timeline"><div class="timeline-label"><strong>RETRACE</strong><span>ENGINE / PROMPT / EVIDENCE</span></div><button id="back" aria-label="Previous event">‹</button><button id="play" aria-label="Play history">▶</button><button id="forward" aria-label="Next event">›</button><input type="range" id="scrub" aria-label="Rewind or advance recorded events" min="0" max="72" value="72"><div class="progress"><strong id="current">072</strong><span>/ <span id="total">072</span> EVENTS</span></div></footer>
+  <div class="legend"><span><i class="white"></i> PATH</span><span><i class="green"></i> VERIFIED EVIDENCE</span><span><i class="red"></i> PARKED</span></div>
+  <div id="intro" class="intro" aria-live="polite"><div class="intro-overline">YOU CAN LEARN THIS BY TOUCHING IT.</div><div class="intro-copy" id="intro-copy">Tap a glowing structure.</div><div class="intro-sub">DRAG TO ORBIT · PINCH TO ZOOM · HOLD FOR COMMANDS</div><button id="dismiss-intro">GOT IT</button></div>
+  <div id="fallback" class="fallback hidden" role="alert"><strong>GPU RENDERER UNAVAILABLE</strong><p>This GPU experiment needs a WebGL-capable browser. Your original M0.3 viewer is preserved in the same archive.</p><a href="../spatial_lab/index.html">OPEN THE PREVIOUS CHAMBER</a></div>
+</main>
+<script src="../spatial_lab/trace_data.js"></script><script src="render_gl.js"></script><script src="field.js"></script>
+</body></html>

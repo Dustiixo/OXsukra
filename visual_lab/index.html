@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>IXO FlowMesh · Visual Lab M0.2</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="shell">
+  <header class="mast">
+    <div class="brand"><span class="brand-mark">IXO<span class="slash">/</span></span><span>FLOWMESH</span><small>VISUAL LAB · M0.2</small></div>
+    <div class="run-state"><span class="blinkdot"></span><span id="data-badge">LOCAL DEMO · OFFLINE</span><span class="run-sub">Read-only visual prototype</span></div>
+  </header>
+  <nav class="stage-nav" aria-label="Four interface concepts">
+    <button data-stage="1" class="stage-tab on"><small>01 · CURRENT</small><span>THE BASE</span></button>
+    <button data-stage="2" class="stage-tab"><small>02 · EXPERIMENT</small><span>MAKE IT TALK</span></button>
+    <button data-stage="3" class="stage-tab"><small>03 · CONCEPT</small><span>LIVING MAP</span></button>
+    <button data-stage="4" class="stage-tab"><small>04 · COMBINED</small><span>OPEN FLOW</span></button>
+  </nav>
+  <section class="stage-intro" aria-live="polite">
+    <div><div class="overline" id="stage-number">STAGE 01 / THE BASE</div><h1 id="stage-title">The machine is running. The screen is cryptic.</h1><p id="stage-description">A faithful reconstruction of what FlowMesh currently exposes: paths, tabs, excerpts, and tick numbers. Functional data, tough to read.</p></div>
+    <div class="stage-actions"><button id="load-file" class="outlined">LOAD LOCAL TRACE</button><input type="file" id="trace-input" accept=".json,application/json" hidden /><button id="how-works" class="outlined">WHAT IS REAL?</button></div>
+  </section>
+  <div class="workspace">
+    <aside class="rail">
+      <div class="rail-top"><div class="eyebrow">RESEARCH PATHWAYS</div><div class="mono" id="counts">0 LIVE / 0 TOTAL</div></div>
+      <div class="branch-list" id="branch-list" aria-label="Select a research branch"></div>
+      <div class="rail-foot"><span class="eyebrow">SELECTED QUESTION</span><div id="selected-question">Select a branch</div><div id="selected-extra"></div></div>
+    </aside>
+    <main id="main-stage" class="main-stage" aria-live="polite"></main>
+    <aside class="details" id="details">
+      <div class="details-header"><span class="eyebrow">THE RECEIPT</span><span class="small-tag" id="event-seq">#000</span></div>
+      <h3 id="event-title">Start exploring</h3>
+      <p id="event-summary">Move the receipt slider or press Next to replay a recorded FlowMesh event.</p>
+      <div class="kv"><span>What happened</span><b id="event-what">None yet</b></div>
+      <div class="kv"><span>Why</span><b id="event-why">No event selected</b></div>
+      <div class="kv"><span>Proof</span><b id="event-proof">Recorded events only</b></div>
+      <div id="evidence-peek" class="evidence-peek" hidden></div>
+      <div class="receipt-bottom"><span class="eyebrow">IMPORTANT</span><p>This is a read-only replay of local records. It does not run an AI, browse the web, or edit any project.</p></div>
+    </aside>
+  </div>
+  <footer class="playback">
+    <div class="player-buttons"><button id="reset" title="Restart replay">↺ RESET</button><button id="previous" title="Previous receipt">◂</button><button id="next" class="primary" title="Next receipt">NEXT RECEIPT ▸</button><button id="next-five" title="Jump ahead five receipts">+5</button></div>
+    <div class="timeline-control"><label for="seek">RECORDED EVENTS <strong id="seek-label">0 / 0</strong></label><input id="seek" type="range" min="0" value="0" max="0" step="1"/></div>
+    <div class="grounding">✔ Verified demo source&nbsp;·&nbsp;<span id="mode-label">Offline</span>&nbsp;·&nbsp;No fake AI activity</div>
+  </footer>
+</div>
+<div id="explainer" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="explainer-title">
+  <div class="modal"><button id="close-explainer" class="modal-close" aria-label="Close explanation">✕</button><div class="overline">HONEST MODE</div><h2 id="explainer-title">What you're looking at</h2><p><b>Real:</b> a deterministic FlowMesh sample run: events, branch IDs, verified local-document excerpts, and links. The JSON comes from an actual execution of FlowMesh's demo and its integrity check.</p><p><b>Concept:</b> the presentation, animation, four layouts, and the autonomous-choice sandbox. Those are experiments, not shipped engine functionality.</p><p><b>Privacy:</b> everything runs locally inside your browser. Loading a trace reads the file on your machine, not on a server. Trace files can contain sensitive source excerpts, so don't publish them.</p></div>
+</div>
+<script src="demo_trace.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

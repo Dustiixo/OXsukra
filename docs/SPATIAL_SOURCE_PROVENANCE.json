@@ -1,0 +1,19 @@
+{
+  "candidate": "IXO FlowMesh Spatial Chamber M0.3",
+  "source_checkpoints": {
+    "IXO_FlowMesh_M0_1.zip": {
+      "sha256": "cb336bc46cf5c2d9e797a7b84e60f9ef8e2ab2df7debe98bee0576f71a6762ae",
+      "bytes": 263953
+    },
+    "FlowMesh_UTF8_M0_1_1_Candidate.zip": {
+      "sha256": "81d0b0ac1bcc2ec2300ca5ff4930a6d0ba29ade48ae2b09f2fd3edc82e9af10e",
+      "bytes": 276533
+    },
+    "FlowMesh_Visual_Lab_M0_2_Candidate.zip": {
+      "sha256": "f05e133d24163f116b28c6116f8ff876063aede0db319252d3ba3bb62fbafd60",
+      "bytes": 1984998
+    }
+  },
+  "core_modification": "none; source modules copied from M0.2 candidate, original not overwritten",
+  "live_approval": "not granted; local-only candidate"
+}
