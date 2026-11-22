@@ -1,0 +1,82 @@
+{
+  "schema": "oxsukra.temporal-spectral-baseline.v1",
+  "status": "design-only",
+  "date": "2026-11-02",
+  "owner": "existing-native-ixo",
+  "persistent_surface": {
+    "name": "temporal-boundary",
+    "preferred_edge": "bottom",
+    "collapsed_inches_approx": 0.5,
+    "expanded_inches_approx": 1.5,
+    "physical_dpi_calibration": true,
+    "foreground_window_policy": "dim-or-occlude; reveal on edge approach",
+    "windows_taskbar_preserved": true,
+    "live_now_and_history_playhead_separate": true
+  },
+  "time_sources": [
+    "pc-clock-observed",
+    "slotline-planned",
+    "calendar-scheduled",
+    "git-source-event",
+    "experiment-observed",
+    "thought-spine-annotation"
+  ],
+  "layers": [
+    "measured-pixel-ruler",
+    "thermal-aggregate-background",
+    "planned-and-calendar-overlay",
+    "observed-event-tracks",
+    "fork-and-provenance-wires",
+    "contextual-inspector"
+  ],
+  "spectra": [
+    "thermal",
+    "compute",
+    "signal",
+    "flow",
+    "phase",
+    "causal",
+    "verification",
+    "uncertainty",
+    "memory"
+  ],
+  "interaction": {
+    "hover": "expand",
+    "shift_hover": "inspect-notes",
+    "ctrl_shift": "candidate-edit-workspace-requires-explicit-confirmation",
+    "shift_alt": "spectral-lens",
+    "alt_t": "time-navigation",
+    "alt_p": "parameter-inspector"
+  },
+  "event_required": [
+    "event_id",
+    "owner_id",
+    "project_id",
+    "source_id",
+    "timestamp_utc",
+    "event_type",
+    "trust_grade"
+  ],
+  "trust_grades": [
+    "observed",
+    "reported",
+    "inferred",
+    "simulated",
+    "missing",
+    "independently-verified"
+  ],
+  "constraints": [
+    "never-confuse-plan-and-observation",
+    "no-implicit-file-mutation",
+    "no-fake-telemetry",
+    "native-first",
+    "full-system-design-minimum-provable-increments",
+    "reduced-motion"
+  ],
+  "performance_target": {
+    "screen": "4k",
+    "fps": 60,
+    "verified": false
+  },
+  "next_gate": "source-lock-and-native-event-vertical-loop"
+}
