@@ -1,0 +1,30 @@
+{
+  "intro": [
+    "You can leave whenever you like. I am not your quest marker.",
+    "The little one keeps collecting things. Nobody knows why.",
+    "Those relays predate the paths. Maybe try building a signal key.",
+    "He had his own plans long before you arrived."
+  ],
+  "logs": [
+    {
+      "id": "log0",
+      "title": "An unrequested arrival",
+      "text": "The screens are windows. None of them are the whole world."
+    },
+    {
+      "id": "log1",
+      "title": "A little arrangement",
+      "text": "The character takes what interests him, not what the player expects."
+    },
+    {
+      "id": "log2",
+      "title": "Device fragment",
+      "text": "A machine humming in a place with no power line."
+    },
+    {
+      "id": "log3",
+      "title": "No answer",
+      "text": "He does not explain his mission. There is still no answer."
+    }
+  ]
+}

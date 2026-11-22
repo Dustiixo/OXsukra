@@ -1,0 +1,7 @@
+.godot/
+.export/
+*.tmp
+*.log
+__pycache__/
+engine/*
+!engine/.gdignore

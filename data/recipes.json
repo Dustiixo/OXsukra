@@ -1,0 +1,40 @@
+{
+  "recipes": [
+    {
+      "id": "patch_kit",
+      "label": "Patch kit",
+      "requires": {
+        "fiber": 2,
+        "shard": 1
+      },
+      "grants": {
+        "patch_kit": 1
+      },
+      "description": "Restore 2 hearts"
+    },
+    {
+      "id": "signal_key",
+      "label": "Signal key",
+      "requires": {
+        "shard": 3,
+        "fiber": 1
+      },
+      "grants": {
+        "signal_key": 1
+      },
+      "description": "Power a sealed relay"
+    },
+    {
+      "id": "lamp",
+      "label": "Camp lamp",
+      "requires": {
+        "shard": 1,
+        "fiber": 2
+      },
+      "grants": {
+        "lamp": 1
+      },
+      "description": "Place a permanent light"
+    }
+  ]
+}

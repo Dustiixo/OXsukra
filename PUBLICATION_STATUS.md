@@ -1,3 +1,4 @@
-# Source publication status
+# UnderbyteNative source candidate
 
-See [SOURCE_PUBLICATION_LEDGER_2026-11-22.md](SOURCE_PUBLICATION_LEDGER_2026-11-22.md) for the audited public-source branch receipts. Source branches do not mean those projects were merged to default, shipped or fully tested on target hardware. The read-only default-branch checker still reports independent code on `main` separately from review branches.
+Original library archive: `UNDERBYTE_NATIVE_GODOT_SOURCE_2026-11-03.zip`. This public snapshot excludes personal collaborator notes, binary media, private runtime state, and third-party or unverified asset files. It is not a release or a preserved native working Git history.
+Source files: 21. No live service, Discord bot connection, Godot GPU/native acceptance, or owner integration claimed.

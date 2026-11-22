@@ -1,0 +1,44 @@
+; UNDERBYTE — original native Godot project
+config_version=5
+
+[application]
+config/name="UNDERBYTE — First Life"
+run/main_scene="res://scenes/game.tscn"
+config/features=PackedStringArray("4.7", "GL Compatibility")
+config/description="A small expressive pixel-world, playable in the foreground. No desktop access."
+
+[display]
+window/size/viewport_width=480
+window/size/viewport_height=270
+window/size/window_width_override=960
+window/size/window_height_override=540
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[input_devices]
+pointing/emulate_mouse_from_touch=false
+
+[rendering]
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/default_filters/use_nearest_mipmap_filter=false
+textures/canvas_textures/default_texture_filter=0
+
+[audio]
+buses/default_bus_layout="res://assets/default_bus_layout.tres"
+
+[input]
+move_left={"deadzone":0.2,"events":[Object(InputEventKey,"physical_keycode":65),Object(InputEventKey,"physical_keycode":4194319),Object(InputEventJoypadMotion,"axis":0,"axis_value":-1.0)]}
+move_right={"deadzone":0.2,"events":[Object(InputEventKey,"physical_keycode":68),Object(InputEventKey,"physical_keycode":4194321),Object(InputEventJoypadMotion,"axis":0,"axis_value":1.0)]}
+move_up={"deadzone":0.2,"events":[Object(InputEventKey,"physical_keycode":87),Object(InputEventKey,"physical_keycode":4194320)]}
+move_down={"deadzone":0.2,"events":[Object(InputEventKey,"physical_keycode":83),Object(InputEventKey,"physical_keycode":4194322)]}
+jump={"deadzone":0.2,"events":[Object(InputEventKey,"physical_keycode":32),Object(InputEventJoypadButton,"button_index":0)]}
+action={"deadzone":0.2,"events":[Object(InputEventKey,"physical_keycode":69),Object(InputEventJoypadButton,"button_index":2)]}
+strike={"deadzone":0.2,"events":[Object(InputEventKey,"physical_keycode":74),Object(InputEventJoypadButton,"button_index":1)]}
+craft={"deadzone":0.2,"events":[Object(InputEventKey,"physical_keycode":67)]}
+view_shift={"deadzone":0.2,"events":[Object(InputEventKey,"physical_keycode":86)]}
+inventory={"deadzone":0.2,"events":[Object(InputEventKey,"physical_keycode":73)]}
+map={"deadzone":0.2,"events":[Object(InputEventKey,"physical_keycode":77)]}
+customize={"deadzone":0.2,"events":[Object(InputEventKey,"physical_keycode":75)]}
+save_game={"deadzone":0.2,"events":[Object(InputEventKey,"physical_keycode":4194336)]}
+reset_position={"deadzone":0.2,"events":[Object(InputEventKey,"physical_keycode":82)]}

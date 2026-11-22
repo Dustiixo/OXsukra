@@ -1,0 +1,793 @@
+{
+  "schema": 1,
+  "seed": 73103,
+  "width": 4800,
+  "ground_y": 220,
+  "regions": [
+    {
+      "id": "WEST",
+      "index": 0,
+      "x_start": 0,
+      "x_end": 300,
+      "tone": "#35465d",
+      "is_cardinal": true,
+      "title": "WEST"
+    },
+    {
+      "id": "WN1",
+      "index": 1,
+      "x_start": 300,
+      "x_end": 600,
+      "tone": "#354a58",
+      "is_cardinal": false,
+      "title": "CONNECTOR WN1"
+    },
+    {
+      "id": "WN2",
+      "index": 2,
+      "x_start": 600,
+      "x_end": 900,
+      "tone": "#3a4d59",
+      "is_cardinal": false,
+      "title": "CONNECTOR WN2"
+    },
+    {
+      "id": "WN3",
+      "index": 3,
+      "x_start": 900,
+      "x_end": 1200,
+      "tone": "#3c525e",
+      "is_cardinal": false,
+      "title": "CONNECTOR WN3"
+    },
+    {
+      "id": "NORTH",
+      "index": 4,
+      "x_start": 1200,
+      "x_end": 1500,
+      "tone": "#315669",
+      "is_cardinal": true,
+      "title": "NORTH"
+    },
+    {
+      "id": "NE1",
+      "index": 5,
+      "x_start": 1500,
+      "x_end": 1800,
+      "tone": "#39475f",
+      "is_cardinal": false,
+      "title": "CONNECTOR NE1"
+    },
+    {
+      "id": "NE2",
+      "index": 6,
+      "x_start": 1800,
+      "x_end": 2100,
+      "tone": "#39445a",
+      "is_cardinal": false,
+      "title": "CONNECTOR NE2"
+    },
+    {
+      "id": "NE3",
+      "index": 7,
+      "x_start": 2100,
+      "x_end": 2400,
+      "tone": "#354c61",
+      "is_cardinal": false,
+      "title": "CONNECTOR NE3"
+    },
+    {
+      "id": "EAST",
+      "index": 8,
+      "x_start": 2400,
+      "x_end": 2700,
+      "tone": "#45516b",
+      "is_cardinal": true,
+      "title": "EAST"
+    },
+    {
+      "id": "ES1",
+      "index": 9,
+      "x_start": 2700,
+      "x_end": 3000,
+      "tone": "#55506b",
+      "is_cardinal": false,
+      "title": "CONNECTOR ES1"
+    },
+    {
+      "id": "ES2",
+      "index": 10,
+      "x_start": 3000,
+      "x_end": 3300,
+      "tone": "#4d4c6a",
+      "is_cardinal": false,
+      "title": "CONNECTOR ES2"
+    },
+    {
+      "id": "ES3",
+      "index": 11,
+      "x_start": 3300,
+      "x_end": 3600,
+      "tone": "#3a4a60",
+      "is_cardinal": false,
+      "title": "CONNECTOR ES3"
+    },
+    {
+      "id": "SOUTH",
+      "index": 12,
+      "x_start": 3600,
+      "x_end": 3900,
+      "tone": "#2d5a58",
+      "is_cardinal": true,
+      "title": "SOUTH"
+    },
+    {
+      "id": "SW1",
+      "index": 13,
+      "x_start": 3900,
+      "x_end": 4200,
+      "tone": "#35555b",
+      "is_cardinal": false,
+      "title": "CONNECTOR SW1"
+    },
+    {
+      "id": "SW2",
+      "index": 14,
+      "x_start": 4200,
+      "x_end": 4500,
+      "tone": "#3a505e",
+      "is_cardinal": false,
+      "title": "CONNECTOR SW2"
+    },
+    {
+      "id": "SW3",
+      "index": 15,
+      "x_start": 4500,
+      "x_end": 4800,
+      "tone": "#3d5060",
+      "is_cardinal": false,
+      "title": "CONNECTOR SW3"
+    }
+  ],
+  "resources": [
+    {
+      "id": "WN1_shard_0",
+      "kind": "shard",
+      "x": 347,
+      "y": 204,
+      "collected": false
+    },
+    {
+      "id": "WN1_fiber_1",
+      "kind": "fiber",
+      "x": 414,
+      "y": 195,
+      "collected": false
+    },
+    {
+      "id": "WN1_shard_2",
+      "kind": "shard",
+      "x": 485,
+      "y": 204,
+      "collected": false
+    },
+    {
+      "id": "WN2_shard_0",
+      "kind": "shard",
+      "x": 656,
+      "y": 204,
+      "collected": false
+    },
+    {
+      "id": "WN2_fiber_1",
+      "kind": "fiber",
+      "x": 730,
+      "y": 195,
+      "collected": false
+    },
+    {
+      "id": "WN2_shard_2",
+      "kind": "shard",
+      "x": 809,
+      "y": 204,
+      "collected": false
+    },
+    {
+      "id": "WN3_shard_0",
+      "kind": "shard",
+      "x": 953,
+      "y": 204,
+      "collected": false
+    },
+    {
+      "id": "WN3_fiber_1",
+      "kind": "fiber",
+      "x": 1034,
+      "y": 195,
+      "collected": false
+    },
+    {
+      "id": "WN3_shard_2",
+      "kind": "shard",
+      "x": 1091,
+      "y": 204,
+      "collected": false
+    },
+    {
+      "id": "NORTH_shard_0",
+      "kind": "shard",
+      "x": 1254,
+      "y": 204,
+      "collected": false
+    },
+    {
+      "id": "NORTH_fiber_1",
+      "kind": "fiber",
+      "x": 1331,
+      "y": 195,
+      "collected": false
+    },
+    {
+      "id": "NORTH_shard_2",
+      "kind": "shard",
+      "x": 1401,
+      "y": 204,
+      "collected": false
+    },
+    {
+      "id": "NE1_shard_0",
+      "kind": "shard",
+      "x": 1535,
+      "y": 204,
+      "collected": false
+    },
+    {
+      "id": "NE1_fiber_1",
+      "kind": "fiber",
+      "x": 1612,
+      "y": 195,
+      "collected": false
+    },
+    {
+      "id": "NE1_shard_2",
+      "kind": "shard",
+      "x": 1710,
+      "y": 204,
+      "collected": false
+    },
+    {
+      "id": "NE2_shard_0",
+      "kind": "shard",
+      "x": 1852,
+      "y": 204,
+      "collected": false
+    },
+    {
+      "id": "NE2_fiber_1",
+      "kind": "fiber",
+      "x": 1925,
+      "y": 195,
+      "collected": false
+    },
+    {
+      "id": "NE2_shard_2",
+      "kind": "shard",
+      "x": 2006,
+      "y": 204,
+      "collected": false
+    },
+    {
+      "id": "NE3_shard_0",
+      "kind": "shard",
+      "x": 2132,
+      "y": 204,
+      "collected": false
+    },
+    {
+      "id": "NE3_fiber_1",
+      "kind": "fiber",
+      "x": 2229,
+      "y": 195,
+      "collected": false
+    },
+    {
+      "id": "NE3_shard_2",
+      "kind": "shard",
+      "x": 2294,
+      "y": 204,
+      "collected": false
+    },
+    {
+      "id": "EAST_shard_0",
+      "kind": "shard",
+      "x": 2450,
+      "y": 204,
+      "collected": false
+    },
+    {
+      "id": "EAST_fiber_1",
+      "kind": "fiber",
+      "x": 2510,
+      "y": 195,
+      "collected": false
+    },
+    {
+      "id": "EAST_shard_2",
+      "kind": "shard",
+      "x": 2591,
+      "y": 204,
+      "collected": false
+    },
+    {
+      "id": "ES1_shard_0",
+      "kind": "shard",
+      "x": 2733,
+      "y": 204,
+      "collected": false
+    },
+    {
+      "id": "ES1_fiber_1",
+      "kind": "fiber",
+      "x": 2809,
+      "y": 195,
+      "collected": false
+    },
+    {
+      "id": "ES1_shard_2",
+      "kind": "shard",
+      "x": 2894,
+      "y": 204,
+      "collected": false
+    },
+    {
+      "id": "ES2_shard_0",
+      "kind": "shard",
+      "x": 3038,
+      "y": 204,
+      "collected": false
+    },
+    {
+      "id": "ES2_fiber_1",
+      "kind": "fiber",
+      "x": 3118,
+      "y": 195,
+      "collected": false
+    },
+    {
+      "id": "ES2_shard_2",
+      "kind": "shard",
+      "x": 3203,
+      "y": 204,
+      "collected": false
+    },
+    {
+      "id": "ES3_shard_0",
+      "kind": "shard",
+      "x": 3348,
+      "y": 204,
+      "collected": false
+    },
+    {
+      "id": "ES3_fiber_1",
+      "kind": "fiber",
+      "x": 3432,
+      "y": 195,
+      "collected": false
+    },
+    {
+      "id": "ES3_shard_2",
+      "kind": "shard",
+      "x": 3492,
+      "y": 204,
+      "collected": false
+    },
+    {
+      "id": "SOUTH_shard_0",
+      "kind": "shard",
+      "x": 3641,
+      "y": 204,
+      "collected": false
+    },
+    {
+      "id": "SOUTH_fiber_1",
+      "kind": "fiber",
+      "x": 3731,
+      "y": 195,
+      "collected": false
+    },
+    {
+      "id": "SOUTH_shard_2",
+      "kind": "shard",
+      "x": 3788,
+      "y": 204,
+      "collected": false
+    },
+    {
+      "id": "SW1_shard_0",
+      "kind": "shard",
+      "x": 3958,
+      "y": 204,
+      "collected": false
+    },
+    {
+      "id": "SW1_fiber_1",
+      "kind": "fiber",
+      "x": 4021,
+      "y": 195,
+      "collected": false
+    },
+    {
+      "id": "SW1_shard_2",
+      "kind": "shard",
+      "x": 4098,
+      "y": 204,
+      "collected": false
+    },
+    {
+      "id": "SW2_shard_0",
+      "kind": "shard",
+      "x": 4241,
+      "y": 204,
+      "collected": false
+    },
+    {
+      "id": "SW2_fiber_1",
+      "kind": "fiber",
+      "x": 4317,
+      "y": 195,
+      "collected": false
+    },
+    {
+      "id": "SW2_shard_2",
+      "kind": "shard",
+      "x": 4396,
+      "y": 204,
+      "collected": false
+    },
+    {
+      "id": "SW3_shard_0",
+      "kind": "shard",
+      "x": 4544,
+      "y": 204,
+      "collected": false
+    },
+    {
+      "id": "SW3_fiber_1",
+      "kind": "fiber",
+      "x": 4628,
+      "y": 195,
+      "collected": false
+    },
+    {
+      "id": "SW3_shard_2",
+      "kind": "shard",
+      "x": 4702,
+      "y": 204,
+      "collected": false
+    },
+    {
+      "id": "intro_0",
+      "kind": "shard",
+      "x": 245,
+      "y": 204,
+      "collected": false
+    },
+    {
+      "id": "intro_1",
+      "kind": "shard",
+      "x": 285,
+      "y": 204,
+      "collected": false
+    },
+    {
+      "id": "intro_2",
+      "kind": "fiber",
+      "x": 322,
+      "y": 195,
+      "collected": false
+    },
+    {
+      "id": "intro_3",
+      "kind": "fiber",
+      "x": 386,
+      "y": 195,
+      "collected": false
+    },
+    {
+      "id": "intro_4",
+      "kind": "shard",
+      "x": 470,
+      "y": 204,
+      "collected": false
+    }
+  ],
+  "enemies": [
+    {
+      "id": "beast_WN1",
+      "kind": "slime",
+      "x": 523,
+      "y": 218,
+      "hp": 2
+    },
+    {
+      "id": "beast_WN2",
+      "kind": "slime",
+      "x": 823,
+      "y": 218,
+      "hp": 2
+    },
+    {
+      "id": "beast_WN3",
+      "kind": "slime",
+      "x": 1123,
+      "y": 218,
+      "hp": 2
+    },
+    {
+      "id": "beast_NORTH",
+      "kind": "wisp",
+      "x": 1423,
+      "y": 218,
+      "hp": 3
+    },
+    {
+      "id": "beast_NE1",
+      "kind": "slime",
+      "x": 1723,
+      "y": 218,
+      "hp": 2
+    },
+    {
+      "id": "beast_NE2",
+      "kind": "slime",
+      "x": 2023,
+      "y": 218,
+      "hp": 2
+    },
+    {
+      "id": "beast_NE3",
+      "kind": "slime",
+      "x": 2323,
+      "y": 218,
+      "hp": 2
+    },
+    {
+      "id": "beast_EAST",
+      "kind": "wisp",
+      "x": 2623,
+      "y": 218,
+      "hp": 3
+    },
+    {
+      "id": "beast_ES1",
+      "kind": "slime",
+      "x": 2923,
+      "y": 218,
+      "hp": 2
+    },
+    {
+      "id": "beast_ES2",
+      "kind": "slime",
+      "x": 3223,
+      "y": 218,
+      "hp": 2
+    },
+    {
+      "id": "beast_ES3",
+      "kind": "slime",
+      "x": 3523,
+      "y": 218,
+      "hp": 2
+    },
+    {
+      "id": "beast_SOUTH",
+      "kind": "wisp",
+      "x": 3823,
+      "y": 218,
+      "hp": 3
+    },
+    {
+      "id": "beast_SW1",
+      "kind": "slime",
+      "x": 4123,
+      "y": 218,
+      "hp": 2
+    },
+    {
+      "id": "beast_SW2",
+      "kind": "slime",
+      "x": 4423,
+      "y": 218,
+      "hp": 2
+    },
+    {
+      "id": "beast_SW3",
+      "kind": "slime",
+      "x": 4723,
+      "y": 218,
+      "hp": 2
+    }
+  ],
+  "platforms": [
+    {
+      "kind": "platform",
+      "x": 210,
+      "y": 174,
+      "w": 70
+    },
+    {
+      "kind": "platform",
+      "x": 410,
+      "y": 174,
+      "w": 64
+    },
+    {
+      "kind": "platform",
+      "x": 710,
+      "y": 174,
+      "w": 64
+    },
+    {
+      "kind": "platform",
+      "x": 800,
+      "y": 144,
+      "w": 65
+    },
+    {
+      "kind": "platform",
+      "x": 1010,
+      "y": 174,
+      "w": 64
+    },
+    {
+      "kind": "platform",
+      "x": 1410,
+      "y": 174,
+      "w": 70
+    },
+    {
+      "kind": "platform",
+      "x": 1610,
+      "y": 174,
+      "w": 64
+    },
+    {
+      "kind": "platform",
+      "x": 1910,
+      "y": 174,
+      "w": 64
+    },
+    {
+      "kind": "platform",
+      "x": 2000,
+      "y": 144,
+      "w": 65
+    },
+    {
+      "kind": "platform",
+      "x": 2210,
+      "y": 174,
+      "w": 64
+    },
+    {
+      "kind": "platform",
+      "x": 2610,
+      "y": 174,
+      "w": 70
+    },
+    {
+      "kind": "platform",
+      "x": 2810,
+      "y": 174,
+      "w": 64
+    },
+    {
+      "kind": "platform",
+      "x": 3110,
+      "y": 174,
+      "w": 64
+    },
+    {
+      "kind": "platform",
+      "x": 3200,
+      "y": 144,
+      "w": 65
+    },
+    {
+      "kind": "platform",
+      "x": 3410,
+      "y": 174,
+      "w": 64
+    },
+    {
+      "kind": "platform",
+      "x": 3810,
+      "y": 174,
+      "w": 70
+    },
+    {
+      "kind": "platform",
+      "x": 4010,
+      "y": 174,
+      "w": 64
+    },
+    {
+      "kind": "platform",
+      "x": 4310,
+      "y": 174,
+      "w": 64
+    },
+    {
+      "kind": "platform",
+      "x": 4400,
+      "y": 144,
+      "w": 65
+    },
+    {
+      "kind": "platform",
+      "x": 4610,
+      "y": 174,
+      "w": 64
+    }
+  ],
+  "objects": [
+    {
+      "id": "workbench_0",
+      "kind": "workbench",
+      "x": 118,
+      "y": 209
+    },
+    {
+      "id": "guide_0",
+      "kind": "npc",
+      "x": 178,
+      "y": 212
+    },
+    {
+      "id": "relay_north",
+      "kind": "relay",
+      "x": 1317,
+      "y": 209
+    },
+    {
+      "id": "lost_device",
+      "kind": "device",
+      "x": 2602,
+      "y": 210
+    },
+    {
+      "id": "gate_return",
+      "kind": "portal",
+      "x": 4730,
+      "y": 206
+    },
+    {
+      "id": "portal_start",
+      "kind": "portal",
+      "x": 25,
+      "y": 206
+    }
+  ],
+  "depth_caches": [
+    {
+      "id": "depth_west_1",
+      "x": 640,
+      "lane": 1
+    },
+    {
+      "id": "depth_north_1",
+      "x": 1790,
+      "lane": -1
+    },
+    {
+      "id": "depth_east_1",
+      "x": 3280,
+      "lane": 1
+    },
+    {
+      "id": "depth_south_1",
+      "x": 4250,
+      "lane": -1
+    }
+  ]
+}
