@@ -1,0 +1,3 @@
+Order Number,Item Number,Transaction ID,Item Title,Sold For,Quantity,Sale Date,Buyer Name,Buyer Email,Ship To Address 1,Tracking Number
+FAKE-ORDER-001,123456789012,FAKE-TXN-1,Fictional example MTG foil,"$22.50",1,"Nov 20, 2026",FICTIONAL BUYER,fictional@example.invalid,FICTIONAL ADDRESS,FICTIONAL TRACK
+FAKE-ORDER-002,123456789013,FAKE-TXN-2,Non-card item,"$9.99",1,"Nov 20, 2026",FICTIONAL BUYER,fictional@example.invalid,FICTIONAL ADDRESS,FICTIONAL TRACK

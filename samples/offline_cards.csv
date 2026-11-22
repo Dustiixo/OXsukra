@@ -1,0 +1,4 @@
+game,name,set_code,collector_number,source
+MTG,Example Sorcery,DEMO,001,fictional demo catalog
+POKEMON,Example Creature,DEMO,002,fictional demo catalog
+YUGIOH,Example Monster,DEMO,003,fictional demo catalog

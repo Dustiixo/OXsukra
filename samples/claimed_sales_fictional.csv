@@ -1,0 +1,4 @@
+game,name,set_code,collector_number,marketplace,sale_id,sold_at,price,currency,condition,source_url
+MTG,Illustrative Card Only,DEM,101,Example Marketplace,DEMO-001,2026-01-12,12.50,CAD,Near Mint,https://example.com/demo-only
+POKEMON,Illustrative Pocket Creature,TEST,42,Example Marketplace,DEMO-002,2026-01-13,18.00,NZD,Played,https://example.com/demo-only
+YUGIOH,Illustrative Duel Card,FIC,11,Example Marketplace,DEMO-003,2026-01-14,5.00,AUD,Excellent,https://example.com/demo-only

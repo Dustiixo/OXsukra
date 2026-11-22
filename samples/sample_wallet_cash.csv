@@ -1,0 +1,4 @@
+Date,Transaction ID,Description,Net Amount,Currency,Status
+2026-11-07T12:00:00Z,DEMO-CASH-001,Illustrative external deposit,100.00,CAD,Completed
+2026-11-07T12:10:00Z,DEMO-CASH-002,Illustrative purchase,-12.50,CAD,Completed
+2026-11-07T12:20:00Z,DEMO-CASH-003,Pending transfer not yet spendable,25.00,CAD,Pending

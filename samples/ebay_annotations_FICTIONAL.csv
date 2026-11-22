@@ -1,0 +1,2 @@
+order_number,item_number,transaction_id,game,name,set_code,collector_number,condition,source_url
+FAKE-ORDER-001,123456789012,FAKE-TXN-1,MTG,Fictional Example Card,FAK,001,Near Mint,https://example.com/not-proof-of-sale

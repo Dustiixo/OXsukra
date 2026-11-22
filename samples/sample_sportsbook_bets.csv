@@ -1,0 +1,3 @@
+Bet ID,Placed At,Settlement Date,Sport,Stake,Gross Payout,Status,Currency
+DEMO-BET-101,2026-11-07T10:00:00Z,2026-11-07T10:20:00Z,Basketball,10.00,16.00,Settled,CAD
+DEMO-BET-102,2026-11-07T11:00:00Z,,Horse racing,5.00,,Open,CAD
