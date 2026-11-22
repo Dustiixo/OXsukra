@@ -1,0 +1,48 @@
+{
+  "schema": "oxsukra.research-ecology-exchange-examples.v1",
+  "status": "PROPOSED-NOT-ADAPTER-VERIFIED",
+  "messages": [
+    {
+      "schema": "oxsukra.research-slot-proposal.v1",
+      "sender_owner": "research-ecology",
+      "recipient_owner": "slotline-overwatch",
+      "slotline_action": "PROPOSE_ONLY",
+      "project_ref": {"owner": "research-ecology", "record_id": "sample-project"},
+      "proposed_start": "2026-11-18T17:00:00-05:00",
+      "duration_minutes": 40,
+      "objective": "Investigate thermal conduction between water-cooled components",
+      "dependency_refs": [],
+      "requires_owner_approval": true
+    },
+    {
+      "schema": "oxsukra.research-source-reference.v1",
+      "source_owner": "parallax",
+      "source_id": "example-capture-id-not-real",
+      "source_snapshot_sha256": null,
+      "url": "https://example.org/technical-reference",
+      "section_anchor": "#contact-resistance",
+      "read_permission": "UNVERIFIED",
+      "analysis_consent": false,
+      "claim_kind": "source-observation",
+      "review_state": "proposed"
+    },
+    {
+      "schema": "oxsukra.research-academy-observation.v1",
+      "sender_owner": "research-ecology",
+      "recipient_owner": "ox-academy",
+      "stage": "skimmed",
+      "attested_by": "human",
+      "competency_signoff": false,
+      "approval_state": "DRAFT"
+    },
+    {
+      "schema": "oxsukra.study-companion-event.v1",
+      "sender_owner": "research-ecology",
+      "recipient_owner": "study-companion",
+      "event": "insight-recorded",
+      "source_id": "example-source-id-not-real",
+      "game_reward": null,
+      "underbyte_state_access": false
+    }
+  ]
+}

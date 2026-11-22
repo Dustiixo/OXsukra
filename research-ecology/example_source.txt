@@ -1,0 +1,3 @@
+Thermal contact resistance means two touching surfaces can impede heat transfer even when each has active cooling.
+Conductive coupling can redistribute heat across a shared path but does not create cooling power by itself.
+The measurable quantities include temperature difference, contact conductance, coolant inlet temperature and heat flux.
