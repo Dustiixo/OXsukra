@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><title>PARALLAX // SESSION ATLAS</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<div class="app" id="app">
+ <aside class="rail">
+  <div class="brand"><div class="mark">◈</div><div><div class="brand-name">PARALLAX</div><div class="brand-sub">LIVING WEB / RESEARCH OS</div></div></div>
+  <div class="rail-heading">WORKSPACE</div>
+  <button class="nav on" data-view="sessions"><span>▦</span> Session Atlas <span class="nav-count" id="sessionCount">0</span></button>
+  <button class="nav" data-view="map"><span>⦿</span> Archipelago</button>
+  <button class="nav" data-view="alltabs"><span>▤</span> Tab Index</button>
+  <button class="nav" data-view="settings"><span>⚙</span> Local AI / Settings</button>
+  <div class="rail-heading lower">SAVED SESSIONS</div>
+  <div id="sessionList" class="session-list"></div>
+  <div class="rail-bottom"><div class="light"></div><span id="mode">LOCAL DEMO</span><span class="tiny">M0.1</span></div>
+ </aside>
+ <main class="main">
+  <header class="top"><div class="breadcrumb">OX / PARALLAX <span> / </span> <strong id="viewTitle">SESSION ATLAS</strong></div><div class="top-right"><span class="secure">● LOCAL-FIRST</span><span class="clock" id="clock">22 NOV 2026</span><button class="mini" id="exportBtn" title="Download selected session">EXPORT ↗</button></div></header>
+  <div class="content" id="sessionsView">
+   <div class="heading"><div><div class="eyebrow">RESEARCH CONTINUITY / 01</div><h1>Sessions don't die.<br><em>They become places.</em></h1><p class="desc">Freeze entire research worlds into navigable islands. Reopen the thread, not 300 live processes.</p></div><div class="headline-actions"><button id="captureBtn" class="primary">＋ SAVE CURRENT TABS</button><button id="importBtn" class="secondary">↓ IMPORT SESSION</button><input id="importFile" type="file" accept=".json,application/json" hidden></div></div>
+   <div id="toast" role="status" aria-live="polite" class="toast"></div>
+   <section class="overview"><div class="overview-left"><div class="pill" id="sessionKind">DEMO / SYNTHETIC</div><div class="overview-title" id="activeName">OX / RESEARCH ARCHIPELAGO</div><div class="overview-caption">A preserved research world, not a pile of forgotten browser windows.</div><div class="stats"><div><b id="statTabs">300</b><small>TABS SAVED</small></div><div><b id="statIslands">10</b><small>TAB ISLANDS</small></div><div><b id="statSites">10</b><small>DOMAINS</small></div><div><b id="statEvidence">0</b><small>PAGE CAPTURES</small></div></div><div class="overview-actions"><button class="primary sm" id="openIslandBtn">↗ OPEN SELECTED ISLAND</button><button class="secondary sm" id="restoreBtn">RESTORE ALL</button><button class="ghost sm" id="archiveBtn">ARCHIVE & CLOSE CURRENT TABS</button></div></div><div class="overview-art" aria-label="Research islands and links"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div><div class="planet p1"></div><div class="planet p2"></div><div class="planet p3"></div><div class="planet p4"></div><div class="center-core">◈</div><div class="art-label">SESSION TOPOLOGY<br>STATE: PRESERVED</div></div></section>
+   <div class="sectionbar"><div><span class="section-kicker">02 / RESEARCH ISLANDS</span><h2>Archipelago <span id="islandCount">10 islands</span></h2></div><div class="find"><span>⌕</span><input id="filter" placeholder="Find a tab, domain or island" autocomplete="off" aria-label="Filter tabs"></div></div>
+   <section class="islands" id="islands"></section>
+   <div class="lower-grid"><section class="panel digest"><div class="panel-top"><span>◈ INTELLIGENCE DIGEST</span><span id="digestLabel" class="panel-label">EXAMPLE / NOT AI</span></div><h3 id="digestTitle">What was happening in this session?</h3><div id="digestText" class="digest-text"></div><div class="digest-foot"><button id="digestBtn" class="secondary sm">✧ GENERATE LOCAL AI DIGEST</button><button id="evidenceBtn" class="ghost sm">⊕ CAPTURE PAGE EVIDENCE</button></div></section><section class="panel inspector"><div class="panel-top"><span>◉ ISLAND INSPECTOR</span><span id="inspectCount" class="panel-label">30 TABS</span></div><h3 id="inspectName">BYTE-FIRST AI</h3><div id="tabPreview" class="tabs-preview"></div><div class="inspector-foot"><button class="ghost sm" id="moreBtn">VIEW ALL TABS ↗</button></div></section></div>
+  </div>
+  <div class="content alt hidden" id="mapView"><div class="eyebrow">RESEARCH CONTINUITY / 02</div><h1>Research <em>topology.</em></h1><p class="desc">An explorable map of saved islands. Click a node to inspect its evidence and tabs.</p><div class="map-layout"><svg id="mapSvg" viewBox="0 0 1000 520" role="img" aria-label="Saved island map"></svg><div class="map-legend">LINES ARE NAVIGATION ONLY. NO INFERRED RESEARCH RELATIONSHIPS.</div></div></div>
+  <div class="content alt hidden" id="alltabsView"><div class="eyebrow">RESEARCH CONTINUITY / 03</div><h1>The <em>tab index.</em></h1><p class="desc">Search every saved URL without loading its webpage.</p><input id="allSearch" class="wide-search" placeholder="Search title or URL"><div id="allTabs" class="all-tabs"></div></div>
+  <div class="content alt hidden" id="settingsView"><div class="eyebrow">RESEARCH CONTINUITY / 04</div><h1>Private <em>intelligence.</em></h1><p class="desc">AI runs only on demand, against your local Ollama server. No remote AI endpoint is included.</p><div class="settings-box"><label for="modelInput">OLLAMA MODEL NAME</label><input id="modelInput" placeholder="e.g. llama3.2:3b" spellcheck="false"><p>Only saved tab titles, URLs, and explicitly captured page snippets are included in the prompt. Page capture requires origin permission.</p><div class="settings-actions"><button id="saveSettings" class="primary sm">SAVE MODEL</button><button id="checkOllama" class="secondary sm">CHECK LOCAL MODELS</button></div><div id="modelStatus" class="model-status"></div></div><div class="settings-box"><h3>Continuity contract</h3><p>Local extension storage, session JSON export/import, explicit restoral. Real tabs reopen only when requested. No form state, scroll state, login secrets or page history are saved by this tool.</p></div></div>
+  <footer><span>PARALLAX • SESSION ATLAS <b>M0.1</b> / LOCAL RESEARCH CONTINUITY</span><span id="footerInfo">EXAMPLE DATA • NOT YOUR REAL TABS</span></footer>
+ </main>
+</div>
+<script src="logic.js"></script><script src="app.js"></script>
+</body></html>

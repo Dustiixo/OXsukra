@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "OX PARALLAX / LIVING WEB M0.7",
+  "version": "0.7.0",
+  "description": "Opt-in factual spatial web observation with an encrypted Linux local vault.",
+  "browser_specific_settings": {"gecko": {"id": "parallax-capture@oxsukra.local", "strict_min_version": "115.0"}},
+  "permissions": ["activeTab", "tabs", "webRequest", "webNavigation", "storage", "nativeMessaging"],
+  "optional_permissions": ["<all_urls>", "cookies"],
+  "background": {"scripts": ["core.js", "background.js"], "persistent": true},
+  "sidebar_action": {"default_title": "PARALLAX / LIVING WEB", "default_panel": "ui/index.html"},
+  "browser_action": {"default_title": "Open PARALLAX"},
+  "commands": {"_execute_sidebar_action": {"suggested_key": {"default": "Ctrl+Shift+Y"}, "description": "Open PARALLAX orbital view"}},
+  "icons": {"48": "ui/icon.svg", "96": "ui/icon.svg"}
+}

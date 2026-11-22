@@ -1,0 +1,19 @@
+{
+  "date_utc": "2026-10-27T05:00:00.983702+00:00",
+  "version": "0.7.0",
+  "platform": "Linux-first source prototype",
+  "python": "3.13.5",
+  "node": "v22.16.0",
+  "source_test_output": [
+    "PASS: URL hygiene, bounded influx, popup semantics, opt-in enforcement, nav disarm, no query/cookie value leak.",
+    "PASS: SPA additions/removals, mutation coalescing, resource timing hints.",
+    ".........                                                                [100%]",
+    "9 passed in 1.61s"
+  ],
+  "python_tests_passed": 9,
+  "js_test_scripts_passed": 2,
+  "linux_firefox_host_executed": false,
+  "zen_host_executed": false,
+  "signed_extension": false,
+  "auto_updates_enabled": false
+}

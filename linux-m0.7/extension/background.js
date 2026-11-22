@@ -1,0 +1,229 @@
+/* Firefox-first PARALLAX observer: opt-in tab-scoped event stream, no page bodies. */
+"use strict";
+const P = ParallaxCore;
+const armed = new Map();
+let selectedTabId=null;
+let nativePort=null;
+let vaultState="not-connected";
+let vaultMessage="Encrypted vault not connected. Live events are volatile.";
+let requestSeq=0;
+const pendingNative=new Map();
+let inflight=null;
+let inflightPromise=null;
+let lastSynopsis="";
+let unsavedOnStop=0;
+const now=()=>Date.now();
+
+function safeTab(t){return t && typeof t.id==="number" && t.url && P.origin(t.url)?t:null;}
+function current(){ return selectedTabId!==null?armed.get(selectedTabId):null; }
+function auditEvent(tabId,raw){
+  const s=armed.get(tabId); if(!s)return;
+  const e=P.safeEvent({...raw,tabId},s.origin);
+  if(e)s.feed.add(e);
+}
+function scope(details){return details && armed.get(details.tabId);}
+function network(type,d){
+  if(!scope(d))return;
+  const kind=String(d.type||"unknown");
+  const event={type, from:armed.get(d.tabId).origin, to:d.url, kind, status:d.statusCode};
+  if(Number.isFinite(d.fromCache)) delete event.fromCache;
+  auditEvent(d.tabId,event);
+}
+browser.webRequest.onBeforeRequest.addListener(d=>network("request",d),{urls:["<all_urls>"]});
+browser.webRequest.onCompleted.addListener(d=>network("response",d),{urls:["<all_urls>"]});
+browser.webRequest.onErrorOccurred.addListener(d=>network("error",d),{urls:["<all_urls>"]});
+browser.webRequest.onBeforeRedirect.addListener(d=>{
+  if(!scope(d))return;
+  auditEvent(d.tabId,{type:"redirect",from:armed.get(d.tabId).origin,to:d.redirectUrl,kind:d.type,status:d.statusCode});
+},{urls:["<all_urls>"]});
+browser.webNavigation.onCommitted.addListener(d=>{
+  if(!scope(d)||d.frameId!==0)return;
+  // If the tab navigates to a different site, observation stops automatically.
+  if(!P.sameOrigin(armed.get(d.tabId).origin,d.url)){stopTab(d.tabId);return;}
+  auditEvent(d.tabId,{type:"navigation",from:armed.get(d.tabId).origin,to:d.url,kind:"committed"});
+});
+browser.webNavigation.onHistoryStateUpdated.addListener(d=>{
+  if(scope(d)&&d.frameId===0)auditEvent(d.tabId,{type:"navigation",from:armed.get(d.tabId).origin,to:d.url,kind:"history"});
+});
+browser.webNavigation.onCreatedNavigationTarget.addListener(d=>{
+  const s=armed.get(d.sourceTabId);if(!s)return;
+  auditEvent(d.sourceTabId,{type:"popup",from:s.origin,to:d.url,kind:"new-target"});
+});
+browser.webNavigation.onCompleted.addListener(async d=>{
+  const s=armed.get(d.tabId);if(!s||d.frameId!==0||!P.sameOrigin(s.origin,d.url))return;
+  try {await browser.tabs.executeScript(d.tabId,{file:"content.js",runAt:"document_idle",allFrames:false});}
+  catch(_) { /* restricted frame/page: network metadata still available */ }
+});
+browser.tabs.onRemoved.addListener(tabId=>{stopTab(tabId);});
+
+async function stopTab(tabId){
+  if(!armed.has(tabId))return;
+  const isSelected=selectedTabId===tabId;
+  if(isSelected && vaultState==="saving") {
+    for(let i=0;i<35;i++){
+      const s=armed.get(tabId);
+      if(!s || (!s.feed.queue.length && !inflightPromise))break;
+      if(inflightPromise)await inflightPromise;
+      else await flush();
+      if(vaultState!=="saving")break;
+    }
+    unsavedOnStop=armed.get(tabId)?.feed.queue.length||0;
+    try{await portMessage("lock");vaultState="connected-locked";}
+    catch(e){vaultState="save-error";vaultMessage=`Vault lock error: ${e.message}`;}
+    if(unsavedOnStop>0)vaultMessage=`Stopped with ${unsavedOnStop} unsaved volatile events. Last saved archive remains encrypted.`;
+  }
+  try{await browser.tabs.sendMessage(tabId,{action:"parallax-stop"});}catch(_){}
+  armed.delete(tabId);
+  if(isSelected)selectedTabId=null;
+}
+async function arm(tabId){
+  const t=safeTab(await browser.tabs.get(tabId)); if(!t)throw new Error("Select a public HTTP(S) website first.");
+  if(t.incognito)throw new Error("Capture is disabled for private windows.");
+  if(!t.url.startsWith("https://"))throw new Error("M0.7 permits HTTPS sites only.");
+  const origin=P.origin(t.url);
+  if(!origin)throw new Error("Not an eligible public HTTPS site.");
+  if(!(await browser.permissions.contains({origins:[origin+"/*"]})))throw new Error("This site has not been approved in Firefox permissions.");
+  // Exactly one monitored tab at a time: prevent silent monitoring of an old island.
+  if(selectedTabId!==null && selectedTabId!==tabId)await stopTab(selectedTabId);
+  await stopTab(tabId);
+  unsavedOnStop=0;
+  armed.set(tabId,{origin,feed:new P.BoundedFeed(),started:now()});
+  selectedTabId=tabId;
+  try{await browser.tabs.reload(tabId,{bypassCache:false});}
+  catch(e){await stopTab(tabId);throw e;}
+  return {ok:true, origin,tabId};
+}
+
+function portMessage(command,payload={}){
+  if(!nativePort)throw new Error("Linux encrypted vault bridge is not installed or connected.");
+  const id=`req-${++requestSeq}`;
+  return new Promise((resolve,reject)=>{
+    const timer=setTimeout(()=>{pendingNative.delete(id);reject(new Error("Native bridge did not respond"));},20000);
+    pendingNative.set(id,{resolve,reject,timer});
+    nativePort.postMessage({id,command,...payload});
+  });
+}
+function connectNative(){
+  if(nativePort)return;
+  try {
+    nativePort=browser.runtime.connectNative("org.oxsukra.parallax_capture");
+    vaultState="connected-locked";
+    vaultMessage="Linux vault bridge ready. Unlock manually for encrypted saving.";
+    nativePort.onMessage.addListener(msg=>{
+      if(!msg||!msg.id)return;
+      const pending=pendingNative.get(msg.id);if(!pending)return;
+      clearTimeout(pending.timer);pendingNative.delete(msg.id);
+      if(msg.ok)pending.resolve(msg);
+      else pending.reject(new Error(String(msg.error||"Native operation failed")));
+    });
+    nativePort.onDisconnect.addListener(()=>{
+      const err=browser.runtime.lastError;
+      vaultState="not-connected";
+      vaultMessage=`Encrypted vault disconnected${err&&err.message?": "+err.message:""}. Live capture remains volatile.`;
+      nativePort=null;
+      for(const p of pendingNative.values()){clearTimeout(p.timer);p.reject(new Error("Native bridge disconnected"));}
+      pendingNative.clear(); inflight=null;
+    });
+  }catch(e){vaultState="not-connected";vaultMessage=e.message;throw e;}
+}
+// Save raw approved observations only while explicitly unlocked. Backpressure retained locally with bounded feed.
+async function flush(){
+  if(vaultState!=="saving")return;
+  if(inflightPromise)return inflightPromise;
+  const s=current();if(!s||!s.feed.queue.length)return;
+  const batch=s.feed.take(48);
+  if(!batch.length)return;
+  inflight=batch;
+  inflightPromise=(async()=>{
+    try {await portMessage("append",{events:batch});}
+    catch(e){vaultMessage=`Save failure: ${e.message}. Capture continues in memory.`;vaultState="save-error";
+      // Restore unacknowledged batch, capped at configured queue depth.
+      s.feed.queue=[...batch,...s.feed.queue].slice(-s.feed.maxQueue);
+    }
+    finally{inflight=null;inflightPromise=null;}
+  })();
+  return inflightPromise;
+}
+setInterval(()=>{flush().catch(()=>{});},450);
+
+async function message(msg,sender){
+  if(!msg || typeof msg.action!=="string")return {ok:false,error:"Missing action"};
+  try{
+    if(msg.action==="observation"){
+      const id=sender.tab && sender.tab.id;
+      const s=armed.get(id);
+      if(!s || !sender.url || !P.sameOrigin(s.origin,sender.url))return {ok:false};
+      if(msg.type==="mutation")auditEvent(id,{type:"mutation",from:s.origin,count:msg.count,kind:msg.kind||"dom-records"});
+      if(msg.type==="overflow")auditEvent(id,{type:"overflow",from:s.origin,count:msg.count,kind:msg.kind||"source-cap"});
+      if(msg.type==="dom_assets"&&Array.isArray(msg.targets)){
+        for(const x of msg.targets.slice(0,90)){
+          const kind=String(x.tag||"").toLowerCase();
+          if(!["a","script","link","iframe","img","video","audio","source"].includes(kind))continue;
+          auditEvent(id,{type:kind==="a"?"link":"asset",from:s.origin,to:x.url,kind});
+        }
+      }
+      if(msg.type==="dom_removed"&&Array.isArray(msg.targets)){
+        for(const x of msg.targets.slice(0,60))auditEvent(id,{type:"dom_removed",from:s.origin,to:x.url,kind:x.tag});
+      }
+      if(msg.type==="resource_hints"&&Array.isArray(msg.targets)){
+        for(const x of msg.targets.slice(0,80))auditEvent(id,{type:"resource_hint",from:s.origin,to:x.url,kind:"performance-timing"});
+      }
+      return {ok:true};
+    }
+    if(msg.action==="state"){
+      const s=current(); return {ok:true,armed:!!s, tabId:selectedTabId,origin:s?s.origin:null,
+        graph:s?s.feed.snapshot():{nodes:[],edges:[],total:0,dropped:0,pending:0},unsavedOnStop,
+        vaultState,vaultMessage,aiReady:vaultState==="saving",synopsis:lastSynopsis};
+    }
+    if(msg.action==="arm")return await arm(msg.tabId);
+    if(msg.action==="stop"){
+      if(selectedTabId!==null)await stopTab(selectedTabId);
+      return {ok:true,unsaved:unsavedOnStop};
+    }
+    if(msg.action==="connect"){
+      connectNative();return {ok:true,vaultState};
+    }
+    if(msg.action==="vault-create"){
+      if(!current())throw new Error("Arm a tab first.");
+      if(typeof msg.passphrase!=="string" || msg.passphrase.length<12)throw new Error("Passphrase must be at least 12 characters.");
+      connectNative();
+      const sessionId=crypto.randomUUID();
+      await portMessage("create",{sessionId,passphrase:msg.passphrase,site:current().origin});
+      vaultState="saving";vaultMessage="Encrypted capture active. Passphrase is not stored.";
+      // Passphrase exists only transiently in the UI and message handling.
+      return {ok:true,sessionId};
+    }
+    if(msg.action==="vault-list"){
+      connectNative();return await portMessage("list");
+    }
+    if(msg.action==="vault-open"){
+      connectNative();return await portMessage("read",{sessionId:msg.sessionId,passphrase:msg.passphrase,limit:120});
+    }
+    if(msg.action==="vault-delete"){
+      connectNative();return await portMessage("delete",{sessionId:msg.sessionId,confirm:"DELETE"});
+    }
+    if(msg.action==="cookie-metadata"){
+      const s=current(); if(!s)throw new Error("Arm a tab first.");
+      if(!(await browser.permissions.contains({permissions:["cookies"],origins:[s.origin+"/*"]})))throw new Error("Firefox cookie permission was not granted.");
+      const all=await browser.cookies.getAll({url:s.origin+"/"});
+      for(const c of all.slice(0,60))auditEvent(selectedTabId,{type:"cookie_meta",from:s.origin,name:c.name,cookieDomain:c.domain,httpOnly:c.httpOnly,secure:c.secure,session:c.session,sameSite:c.sameSite});
+      return {ok:true,count:Math.min(all.length,60),valuesCaptured:false};
+    }
+    if(msg.action==="summarize"){
+      const s=current();if(!s)throw new Error("No armed tab.");
+      const node= s.feed.graph.get(String(msg.nodeId||""));
+      if(!node)throw new Error("Choose an observed graph node first.");
+      if(typeof msg.model!=="string" || !/^[a-zA-Z0-9._:\/-]{1,80}$/.test(msg.model))throw new Error("Enter a valid local Ollama model name.");
+      connectNative();
+      const result=await portMessage("local-summary",{node:{id:node.id,type:node.type,hits:node.hits}, model:msg.model});
+      lastSynopsis=result.summary||"";return {ok:true,summary:lastSynopsis};
+    }
+    if(msg.action==="focus"){
+      if(selectedTabId!==null)await browser.tabs.update(selectedTabId,{active:true});
+      return {ok:true};
+    }
+    return {ok:false,error:"Unknown action"};
+  }catch(e){return {ok:false,error:String(e.message||e)};}
+}
+browser.runtime.onMessage.addListener(message);
+browser.browserAction.onClicked.addListener(()=>browser.sidebarAction.open().catch(()=>{}));

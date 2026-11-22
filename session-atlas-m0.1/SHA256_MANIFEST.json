@@ -1,0 +1,17 @@
+{
+  "version": "M0.1",
+  "generated_utc": "2026-11-22",
+  "files": {
+    "preview.png": "31c95f09890ad73f4e2aecf74b31b9fe6b0ad7d8288ad4f9aff2999f8a3afcc4",
+    "STANDALONE_DEMO.html": "69a90239279d4fbefb0ff5394a6ae561f969d05078223e1fb3f7aff51bdb2c2c",
+    "home.html": "9ca2f3cd51ec44d3b8f8bda93b0cf836b8d3a26b90b84e8175f731a19ce9d6c0",
+    "app.js": "7d9e96bf638b658497ad698874ab9dfc89a6d4e6d8f942eb75090ce235e4bb97",
+    "background.js": "57ebf007d4ce71ba54a221550b3641ce8e9ea321f87db5c544f498debdb04450",
+    "manifest.json": "93d5cbf6fca53bf0cdcb9b57f4eab10bf08666ba168ae924d01a7c3fc50c9233",
+    "TEST_REPORT.md": "dd42b507ef28b1de247ac270f6c41a5a869a3db6092a13099fad9c3334d2533e",
+    "style.css": "99ed521e8166cec8884487ceaa4e1ab9bb7040003b1f9221547ff1b038f44746",
+    "README.md": "4d0e37b3584529a75f38d054e96b063a4f8c99f090bec16acf13eca8918b7acf",
+    "logic.js": "919c23f0752a96ed89da9a45077ed0a8a924922c90e045104b9c245f1bd27f19",
+    "tests/logic.test.js": "06e3e931d171105460a2085a859d36c8dc34d24d826e0d8016c816fcc8a8258b"
+  }
+}

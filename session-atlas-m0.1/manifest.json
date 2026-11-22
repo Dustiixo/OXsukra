@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "PARALLAX // Session Atlas",
+  "description": "Local-first browser research sessions with tab islands, evidence-aware digests, and deliberate restore.",
+  "version": "0.1.0",
+  "minimum_chrome_version": "112",
+  "permissions": [
+    "tabs",
+    "tabGroups",
+    "storage",
+    "scripting",
+    "activeTab"
+  ],
+  "optional_host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1:11434/*"
+  ],
+  "chrome_url_overrides": {
+    "newtab": "home.html"
+  },
+  "action": {
+    "default_title": "Open PARALLAX Session Atlas"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
