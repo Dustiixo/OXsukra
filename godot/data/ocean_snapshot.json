@@ -1,0 +1,166 @@
+{
+  "approved_links": [
+    {
+      "from": "6fe0b9b0dbe64e5eba5914192fbd28fe",
+      "reason": "Human-reviewed navigation-to-continuity dependency",
+      "to": "ba9995178bd34b47b21e65d7d99e0253"
+    }
+  ],
+  "authority": {
+    "agent_execution": false,
+    "data_mutation": false,
+    "source_db_is_authoritative": true
+  },
+  "entries": [
+    {
+      "created_at": "2026-11-17T13:49:35.337946+00:00",
+      "entry_kind": "blocker",
+      "id": "b84252396b1b45aebbdc098fab3d7abc",
+      "kind": "entry",
+      "next_step": "Verify protected broker before integration",
+      "original_excerpt": "Real autonomous external effects remain blocked until dispatch and concurrency fixes pass.",
+      "position": [
+        -10.886,
+        -3.354,
+        11.16
+      ],
+      "project_id": "4f025f7d2b984c53bd51187652cb9414",
+      "source_id": "85e1b0e8e44b443bb87a81e1264bab67",
+      "source_sha256": "37243294ffb20d7db56cf8918287520c984088a77f7e5bb1949ddbc3332af3c6",
+      "state": "idea",
+      "tags": [
+        "safety",
+        "broker"
+      ],
+      "title": "Protected broker R11RF6",
+      "updated_at": "2026-11-17T13:49:35.337946+00:00"
+    },
+    {
+      "created_at": "2026-11-17T13:49:35.332906+00:00",
+      "entry_kind": "discovery",
+      "id": "bc2b76b63ff74325800b62875ed0a2e7",
+      "kind": "entry",
+      "next_step": "Preserve isolated IC0.1 evidence",
+      "original_excerpt": "One-shot blocked-record scan, pending proposal, operator review, native readback and receipt.",
+      "position": [
+        -10.087,
+        -4.687,
+        5.794
+      ],
+      "project_id": "4f025f7d2b984c53bd51187652cb9414",
+      "source_id": "90b48bb366214d9c83fad89122988eb9",
+      "source_sha256": "86d85e841f424537427aa1d0bede595ec2b8455b3c8201cca4a07208859d4fc6",
+      "state": "idea",
+      "tags": [
+        "ixo",
+        "industrial"
+      ],
+      "title": "Native IXO feedback loop",
+      "updated_at": "2026-11-17T13:49:35.332906+00:00"
+    },
+    {
+      "created_at": "2026-11-17T13:49:35.325888+00:00",
+      "entry_kind": "blocker",
+      "id": "65a7b0db2bc34bf094501498417bf49a",
+      "kind": "entry",
+      "next_step": "",
+      "original_excerpt": "IXO must not react to a controller while a game or unrelated app is focused.",
+      "position": [
+        -9.555,
+        -0.234,
+        5.392
+      ],
+      "project_id": "47f4a85ee65d400ca779e466ab67c18c",
+      "source_id": "5edbdc9f80d94fbda477f8ba69894ae1",
+      "source_sha256": "2914e718f2491888b3b435b3aab7d3d6dbfc8315c557e2ffd797047ad68129f5",
+      "state": "blocked",
+      "tags": [
+        "controller",
+        "focus"
+      ],
+      "title": "Controller focus boundary",
+      "updated_at": "2026-11-17T13:49:35.328753+00:00"
+    },
+    {
+      "created_at": "2026-11-17T13:49:35.320430+00:00",
+      "entry_kind": "idea",
+      "id": "6fe0b9b0dbe64e5eba5914192fbd28fe",
+      "kind": "entry",
+      "next_step": "Prove enter then B returns to prior pose",
+      "original_excerpt": "Opening a node must preserve a path back to the exact prior camera transform.",
+      "position": [
+        -14.305,
+        0.578,
+        10.252
+      ],
+      "project_id": "47f4a85ee65d400ca779e466ab67c18c",
+      "source_id": "fba24b9dcacd49948f051cc13f86d9f5",
+      "source_sha256": "5528ea8cdcc4b483020655d7589a02d7219830c4bbc211aa26d83772e8e1cbde",
+      "state": "idea",
+      "tags": [
+        "opris",
+        "continuity"
+      ],
+      "title": "Opris breadcrumb return",
+      "updated_at": "2026-11-17T13:49:35.320430+00:00"
+    },
+    {
+      "created_at": "2026-11-17T13:49:35.314550+00:00",
+      "entry_kind": "discovery",
+      "id": "ba9995178bd34b47b21e65d7d99e0253",
+      "kind": "entry",
+      "next_step": "Test gamepad axes on ASUS",
+      "original_excerpt": "Left stick translates; right stick orients; triggers ascend/descend; bumpers roll.",
+      "position": [
+        -14.39,
+        -0.197,
+        11.074
+      ],
+      "project_id": "47f4a85ee65d400ca779e466ab67c18c",
+      "source_id": "aa77c93d47084b28a374a2c65859eea9",
+      "source_sha256": "a2a0ac52602a1279474375463ec352dde80000bbcfcaf4b0c245d819e4083498",
+      "state": "idea",
+      "tags": [
+        "echofold",
+        "6dof"
+      ],
+      "title": "Zero-gravity navigation",
+      "updated_at": "2026-11-17T13:49:35.314550+00:00"
+    }
+  ],
+  "generated_at_utc": "2026-11-17T13:49:35.348135+00:00",
+  "includes_source_excerpts": true,
+  "journal_events_verified": 9,
+  "journal_head_sha256": "3cc64db35a06eee589846df97a8f6643c7e49f0f323bdda03dca3d2272b6f92d",
+  "projects": [
+    {
+      "created_at": "2026-11-17T13:49:35.302751+00:00",
+      "description": "Freeform movement through original IXO project identities",
+      "id": "47f4a85ee65d400ca779e466ab67c18c",
+      "kind": "project",
+      "name": "ECHOFOLD Ocean",
+      "position": [
+        -11.123,
+        2.538,
+        8.113
+      ]
+    },
+    {
+      "created_at": "2026-11-17T13:49:35.307188+00:00",
+      "description": "Industrial feedback applied to persistent project work",
+      "id": "4f025f7d2b984c53bd51187652cb9414",
+      "kind": "project",
+      "name": "IXO Control Spine",
+      "position": [
+        -11.932,
+        -0.059,
+        7.323
+      ]
+    }
+  ],
+  "schema": "echofold.ocean.snapshot.g0.1",
+  "source": "IXO Convergence G0.4 read-only projection",
+  "source_integrity": "VERIFIED_SELECTED_ENTRIES",
+  "source_label": "ocean_demo_ixo_data",
+  "state_id": "f2ff5c2811276ec301a6ad16f80ae7c7a320c073a7e481aa79b36316cb722b98"
+}

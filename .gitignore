@@ -1,0 +1,5 @@
+.godot/
+__pycache__/
+*.pyc
+*.log
+godot/data/private_*.json
