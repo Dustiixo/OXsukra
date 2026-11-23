@@ -74,3 +74,13 @@ Resume by recovering the exact archives and checking their hashes, provenance, l
 - Ownership/license **BLOCKED** (no LICENSE/COPYING/NOTICE in archive); original Git ancestry **MISSING** (no `.git` objects). Network/live-provider and native hardware tests **NOT RUN**. Candidate public-release acceptance **BLOCKED**.
 - **Publication decision:** No v0.29 source branch created; no duplicate source blobs pushed. Existing 15 staging branches/769 previously audited blobs unchanged. Repository creation/visibility limitations still block dedicated independent repos; PR #4 not merged. This entry documents verification, not publication.
 - Fast-forward safety basis: fetched main HEAD `679ee04e9ad12e454bb4b465f4026ee1a6c4f109` immediately before this ledger update; existing file blob SHA `a0085427e10161d51e416011fbb52cfa3c09e952` supplied as compare-and-swap precondition.
+
+
+### Independent candidate gate: OX Treasury v0.30 (2026-11-23 UTC)
+
+- Source: Library `/OX Treasury/Continuity/OX_Treasury_v0_30.zip` (106,342 bytes, 60 ZIP members). Independently computed SHA-256 `3c6059760d78425d7c2f67a1ec11dae46a537bdb1ea277ae10cf451cfff2138e`, matching its continuity report; ZIP testzip PASS.
+- Reproducibility: Python compileall PASS; `python -m unittest discover -s tests -q` PASS, **158 tests** in **13.344 seconds** on extracted archive bytes. SQLite ResourceWarnings appeared for unclosed connections; tests still exited 0.
+- Preliminary privacy scan: no matches for bounded private-key headers, selected GitHub/OpenAI token patterns or absolute user-home paths in Python/CSV/JSON files. This is **not** a complete privacy or history scan. Financial-themed sample CSVs are present; their provenance and suitability for public distribution remain unapproved.
+- Ownership/history/license: no LICENSE file and no original `.git` history in the 60-member source archive; original authorship, independent public-license permission, and complete private-data review remain **BLOCKED**.
+- External/live provider tests: NOT RUN; no Windows-specific hardware acceptance. Missing-media: NOT ASSESSED. Timeout: NONE during local suite.
+- Publication: **0 new source files, 0 branches**; no duplicate upload, merge, release, or PR #4 change. Existing 15 branch/769 blob baseline unchanged; remote blob integrity for new v0.30 source is **NOT APPLICABLE** because it was not published. Dedicated repo creation remains unavailable through the connected GitHub action surface.
