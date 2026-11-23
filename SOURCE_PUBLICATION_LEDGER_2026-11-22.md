@@ -84,3 +84,14 @@ Resume by recovering the exact archives and checking their hashes, provenance, l
 - Ownership/history/license: no LICENSE file and no original `.git` history in the 60-member source archive; original authorship, independent public-license permission, and complete private-data review remain **BLOCKED**.
 - External/live provider tests: NOT RUN; no Windows-specific hardware acceptance. Missing-media: NOT ASSESSED. Timeout: NONE during local suite.
 - Publication: **0 new source files, 0 branches**; no duplicate upload, merge, release, or PR #4 change. Existing 15 branch/769 blob baseline unchanged; remote blob integrity for new v0.30 source is **NOT APPLICABLE** because it was not published. Dedicated repo creation remains unavailable through the connected GitHub action surface.
+
+
+### Independent candidate gate: OX Treasury v0.31 (2026-11-23 UTC)
+
+- Canonical Library source: `/OX Treasury/Continuity/OX_Treasury_v0_31.zip`; 60 ZIP entries. Independently computed SHA-256 `b1bf2c1913579d14b566164a5633e4dcfa1502bb8bc7069fbec88d9b0467f2c2`, matching v0.31 continuity. ZIP integrity PASS (`testzip`: no corrupt member).
+- Reproducibility: Python compileall PASS; `python -m unittest discover -s tests -q` PASS, **160 tests in 25.572 seconds**, exit 0 on extracted bytes. SQLite ResourceWarnings for unclosed connections were observed. No timeout in this independent run. Live-provider, Windows process-group, native hardware and missing-media acceptance NOT RUN/NOT ASSESSED.
+- Preliminary privacy/credential scan: no matches for bounded private-key headers, GitHub/OpenAI token formats, or selected quoted secret assignments in Python/JSON/CSV/Markdown. This is NOT a complete history/privacy certification. Financial-themed CSV samples (`offline_cards.csv`, `sample_wallet_cash.csv`, fictional orders) remain withheld pending provenance and disclosure review.
+- Ownership/license/history: no LICENSE/COPYING/NOTICE and no `.git` object history in the source archive; release authorization and original ancestry remain BLOCKED.
+- Fresh continuity discovery also found VELA M2.51 and OX Ripple v0.52; their source archives were NOT independently tested here.
+- Publication: **0 new source files, 0 new branches**; existing 15 staging branches and 769 previously verified blobs remain the historical baseline, not freshly re-audited in this run. No remote v0.31 blob integrity claim because no v0.31 source was published. PR #4 untouched. Dedicated-repository creation remains unavailable in the connected GitHub action surface.
+- Fast-forward safety: immediately preceding main HEAD `5d122d47109fe41adff62f27f8e4cea76a3e54ce`; ledger blob precondition `3d95b0ad32739b9f6ac18be6565af777bcca9d3d`. This ledger-only receipt is not source publication.
