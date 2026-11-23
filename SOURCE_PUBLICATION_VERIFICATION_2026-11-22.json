@@ -1,0 +1,622 @@
+{
+  "schema": "ox.publication-verification.v1",
+  "run_id": "ox-pub-20261122-work-1",
+  "audited_on": "2026-11-22",
+  "observed_at_utc": "2026-11-23T01:14:07Z",
+  "basis_main_commit": "30e656a7878a3cea10408085610e6d8ceb3d88cd",
+  "baseline_manifest_blob": "0ef2959783d651e6d429ee7b23b36e8a0bc01c31",
+  "baseline_ledger_blob": "d3a1919f501e74580376e648a85307f1fb6d83ae",
+  "owner": "Dustiixo",
+  "owner_authorization": "Safe source publication or isolated candidates; metadata-only main update permitted. Promotion, destructive pushes, private assets, PR #4 and MORPH merges excluded.",
+  "owner_corrections": [
+    "Independent project trees are not one merged product.",
+    "IXO engineering snapshot is historical, not current native IXO authority.",
+    "AIXO Bridge is not the whole engine; Hermes Funnel is not HermesXO factual-memory source.",
+    "Underbyte web remains an archived prototype; native Godot lineage stays separate."
+  ],
+  "result": "blocked_for_new_application_source; existing_public_source_reverified; ledger_metadata_update_authorized",
+  "application_source_writes_this_run": 0,
+  "new_source_branches_this_run": 0,
+  "integrity": {
+    "branch_heads_checked": 15,
+    "matching_heads": 15,
+    "file_references": 769,
+    "distinct_git_blobs": 755,
+    "matched_remote_and_recomputed_git_blobs": 769,
+    "missing": 0,
+    "extra": 0,
+    "mismatch": 0,
+    "truncated_remote_trees": 0,
+    "git_fsck": "PASS in all four recovered public repositories",
+    "method": "Fresh connector Git trees compared by path/mode/SHA to cloned Git object bytes. Git SHA-1 recomputed over blob header and raw bytes; per-file SHA-256 aggregated in Git tree order as path NUL sha256 newline.",
+    "limit": "Original sanitized input archive bytes were unavailable; this run does not re-establish source archive-to-public-tree equivalence."
+  },
+  "licensing": {
+    "candidate_trees_with_license_file": 1,
+    "candidate_trees_without_license_file": 14,
+    "verified_file": "Cubix MIT LICENSE",
+    "limit": "Missing per-tree notices do not establish infringement; latest source licensing, third-party provenance and original authorship remain unverified. Do not apply OXsukra main BSD license automatically to independent projects."
+  },
+  "privacy": {
+    "scope": "Current published UTF-8 source/documents only; binary/history-bundle internals not exhaustively secret-scanned",
+    "patterns": [
+      "private-key header",
+      "GitHub token",
+      "OpenAI-style key",
+      "AWS access key",
+      "literal credential assignment",
+      "personal home path",
+      "email"
+    ],
+    "reviewed_matches": 7,
+    "unresolved_matches": 0,
+    "classification": "fictional sample/test identities, test passphrase, or extension identifier; no live credential found by these patterns",
+    "limit": "A bounded pattern scan is not a complete privacy or secret certification. No private archives or assets were uploaded."
+  },
+  "history_bundles": [
+    {
+      "project": "Cubix",
+      "tip": "d2c4c36ad85c9ec75077c302e437d678a3c51658",
+      "commits": 3,
+      "verify": "complete bundle; imported locally and git fsck PASS"
+    },
+    {
+      "project": "SpatialDoor",
+      "tip": "8c17a374e794ca4d16fc0171accda8efaf052c72",
+      "commits": 3,
+      "verify": "complete bundle; imported locally and git fsck PASS"
+    }
+  ],
+  "original_history_limit": "Bundle ancestry is separate from published snapshot parents. Original project histories for the other thirteen candidates are not established by publication commits.",
+  "latest_continuities": [
+    {
+      "project": "VELA",
+      "version": "M2.49",
+      "file": "VELA_Continuity_M2_49_2026-11-22.zip",
+      "reported_sha256": "fd7994e02620fed561636e4a8906a0ca385b5c392c0f5eafe660ebc1f8dbfc7f",
+      "reported_tests": 115,
+      "evidence_class": "historical_test_or_self_report",
+      "archive_bytes_recovered": false,
+      "archive_hash_independently_verified": false,
+      "publication_status": "blocked_archive_access"
+    },
+    {
+      "project": "OX Treasury",
+      "version": "v0.29",
+      "file": "OX_Treasury_v0_29.zip",
+      "reported_sha256": "47ee68d23dd21b72f5dfc1c816c140210e1f51fb146db838123c93f72a3db3f4",
+      "reported_tests": 155,
+      "evidence_class": "historical_test_or_self_report",
+      "archive_bytes_recovered": false,
+      "archive_hash_independently_verified": false,
+      "publication_status": "blocked_archive_access"
+    },
+    {
+      "project": "OX Ripple",
+      "version": "v0.50",
+      "file": "OX_Ripple_Progressive_Build_Pack_v0_50.zip",
+      "reported_sha256": "b35ec8141587c2f0ea30dac58a0137428b1473843c946e37dd7b3f0292bf3e48",
+      "reported_tests": "62 native FlowMesh; 48 coordinator",
+      "evidence_class": "historical_test_or_self_report",
+      "archive_bytes_recovered": false,
+      "archive_hash_independently_verified": false,
+      "publication_status": "blocked_archive_access"
+    }
+  ],
+  "blockers": [
+    {
+      "id": "library-source-access",
+      "evidence": "Connected thread reader exposes versions/hashes and sandbox links, but no archive bytes. Available browser ChatGPT context could not open the referenced source chat; Library search failed twice. Pages discovery exposed no matching Space/Page.",
+      "required_to_resolve": "Accessible source archives and continuity manifests in the correct Library account or attached files; no renewed publication approval needed."
+    },
+    {
+      "id": "repo-creation",
+      "evidence": "GitHub connector has existing-repo Git writes but no repository-creation operation; gh has no authenticated host; browser /new redirects to sign-in.",
+      "required_to_resolve": "A signed-in owner browser or repository-creation-capable connection, or correctly named repos created by owner. Existing-repo candidate publication remains possible once source safety gates pass."
+    },
+    {
+      "id": "remaining-canonical-lineages",
+      "evidence": "Current native IXO, full AIXO, HermesXO owner source, Opris, GREMLIN, WRAP and other unresolved independent lineages lack verified canonical archive/history in this bounded review.",
+      "required_to_resolve": "Exact owner-authoritative source/root, dependency and licensing evidence. Historical downloaded roots must not be guessed into canon."
+    }
+  ],
+  "scope_coverage": {
+    "indexed": "All 15 authoritative manifest records; all files in those candidate trees; recent continuity messages for VELA, Treasury, Ripple; four public Git histories.",
+    "close_read": "Authority-bearing publication records, candidate status/license files, scan matches, relevant test/entrypoint code and failed-test traces.",
+    "index_only": "Historical local Downloads directory/filename matches; not admitted as canonical sources.",
+    "excluded": "Private repositories, runtime financial data, personal vaults, audio/media, private Ripple registry; inaccessible latest Library archive bytes.",
+    "new_attachments_admitted": 0
+  },
+  "main_checker_tests": {
+    "status": "pass",
+    "tests": 3
+  },
+  "test_environment": {
+    "os": "Windows",
+    "python": "3.12.14",
+    "scope": "Copied public snapshot bytes; minimal inherited environment; synthetic profile used where required; no live provider, trading, external-model or device acceptance"
+  },
+  "projects": [
+    {
+      "project": "VELA M2.40",
+      "repo": "Dustiixo/OXsukra",
+      "branch": "publish/vela-m2-40-source-20261122",
+      "expected_commit": "bcac1c52028e044f10dc8caaef046ae1c16341fc",
+      "actual_commit": "bcac1c52028e044f10dc8caaef046ae1c16341fc",
+      "head_matches": true,
+      "tree_sha": "5baae6bbcf689d71a2bb6d4769c72e64e44432d8",
+      "expected_files": 124,
+      "actual_files": 124,
+      "matched": 124,
+      "license_paths": [],
+      "parents": [
+        "53c039ce40f625e7ce305263375b023a7570e134"
+      ],
+      "path_sha256_digest": "d12e2affc0d69391cfbfc795d785a23cc528aebef23bab082dafcfcff5b54536",
+      "evidence_class": "direct_static_source",
+      "fresh_tests": {
+        "status": "not_run",
+        "reason": "pytest, NumPy, SciPy and audio dependencies unavailable in selected interpreter; latest source unavailable",
+        "evidence_class": "demonstrated_test"
+      },
+      "admission": "preserve existing staging only; no new source digest copied"
+    },
+    {
+      "project": "OX Treasury v0.17",
+      "repo": "Dustiixo/OXsukra",
+      "branch": "publish/ox-treasury-v0-17-source-20261122",
+      "expected_commit": "712611ca9937ce4e2d373da7ed2cb8aaf933b44d",
+      "actual_commit": "712611ca9937ce4e2d373da7ed2cb8aaf933b44d",
+      "head_matches": true,
+      "tree_sha": "e0e85ef039f4800588f915e01854047cac65685e",
+      "expected_files": 48,
+      "actual_files": 48,
+      "matched": 48,
+      "license_paths": [],
+      "parents": [
+        "53c039ce40f625e7ce305263375b023a7570e134"
+      ],
+      "path_sha256_digest": "75c29c66afc44d0a991cc802f936451bae9958b97abf50156d81e16690149f08",
+      "evidence_class": "direct_static_source",
+      "fresh_tests": {
+        "status": "fail",
+        "tests": 93,
+        "errors": 2,
+        "reason": "Windows SQLite handles remain open during temporary-directory cleanup; no live provider used",
+        "evidence_class": "demonstrated_test"
+      },
+      "admission": "preserve existing staging only; no new source digest copied"
+    },
+    {
+      "project": "FlowMesh M0.6",
+      "repo": "Dustiixo/OXsukra",
+      "branch": "publish/flowmesh-m0-6-source-20261122",
+      "expected_commit": "253e62f498b1b1bdb3c8fb94a580aaf0a57ccae2",
+      "actual_commit": "253e62f498b1b1bdb3c8fb94a580aaf0a57ccae2",
+      "head_matches": true,
+      "tree_sha": "a7578a29e642104c93f4787cd4e1fd07b411d7b9",
+      "expected_files": 77,
+      "actual_files": 77,
+      "matched": 77,
+      "license_paths": [],
+      "parents": [
+        "53c039ce40f625e7ce305263375b023a7570e134"
+      ],
+      "path_sha256_digest": "25ffb10e39faa614e22d18b1de5c1d1a7d71c9ad7ff0bf971e69e6b8ac6b25e7",
+      "evidence_class": "direct_static_source",
+      "fresh_tests": {
+        "status": "pass_with_skip",
+        "tests": 47,
+        "skipped": 1,
+        "scope": "Python unittest core suite; spatial/native device acceptance not run",
+        "evidence_class": "demonstrated_test"
+      },
+      "admission": "preserve existing staging only; no new source digest copied"
+    },
+    {
+      "project": "Underbyte web v0.9",
+      "repo": "Dustiixo/OXsukra",
+      "branch": "publish/underbyte-v0-9-web-source-20261122",
+      "expected_commit": "deb021f3bdf04a8ce4ddbdca697a75dfb1973c75",
+      "actual_commit": "deb021f3bdf04a8ce4ddbdca697a75dfb1973c75",
+      "head_matches": true,
+      "tree_sha": "0f47cd22ef3576e147729f06e70996b91937b600",
+      "expected_files": 11,
+      "actual_files": 11,
+      "matched": 11,
+      "license_paths": [],
+      "parents": [
+        "53c039ce40f625e7ce305263375b023a7570e134"
+      ],
+      "path_sha256_digest": "f2b1325ff6673ba2c12509c9c9b0a83657126ba14eccbd6cad9867ef6d7bc769",
+      "evidence_class": "direct_static_source",
+      "fresh_tests": {
+        "status": "not_run",
+        "reason": "No automated suite in published tree; historical browser prototype only",
+        "evidence_class": "demonstrated_test"
+      },
+      "admission": "preserve existing staging only; no new source digest copied"
+    },
+    {
+      "project": "OX Ripple v0.42 public subset",
+      "repo": "Dustiixo/OXsukra",
+      "branch": "publish/ripple-v0-42-public-subset-20261122",
+      "expected_commit": "3cf928efc80fd245674ad30fad8c15b1fc2fb54d",
+      "actual_commit": "3cf928efc80fd245674ad30fad8c15b1fc2fb54d",
+      "head_matches": true,
+      "tree_sha": "f4932a0a6b171e076bb60f781f88bcccd37372b2",
+      "expected_files": 88,
+      "actual_files": 88,
+      "matched": 88,
+      "license_paths": [],
+      "parents": [
+        "53c039ce40f625e7ce305263375b023a7570e134"
+      ],
+      "path_sha256_digest": "b171068bcc2dd9627e0ee0df4895bf4cad3c098701e3bfbe2089b587f4bed3ff",
+      "evidence_class": "direct_static_source",
+      "fresh_tests": {
+        "status": "blocked",
+        "reason": "Public subset excludes private registry/runtime; complete coordinator acceptance not reproducible from this tree",
+        "evidence_class": "demonstrated_test"
+      },
+      "admission": "preserve existing staging only; no new source digest copied"
+    },
+    {
+      "project": "Cubix M0.1",
+      "repo": "Dustiixo/Cubix",
+      "branch": "publish/cubix-m0-1-recovered-20261122",
+      "expected_commit": "d858917517056eb4d2e18ca1e51d60757507cfec",
+      "actual_commit": "d858917517056eb4d2e18ca1e51d60757507cfec",
+      "head_matches": true,
+      "tree_sha": "d6fb4bab3b832541a55b8324e109571f59934e8b",
+      "expected_files": 24,
+      "actual_files": 24,
+      "matched": 24,
+      "license_paths": [
+        "LICENSE"
+      ],
+      "parents": [
+        "1c9cb80f9ab5987c06596247ba7b2cc322ed3ee8"
+      ],
+      "path_sha256_digest": "cda06450840c0665677133c9b9d4456201749e3f2cc2b35130e16a49f80ea93f",
+      "evidence_class": "direct_static_source",
+      "fresh_tests": {
+        "status": "pass",
+        "tests": 18,
+        "evidence_class": "demonstrated_test"
+      },
+      "admission": "preserve existing staging only; no new source digest copied"
+    },
+    {
+      "project": "AIXO local bridge M0.2",
+      "repo": "Dustiixo/Aixo-",
+      "branch": "publish/aixo-local-bridge-m0-2-20261122",
+      "expected_commit": "5732a63c226f6442921ab075906ca7af8970c005",
+      "actual_commit": "5732a63c226f6442921ab075906ca7af8970c005",
+      "head_matches": true,
+      "tree_sha": "3eb32c54236e78dfea08346c9100b3bb0c05dcf0",
+      "expected_files": 28,
+      "actual_files": 28,
+      "matched": 28,
+      "license_paths": [],
+      "parents": [
+        "d97711ce16840c9983c7c74af7ffcf6c1d9f4672"
+      ],
+      "path_sha256_digest": "86c0c4dfbfc1ddca15712a46d3f9938917b68855be8608772a1707f1cd9d2a17",
+      "evidence_class": "direct_static_source",
+      "fresh_tests": {
+        "status": "pass",
+        "tests": 48,
+        "evidence_class": "demonstrated_test"
+      },
+      "admission": "preserve existing staging only; no new source digest copied"
+    },
+    {
+      "project": "PARALLAX Linux M0.7 + Session Atlas M0.1",
+      "repo": "Dustiixo/OXsukra",
+      "branch": "publish/parallax-linux-m0-7-session-atlas-m0-1-20261122",
+      "expected_commit": "2bc3cf207c1149ca713f553bb14947daf1d4f494",
+      "actual_commit": "2bc3cf207c1149ca713f553bb14947daf1d4f494",
+      "head_matches": true,
+      "tree_sha": "946f3240d874029b5bc7008c7090ed5f66270737",
+      "expected_files": 42,
+      "actual_files": 42,
+      "matched": 42,
+      "license_paths": [],
+      "parents": [
+        "53c039ce40f625e7ce305263375b023a7570e134"
+      ],
+      "path_sha256_digest": "e6756317a1df00cb3a1da4d656960b9e915970f455df2960001a567779cfc8ba",
+      "evidence_class": "direct_static_source",
+      "fresh_tests": {
+        "status": "partial_pass",
+        "node_tests": 7,
+        "assertion_scripts_passed": 2,
+        "reason": "Python host not rerun: pytest/cryptography unavailable; Node scripts and Session Atlas pass",
+        "evidence_class": "demonstrated_test"
+      },
+      "admission": "preserve existing staging only; no new source digest copied"
+    },
+    {
+      "project": "IXO engineering v0.4.1",
+      "repo": "Dustiixo/OXsukra",
+      "branch": "publish/ixo-v0-4-1-engineering-source-20261122",
+      "expected_commit": "9c9b32b1caf814a0c9fcfebe80b23df944728f8e",
+      "actual_commit": "9c9b32b1caf814a0c9fcfebe80b23df944728f8e",
+      "head_matches": true,
+      "tree_sha": "4220c8226e70be6dc14d9c63eb6878952c6ab848",
+      "expected_files": 99,
+      "actual_files": 99,
+      "matched": 99,
+      "license_paths": [],
+      "parents": [
+        "53c039ce40f625e7ce305263375b023a7570e134"
+      ],
+      "path_sha256_digest": "d56dc82a2b8ed5015d62b04138d460b2e3abb1ea11dbf38e2a4d79a44799a09b",
+      "evidence_class": "direct_static_source",
+      "fresh_tests": {
+        "status": "pass",
+        "tests": 152,
+        "scope": "Historical engineering snapshot only",
+        "evidence_class": "demonstrated_test"
+      },
+      "admission": "preserve existing staging only; no new source digest copied"
+    },
+    {
+      "project": "SpatialDoor v0.1",
+      "repo": "Dustiixo/SpatialDoor",
+      "branch": "publish/spatial-door-v0-1-source-20261122",
+      "expected_commit": "d60152c3ce5eeea0dd1e8c7022537e32faf8e7d9",
+      "actual_commit": "d60152c3ce5eeea0dd1e8c7022537e32faf8e7d9",
+      "head_matches": true,
+      "tree_sha": "1ded14172f1689060d48dd77337c380fd79f6513",
+      "expected_files": 22,
+      "actual_files": 22,
+      "matched": 22,
+      "license_paths": [],
+      "parents": [
+        "7ac7c68a8b74bb95b038721d20c4edff60adf995"
+      ],
+      "path_sha256_digest": "adae41590eaf9e329f8834818f097ba5ebb90efdf334801f2a0b5a17e4fe1523",
+      "evidence_class": "direct_static_source",
+      "fresh_tests": {
+        "status": "pass",
+        "tests": 50,
+        "scope": "Includes Tk GUI tests on Windows; synthetic empty user-profile directory",
+        "evidence_class": "demonstrated_test"
+      },
+      "admission": "preserve existing staging only; no new source digest copied"
+    },
+    {
+      "project": "DeepBrew Studio G0.3.1",
+      "repo": "Dustiixo/OXsukra",
+      "branch": "publish/deepbrew-studio-g0-3-1-source-20261122",
+      "expected_commit": "956a27d254bc95112e64bea022556429b445ed01",
+      "actual_commit": "956a27d254bc95112e64bea022556429b445ed01",
+      "head_matches": true,
+      "tree_sha": "0fce32e131c3c168c973116d3aae7a7e6dd1d00c",
+      "expected_files": 49,
+      "actual_files": 49,
+      "matched": 49,
+      "license_paths": [],
+      "parents": [
+        "546af263e2f7c88e85713347c4b045d89456be7b"
+      ],
+      "path_sha256_digest": "2e92e907f0b19848d14f5acce77659cf7b8dca494da07209d95062b49d4be529",
+      "evidence_class": "direct_static_source",
+      "fresh_tests": {
+        "status": "not_run",
+        "reason": "Godot executable unavailable; original media excluded",
+        "evidence_class": "demonstrated_test"
+      },
+      "admission": "preserve existing staging only; no new source digest copied"
+    },
+    {
+      "project": "ECHOFOLD Ocean G0.1",
+      "repo": "Dustiixo/OXsukra",
+      "branch": "publish/echofold-ocean-g0-1-source-20261122",
+      "expected_commit": "1d7e963c4737d8183c1f438f7210cd774afab2f1",
+      "actual_commit": "1d7e963c4737d8183c1f438f7210cd774afab2f1",
+      "head_matches": true,
+      "tree_sha": "bc993c60d37223618dcf1074e3fda6d1d4fd52f4",
+      "expected_files": 16,
+      "actual_files": 16,
+      "matched": 16,
+      "license_paths": [],
+      "parents": [
+        "546af263e2f7c88e85713347c4b045d89456be7b"
+      ],
+      "path_sha256_digest": "98215c92c0169671a280637f8033b022daa0bede836ffae796fdb56f9fc998b2",
+      "evidence_class": "direct_static_source",
+      "fresh_tests": {
+        "status": "fail",
+        "tests": 5,
+        "errors": 3,
+        "reason": "Windows SQLite handles remain open during temporary-directory cleanup",
+        "evidence_class": "demonstrated_test"
+      },
+      "admission": "preserve existing staging only; no new source digest copied"
+    },
+    {
+      "project": "Underbyte Native Godot",
+      "repo": "Dustiixo/OXsukra",
+      "branch": "publish/underbyte-godot-native-source-20261122",
+      "expected_commit": "3c07381373936b8a087d472191ffe5242c60f599",
+      "actual_commit": "3c07381373936b8a087d472191ffe5242c60f599",
+      "head_matches": true,
+      "tree_sha": "805122742ce069c342fd96dc8dfda8a5eb76cbc0",
+      "expected_files": 22,
+      "actual_files": 22,
+      "matched": 22,
+      "license_paths": [],
+      "parents": [
+        "bad78439e09c91c6813277219f080975804ec22e"
+      ],
+      "path_sha256_digest": "ad4d63b5f8e4da1c3466f3ab67bdb3ea3571c2a593e907245db23fec06fee677",
+      "evidence_class": "direct_static_source",
+      "fresh_tests": {
+        "status": "not_run",
+        "reason": "Godot and Pillow unavailable; original media intentionally excluded",
+        "evidence_class": "demonstrated_test"
+      },
+      "admission": "preserve existing staging only; no new source digest copied"
+    },
+    {
+      "project": "OX Hermes Funnel Pilot v0.8",
+      "repo": "Dustiixo/OXsukra",
+      "branch": "publish/ox-hermes-funnel-pilot-v0-8-source-20261122",
+      "expected_commit": "39450690d44a52a1d62b89b559cb6b5c78c142cd",
+      "actual_commit": "39450690d44a52a1d62b89b559cb6b5c78c142cd",
+      "head_matches": true,
+      "tree_sha": "8fa08dca310a6298d13ba8dfff6a6aa7e6710127",
+      "expected_files": 58,
+      "actual_files": 58,
+      "matched": 58,
+      "license_paths": [],
+      "parents": [
+        "bad78439e09c91c6813277219f080975804ec22e"
+      ],
+      "path_sha256_digest": "9080e6e50bbbe4b0175738ed9e0114179e6ad1281025fcfc787f9d3812546663",
+      "evidence_class": "direct_static_source",
+      "fresh_tests": {
+        "status": "fail",
+        "tests": 38,
+        "failures": 1,
+        "skipped": 1,
+        "reason": "test_member_materials_exist expects excluded MEETING_OVERVIEW.html; Java-dependent test skipped",
+        "evidence_class": "demonstrated_test"
+      },
+      "admission": "preserve existing staging only; no new source digest copied"
+    },
+    {
+      "project": "OX Spatial Fabric v0.2.2",
+      "repo": "Dustiixo/OXsukra",
+      "branch": "publish/ox-spatial-fabric-v0-2-2-source-20261122",
+      "expected_commit": "9f2666807c2ab4a2c050f96bc0e73f952194f5cd",
+      "actual_commit": "9f2666807c2ab4a2c050f96bc0e73f952194f5cd",
+      "head_matches": true,
+      "tree_sha": "59798102abe8315494fae187f0b93e184c633ef5",
+      "expected_files": 61,
+      "actual_files": 61,
+      "matched": 61,
+      "license_paths": [],
+      "parents": [
+        "bad78439e09c91c6813277219f080975804ec22e"
+      ],
+      "path_sha256_digest": "13f3935eb52fe91b38f389bdd9e8dd8978a8fc585c6b0eb8d7e40c6594b3b5c9",
+      "evidence_class": "direct_static_source",
+      "fresh_tests": {
+        "status": "pass",
+        "tests": 77,
+        "additional_node_assertions": 8,
+        "scope": "Python tests and splice-core assertions; hardware/native SELF acceptance not established",
+        "evidence_class": "demonstrated_test"
+      },
+      "admission": "preserve existing staging only; no new source digest copied"
+    }
+  ],
+  "authority_graph": {
+    "nodes": [
+      "Dustiixo",
+      "OXsukra main publication index",
+      "VELA M2.40",
+      "OX Treasury v0.17",
+      "FlowMesh M0.6",
+      "Underbyte web v0.9",
+      "OX Ripple v0.42 public subset",
+      "Cubix M0.1",
+      "AIXO local bridge M0.2",
+      "PARALLAX Linux M0.7 + Session Atlas M0.1",
+      "IXO engineering v0.4.1",
+      "SpatialDoor v0.1",
+      "DeepBrew Studio G0.3.1",
+      "ECHOFOLD Ocean G0.1",
+      "Underbyte Native Godot",
+      "OX Hermes Funnel Pilot v0.8",
+      "OX Spatial Fabric v0.2.2"
+    ],
+    "edges": [
+      {
+        "from": "Dustiixo",
+        "to": "OXsukra main publication index",
+        "type": "owner_authorized_metadata_write"
+      },
+      {
+        "from": "VELA M2.40",
+        "to": "OXsukra main publication index",
+        "type": "indexed_by_no_integration_or_promotion"
+      },
+      {
+        "from": "OX Treasury v0.17",
+        "to": "OXsukra main publication index",
+        "type": "indexed_by_no_integration_or_promotion"
+      },
+      {
+        "from": "FlowMesh M0.6",
+        "to": "OXsukra main publication index",
+        "type": "indexed_by_no_integration_or_promotion"
+      },
+      {
+        "from": "Underbyte web v0.9",
+        "to": "OXsukra main publication index",
+        "type": "indexed_by_no_integration_or_promotion"
+      },
+      {
+        "from": "OX Ripple v0.42 public subset",
+        "to": "OXsukra main publication index",
+        "type": "indexed_by_no_integration_or_promotion"
+      },
+      {
+        "from": "Cubix M0.1",
+        "to": "OXsukra main publication index",
+        "type": "indexed_by_no_integration_or_promotion"
+      },
+      {
+        "from": "AIXO local bridge M0.2",
+        "to": "OXsukra main publication index",
+        "type": "indexed_by_no_integration_or_promotion"
+      },
+      {
+        "from": "PARALLAX Linux M0.7 + Session Atlas M0.1",
+        "to": "OXsukra main publication index",
+        "type": "indexed_by_no_integration_or_promotion"
+      },
+      {
+        "from": "IXO engineering v0.4.1",
+        "to": "OXsukra main publication index",
+        "type": "indexed_by_no_integration_or_promotion"
+      },
+      {
+        "from": "SpatialDoor v0.1",
+        "to": "OXsukra main publication index",
+        "type": "indexed_by_no_integration_or_promotion"
+      },
+      {
+        "from": "DeepBrew Studio G0.3.1",
+        "to": "OXsukra main publication index",
+        "type": "indexed_by_no_integration_or_promotion"
+      },
+      {
+        "from": "ECHOFOLD Ocean G0.1",
+        "to": "OXsukra main publication index",
+        "type": "indexed_by_no_integration_or_promotion"
+      },
+      {
+        "from": "Underbyte Native Godot",
+        "to": "OXsukra main publication index",
+        "type": "indexed_by_no_integration_or_promotion"
+      },
+      {
+        "from": "OX Hermes Funnel Pilot v0.8",
+        "to": "OXsukra main publication index",
+        "type": "indexed_by_no_integration_or_promotion"
+      },
+      {
+        "from": "OX Spatial Fabric v0.2.2",
+        "to": "OXsukra main publication index",
+        "type": "indexed_by_no_integration_or_promotion"
+      }
+    ]
+  },
+  "next_step": "Recover and hash exact latest archives, review per-project attribution/private assets, reproduce tests on sanitized trees, then publish only changed authorized source digests to independent repos or isolated candidates. Resume from verified SHAs; do not duplicate current source."
+}

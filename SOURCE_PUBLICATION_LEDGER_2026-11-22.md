@@ -35,6 +35,32 @@ Fifteen **review/staging** branches contain **769 source/artifact files**. A dir
 
 For each project: create or select its correctly named repository, validate licensing and lineage, import the source without overwriting existing history, run tests on the resulting tree, open a reviewed PR, and only then promote to its default branch. This ledger is designed to make progress measurable, not substitute for those steps.
 
-## Publication follow-through
+## Work-mode verification receipt — 2026-11-22
 
-An hourly evidence-first GitHub publication workflow is active to reconcile the remaining source archives and repo boundaries. It must skip unchanged digests and must not bypass licensing, privacy, testing, author-ownership or release acceptance. This task is still **incomplete**: outstanding dedicated repositories and owner-controlled integrations cannot be declared complete based on source snapshots.
+**New application source published in this run: 0 files, 0 branches. Publication remains blocked, not complete.** The existing public staging branches were verified without re-uploading them. This receipt supersedes any implication that historical test receipts establish fresh Windows or latest-archive acceptance.
+
+- Basis main: `30e656a7878a3cea10408085610e6d8ceb3d88cd`; all 15 listed source branch heads still match their recorded commits.
+- Fresh connector tree comparisons and raw Git blob rehash: **769/769 file references match**, zero missing, extra or mismatched files; **755 distinct blobs**. Git object checks pass for OXsukra, Cubix, Aixo- and SpatialDoor. This proves recovered public-byte integrity, not equivalence to inaccessible original source archives.
+- Cubix and SpatialDoor original bundles each contain three commits, validate as complete, and pass a local import/object check. Their original tips remain separate from snapshot branch ancestry. Original history for the other thirteen candidates remains unresolved.
+- Current-tree scan matches were reviewed as fictional data/tests or extension identifiers. No live credential was identified by the bounded patterns. Binary/history internals and unavailable private archives are outside that scan; it is not a full privacy certification.
+- Only Cubix has a license file in its candidate tree (MIT). Fourteen candidate trees lack one. OXsukra main BSD terms must not be automatically assigned to other independent projects; latest-source attribution and licensing remain gates.
+
+Fresh Windows Python 3.12.14 results on copied public snapshot bytes:
+
+- PASS: main checker 3 tests; Cubix 18; AIXO Bridge 48; FlowMesh core 47 with 1 skipped; IXO engineering 152; SpatialDoor 50; Spatial Fabric 77 plus 8 Node assertions.
+- PASS: PARALLAX extension/content assertion scripts and 7 Session Atlas Node tests. Python host dependencies were unavailable.
+- FAIL: Treasury v0.17 ran 93 tests with 2 Windows SQLite temporary-directory cleanup errors; ECHOFOLD ran 5 tests with 3 equivalent cleanup errors; Hermes Funnel ran 38 tests with 1 missing-material failure and 1 skipped. Intentionally excluded `MEETING_OVERVIEW.html` is expected by its onboarding test. These results do not change the public source trees.
+- NOT RERUN: VELA (missing numerical/audio test dependencies), Underbyte web (no suite in tree), Underbyte Godot (engine/Pillow/media absent), DeepBrew native (Godot/media absent), complete Ripple coordinator (private registry/runtime absent). No full hardware acceptance is claimed.
+- A first isolation pass omitted a profile directory and caused environment-only errors for SpatialDoor/IXO. A second pass supplied an empty workspace-local profile; their full suites then passed. Raw logs remain local because they contain machine paths.
+
+**Latest continuity discovery:** VELA **M2.49**, Treasury **v0.29**, Ripple **v0.50**. Their reported hashes are recorded in the manifest and [verification receipt](SOURCE_PUBLICATION_VERIFICATION_2026-11-22.json). Archive bytes were not recovered, so their hashes/tests/privacy/licensing were not independently verified here. Ripple v0.50 review commit `69d63ce909a18f2ee6ef418806a03205a01d3206` is metadata evidence, not application-source publication.
+
+**Exact blockers:**
+
+1. Library access: source-chat reading returns continuity text and sandbox download references, not usable archive bytes. The available browser ChatGPT context could not open the source chat; Library search failed on an initial attempt and one retry. Pages discovery supplied no matching source. Access to the correct Library account or the exact archive files is needed. Prior publication authorization remains valid.
+2. Repository creation: connected GitHub tools can write existing repos but expose no create-repository action. The terminal has no GitHub login, and the browser new-repository page requires sign-in. Correctly named dedicated repos therefore cannot be created through the currently authenticated surface. Isolated branches remain an authorized fallback once exact source bytes clear verification.
+3. Canonical source and rights: current native IXO, full AIXO engine, HermesXO owner source, Opris, GREMLIN, WRAP and remaining lineages still need exact authoritative archive/history and attribution evidence. Historical Downloads matches were not promoted to canon. Hermes Funnel and HermesXO, IXO historical engineering and native IXO, and Underbyte browser/native histories remain distinct.
+
+**Changes authorized on main:** ledger, manifest and this verification receipt only, as a single additive commit using the current main as parent and a non-force expected-SHA lease. No source promotion, release, duplicate source branch, history rewrite, private asset upload, PR #4 merge or MORPH merge is authorized by this receipt.
+
+Resume by recovering the exact archives and checking their hashes, provenance, licenses, assets and sanitized-tree tests. Skip already-published digests; preserve project boundaries. [Machine-readable receipt](SOURCE_PUBLICATION_VERIFICATION_2026-11-22.json) includes per-project tree SHAs, counts, fresh test scopes, typed authority edges and coverage limits.

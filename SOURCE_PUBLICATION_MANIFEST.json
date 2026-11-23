@@ -10,7 +10,13 @@
       "commit": "bcac1c52028e044f10dc8caaef046ae1c16341fc",
       "git_blob_count": 124,
       "tests": "95 pytest under Xvfb; staged source PASS",
-      "limit": "Audio media excluded; Windows audio unverified"
+      "limit": "Audio media excluded; Windows audio unverified",
+      "verification": {
+        "tree_sha": "5baae6bbcf689d71a2bb6d4769c72e64e44432d8",
+        "current_head_matches": true,
+        "recomputed_blobs": 124,
+        "fresh_test_status": "not_run"
+      }
     },
     {
       "project": "OX Treasury v0.17",
@@ -19,7 +25,13 @@
       "commit": "712611ca9937ce4e2d373da7ed2cb8aaf933b44d",
       "git_blob_count": 48,
       "tests": "93 unittest; staged source PASS",
-      "limit": "Offline only; financial values unverified"
+      "limit": "Offline only; financial values unverified",
+      "verification": {
+        "tree_sha": "e0e85ef039f4800588f915e01854047cac65685e",
+        "current_head_matches": true,
+        "recomputed_blobs": 48,
+        "fresh_test_status": "fail"
+      }
     },
     {
       "project": "FlowMesh M0.6",
@@ -28,7 +40,13 @@
       "commit": "253e62f498b1b1bdb3c8fb94a580aaf0a57ccae2",
       "git_blob_count": 77,
       "tests": "47 core and 4 visual tests staged PASS; 6 spatial BLOCKED",
-      "limit": "Demo SQLite withheld; native GPU/device unverified"
+      "limit": "Demo SQLite withheld; native GPU/device unverified",
+      "verification": {
+        "tree_sha": "a7578a29e642104c93f4787cd4e1fd07b411d7b9",
+        "current_head_matches": true,
+        "recomputed_blobs": 77,
+        "fresh_test_status": "pass_with_skip"
+      }
     },
     {
       "project": "Underbyte web v0.9",
@@ -37,7 +55,13 @@
       "commit": "deb021f3bdf04a8ce4ddbdca697a75dfb1973c75",
       "git_blob_count": 11,
       "tests": "Original archive evidence only; staged native tests NOT RUN",
-      "limit": "No verified Godot/Android integration"
+      "limit": "No verified Godot/Android integration",
+      "verification": {
+        "tree_sha": "0f47cd22ef3576e147729f06e70996b91937b600",
+        "current_head_matches": true,
+        "recomputed_blobs": 11,
+        "fresh_test_status": "not_run"
+      }
     },
     {
       "project": "OX Ripple v0.42 public subset",
@@ -46,7 +70,13 @@
       "commit": "3cf928efc80fd245674ad30fad8c15b1fc2fb54d",
       "git_blob_count": 88,
       "tests": "48 original coordinator tests PASS; public-only subset not independently runnable",
-      "limit": "Private registry and receipts deliberately excluded"
+      "limit": "Private registry and receipts deliberately excluded",
+      "verification": {
+        "tree_sha": "f4932a0a6b171e076bb60f781f88bcccd37372b2",
+        "current_head_matches": true,
+        "recomputed_blobs": 88,
+        "fresh_test_status": "blocked"
+      }
     },
     {
       "project": "Cubix M0.1",
@@ -55,7 +85,13 @@
       "commit": "d858917517056eb4d2e18ca1e51d60757507cfec",
       "git_blob_count": 24,
       "tests": "18 unittest PASS; complete three-commit bundle retained",
-      "limit": "Original Git ancestry inside history bundle; main not replaced"
+      "limit": "Original Git ancestry inside history bundle; main not replaced",
+      "verification": {
+        "tree_sha": "d6fb4bab3b832541a55b8324e109571f59934e8b",
+        "current_head_matches": true,
+        "recomputed_blobs": 24,
+        "fresh_test_status": "pass"
+      }
     },
     {
       "project": "AIXO local bridge M0.2",
@@ -64,7 +100,13 @@
       "commit": "5732a63c226f6442921ab075906ca7af8970c005",
       "git_blob_count": 28,
       "tests": "48 unittest; staged source PASS",
-      "limit": "Not the entire AIXO learning engine"
+      "limit": "Not the entire AIXO learning engine",
+      "verification": {
+        "tree_sha": "3eb32c54236e78dfea08346c9100b3bb0c05dcf0",
+        "current_head_matches": true,
+        "recomputed_blobs": 28,
+        "fresh_test_status": "pass"
+      }
     },
     {
       "project": "PARALLAX Linux M0.7 + Session Atlas M0.1",
@@ -73,7 +115,13 @@
       "commit": "2bc3cf207c1149ca713f553bb14947daf1d4f494",
       "git_blob_count": 42,
       "tests": "9 Python host, 7 Node atlas and 2 extension/content scripts PASS",
-      "limit": "Two isolated candidates; not production browser"
+      "limit": "Two isolated candidates; not production browser",
+      "verification": {
+        "tree_sha": "946f3240d874029b5bc7008c7090ed5f66270737",
+        "current_head_matches": true,
+        "recomputed_blobs": 42,
+        "fresh_test_status": "partial_pass"
+      }
     },
     {
       "project": "IXO engineering v0.4.1",
@@ -82,7 +130,13 @@
       "commit": "9c9b32b1caf814a0c9fcfebe80b23df944728f8e",
       "git_blob_count": 99,
       "tests": "152 Python unittest on source archive PASS",
-      "limit": "Historical engineering source; not current native host release"
+      "limit": "Historical engineering source; not current native host release",
+      "verification": {
+        "tree_sha": "4220c8226e70be6dc14d9c63eb6878952c6ab848",
+        "current_head_matches": true,
+        "recomputed_blobs": 99,
+        "fresh_test_status": "pass"
+      }
     },
     {
       "project": "SpatialDoor v0.1",
@@ -91,7 +145,13 @@
       "commit": "d60152c3ce5eeea0dd1e8c7022537e32faf8e7d9",
       "git_blob_count": 22,
       "tests": "50 unittest under Xvfb passed; remote SHA match 22/22",
-      "limit": "Original Git ancestry preserved in history bundle; preview media excluded"
+      "limit": "Original Git ancestry preserved in history bundle; preview media excluded",
+      "verification": {
+        "tree_sha": "1ded14172f1689060d48dd77337c380fd79f6513",
+        "current_head_matches": true,
+        "recomputed_blobs": 22,
+        "fresh_test_status": "pass"
+      }
     },
     {
       "project": "DeepBrew Studio G0.3.1",
@@ -100,7 +160,13 @@
       "commit": "956a27d254bc95112e64bea022556429b445ed01",
       "git_blob_count": 49,
       "tests": "Python compileall passed; Godot test report historical, NOT independently rerun",
-      "limit": "Audio assets/media excluded, Godot runtime unavailable"
+      "limit": "Audio assets/media excluded, Godot runtime unavailable",
+      "verification": {
+        "tree_sha": "0fce32e131c3c168c973116d3aae7a7e6dd1d00c",
+        "current_head_matches": true,
+        "recomputed_blobs": 49,
+        "fresh_test_status": "not_run"
+      }
     },
     {
       "project": "ECHOFOLD Ocean G0.1",
@@ -109,7 +175,13 @@
       "commit": "1d7e963c4737d8183c1f438f7210cd774afab2f1",
       "git_blob_count": 16,
       "tests": "5 Python unittest passed; remote SHA match 16/16",
-      "limit": "Native Godot hardware and cross-system integration unverified"
+      "limit": "Native Godot hardware and cross-system integration unverified",
+      "verification": {
+        "tree_sha": "bc993c60d37223618dcf1074e3fda6d1d4fd52f4",
+        "current_head_matches": true,
+        "recomputed_blobs": 16,
+        "fresh_test_status": "fail"
+      }
     },
     {
       "project": "Underbyte Native Godot",
@@ -118,7 +190,13 @@
       "commit": "3c07381373936b8a087d472191ffe5242c60f599",
       "git_blob_count": 22,
       "tests": "8/10 content tests passed; 2 asset-dependent failed due intentionally withheld media",
-      "limit": "Original local Git objects and media withheld; Godot runtime unverified"
+      "limit": "Original local Git objects and media withheld; Godot runtime unverified",
+      "verification": {
+        "tree_sha": "805122742ce069c342fd96dc8dfda8a5eb76cbc0",
+        "current_head_matches": true,
+        "recomputed_blobs": 22,
+        "fresh_test_status": "not_run"
+      }
     },
     {
       "project": "OX Hermes Funnel Pilot v0.8",
@@ -127,7 +205,13 @@
       "commit": "39450690d44a52a1d62b89b559cb6b5c78c142cd",
       "git_blob_count": 58,
       "tests": "Python compileall PASS; full unittest timed out after 15s; test acceptance NOT established",
-      "limit": "Collaborator/private notes omitted; HermesXO factual-memory owner is a different project"
+      "limit": "Collaborator/private notes omitted; HermesXO factual-memory owner is a different project",
+      "verification": {
+        "tree_sha": "8fa08dca310a6298d13ba8dfff6a6aa7e6710127",
+        "current_head_matches": true,
+        "recomputed_blobs": 58,
+        "fresh_test_status": "fail"
+      }
     },
     {
       "project": "OX Spatial Fabric v0.2.2",
@@ -136,7 +220,13 @@
       "commit": "9f2666807c2ab4a2c050f96bc0e73f952194f5cd",
       "git_blob_count": 61,
       "tests": "Python compileall PASS; full unittest timed out after 15s; test acceptance NOT established",
-      "limit": "Large demo JSON, audio, meshes, PNG excluded; native SELF/GUI not accepted"
+      "limit": "Large demo JSON, audio, meshes, PNG excluded; native SELF/GUI not accepted",
+      "verification": {
+        "tree_sha": "59798102abe8315494fae187f0b93e184c633ef5",
+        "current_head_matches": true,
+        "recomputed_blobs": 61,
+        "fresh_test_status": "pass"
+      }
     }
   ],
   "remote_git_blob_integrity": {
@@ -144,8 +234,49 @@
     "matched": 769,
     "missing": 0,
     "mismatch": 0,
-    "extra": 0
+    "extra": 0,
+    "reverified_on": "2026-11-22",
+    "distinct_blob_count": 755,
+    "scope": "Fresh remote tree vs cloned Git blob bytes; original archive equivalence not re-established"
   },
   "promotion": "staging-only; not merged or released",
-  "unpublished": "dedicated repositories and remaining independent source lineages not complete"
+  "unpublished": "dedicated repositories and remaining independent source lineages not complete",
+  "verification_record": "SOURCE_PUBLICATION_VERIFICATION_2026-11-22.json",
+  "test_evidence_note": "Existing tests strings are historical publication receipts. Fresh Windows results are in the verification record and may differ.",
+  "publication_status": "blocked_for_new_application_source; existing_public_source_reverified; ledger_metadata_update_authorized",
+  "latest_continuities": [
+    {
+      "project": "VELA",
+      "version": "M2.49",
+      "file": "VELA_Continuity_M2_49_2026-11-22.zip",
+      "reported_sha256": "fd7994e02620fed561636e4a8906a0ca385b5c392c0f5eafe660ebc1f8dbfc7f",
+      "reported_tests": 115,
+      "evidence_class": "historical_test_or_self_report",
+      "archive_bytes_recovered": false,
+      "archive_hash_independently_verified": false,
+      "publication_status": "blocked_archive_access"
+    },
+    {
+      "project": "OX Treasury",
+      "version": "v0.29",
+      "file": "OX_Treasury_v0_29.zip",
+      "reported_sha256": "47ee68d23dd21b72f5dfc1c816c140210e1f51fb146db838123c93f72a3db3f4",
+      "reported_tests": 155,
+      "evidence_class": "historical_test_or_self_report",
+      "archive_bytes_recovered": false,
+      "archive_hash_independently_verified": false,
+      "publication_status": "blocked_archive_access"
+    },
+    {
+      "project": "OX Ripple",
+      "version": "v0.50",
+      "file": "OX_Ripple_Progressive_Build_Pack_v0_50.zip",
+      "reported_sha256": "b35ec8141587c2f0ea30dac58a0137428b1473843c946e37dd7b3f0292bf3e48",
+      "reported_tests": "62 native FlowMesh; 48 coordinator",
+      "evidence_class": "historical_test_or_self_report",
+      "archive_bytes_recovered": false,
+      "archive_hash_independently_verified": false,
+      "publication_status": "blocked_archive_access"
+    }
+  ]
 }
