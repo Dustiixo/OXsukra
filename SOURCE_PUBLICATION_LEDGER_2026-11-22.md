@@ -64,3 +64,13 @@ Fresh Windows Python 3.12.14 results on copied public snapshot bytes:
 **Changes authorized on main:** ledger, manifest and this verification receipt only, as a single additive commit using the current main as parent and a non-force expected-SHA lease. No source promotion, release, duplicate source branch, history rewrite, private asset upload, PR #4 merge or MORPH merge is authorized by this receipt.
 
 Resume by recovering the exact archives and checking their hashes, provenance, licenses, assets and sanitized-tree tests. Skip already-published digests; preserve project boundaries. [Machine-readable receipt](SOURCE_PUBLICATION_VERIFICATION_2026-11-22.json) includes per-project tree SHAs, counts, fresh test scopes, typed authority edges and coverage limits.
+
+
+### Independent candidate gate: OX Treasury v0.29 (2026-11-23 UTC)
+
+- Library source: `/OX Treasury/Continuity/OX_Treasury_v0_29.zip` (60 ZIP members); SHA-256 `47ee68d23dd21b72f5dfc1c816c140210e1f51fb146db838123c93f72a3db3f4`.
+- Independent ZIP integrity **PASS** (`testzip`: no corrupt members); Python `compileall` **PASS**; `python -m unittest discover -s tests -q` **PASS**, 155 tests in 10.021 seconds, exit 0.
+- Preliminary privacy scan: no PEM private-key headers, obvious assigned API keys or absolute `/home`/`/Users` paths detected. Email patterns found in `samples/ebay_own_orders_FICTIONAL.csv` and `tests/test_marketplace_map.py`; fictional provenance not independently established. Sample finance/card CSVs present; **withhold** from public release pending review.
+- Ownership/license **BLOCKED** (no LICENSE/COPYING/NOTICE in archive); original Git ancestry **MISSING** (no `.git` objects). Network/live-provider and native hardware tests **NOT RUN**. Candidate public-release acceptance **BLOCKED**.
+- **Publication decision:** No v0.29 source branch created; no duplicate source blobs pushed. Existing 15 staging branches/769 previously audited blobs unchanged. Repository creation/visibility limitations still block dedicated independent repos; PR #4 not merged. This entry documents verification, not publication.
+- Fast-forward safety basis: fetched main HEAD `679ee04e9ad12e454bb4b465f4026ee1a6c4f109` immediately before this ledger update; existing file blob SHA `a0085427e10161d51e416011fbb52cfa3c09e952` supplied as compare-and-swap precondition.
