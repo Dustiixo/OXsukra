@@ -1,0 +1,3 @@
+# RIPPLE v0.52 native FlowMesh evidence capsule
+
+Metadata-only review. Native Tk adds explicit local JSON evidence export with reverified ledger/source identity, atomic save, no automatic network or peer adapter. Native project tests: 69/69 PASS under Xvfb; coordinator: 48/48 PASS. Source remains private pending license/ownership review. Underbyte Godot source/runtime unavailable; historical strict journal and independent adapter blocked; physical ASUS/Android acceptance not run. Parent continuity SHA256: 6052825645ce13c92a834693839eedd492f9af8207a925933ce0f63043bf661f. No application source or private crosswalk published.
