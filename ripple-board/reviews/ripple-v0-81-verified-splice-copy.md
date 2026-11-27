@@ -1,0 +1,3 @@
+# RIPPLE v0.81 candidate review
+
+Metadata only. Spatial Fabric's native read-only viewer now supports explicit clipboard export of the selected splice as a structured provenance record, after fresh world and selection verification. Four added tests cover cross-page selection, invalid indices, changed snapshots and actual clipboard behavior. Full project regression: 109 passed; coordinator: 48 passed. Native Tk interaction on a virtual display passed. Independent adapter, Godot runtime, licensing and physical acceptance remain outstanding. No source, assets, identifiers or user data are included. Not an accepted release.
