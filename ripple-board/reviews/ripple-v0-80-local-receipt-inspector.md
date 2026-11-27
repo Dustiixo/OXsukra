@@ -1,0 +1,3 @@
+# RIPPLE v0.80 candidate review
+
+Metadata only. The independent Underbyte Python/Tk prototype now opens local quest receipts in a read-only inspector with exact schema, checkpoint sequence and payload checksum validation, and shows cumulative and segment timing. Native regression: 62 passed; coordinator regression: 48 passed. Actual Tk/Xvfb interaction with a synthetic receipt passed; the test harness supplied the file chooser destination. A checksum match is not authentication. Godot runtime, independent adapter, source licensing and physical acceptance remain outstanding. No source, assets or user data included. Not an accepted release.
