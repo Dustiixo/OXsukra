@@ -1,0 +1,3 @@
+# RIPPLE v0.82 candidate review
+
+Metadata only. Two independent native command-line processes completed an explicitly authorized synthetic, read-only exchange. Six new boundary tests and 48 coordinator tests passed. FlowMesh regression: 84 tests passed. Spatial Fabric regression logs report 109 passing tests; four module exit codes were not captured after the outer tool timeout. The transport pin does not authenticate the source. Physical device, independent human and production trust acceptance remain outstanding. No source code, data, assets, or private mappings included. Not an accepted release.
