@@ -1,0 +1,3 @@
+# RIPPLE v0.79 candidate review
+
+Metadata only. FlowMesh native evidence search now supports exact document selection by full recorded source hash, combined with free-text filtering. Reverse receipt and local capsule navigation clear the facet. Native Tk/Xvfb interaction selected two of four synthetic excerpts without changing source state or ledger. FlowMesh regression: 84 passed; coordinator regression: 48 passed. Underbyte and DeepBrew Godot source archives were recovered privately; Underbyte static content checks: 10 passed. Godot runtime, independent adapter, licensing and physical acceptance remain blocked. No source, assets, private identifiers, or user data included. Not an accepted release.
