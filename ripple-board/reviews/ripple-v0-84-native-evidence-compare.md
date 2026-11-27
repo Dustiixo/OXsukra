@@ -1,0 +1,3 @@
+# RIPPLE v0.84 candidate review
+
+Metadata only. The independent FlowMesh native desktop now supports pinning and comparing two local evidence excerpts with their verified source and ledger provenance in a read-only comparison window. Seven new tests passed; full FlowMesh regression: 91 passed (including the seven), coordinator: 48 passed, local independent exchange regression: 18 passed. All captured exit codes were zero. Actual Tk interaction on a virtual display passed using synthetic documents. Godot runtime, physical device, operator acceptance and production trust remain outstanding. No source, assets, keys, data or private mappings included. Not an accepted release.
