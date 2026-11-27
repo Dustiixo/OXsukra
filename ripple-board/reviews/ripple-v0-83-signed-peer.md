@@ -1,0 +1,3 @@
+# RIPPLE v0.83 candidate review
+
+Metadata only. Separate local native command-line producer and consumer processes exercised an Ed25519-signed, read-only synthetic exchange using pre-provisioned trust and persistent replay state. Twelve focused acceptance tests passed, including concurrent replay rejection, wrong signer, changed payload, expired messages and invalid scope. All 247 existing Python regression tests passed with captured zero exit codes. The local mechanism is not production trust, operator acceptance or physical deployment. No source, keys, data, assets or private mappings included. Not an accepted release.
